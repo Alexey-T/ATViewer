@@ -1,0 +1,647 @@
+Version=6.5.0
+Author=UVViewSoft
+Homepage=http://www.uvviewsoft.com
+Email=
+
+[Messages]
+
+101="Dosya bulunamadý: "%s""
+102="Dosya açýlamýyor: "%s""
+104="Dosya yüklenemiyor: "%s""
+105="Dosya okunamýyor: "%s""
+106="baþlatýlamýyor %s"
+107="Klasör bulunamadý: "%s""
+
+108="Bilinmeyen biçim\nÝkili dökümü göstermek için týklayýn\n(Bu mesaj seçenekler ileþim kýsmýndan kapatýlabilir)"
+109="Uzantý okuma hatasý %s"
+110="Dosya listesi iþlenemitor: "%s""
+111="Boþ dosya"
+113="Dosya biçimi algýlanamýyor\nÝkili döküm gösretilir"
+114="MS Office modül bu dosya türünü desteklemiyor"
+115="Bilinmeyen resim biçimi"
+116="Bilinmeyen multi medya biçimi"
+120="Arama dizini bulunamadý: "%s""
+121="Panoya metin kopyalanamýyor"
+122="Geçersiz onaltýlýk dize: "%s""
+123="Arama "%s":"
+124="Arama hatasý oluþtu"
+125="Metin seçili deðil"
+126="Bu dosyada EXIF bilgileri yok"
+127="Pano grafik veya metin içermiyor"
+129="Önceki/Sonraki sayfa\nGüncel sayfa: %d of %d"
+130="Bu dosya türü için metin dönüþtürücü kullanýlabilinir\nMetin dönüþtürmek için týklayýn"
+
+151="Araç yürütülemiyor:\n"%s""
+152="Kayýr defterinde gezgin entegrasyonu seçeneði uygulanmýyor. Yönetici olarak bu uygulamayý çalýþtýrmayý deneyin."
+153="Ekli dosya."
+154="e-posta gönderilemiyor (MAPI hatasý)"
+155="Belge metin biçimine dönüþtürülemiyor"
+156="Geçici dosya oluþturulamýyor"
+
+200="özel durum eklentiri "%s" fonksiyonu "%s""
+201=" "%s"eklentisi kaldýrýlamýyor"
+202="belirtilmemiþ ana form eklentileri yüklenemitor"
+
+203="Bu arþiv desteklenmeyen eklenti içerir (%s)"
+204="Bu arþiv eklentisi içerir:\n"%s".\n\nUniversal Viewer içinde yüklemek istermisiniz?"
+
+209="Aþaðýdaki eklentiler eklendi:\n\n%s\nAþaðýdaki eklentiler güncellendi:\n\n%s"
+210="Aþaðýdaki eklentiler eklendi:\n\n%s\nAþaðýdaki eklentiler yüklü ve ekli deðil:\n\n%s"
+211="(yok)\n"
+212="Kaynak dosya/klasör adý geçerli deðil"
+213="Seçilen Total Commander çalýþtýrýlabilir adý geçerli deðil"
+214="(bulunamadý)"
+215=" "%s" arþvi açýlmaz "%s" eklentiler klasörüne"
+216=" "%s" arþiv eklentisi bulunamýyor"
+
+250="Bu klasördeki son dosyadýr. Ýlk dosyaya git?"
+251="Bu klasördeki ilk dosyadýr. Son dosyaya git?"
+252="Mevcut dosya "%s" klasöründe bulunamadý. Ýlk dosyaya git?"
+253="Geçerli klasör boþ. Baþka bir dosyaya geçemez."
+254="Bu klasör tek dosyadýr. Baþka bir dosyaya geçemez."
+255="Bu listedeki son dosyadýr.Ýlk dosyaya git?"
+256="Bu listedeki ilk dosyadýr. Son dosyaya git?"
+257=" "%s" klasörü boþ deðil"
+
+260="Dosya sil"
+261=" "%s" dosyasýný Geri Dönüþüm Kutusuna taþýmak istiyormusunuz?"
+262=""%s" silmek istiyormusunuz?"
+263=" "%s" silinemiyor"
+264=" "%s" dan "%s" ya kopyalanamýyor veya taþýnamýyor"
+
+301="%d bytes"
+302="%d KB"
+303="%d MB"
+304="%d GB"
+305="%d TB"
+306="%d klasöründeki  %d "
+307="%d listesindeki  %d "
+
+310="Klasörde baðlantý oluþturun:"
+311="Baðlantý oluþturulamýyor:"
+312="Baðlantý oluþturuldu:"
+
+313="Not: Kopyala/Taþý/sil/E-posta/Dönüþtürücü iþlemleri Navigasyon panel eklentisi gerektirir."
+314="MS Office kontrolü baþlatýlamýyor"
+315="(%s) dosya uzantýsý açýlmayacaklar listesindedir.\nYinede açýlsýnmý?"
+316=" "%s" dosyasý  %s yanlýþ uzantýlý.\nYeniden adlandýrýn?"
+317=" "%s" bu lisans anahtarý zaten atanmýþ"
+
+320=Kayýtlý uygulama
+321=Lisans anahtarý aktif deðil. Metin yada internet baðlantýsýný kontrol edin.
+322=kayýtlý
+323=%d gün sonra sona erer
+
+;Keys
+400="BkSp"
+401="Tab"
+402="Esc"
+403="Enter"
+404="Space"
+405="PgUp"
+406="PgDn"
+407="End"
+408="Home"
+409="Left"
+410="Up"
+411="Right"
+412="Down"
+413="Ins"
+414="Del"
+415="Shift+"
+416="Ctrl+"
+417="Alt+"
+
+[Captions]
+
+;FormViewUV
+100="&Dosya"
+101="&Aç..."
+102="&Güncelle"
+103="Kaydet/Farklý kaydet"
+104="&Kapat"
+105="Klasör aç"
+106="Yeni aç"
+107="&Listteyi Sil"
+108="e-posta ile gönder..."
+109="Dosyayý kopyala"
+110="&Yazdýr..."
+111="Yazdýr ve önizleme.."
+112="Sayfa &yapýsý..."
+115="Önceki dosya"
+116="&Sonraki dosya"
+117="&Sil..."
+118="Çýkýþ"
+119="E&xit"
+
+120="&Yeni dosyaya yapýþtýr"
+121="&Düzenle"
+122="&Kopyala"
+123="Tümünü seç"
+124="&Bul.."
+125="Sonrakini bul"
+126="&Git..."
+127="Tümünü farklý kopyala"
+128="Satýr seç"
+129="Dosya kopyala..."
+
+130="&Seçenekler"
+131="&1  Metin"
+132="&2  Ýkili (Sabit uzunluk)"
+133="&3  Hex"
+134="&4  Resim/Multimedya"
+135="&5  Ýnternet"
+136="&6  Unikod"
+137="&7  Eklentiler"
+138="&4  Resim"
+
+139="&Kýsým"
+140="Kopyala ve baðlantý"
+141="URL &baðlantýsý"
+142="&Vurgulu kelime"
+143="&Uygun pencere görüntüsü"
+144="&Çevrimdýþý tarama"
+145="&Herzaman üste"
+146="&Tam ekran"
+
+147="&Ayarlar..."
+148="Eklenti ayarlarý.."
+149="Özelleþtir&araç çubuðu.."
+
+150="&Görünüm"
+151="&Resim"
+152="Büyült"
+153="Küçült"
+154="Orjinal görüntü"
+
+155="&Yardým"
+156="&Hakkýnda.."
+
+157="Döndür &90"
+158="Döndür &270"
+159="&Gri tonlama"
+160="&Ters"
+161="Sadece uygun görüntüleri büyüt"
+162="Bilgi etiketi göster"
+163="&Merkezi görüntü"
+164="&Yakýnlaþtýrma"
+165="Uygun pencere görüntüsü"
+166=
+
+167="Öncekini bul"
+168="&Kodlama"
+169="Kodlama menüsü.."
+170="&Önceki kodlama"
+171="&Ýleri kodlama"
+172="&Basýlamaz karakter"
+173=
+174="Medya klasörü için pencere"
+175="Zaman göstergesini göster"
+
+176="Geri dön"
+177="Ýleri git"
+178="&Metin"
+179="&Ýnternet"
+
+180="Dosya yüklenemez(Menü dosyasýndan >Aç seçin)"
+
+181="&Araçlar"
+182="Yapýlandýrma ve kullanýcý araçlarý.."
+183="&Geliþmiþ"
+184="Manuel düzenleme ve yapýlandýrma dosyasý"
+185="Manuel düzenleme ve geçmiþ dosyasý"
+186="Pencere konumunu kayýt et"
+187="Dosya internet baðlantýsý."
+188="Uygun görüntü geniþliði"
+189="Uygun görüntü yüksekliði"
+
+219="Resim Efekti"
+220=
+221=
+222=
+223=
+224="Yatay çevir"
+225="Dikey çevir"
+226="180 derece döndür"
+227="&Tonlama"
+
+228="Ýngilizce Forum"
+229="Rusca Forum"
+230="Web baðlantýsý"
+231="&Ana sayfa"
+232="&E-posta"
+233="&Eklentiler"
+234="&Ýçindekiler"
+
+;imaj paneli
+235=Resim paneli
+236=Düzenle
+237=Dönüþtür
+238=Dönme:
+239=Efek:
+240=Dönüþtür:
+241=Dönüþtürme...
+242=Resim gösterme penceresi
+
+;FormViewOptions
+;(continues after 800)
+263="Yanlýþ uzantýlý resimleri yeniden adlandýrmayý öner"
+264="Pencere baþlýðý:"
+265="Tam yolu göster"
+266="Dosya ekraný"
+267="Baþlangýç görünüm modu:"
+268="Otomatik algýla"
+
+269="&Kenar ve satýr numaralandýrma..."
+270="Kenar ve satýr numaralarýný göster"
+271="&Sadece ilk kez:"
+272="KB dosya"
+273="Sadece bu dosya ve uzantýlarý için:"
+
+274="&Soldaki sýnýr"
+275="Hata mesajlarýný sesli uyar"
+276="&satýr numaralarýnýn üst sýnýrýný göster:"
+278="Adým (1: Herkez için göster):"
+279="Sonraki seçenekleri bulmak için onaylayýn"
+
+280="Çeþitli"
+281="Çöz .lnk dosya hedefleri"
+282="&Sayaç"
+283="Gizli dosyalarý göster"
+284="Pencere konumunu kaydet"
+285="Son açýlan dosyayý kaydet"
+286="Geçmiþ"
+287="Yazýcý"
+288="&Arayüz:"
+289="Aramayý kaydet"
+290="&Alt yazý:"
+291="Temizle"
+292="Temizle"
+
+300="Universal Viewer ayarlarý"
+301="Dosya uzantýlarý"
+302="Metin"
+303="Multimedya"
+304="Arayüz"
+305="Dosya türleri"
+306="Geliþmiþ"
+307="Kýsayollar"
+308="Yazý ve renkler"
+309="Otomatik yükle"
+
+310="&Metin:"
+311="&Resim:"
+312="&Medya:"
+313="Ýnternet:"
+314="&RTF:"
+
+315="Farklý yüzey rengi"
+316="Farklý arka plan rengi"
+
+317="Özel OEM yazý tipi kullanýn"
+318="Maksimum satýr uzunluðu"
+319="Sekme boyutu"
+320="&Yazý:"
+321="&Renkler:"
+322="Ýkili mod:geniþliði uydur"
+323="Ýkili mod:sabit geniþlik"
+324="&Arama sonuçlerý yukardan aþaðý"
+325="Arama seçimini metin olarak öner"
+326="Deðiþenleri dosyalarý otomatik yenile"
+327="Sona erenleri analiz et"
+328="&Yeniden yüklemede sesli uyar"
+329="&Metin ve panolarý otomatik kopyala"
+
+330="Resim etiket rengi"
+331="&Resimleri düzelt ve ölçeklendir"
+332="Resim arka plan rengi"
+333="Resimleri þeffaf göster"
+334="&Baþlangýçta otomatik oynat"
+
+335="&Kullanýcý dili:"
+336="Gezinti kýsayolunu içerik menüsünde göster"
+337="Araç çubuðunu göster"
+338="Görünümde kenarlarý göster"
+339="Tam ekran kýsayolunu araç çubuðunda göster"
+
+340="Kamut"
+341="Kýsayol"
+342="&Kýsayol:"
+
+343="Menüde simgeleri göster"
+344="Menüyü göster"
+345="Son dosya listesini kaydet"
+346="&Sadece tek bir öðeye izin ver"
+347="Durum çubuðunu göster"
+348="Navigasyon panelini göster"
+349="Bilinmeyen dosyalarý açmadan önce onay iste"
+
+;Buttons
+350="Onay"
+351="Ýptal"
+352="Bul"
+353="Kapat"
+354="Ata"
+355="Yardým"
+356="kapat-aç (Reset)"
+
+;Options dialog
+360="Metin Dönüþtürücü:"
+361="Metin dönüþtürücüyü iþlem sýrsýnda göster"
+362="Son kullanýlan dosyayý aç"
+363="RAW resmi"
+
+364="&Ses sürücüsü:"
+365="&Video sürücüsü:"
+366="EXIF göre otomatik döndür"
+
+;FormViewOptionsText
+380="&Otomatik algýlama"
+381="&Otomatik algýlanan metin dosyasý"
+382="Ýlk önce"
+383="KB"
+384="&Maksimum bayut:"
+385="KB (0: sýnýrsýz limit)"
+386="Otomatik algýla ve OEM kodla"
+387="Otomatik algýla ve UTF-8 kodla"
+
+;FormViewGoto
+400="Git"
+401="Yani pozisyon"
+402="&Yüzde (%)"
+403="&Farklý baský"
+404="&Çoklu baský"
+405="Baþlangýþ seç"
+406="Bitiþi seç"
+407="&Satýr numarasý"
+408="Kutu adý girin örneðin A10:"
+409="Sayfa numarasý girin:"
+
+;FormViewAbout
+410="Hakkýnda"
+411="Sürüm"
+412="Kullanýcý kredisi:"
+413="Kayýtlý:"
+414="Denem sürümü (%d gün kaldý)"
+416="Lisans sözleþmesi"
+417="Uygulamayý kaldýrmak için Baþlat menüsü - Programlar- Universal Viewer - "Uninstall" çalýþtýrýn."
+
+;FormViewFindText
+420="Ara"
+421="&Metin bul:"
+422="&Kelimenin tamamýný"
+423="&Hassas durum"
+424="&Çok satýrlý düzenli ifade"
+425="Farklý dize"
+426="&Düzenli ifade"
+427=" (ütüphane kullanýlmýyor)"
+428="Seçenekler"
+429="Yön"
+430="&Ýleri"
+431="&Geri"
+432="Köken"
+433="Forum imleçi"
+434="Mevcut sayfa"
+435="&Tüm dosya"
+436="Tüm oluþumlarý iþaretle"
+
+;FormPluginsOptions
+500="Eklentileri yapýlandýr"
+501="Yüklü eklentiler"
+502="&Ekle..."
+503="&Kaldýr"
+504="&Düzenle..."
+505="&Yukarý"
+506="&Aþaðý"
+507="&Yapýlandýr.."
+510="Ýsim"
+511="Dizin tespit"
+512="Dosya adý"
+520="Ýç izleyiciler eklentilerden yüksek önceliðe sahiptir"
+521="Eklentileri %Commander_Path% ortam deðiþkeni dosyasýna kaydet"
+524="Eklentiler ile çalýþmayý önlemek için kýsayol ekle"
+
+;FormPluginsAdd
+530="Eklenti kur"
+531="Ýçe aktarma ayarlarý fromu &Total Commander"
+532="klasördeki tüm eklentileri yükleyin"
+533="&eklentinin güncelini kurunuz"
+534="Eklentileri arþivden kurunuz"
+537="TC &çalýþtýrýlabilir dosya:"
+538="TC yapýlandýrma dosyasý:"
+539="&Dosya:"
+540="&Dizin:"
+541="Uygulamalar (*.exe)|*.EXE"
+542="Ini dosyalarý (*.ini)|*.INI"
+543="Eklentiler (*.wlx)|*.WLX"
+544="Sýkýþtýrýlmýþ arþiv dosyasý (*.zip,*.rar)|*.ZIP;*.RAR"
+
+;FormPluginsEdit
+550="Eklenti ayarlarý"
+551="Dosya adý:"
+552="&Dizin belirle:"
+553="Varsayýlan"
+554="Yapýlandýrma dosyasý:"
+
+;FormViewToolbar
+560="Araç çubuðunu özelleþtir"
+561="Mevcut simgeler:"
+562="Seçili simgeler:"
+563="&Ekle ->"
+564="<- &Kaldýr"
+565="Reset"
+566="(Ayýrýcý)"
+
+;FormViewToolList
+600="Kullanýcý araçlarý listesi"
+601="Kullanýcý araçlarý özellikleri"
+602="Baþlýk:"
+603="Uygulama:"
+604="Parametre:"
+605="Paramete ve makro (parametre listesine makro eklemek için çift týklayýn):"
+606="Gerçekleþtirilecek eylemler:"
+607="uygulama çalýþtýrmadan önce:"
+608="uygulama çalýþtýrýldýktan sonra:"
+609="Ýpucu ekele '?' parametreleri onaylamak için ilk karakter olarak."
+
+;FormViewRename
+650="Dosyayý yeniden adlandýr"
+651="yeniden adlandýr..."
+652="&Yeniden adlandýr:"
+653="Klasörü kopyala..."
+654="Klasörü taþý..."
+
+;FormReg
+700="Kayýt"
+701="&Kaydet..."
+702=
+703=
+704=
+705=
+706=e-posta yoluyla aldýðýnýz lisans anahtarýný giriniz. Lisans anahtarýküçük büyük harfe duyarlýdýr. Kopyala yapýþtýr yapmanýzý tavsiye ederiz.
+707=&Etkinleþtirin
+708=&Lisans anahtar alýn
+
+;FormPrintPreview
+710="Boþluk"
+711="&Sol:"
+712="&Sað:"
+713="&Yukarý:"
+714="&Aþaðý:"
+715="mm"
+716="cm"
+717="inches"
+718="kontrast"
+719="&kontrast deðeri:"
+
+720="Baský ön izleme"
+721="Yazdýr"
+722="Seçenekler"
+723="Önizleme"
+724="Metin alt bilgi"
+725="Geçici bit eþlem ayarlanýyor."
+726="Konum"
+
+727="&Uygun biçim:"
+728="Normal"
+729="En uygun"
+730="Geniþ"
+731="Özel boyut"
+732="&Yükseklik:"
+733="&Geniþlik:"
+734="&Orantýlý"
+735="Yazý..."
+736="Yazýcý kur..."
+
+;FormViewOptionsImages
+740="&Grafik kütüphanesi"
+741="&Ggrafik yüklemek için IrfanView/XnView kullan"
+742="&Uygulama dosyasý adý:"
+743="&Dosya uzantýsý:"
+744="IrfanView/XnView dahili uygulamalardan daha yüksek önceliðe sahiptir"
+745=" Kütüphaneye &JPEG grafik yüklemek için "IJL15.dll" kullanýmý"
+746="Dosya uzantýlarý:"
+
+;FormNavColumns
+780="Daha fazla..."
+781="Sütun ayarlarý"
+782="Bu klasörde sütünlarý görünür yapmak istiyorum seçeneðini kontrol edin . Sütunlarý yeniden düzenlemek için sürükleyin býrakýn."
+783="Seçilen sütun olmalýdýr "
+784="piksel geniþliði"
+785="Güncelleþtirme"
+
+;FormViewOptions..
+800="&Simgeler:"
+801="(Varsayýlan)"
+802="(Þaplonu kaydet..)"
+803="&Tekrar çalma"
+
+805="Dosya sýrala:"
+806=" (desc.)"
+807="Dosya adý"
+808="Uzat"
+809="Oluþtur"
+810="Deðiþtir"
+811="Biçim için özel pencere yüksekliði kullan"
+812="Yoksay listesi:"
+813="Vurgulu arama"
+
+814="Modern medya oynatýcýsý kullan"
+815="Devre dýþý býrakýlýrsa, eski tarz oynatýcý kullanýlýr.Ayrýca "Dosya türleri" sekmesinde "Medya" iþaretini kaldýrarak eski tarz oynatýcý devre dýþý býrakabilir"
+
+816=Tam ekram modunda öðeler
+817=Menü çubuðu
+818=Araç çubuðu
+819=Medya oynatýcý izleme çubuðu
+820=Medya oynatýcý düðme çubuðu
+821=Durum çubuðu
+822=Medya oynatýcý imleçi
+
+830=Kelime/RTF seçenekleri
+831=Varsayýlan düzen:
+832=Varsayýlan yakýnlaþtýrma
+833=Özel yakýnlaþtýrma deðeri %:
+834=Taslak düzeni
+835=Web düzeni
+836=Baský düzeni
+
+;FormViewEXIF
+880="EXIF okuyucu"
+881="EXIF göster..."
+883="Etiket"
+884="Özellik"
+885="Deðer"
+890=" IFD 0 "
+891=" Alt IFD "
+892=" Birlikte çalma. IFD "
+893=" Oluþturanýn notu "
+894=" IFD 1 "
+895=" Thumbnail "
+
+;Preview
+900=Ýlk sayfa
+901=Önceki sayfa
+902=Sonraki sayfa
+903=Son sayfa
+904=Geçerli sayfa
+905=Yakýnlaþtýrma deðeri
+906=Tüm sayfa
+907=Uygun geniþlik
+908=Özel..
+
+;Media
+910=Oynat/Beklet
+911=Beklet
+912=Durdur
+913=Ýleri sar
+914=Orijinal
+915=Stretch
+916=Ses#%d
+917=Sezsiz
+918=Ses
+919=Boy oraný
+920=Ses kanalý
+921=Açýlýþ resmi...
+922=Geri 10 saniye
+923=Geri 1 dakkika
+924=Geri 5 Dakika
+925=Ýleri 10 saniye
+926=Ýleri 1 dakkika
+927=Ýleri 5 Dakika
+928=Süre (hh:mm:ss):
+929=Mevcut görünümü kaydet...
+
+
+
+[Nav]
+
+200="Navigasyon Paneli"
+201="Üst seviye"
+202="&Görünüm"
+203="&Yardým"
+204="&Kayýt..."
+205="&Hakkýnda..."
+206="&Dosya:"
+207="&Sürücüler:"
+
+210="Boþ klasör"
+211="&Ýkonlar"
+212="&Liste"
+213="&Detaylar"
+214="&Thumbnails"
+215="Ytay düzen"
+216="Gizli dosyalarý göster"
+217="Görüntüleyiciyi sabitle"
+218="Yol çubuðunu göster"
+219="Sürücü çubuðunu göster"
+220="Özel klasörleri göster"
+221="Durum çubuðunu göster"
+222="Klasör görüntüleyici açýk"
+
+
+
+
+
+
+
+

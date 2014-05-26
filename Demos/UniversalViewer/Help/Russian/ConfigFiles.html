@@ -1,0 +1,37 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <title>Файлы настроек</title>
+  <link href="Main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h3>
+  Файлы настроек
+</h3>
+<hr>
+
+<p>
+Программа имеет несколько файлов настроек:
+<ul>
+<li> <i>Portable.ini</i> -- задает режим портабельности программы;
+<li> <i>Viewer.ini</i> -- основной файл настроек;
+<li> <i>ViewerHistory.ini</i> -- различные истории: позиция окна, строки поиска и т.д.;
+<li> <i>lsplugin.ini</i> -- настройки некоторых Lister-плагинов.
+</ul>
+
+<p>
+Файлы настроек ищутся в следующих папках:
+<ol>
+<li> Папка, заданная через ключ комстроки /Ini;
+<li> Папка UV, если в ней существует файл <i>Portable.ini</i>;
+<li> Папка, записанная в реестре в <i>"HKEY_CURRENT_USER\Software\UniversalViewer"</i>;
+<li> Папка, записанная в реестре в <i>"HKEY_LOCAL_MACHINE\Software\UniversalViewer"</i>;
+<li> Низкий приоритет: папка по умолчанию <i>"%AppData%\ATViewer"</i>.
+</ol>
+
+<p>
+Таким образом, чтобы сделать <b>переносной вариант</b> UV,
+необходимо создать файл <i>Portable.ini</i> в папке UV.
+
+</body></html>

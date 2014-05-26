@@ -1,0 +1,611 @@
+[About]
+
+Version=6.1
+Author=J. Hurtig
+Homepage=http://www.uvviewsoft.com
+Email=
+
+[Messages]
+
+101="Tiedostoa ei löydy: "%s""
+102="Ei voida avata tiedostoa: "%s""
+104="Ei voida ladata tiedostoa: "%s""
+105="Ei voida lukea tiedostoa: "%s""
+106="Ei voida alustaa %s"
+107="Kansiota ei löydy: "%s""
+
+108="Tuntematon formaatti\nKlikkaa tästä näyttääksesi binäärivedoksen\n(Tämä viesti voidaan sammuttaa Asetuksista valintaikkunasta)"
+109="Lukuvirhe siirtymässä %s"
+110="Ei voida käsitellä tiedostolistaa: "%s""
+111="Tiedosto on tyhjä"
+113="Ei havaita tiedostomuotoa\nBinäärivedos on näkyvillä"
+114="MS Office-moduuli ei voi käyttää tätä tiedostotyyppiä"
+115="Tuntematon kuvaformaatti"
+116="Tuntematon multimediaformaatti"
+120="Ei löydy etsittävää merkkijonoa: "%s""
+121="Ei voida kopioida tekstiä leikepöydälle"
+122="Kelpaamaton Hex merkkijono: "%s""
+123="Etsitään "%s":"
+124="Tapahtui etsintävirhe"
+125="Tekstiä ei ole valittu"
+126="EXIF tietoja ei ole tässä tiedostossa"
+127="Leikepöydällä ei ole grafiikka- tai tekstitietoja"
+129="Edellinen/Seuraava sivu\nNykyinen sivu: %d / %d"
+130="Tekstimuokkain on saatavilla tähän tiedostotyyppiin\nKlikkaa tästä nähdäksesi teksti"
+
+151="Ei voida käyttää työkalua:\n"%s""
+152="Ei voida käyttää selaimen integrointiasetusta rekisteriin. Yritä käynnistää sovellutus järjestelmänvalvojana."
+153="Tiedostoliite."
+154="Ei voida lähettää sähköpostitse liitteenä (MAPI virhe)"
+155="Ei voida konvertoida dokumenttia tekstiformaattiin"
+156="Ei voida luoda väliaikaistiedostoa"
+
+200="Laitteistokeskeytys lisäosassa "%s" funktiossa "%s""
+201="Lataamaton lisäosa "%s""
+202="Ei voida ladata lisäosia, vanhempi formaatti ei ole määritelty"
+
+203="Tämä arkisto sisältää tukemattoman lisäosan (%s)"
+204="Tämä arkisto sisältää lisäosan:\n"%s".\n\nHaluatko asentaa sen Universal Vieweriin?"
+
+209="Seuraavat lisäosat lisättiin:\n\n%s\nSeuraavat lisäosat päivitettiin:\n\n%s"
+210="Seuraavat lisäosat lisättiin:\n\n%s\nSeuraavat lisäosat on jo asennettu mutta ei lisätty:\n\n%s"
+211="(ei mitään)\n"
+212="Lähdetiedoston/kansion nimi ei kelpaa"
+213="Valittu Total Commander EXE-tiedoston nimi ei kelpaa"
+214="(Ei löydy)"
+215="Ei voida purkaa arkiston "%s" lisäosia kansioon "%s""
+216="Lisäosaa ei löydy arkistosta "%s""
+
+250="Tämä on viimeinen tiedosto kansiossa. Hyppää ensimmäiseen tiedostoon?"
+251="Tämä on ensimmäinen tiedosto kansiossa. Hyppää viimeiseen tiedostoon?"
+252="Nykyistä tiedostonimeä "%s" ei löydy kansiosta. Hyppää ensimmäiseen tiedostoon?"
+253="Nykyinen kansio on tyhjä. Ei voida hypätä toiseen tiedostoon."
+254="Tämä on ainoa tiedosto kansiossa. Ei voida hypätä toiseen tiedostoon."
+255="Tämä on viimeinen tiedosto luettelossa. Hyppää ensimmäiseen tiedostoon?"
+256="Tämä on ensimmäinen tiedosto luettelossa. Hyppää viimeiseen tiedostoon?"
+257="Kansio on tyhjä: "%s""
+
+260="Poista tiedosto"
+261="Haluatko siirtää "%s" Roskakoriin?"
+262="Haluatko poistaa "%s"?"
+263="Ei voida poistaa "%s""
+264="Ei voida kopioida tai siirtää "%s" paikkaan "%s""
+
+301="%d tavut"
+302="%d KB"
+303="%d MB"
+304="%d GB"
+305="%d TB"
+306="%d on kansiossa %d"
+307="%d on luettelossa %d"
+
+310="Luo linkki kansioon:"
+311="Ei voida luoda linkkiä:"
+312="Linkki luotu:"
+
+313="Huomautus: Kopioi/Siirrä/Poista/Sähköposti/Konvertteri/MS-Office -alustamistoiminnot edellyttävät että navigointipaneelin lisäosa on rekisteröity (tai kokeiluversio). Katso "Navigointipaneelin lisäosa" ohjeen aiheet."
+314="Ei voida alustaa MS Office control.\n\nNote: MS Office toiminta edellyttää että navigointipaneelin lisäosa on rekisteröity (tai kokeiluversio). Katso "Navigointipaneelin lisäosa" ohjeen aiheet."
+315="Tämä tiedostolaajennus (%s) on sivuutettujen luettelossa. Avaa silti?"
+316="Tiedostossa "%s" on %s väärä laajennus.\nNimeä?"
+317="Tämä näppäin on jo liitetty "%s""
+
+320=Application registered
+321=Ei voida aktivoida koodia. Tarkista teksti ja internetyhteys.
+322=rekisteröity
+323=%d päivää jäljellä
+
+;Keys
+400="BkSp"
+401="Tab"
+402="Esc"
+403="Enter"
+404="Space"
+405="PgUp"
+406="PgDn"
+407="End"
+408="Home"
+409="Vasen nuoli"
+410="Ylänuoli"
+411="Oikea nuoli"
+412="Alanuoli"
+413="Ins"
+414="Del"
+415="Shift+"
+416="Ctrl+"
+417="Alt+"
+
+[Captions]
+
+;FormViewUV
+100="Tiedosto"
+101="Avaa..."
+102="Uudelleenlataus"
+103="T&allenna nimellä..."
+104="Sulje"
+105="Avaa kansio..."
+106="Avaa viimeisimmät"
+107="Tyhjennä luettelo"
+108="Läh&etä sähköpostitse liitteenä..."
+109="Kopioi tiedostonimi"
+110="&Tulosta..."
+111="Tulostuksen esikatselu..."
+112="Sivun a&setukset..."
+115="Edellinen tiedosto"
+116="Seuraava tiedosto"
+117="Poista..."
+118="Om&inaisuudet..."
+119="Poistu"
+
+120="Liitä uusi tiedosto"
+121="Muokkaa"
+122="Kopioi"
+123="Valitse k&aikki"
+124="Etsi..."
+125="Etsi &seuraava"
+126="Siirry..."
+127="Kopioi &hex:"
+128="Val&itse rivi"
+129="Kopioi t&iedostoon..."
+
+130="Valinnat"
+131="&1  Teksti"
+132="&2  Binääri (mukautettu pituus)"
+133="&3  Hex"
+134="&4  Kuva/Multimedia"
+135="&5  Internet/Office"
+136="&6  Unicode"
+137="&7  Lisäosat"
+138="&4  Image"
+
+139="Toi&mintatila"
+140="Kopioi &linkki"
+141="URL korostettu"
+142="Vierityspalkki"
+143="Sovita kuvat ikkunaan"
+144="Selaus &Offline tilassa"
+145="&Aina päällimmäisenä"
+146="Koko näyttö"
+
+147="Asetukset..."
+148="&Lisäosien asetukset..."
+149="Mukautettu &työkalupalkki..."
+
+150="Näytä"
+151="&Multimedia"
+152="Zoomaa s&isään"
+153="Zoomaa ul&os"
+154="Alkuperäinen koko"
+
+155="O&hje"
+156="Tietoj&a..."
+
+157="Käännä oikealle"
+158="Käännä vasemma&lle"
+159="Mustavalkoinen"
+160="&Negatiivi"
+161="Sovita vain isot kuvat"
+162="Näytä t&iedot teksti"
+163="Keskitä kuva"
+164="&Zoomaa"
+165="Sovita ikkuna kuvaan"
+166="Toista/Keskeytä"
+
+167="Etsi edellinen"
+168="Koodaus"
+169="Koodaukset valikko..."
+170="Edellinen koodaus"
+171="Seuraava koodaus"
+172="Ei tulostettavat merkit"
+173="&Tekstin kursori"
+174="Sovita ikkuna median kokoon &z"
+
+176="Siirry taaksepäin"
+177="Siirry eteenpäin"
+178="&Teksti"
+179="&Internet"
+
+180="Tiedostoa ei ole ladattu"
+
+181="&Työkalut"
+182="Aset&ukset käytettäville työkaluille..."
+183="Edistyneet"
+184="Manuaalinen asetustiedoston muokkaus"
+185="Manuaalinen &historiatiedoston muokkaus"
+186="Tallenna ikkunan sijainti"
+187="Luo lin&kki tiedostoon..."
+
+219="Kuva&efektit"
+220="Toisto"
+221="Lisää äänenvoimakk&uutta"
+222="Vähennä äänenvoimakkuutta"
+223="Vaimenna"
+224="Pystytasossa"
+225="Vaakatasossa"
+226="Käännä &180"
+227="&Seepia"
+
+230="&Web linkit"
+231="Kotisivu"
+232="Palaute"
+233="Lisäosat"
+234="Sisältö"
+
+;img panel
+235=Kuvapaneeli
+236=Muokkaa
+237=Muunna
+238=Käännä:
+239=Efektit:
+240=Formaattiin:
+241=Tallenna...
+242=Näytä kuva&paneeli
+
+;FormViewOptions
+;(continues after 800)
+263="Ehdota uudelleennimeämisestä kuvien vääriin laajennuksiin"
+264="Ikkunan otsikko:"
+265="Näytä koko polku"
+266="Näytä vain tiedostonimi"
+267="&Valinnat käynnistettäessä:"
+268="Havaitse automaattisesti"
+
+269="Reunapalkki ja rivinumerot..."
+270="Näytä rivi&numerot reunapalkissa"
+271="Vain ensimmäiset:"
+272="KB tiedostossa"
+273="Vain nämä tiedostolaaj&ennukset:"
+
+274="Reunapalkki vasemmalla"
+275="Älä näytä virh&eviestejä, pelkästään piippaus"
+276="Rivinumeroiden eni&mmäismäärä:"
+278="Riveittäin (1: kaikilla riveillä):"
+279="Älä vahvista "Etsi seuraava" asetuksia"
+
+280="Yleiset"
+281="Jaa .lnk &tiedostojen kohteet"
+282="Toistokertaa"
+283="Näytä piilotetut tiedostot"
+284="Tallenna ikkunan sijainti"
+285="Tallenna ede&lliseen työkansioon"
+286="Historia"
+287="Tulosta"
+288="Ulkoinen soitin:"
+289="Tallenna hakuhi&storia"
+290="Alatunnisteen &fontti:"
+291="Tyhj&ennä"
+292="Tyhjennä"
+
+300="Universal Viewer asetukset"
+301="Tiedostolaajennukset"
+302="Valinnat"
+
+303="Multimedia"
+304="Ulkoasu"
+305="Tiedostotyypit"
+306="Edistyneet"
+307="Pikanäppäimet"
+308="Fontit ja värit"
+309="Lataa automaattisesti uudelleen"
+
+310="&Teksti:"
+311="Kuvat:"
+312="&Media:"
+313="I&nternet:"
+314="&RTF:"
+
+315="Hex väri"
+316="Hex tausta"
+
+317="Käytä erityistä &OEM fonttia"
+318="Rivin pituus enimmillään"
+319="Tab koko"
+320="&Fontti:"
+321="Taustaväri:"
+322="Binäärimuoto: sov&itettu leveys"
+323="Binäärimuoto: mukautettu leveys"
+324="Et&sintätulos: rivit ylhäältä"
+325="Ehdota valintaa etsittäessä tekstiä"
+326="Lataa uudelleen tiedoston muuttuessa"
+327="Muutos uudelleen la&tauksen jälkeen"
+328="Piippaus uudelleen ladattaessa"
+329="Kopioi teksti &automaattisesti Leikepöydälle"
+
+330="kuvaetiketin väri"
+331="Säilytä kuvan kokoarvot skaalattaessa"
+332="Kuvan taustaväri"
+333="Näytä kuvan läpinäkyvyys"
+334="&Automaattinen toisto kerran"
+
+335="Kie&livalinta:"
+336="Näytä S&elaimen yhteysvalikon kohteet"
+337="Näytä &Työkalupalkki"
+338="Näytä reunukset katselualueella"
+339="Salli työkalupalkki k&oko näytöllä"
+
+340="Komento"
+341="Pikanäppäin"
+342="Pikanäppäin:"
+
+343="Näytä kuvakkeet valikossa"
+344="Näytä valikko"
+345="Tallenna avatut tiedostot "Avaa viimeisimmät" valikkoon
+346="S&alli vain yksi instanssi"
+347="Näytä Tilarivi"
+348="Näytä &Navigointipaneeli"
+349="Näytä vahvist&us ennen havaitsemattomien tiedostojen avausta"
+
+;Buttons
+350="OK"
+351="Ohita"
+352="Etsi"
+353="Sulje"
+
+360="Tekstimuokkain:"
+361="Näytä tekstimuokkaimen kehote aina päällimmäisenä"
+362="Avaa käynnistettäessä viimeksi käytetty tiedosto"
+363="RAW kuvat"
+
+;FormViewOptionsText
+380="Havaitse &automaattisesti"
+381="H&avaitse automaattisesti tekstitiedostot"
+382="Pi&enin koko"
+383="KB"
+384="Enim&mäiskoko:"
+385="KB (0: ei rajoitusta)"
+386="Havaitse &OEM koodaus automaattisesti"
+
+;FormViewGoto
+400="Siirry"
+401="Uusi sijainti"
+402="&Prosentti (%)"
+403="&Hex korvaus"
+404="&Desimaalin korvaus"
+405="Valinnan aloitu&s"
+406="Valinnan lop&etus"
+407="Rivinumero"
+408="Kirjoita solun nimi, esim. A10:"
+
+;FormViewAbout
+410="Tietoja"
+411="Versio"
+412="Luotettavat komponentit:"
+413="Rekisteröity:"
+414="Kokeiluversio (%d päivää jäljellä)"
+416="Lisenssisopimus"
+417="Voit poistaa sovelluksen avaamalla Käynnistä valikosta - Ohjelmat - Universal Viewer - ja "Uninstall" klikkaamalla."
+
+;FormViewFindText
+420="Etsi"
+421="E&tsi teksti:"
+422="Vain kokonaiset sanat"
+423="Sama merkkikoko"
+424=""&Multiline regular expression"
+425="He&x merkkijono"
+426="Säännöllinen lauseke"
+427=" (ei kirjastoa käytössä)"
+428="Asetukset"
+429="Sijainti"
+430="Alusta loppuun"
+431="Lopusta alkuun"
+432="Alkuperä"
+433="Kurs&orista"
+434="Nykyiseltä sivulta"
+435="Koko tiedostosta"
+436="Merkitse k&aikki tapahtumat"
+
+;FormPluginsOptions
+500="Lisäosien kokoonpano"
+501="Asennetut lisäosat"
+502="Lisää..."
+503="Hävitä"
+504="Muokkaa..."
+505="Ylös"
+506="Alas"
+507="Asetukset..."
+510="Nimi"
+511="Havaittu merkkijono"
+512="Tiedostonimi"
+520="Lisäosat ovat etusijalla sisäisessä selaimessa"
+521="Tallenna lisäosien tiedostonimien kanssa %Commander_Path% ympäristömuuttuja"
+524="Lisää 'Alt' näppäin valikon pikavalintoihin välttääksesi lisäosien ristiriidat"
+
+;FormPluginsAdd
+530="Asenna lisäosat"
+531="Tuo asetukset &Total Commanderista"
+532="Asenna kaikki lisäosat kansiosta"
+533="Asenna yksittäinen lisäosa"
+534="Asenna lisäosat &arkistosta"
+537="TC &EXE-tiedosto:"
+538="TC kokoonpanotiedosto:"
+539="Tiedosto:"
+540="Kansio:"
+541="Sovellutukset (*.exe)|*.EXE"
+542="Ini -tiedostot (*.ini)|*.INI"
+543="Lisäosat (*.wlx)|*.WLX"
+544="Arkistot (*.zip,*.rar)|*.ZIP;*.RAR"
+
+;FormPluginsEdit
+550="Lisäosien asetukset"
+551="Tiedostonimi:"
+552="Havaittu merkkijono:"
+553="Oletus"
+554="Kokoonpanotiedosto:"
+
+;FormViewToolbar
+560="Mukautettu työkalupalkki"
+561="Saat&avilla olevat painikkeet:"
+562="Va&litut painikkeet:"
+563="Lisää ->"
+564="<- Hävitä"
+565="A&seta"
+566="(Erotin)"
+
+;FormViewToolList
+600="Käytettävien työkalujen luettelo"
+601="Käytettävien työkalujen ominaisuudet"
+602="Otsikko:"
+603="Sove&llutus:"
+604="Pa&rametrit:"
+605="Parametrit ja makrot (tuplaklikkaa lisätäksesi makron parametriluetteloon):"
+606="Suoritustoiminnot:"
+607="Sovellutus toteuttamista ennen:"
+608="Sovellutus toteuttamisen jälkeen:"
+609="Vihje: Lisää '?' ensimmäinen merkki vahvistaessasi parametrit."
+
+;FormViewRename
+650="Nimeä tiedosto"
+651="Nimeä..."
+652="Nimeä:"
+653="Kopioi kansioon..."
+654="Siirrä kansioon..."
+
+;FormViewReg
+700="Rekisteröity sovellutus"
+701="&Rekisteröi..."
+702="Rekisteröintitiedot"
+703="&Nimi:"
+704="&Koodi:"
+705="Liitä"
+706=Kirjoita lisenssiavain jonka olet saanut sähköpostissa. Avaimen kirjainkoko on merkitsevä. Suosittelemme (Ctrl+V) kopioi, liitä menettelyä avaimen lisäämiseksi. l. Klikkaa Aktivoi kun olet lisännyt avaimen.
+707=&Aktivoi
+708=Anna koodi &G
+
+;FormPrintPreview
+710="Marginaalit"
+711="Vasen:"
+712="Oikea:"
+713="Yläreuna:"
+714="Alareuna:"
+715="mm"
+716="cm"
+717="tuumat"
+718="Gamma"
+719="&Gamma-arvo:"
+
+720="Tulostuksen esikatselu"
+721="Tulosta"
+722="Asetukset"
+723="Esikatselu"
+724="Alatunnisteen teksti"
+725="Ei voida antaa käyttöön väliaikaista bitmap formaattia."
+726="Sijainti"
+
+727="Kuvakoko:"
+728="Normaali"
+729="Paras sovitus kuvasuhteella"
+730="Venytä"
+731="Mukautettu koko"
+732="Korkeus:"
+733="Leveys:"
+734="Kuvasuhde"
+735="Fo&ntti..."
+736="Tulostusa&setukset..."
+
+;FormViewOptionsImages
+740="&Graafinen kirjasto"
+741="Käytä IrfanView/XnView ohjelmia grafiikan latauksessa"
+742="Sovellutuksen tiedostonimi:"
+743="Tiedoston laajennukset:"
+744="IrfanView/XnView on tärkeämpiä kuin sisäinen kirjasto"
+745="Käytä "IJL15.dll" kirjastoa &JPEG grafiikan lataukseen"
+746="Tiedoston &laajennukset:"
+
+;FormNavColumns
+780="Lisää..."
+781="Sarakkeiden asetukset"
+782="Tarkista sarakkeet jotka haluat näkyvän tässä kansiossa. Vedä ja pudota järjestääksesi sarakkeet uudelleen."
+783="Valitut sarakkeet on "
+784="pikselikoko"
+785="Päivitys"
+
+;FormViewOptions..
+800="Kuvakkeet:"
+801="(Oletus)"
+802="(Tallenna malli...)"
+803="Jatkuva toisto"
+
+805="Tiedo&ston lajittelu:"
+806=" (desc.)"
+807="Tiedostonimi"
+808="Laajennus"
+809="Luotu"
+810="Muokattu"
+811="Käytä mukautettua ikkunan korkeutta muotoon"
+812="Sivuuta &luettelo:"
+813="Korostettu haku"
+
+;FormViewEXIF
+880="EXIF lukija"
+881="Näytä E&XIF..."
+883="Tagi"
+884="Ominaisuus"
+885="Arvo"
+890=" IFD 0 "
+891=" Sub IFD "
+892=" Interop. IFD "
+893=" Tekijän huomautus "
+894=" IFD 1 "
+895=" Kuvake "
+;Preview
+900=Ensimmäinen sivu
+901=Edellinen sivu
+902=Seuraava sivu
+903=Viimeinen sivu
+904=Nykyinen sivu
+905=Zoomausarvo
+906=Koko sivu
+907=Sovita leveys
+
+;Media
+910=Toista/keskeytä
+911=Keskeytä
+912=Pysäytä
+913=Hyppää eteenpäin
+914=Alkuperäinen
+915=Venytä
+916=Audio#%d
+917=Vaimenna
+918=Voimakkuus
+919=Suhde
+920=Audiokanava
+921=
+922=Taaksepäin 10 s
+923=Taaksepäin 1 min
+924=Taaksepäin 5 min
+925=Eteenpäin 10 s
+926=Eteenpäin 1 min
+927=Eteenpäin 5 min
+928=Aika (hh:mm:ss):
+
+[Nav]
+
+200="Navigaattori"
+201="Yksi taso ylös"
+202="Näytä"
+203="O&hje"
+204="&Rekisteröi..."
+205="Tietoj&a..."
+206="Kansio:"
+207="Asemat:"
+
+210="Kansio on tyhjä"
+211="Kuvakkeet"
+212="&Luettelo"
+213="Yksityiskohdat"
+214="Kuvakkee&t"
+215="Asettelu vaakatas&ossa"
+216="Näytä piilotetut tiedostot"
+217="Dokumenttiselain"
+218="Näytä &polkupalkki"
+219="Näytä Asemapalkki"
+220="Näytä erikoi&skansiot"
+221="Näytä til&arivi"
+222="Avaa kansiot s&elaimessa"
+
+
+
+
+
+
+
+

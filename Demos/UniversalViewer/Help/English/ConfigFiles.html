@@ -1,0 +1,38 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <title>Configuration files</title>
+  <link href="Main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h3>
+  Configuration files
+</h3>
+<hr>
+
+<p>
+Application has several configuration files:
+<ul>
+<li> <i>Portable.ini</i> -- flag-file which sets portable mode;
+<li> <i>Viewer.ini</i> -- main configuration file;
+<li> <i>ViewerHistory.ini</i> -- various histories: window position, search strings etc;
+<li> <i>lsplugin.ini</i> -- configuration of some Lister plugins.
+</ul>
+
+<p>
+Config files are searched in the following locations:
+<ol>
+<li> Location specified in the command line "/Ini=" parameter;
+<li> UV folder, if <i>Portable.ini</i> file exists there;
+<li> Location stored in the registry under <i>"HKEY_CURRENT_USER\Software\UniversalViewer"</i>;
+<li> Location stored in the registry under <i>"HKEY_LOCAL_MACHINE\Software\UniversalViewer"</i>;
+<li> Lowest precedence: <i>"%AppData%\ATViewer"</i> folder.
+</ol>
+
+<p>
+To be sure that application is made <b>portable</b>,
+you need to create <i>Portable.ini</i> file in the app folder.
+
+</body>
+</html>

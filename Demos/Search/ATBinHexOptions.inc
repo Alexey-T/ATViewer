@@ -1,0 +1,2 @@
+{$define SEARCH}
+{$define HSCROLLBAR_WORKAROUND}

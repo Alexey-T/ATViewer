@@ -1,0 +1,387 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <title>FAQ - Frequently Asked Questions</title>
+  <link href="Main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h3>
+  FAQ - Frequently Asked Questions
+</h3>
+<hr>
+
+<p>
+<!------------------------------------------------------------>
+Q1: <a href="#Q1">How to integrate Universal Viewer into popular file managers?</a> <br>
+Q2: <a href="#Q2">I can't view DOC/XLS, ODT/ODS or PDF files...</a> <br>
+Q3: <a href="#Q3">What are the limits for files sizes?</a> <br>
+Q4: <a href="#Q4">What are security concerns when a link is opened in HTML page?</a> <br>
+Q5: <a href="#Q5">Can the Flash animation be played not in the full window?</a> <br>
+Q6: <a href="#Q6">Why some UTF-8 encoded texts are not shown?</a> <br>
+Q7: <a href="#Q7">Word/Excel documents are sometimes opened in a new window...</a> <br>
+Q8: <a href="#Q8">How to change the look of WMP 6.4 control?</a> <br>
+Q9: <a href="#Q9">When images are get from IrfanView/XnView, the animation doesn't work...</a> <br>
+Q10: <a href="#Q10">Does the program have issues with Unicode filenames?</a> <br>
+Q11: <a href="#Q11">How to view CHM files?</a> <br>
+Q12: <a href="#Q12">For Word files, I get message "Cannot init MS Office control"...</a> <br>
+<p>
+<hr>
+
+<!------------------------------------------------------------>
+<p>
+<a name="Q1"></a>
+<b>Q1: How to integrate Universal Viewer into popular file managers?</b>
+
+<p>
+<b>A:</b>
+
+<ul>
+<li><b>Windows Explorer</b>
+  <p>
+  In UV open "Options -- Configure" dialog, 1st tab, check the option "Show Explorer context menu item".
+  (Under Vista/Win7 you may need to run UV as Administrator.)
+  This will add UV item to Explorer context menu.
+
+<p>
+<li><b>Total Commander</b>
+  <p>
+  "Configuration -- Options" dialog, "Edit/View" tab, check "External Viewer" and enter path
+  to Viewer.exe into "Default:" field. If this path contains spaces, double-quote it first.
+  <p>
+  This will assign Viewer to F3 key.
+  <p>
+  Also you may create toolbar button to call Viewer with several files selected on TC file panel.
+  Drag Viewer.exe file onto TC toolbar empty space, new toolbar button will be created. Rigth-click it,
+  select Change and in the Parameters field enter "@%UL" (with quotes).
+
+<p>
+<li><b>FAR Manager</b>
+  <p>
+  "Options -- Viewer settings" dialog, check "Use for Alt+F3" and
+  enter path to Viewer.exe with additional macros into "Viewer command:" field:<br>
+  <font face="Courier">
+  "C:\Program Files\Universal Viewer\Viewer.exe" "!\!.!"
+  </font>
+  <p>
+  This will assign Viewer to Alt+F3 key.
+  <p>
+  Also you may pass to UV list of files selected on FAR file panel. To do this, change the value of
+  "Viewer command:" field like this: <br>
+  <font face="Courier">
+  "C:\Program Files\Universal Viewer\Viewer.exe" "@!@AF!"
+  </font>
+
+<p>
+<li><b>FreeCommander</b>
+
+  <p>
+  "Extras -- Settings" dialog, "Programs" tab,
+  enter path to Viewer.exe into "External viewer" field.
+  <p>
+  This will assign Viewer to Shift+F3 key.
+  <p>
+  To assign Viewer to F3 key, go to "Extras -- Define shortcuts" dialog,
+  and for the "File - View external" command set the F3 shortcut.
+
+<p>
+<li><b>SpeedCommander</b>
+
+  <p>
+  "Extra -- Settings" dialog, "Advanced -- Applications & Internet" tab,
+  enter path to Viewer.exe into "Viewer:" field.
+  <p>
+  This will assign Viewer to F3 key.
+
+</ul>
+
+<p>
+<hr>
+
+<!------------------------------------------------------------>
+<p>
+<a name="Q2"></a>
+<b>Q2: I can't view DOC/XLS, ODT/ODS or PDF files. Viewer shows only a blank
+page. Is there anything I can do to fix this?</b>
+
+<p>
+<b>A1:</b>
+
+<p>
+To display DOC/XLS you need to install one of the following:<br>
+<ul>
+<li><a href="http://office.microsoft.com/" target="_blank">Microsoft Office</a></li>
+<li><a href="http://www.uvviewsoft.com/lister_plugins.htm" target="_blank">Lister plugin</a> for DOC/XLS</li>
+</ul>
+
+To display ODT/ODS/ODP you need to install one of the following:<br>
+<ul>
+<li><a href="http://www.openoffice.org" target="_blank">OpenOffice.org</a></li>
+<li><a href="http://www.uvviewsoft.com/lister_plugins.htm" target="_blank">Lister plugin</a> for ODT/ODS</li>
+</ul>
+
+To display PDF you need to install one of the following:<br>
+<ul>
+<li><a href="http://www.adobe.com" target="_blank">Adobe Reader</a></li>
+<li><a href="http://www.foxitsoftware.com" target="_blank">Foxit Reader</a></li>
+<li><a href="http://www.uvviewsoft.com/lister_plugins.htm" target="_blank">Lister plugin</a> for PDF</li>
+</ul>
+
+<p>
+<b>A2</b>: If the first answer doesn't help,
+i.e. you have needed Office applications installed
+but the window is still blank in Internet mode,
+try to enable option "Multimedia -- Internet -- Try to open unknown file types".
+
+<p>
+<hr>
+
+<!------------------------------------------------------------>
+<p>
+<a name="Q3"></a>
+<b>Q3: What are the limits for files sizes?</b>
+
+<p>
+<b>A:</b>
+UV can show, in Text/Binary/Hex/Unicode modes, files of any size.
+You can quickly scroll huge files in mentioned view modes,
+as UV holds in memory only small amount of file data (approximately 120-180 Kb),
+and not the whole file contents.
+
+<p>
+But you cannot open huge files in RTF/UTF-8 mode and (usually) in Plugins mode,
+because RichEdit control and most of plugins try to load the whole file contents
+and this will be very slow and will fail.
+
+<p>
+<hr>
+
+
+<!------------------------------------------------------------>
+<p>
+<a name="Q4"></a>
+<b>Q4: If a link in a local HTML file opens a page from the Internet within Universal Viewer,
+could there be any security concerns? The reason I ask this question is because we are constantly
+hearing stories about security flaws in this or that browser.</b>
+
+<p>
+<b>A:</b> Security concerns in UV are almost the same as in Internet Explorer (with current settings).
+UV uses web control based on code and settings of current installation of MSIE.
+
+<p>
+So If MSIE has a flaw and you don't want to open a page with it,
+you shouldn't also open the link to that page in UV. To prevent this, I recommend to check the option
+"View -- Internet -- Offline browsing", which prevents online content to be opened.
+Note that some links can be setup to be opened in a separate MSIE window, and this option won't affect them.
+
+<p>
+<hr>
+
+<!------------------------------------------------------------>
+<p>
+<a name="Q5"></a>
+<b>Q5: Can the Flash animation be played not in the full window?</b>
+
+<p>
+<b>A:</b> By default Flash animation is played in Internet mode, in MSIE window.
+You may change this to play it in different way, where you can affect Flash picture size:
+
+<ul>
+<li> using Windows Media Player. Open configuration dialog, and on the first tab move "swf" file extension
+from Internet list to Multimedia list. Then on the second tab check "Windows Media Player 9.0" mode. </li>
+<li> <a href="http://www.uvviewsoft.com/lister_plugins.htm" target="_blank">using one of the Lister plugins</a>. </li>
+</ul>
+
+<p>
+<hr>
+
+<!------------------------------------------------------------>
+<p>
+<a name="Q6"></a>
+<b>Q6: Why some UTF-8 encoded texts are not shown?</b>
+
+<p>
+<b>A:</b> In older versions (older than 1.5.9.0) UV required presence of UTF-8 signatures in the file.
+In newer versions this is not required, but note:
+
+<ul>
+<li> UTF-8 is not supported under Windows 9x.
+<li> UTF-8 texts without signatures will not be autodetected, so you'll have to manually set
+"RTF/UTF-8" view mode.
+</ul>
+
+<p>
+<hr>
+
+<!------------------------------------------------------------>
+<p>
+<a name="Q7"></a>
+<b>Q7: Word/Excel documents are sometimes opened in a new window...</b>
+
+<p>
+<b>A:</b> This is a known problem with MS Office, it sometimes can be fixed
+by applying the following .REG file. Save the following text to a new file,
+name it "Fix.reg" and double-click it in Explorer:
+
+<p>
+<table align="center">
+<tr><td class="pre">
+<pre>
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Word.Document.8]
+"BrowserFlags"=dword:80000024
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Word.RTF.8]
+"BrowserFlags"=dword:80000024
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Word.Document.12]
+"BrowserFlags"=dword:80000024
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Word.DocumentMacroEnabled.12]
+"BrowserFlags"=dword:80000024
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Excel.Sheet.8]
+"BrowserFlags"=dword:80000A00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Excel.Sheet.12]
+"BrowserFlags"=dword:80000A00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Excel.SheetMacroEnabled.12]
+"BrowserFlags"=dword:80000A00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Excel.SheetBinaryMacroEnabled.12]
+"BrowserFlags"=dword:80000A00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\PowerPoint.Show.8]
+"BrowserFlags"=dword:800000A0
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\PowerPoint.Show.12]
+"BrowserFlags"=dword:800000A0
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\PowerPoint.ShowMacroEnabled.12]
+"BrowserFlags"=dword:800000A0
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\PowerPoint.SlideShow.8]
+"BrowserFlags"=dword:800000A0
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\PowerPoint.SlideShow.12]
+"BrowserFlags"=dword:800000A0
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\PowerPoint.SlideShowMacroEnabled.12]
+"BrowserFlags"=dword:800000A0
+</pre>
+</td></tr>
+</table>
+
+<p>
+<hr>
+
+<!------------------------------------------------------------>
+<p>
+<a name="Q8"></a>
+<b>Q8: How to change the look of WMP 6.4 control?</b>
+
+<p>
+<b>A:</b> The look of Windows Media Player 6.4 control can be changed
+to mimic the look of WMP 9.0 (if WMP 9.0+ is installed on your system).
+To do this, apply the following .REG file:
+
+<p>
+<table align="center">
+<tr><td class="pre">
+<pre>
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MediaPlayer\ShimInclusionList\VIEWER.EXE]
+</pre>
+</td></tr>
+</table>
+
+<p>
+To undo this change, apply the following .REG file:
+
+<p>
+<table align="center">
+<tr><td class="pre">
+<pre>
+REGEDIT4
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MediaPlayer\ShimInclusionList\VIEWER.EXE]
+</pre>
+</td></tr>
+</table>
+
+<p>
+<hr>
+
+<!------------------------------------------------------------>
+<p>
+<a name="Q9"></a>
+<b>Q9: When images are get from IrfanView/XnView, the animation doesn't work...</b>
+
+<p>
+<b>A:</b>
+The IrfanView/XnView intefrace is sending a <u>simple bitmap</u> to the application,
+and the animation isn't supported for simple bitmaps.
+So to view GIFs with animation you have to use the internal image library
+(Hint: use the '4' key to switch between internal library and IrfanView/XnView).
+<p>
+<hr>
+
+<!------------------------------------------------------------>
+<p>
+<a name="Q10"></a>
+<b>Q10: Does the program have issues with Unicode filenames? </b>
+
+<p>
+<b>A:</b>
+
+<ul>
+<li> Please don't install application to Unicode-named folder,
+     it expects ANSI name.
+<li> Unicode filenames may be not supported for: IJL15.dll, IrfanView, plugins.
+     Unicode names are loaded using shortnames (8.3) for these cases,
+     so you should have shortnames on your OS.
+     To check, does your OS have shortnames in a folder, open "cmd.exe" in this folder,
+     and then run command "dir /x".
+     It should show shortnames for all Unicode names.
+</ul>
+
+<!------------------------------------------------------------>
+<p>
+<a name="Q11"></a>
+<b>Q11: How to view CHM files? </b>
+
+<p>
+<b>A:</b>
+
+Install the plugin <a href="http://www.totalcmd.net/plugring/htmlview.html" target=_blank>HTMLView</a>.
+Then, go to Plugins options dialog (F10 key),
+press Configure button for HTMLView, and in the Detect-string field
+write the string:<br>
+<i>ext:chm</i> <br>
+
+<!------------------------------------------------------------>
+<p>
+<a name="Q12"></a>
+<b>Q12: For Word files, I get message "Cannot init MS Office control"...</b>
+
+<p>
+<b>A:</b>
+To show Word files, UV can use one of the following:<br>
+<ul>
+<li> Internet mode. Used if "doc,docx" is added to "Internet" extensions
+ list in Options dialog. Not quite good, as you may get
+ "Do you want to save this document?" prompts from browser.
+<li> MS Office mode. NavPanel add-on is used to support this mode,
+so this add-on is needed in registered/trial state. If NavPanel add-on
+has expired trial state, you won't be able to initialize MS Office mode
+- so the message (question) appears, and you need to register NavPanel.
+</ul>
+
+
+
+
+</body>
+</html>

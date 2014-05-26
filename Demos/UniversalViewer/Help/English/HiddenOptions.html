@@ -1,0 +1,145 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <title>Hidden options</title>
+  <link href="Main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h3>
+  Hidden options
+</h3>
+<hr>
+
+<p>
+Program has several "hidden" options that cannot be changed using configuration dialogs.
+They must be changed by manual editing the <b>Viewer.ini</b> file.
+You can open this file using UV command "Options -- Advanced -- Manually edit configuration file".
+After saving changes, you must restart UV for changes will take effect.
+
+<p>
+<table border="1" align="center">
+<tr>
+  <td class="big" colspan="2">
+    [Options] section
+  </td>
+</tr>
+
+<tr>
+  <td width="200">
+    <b>FileNextMsg</b>
+  </td>
+  <td>
+     "File -- Next / Previous file" commands:
+     If set to 0, it disables messages about first/last file in a directory.
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <b>FileSkipHidden</b>
+  </td>
+  <td>
+     "File -- Next / Previous file" commands:
+     If set to 0, hidden files will not be skipped while going through a directory.
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <b>FileMoveDelay</b>
+  </td>
+  <td>
+     "File -- Rename / Move to filder" commands:
+     Delay (in msec, default is 800) between closing the file and moving operation.
+     May need increasing if Move operation doesn't work with PDF files.
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <b>StatusUrlWidth</b>
+  </td>
+  <td>
+    Width of Codepage/URL statusbar panel (default is about 300 px).
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <b>ModeUndetected</b>
+  </td>
+  <td>
+     This is number of mode used for unknown file types. It is 1 (Text mode) by default, but you may
+     change it to 2 (Binary), 3 (Hex) or 8 (RTF/UTF-8).
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <b>ModesDisabled</b>
+  </td>
+  <td>
+     This is list of modes numbers (from 1 to 8, separated by spaces),
+     which will be disabled for mode auto-detection procedure.
+     For example, if this list is "5 7 8", then Internet, Plugins and RTF/UTF-8 modes
+     will not be used for mode auto-detection procedure.
+  </td>
+</tr>
+
+<tr>
+  <td class="big" colspan="2">
+    [Text] section
+  </td>
+</tr>
+<tr>
+  <td>
+    <b>MaxClip</b>
+  </td>
+  <td>
+     Sets maximal data size, in Mb, for copying to Clipboard in Text/Binary/Hex/Unicode modes.
+     Default value is 16 (Mb), which prevents visual "hanging" when too large block is
+     selected accidentally before copying.
+  </td>
+</tr>
+
+<tr>
+  <td class="big" colspan="2">
+    [Media] section
+  </td>
+</tr>
+<tr>
+  <td>
+    <b>AutoAdv</b>
+  </td>
+  <td>
+     By default, when UV is run with @FileList parameter and several media clips are
+     present in the file list, these clips are played one after another.
+     If this option set to 0, it will disable "playlist auto advance", so you'll have to
+     manually run "File -- Next file" command to advance playlist.
+  </td>
+</tr>
+
+<tr>
+  <td class="big" colspan="2">
+    [Shortcuts] section
+  </td>
+</tr>
+<tr>
+  <td>
+    <b>MenuItemID</b>
+  </td>
+  <td>
+     Changes the shortcut for the given menu item.
+     Shortcuts can be configured in the Options dialog, but if you cannot assign some of them in the dialog
+     (e.g. Esc and BackSpace cannot be assigned there), you can change them by manually editing these parameters.
+     <ul>
+     <li>Available keys: Space BkSp Tab Esc Enter PgUp PgDn Home End Left Right Up Down Ins Del A...Z F1...F12
+     <li>Available key modifiers: Shift+ Ctrl+ Alt+
+     </ul>
+  </td>
+</tr>
+
+</table>
+
+</body></html>

@@ -1,0 +1,392 @@
+xdoc2txt - PDF,WORD,EXCEL,一太郎などの各種バイナリ文書からテキストを抽出
+
+■ 概要
+・xdoc2txtはPDF,WORD,EXCEL,一太郎などの各種バイナリ文書から、テキスト要素を抽出
+　する汎用テキストコンバータであり、Windowsのコマンドラインで動作します。
+・xdoc2txtは各種文書の構造を直接解析しているため、単独で変換できます。WORDや
+　Acrobatなど、作成元のアプリケーションをインストールする必要はありません。
+・高速に動作するので、各種全文検索エンジンのフィルタに最適です。
+・文書の種類は、拡張子から判別します。次の拡張子のファイルに対応しています。
+	.sxw	OpenOffice.org Writer
+	.sxc	OpenOffice.org Calc
+	.sxi	OpenOffice.org Impress
+	.sxd	OpenOffice.org Draw
+	.odt	Open Document (text documemts)
+	.ods	Open Document (spreadsheet documemts)
+	.odp	Open Document (presentation documemts)
+	.odg	Open Document (drawing documemts)
+	.docx/.docm	WORD 2007
+	.xlsx/.xlsm	Excel 2007
+	.pptx/.pptm	PowerPoint 2007
+	.doc	WORD ver5.0/95/97/2000/Xp/2003
+	.xls	Excel ver5.0/95/97/2000/Xp/2003
+	.ppt	PowerPoint 97/2000/Xp/2003
+	.rtf	リッチテキスト
+	.jaw/jtw 一太郎 ver5
+	.jbw/juw 一太郎 ver6
+	.jfw/jvw 一太郎 ver7
+	.jtd/jtt 一太郎 ver8/9/10/11/12
+	.oas/oa2/oa3	OASYS/Win
+	.bun	新松/松5/松6
+	.wj2/wj3/wk3/wk4/123	Lotus 123 
+	.wri	Windows3.1 Write 
+	.pdf	Adobe PDF
+	.mht	
+	.html	HTML
+	.eml	OutlookExpressのMailエクスポート形式
+・exe版とActiveX版があります。テキスト抽出の機能は同等です。
+
+※ xdoc2txt は「KWIC Finder」の機能の一部を公開したものです。
+
+	KWIC Finder - ファイル検索・テキストビューア
+	http://www31.ocn.ne.jp/~h_ishida/
+
+
+■ 動作環境
+ Windows 95 / 98 / NT / 2000 / XP / Vista / Server 2003
+
+■ 著作権・利用条件について
+・xdoc2txtは非営利の場合、フリーで使用できます。個人や非営利組織の利用、企業・法人
+内部のイントラネットでの利用、インターネット公開サーバーを自ら構築して利用する場合
+（商用サイトの運営を含む）は、商用には当たりませんので、フリーで利用できます。
+・xdoc2txtを組み込んだ製品を販売して利益を得る場合は商用ライセンスにあたりますので、
+作者までご相談ください。
+・Hyper Estraierに含まれるxdoc2txtを、Hyper Estraierと共に配布する場合は、
+商用ライセンスから除外されます。
+・xdoc2txtを再配布する場合、パッケージに含まれる全ファイルを変更せずに配布して下
+さい。ユーザが作製したソフトにxdoc2txtを組み込む場合、xdoc2txtを使用している旨を
+マニュアル等のユーザがわかる場所に明示して下さい。また、必ず作者に配布許可を
+取って下さい。 
+・xdoc2txtパッケージに含まれる全ファイルの著作権は、hishidaに帰属します。 
+・xdoc2txtは、無保証で現状のまま提供されます。xdoc2txtの使用または使用不能から生
+じるいかなる損害（逸失利益、事業の中断、事業情報の喪失その他の金銭的損害を含む）
+に関して、作者は一切責任を負いません。 
+・本ソフトウェアの雑誌への掲載・収録、インターネット上での転載を許可します。
+掲載される場合は、事後報告で結構ですので作者まで掲載誌についてご連絡下さい。 
+
+
+■ 配布ファイル
+	xdoc2txt.exe	プログラム本体
+	xdoc2txt.txt	マニュアル
+	zlib.dll	flate圧縮展開用DLL
+	(配布される場合は、以上の３つのファイルを同梱してください)
+
+■ コマンドオプション
+	xdoc2txt.exe [-s|-e|-j][-c][-f][-r=(0|1|2)][-g=#] <filename...>
+
+	-h	ヘルプの表示
+	-s	出力のエンコードはShiftJIS(デフォルト)
+	-j	出力のエンコードはJIS
+	-e	出力のエンコードはEUC
+	-c	PDFキャッシュon(デフォルトはoff)
+	-f	変換結果をファイルに出力。デフォルトでは標準出力に出力
+	-p	文書プロパティを表示(MS Office,OpenOffice.org,一太郎で有効)
+	-n	PDF文書のアクセス権限の設定を無視する(cryptlib.dllが必要)
+	-r=	HTML文書のルビの変換
+		-r=0	ルビ削除
+		-r=1	（）
+		-r=2	《》青空文庫形式
+	-o=	その他のオプション
+		-o=0	PDFで -- ? -- の形式のページ番号を表示しない
+		-o=1	PDFで改行を削除(縦書きで1字毎に改行される場合に使用)
+	-g=#	PDFの字間調整オプション（省略値は92）
+		# は0以上の百分率（60%の場合、-g=60と指定）
+		字間が、文字高*(#/100) 以上開くと、空いているとみなして空白を出力
+<li>		-g=0	字間調整をしない
+		-g=60	文字高の60%以上開くと、字間が空いているとみなす
+	-v	バージョン番号表示
+	-x	EXCEL2007で存在するセルのみ表示(xdoc2txt 1.33以降)
+
+	<filename>	変換元のファイル名。ワイルドカード文字(* ?)が使用可。
+		※空白を含むファイル名の場合、""で囲ってください。
+
+■ xdoc2txtの使用方法
+
+・典型的な使用方法は、次の通りです。
+	例)
+	xdoc2txt sample.doc
+　この例ではMS-Word文書の sample.doc に含まれるテキストを標準出力に書き出しま
+　す。
+
+・次のように出力先をリダイレクトすることで、ファイルに保存することもできます。
+	例)
+	xdoc2txt sample.doc > sample.txt
+
+・-f オプションを付けると、出力先をファイルに変更できます。拡張子は自動的に.txt 　になります。
+	例)
+	xdoc2txt -f sample.doc sample.xls
+　ワイルドカード * ? が使用できるため、複数のファイルを一括してテキスト化するこ
+　とが出来ます。
+	例)
+	xdoc2txt -f *.xls
+
+・MS Office文書(2007を含む)、OpenOffice.org文書、一太郎文書(Ver8以降)の場合、-p オプションで文書プロパティを表示できます。
+　プロパティは設定された項目のみ表示されます。
+	例)
+	xdoc2txt -p マニュアル.doc
+
+	実行結果)
+	<Title>KWIC Finderマニュアル</Title>
+	<Author>hishida</Author>
+	<Template>Normal.dot</Template>
+	<LastAuthor>hishida</LastAuthor>
+	<RevisionNumber>1</RevisionNumber>
+	<AppName>Microsoft Word 9.0</AppName>
+	<Lastprinted>2004/03/23 19:39:00</Lastprinted>
+	<Created>2004/03/23 19:35:00</Created>
+	<LastSaved>2004/03/23 19:44:00</LastSaved>
+	<PageCount>1</PageCount>
+	<WordCount>21</WordCount>
+	<CharCount>121</CharCount>
+
+
+■各ファイル形式毎の制限事項
+
+◎ Microsoft WORD 2007
+・拡張子.docx .docm に対応しています。
+
+◎ Microsoft WORD
+
+・5.0/95/97/2000/2003に対応しています。 
+・テキストはWord文書の格納順に表示するため、テキストボックスは本文テキストの後に
+　表示されます。したがってテキストボックスを使用している文書では、Wordでの表示結
+　果と違った表示になりますが、検索は正常に行われます。 
+・ルビは、（ふりがな）の形式で表示します。囲み文字は、（字）の形式で表示します。 
+・パスワードで保護されたWord文書は検索・表示できません。 
+・高速保存モードには対応していません。 
+
+◎ Microsoft EXCEL 2007
+・拡張子.xlsx .xlsm に対応しています。
+・.xlsb(EXCEL2007バイナリブック)には未対応です。
+
+◎ Microsoft EXCEL
+
+・5.0/95/97/2000/2003に対応しています。 
+・テキスト、数値、計算結果、テキストボックス内のテキストが検索・表示されます。
+　計算式、マクロは検索対象になりません。 
+・テキストボックスはファイル内の格納順に表示されるため、EXCEL上の見かけと必ずしも
+　同じ順序になりません。 
+・パスワードで保護されたExcel文書は検索・表示できません。 
+
+◎ Microsoft EXCEL 2007
+・拡張子.pptx .pptm に対応しています。
+・テキスト要素が表示されます。 
+
+◎ Microsoft PowerPoint
+
+・95/97/2000/2003/2007に対応しています。 
+・テキスト要素が表示されます。 
+・高速保存モードの場合、正しく表示されない場合があります。 
+
+◎ RTF(Rich Text Format)
+
+・テキスト部分のみ表示・検索の対象となります。表などのレイアウトは再現されません。 
+
+◎ 一太郎
+
+・ver5( .jaw)/6( .jbw)/7( .jfw)/8以降( .jtd)に対応しています。 
+・テキスト・注釈・レイアウト枠・脚注が検索・表示されます。 
+・ver5/6では、罫線も表示します。 
+・注釈等のフィールドは、[ ]で表示します。 
+・パスワードで保護された一太郎文書は検索・表示できません。 
+・高速保存モードには対応していません。 
+
+◎ 富士通 OASYS Win
+
+・OASYS文書(.OAS)、OASYS2文書(.OA2/.OA3)に対応しています。
+・OASYSの特殊文字は、可能な限り近いJIS漢字に変換します。ただし二重線は太線に、
+　点線は細線に変換します。 
+・ワープロ専用機のOASYSフロッピーは検索できません。いったん OASYS/Winや市販のワー
+　プロコンバータでWindows上のOASYS形式(.OAS .OA2 .OA3 .DOC) に変換してください。 
+
+◎ 新松
+
+・新松 / 松5 / 松6 の.bun形式をサポートしています。松85には未対応です。 
+・テキスト部分のみが検索・表示されます。罫線等は無視されます。 
+
+◎ Lotus 123
+
+・.WJ2 .WJ3 .WK3 .WK4 .123に対応しています。 
+・.WJ2 .WJ3 はテキスト、数値、計算結果が表示されます。
+・.WK3 .WK4 .123はテキストのみが表示されます。 
+
+◎ Adobe PDF
+
+・PDF1.3の仕様を元に開発しています。1.4以降の文書でもテキストに関しては表示できる
+　と考えられます。 
+・本文内のテキストのみ検索・表示の対象となります。注釈等には対応していません。 
+・暗号化されたPDFに対応していません。ただし、別途暗号化モジュール cryptlib.dll
+　を http://www31.ocn.ne.jp/~h_ishida/KWIC.html からダウンロードして解凍し、
+　xdoc2txtのインストールディレクトリに入れると、パスワード無で暗号化されたPDFに
+　ついては検索・表示できるようになります。PDF1.4の128bit暗号にも対応しています。
+　ただしcryptlib.dllの使用は個人・教育用途に限定されます。
+・フォント埋め込みでカスタムエンコーディングのPDFは、PDF文書中にエンコーディング
+　のマップ情報(/ToUnicode)がないと検索・表示対象にできません(例：Ghostscriptの
+　Type3フォント)。もっとも、このようなファイルはAcrobat Readerのテキストツールで
+　もテキストを抽出できません。 
+・ページ内のテキスト要素の表示順は、ページ内のデータ格納順に行います（=PDF文書を
+　作成したアプリケーションの描画順）。このためAcrobat Readerでの表示順と異なるこ
+　とがあります。 
+・現時点では縦書き対応は不完全であり、1字ずつ改行して表示されます。 
+・対応しているエンコーディング(CMAP)の種類は以下の通りです。 
+
+	/Identity-H(V) /UniJIS-UCS2-H(V) 
+	/90ms-RKSJ-H(V) /78ms-RKSJ-H(V) 
+	/90pv-RKSJ-H(V) /83pv-RKSJ-H(V) 
+	/MacRomanEncoding /WinAnsiEncoding
+	/H /V
+
+・コンテンツストリームのデコードフィルター(/Filter)は、 /Ascii85Decode 、
+　/FlateDecode に対応しています。テキストの圧縮に使用されるフィルターには、
+　他に /LZWDecode がありますが、Unisys社の特許に抵触するため対応していません。
+　ただし実際にはほとんどのケースで /FlateDecode が使われているため、実用上の問題
+　は小さいでしょう。
+・/FlateDecode の展開のため、zlib.dllを使用します。
+  zlib.dllは配布パッケージに同梱されています。(ver1.34以降は静的リンクなのでdllは不要)
+・次のアプリケーションで生成したPDFについて動作確認を行いました。 
+
+	Acrobat PDFWriter 3.0/4.0/5.0
+	Acrobat PDFMaker 5.0 
+	Acrobat Distiller 3.0/4.0/5.0/6.0
+	Acrobat Web Capture 5.0
+	Adobe PageMaker 6.0J/6.5J
+	Adobe Illustrator 5.5J/8.0
+	Adobe InDesign 2.0J
+	FrameMaker 6.0
+	pdfTeX
+	Ghostscript(英語のみ・日本語はだめ)
+	読んでココVer9(透明テキスト)
+	読取革命(透明テキスト)
+	eTypist(透明テキスト)
+	SkyPDF Driver 1.02
+	いきなりPDF
+	OpenOffice.Org.1.1
+	ActiveReports 2.0J 
+	easyPDF 3.1
+	Jaws PDF Creator
+	eXPert PDF
+	JustSystem PDF Creater
+
+■マウス操作での利用について
+・デスクトップにショートカットを作成し、マウス操作でテキスト化することができます。
+
+(1)エクスプローラで xdoc2txt.exe の上で右ボタンメニュー→[送る(N)]→[デスクトップ(ショートカットを作成)]
+(2)デスクトップに作成されたアイコンの上で右ボタンメニュー→[プロパティ(R)]
+(3)[リンク先(T)]の末尾に、 -f を追加。
+	例）
+	"C:\Program Files\kwic\xdoc2txt.exe" -f
+(4)テキスト化したいファイルをアイコンにドラッグ＆ドロップすると、同じディレクトリに拡張子が.txtのファイルが出来ます。
+
+参考記事： http://www.forest.impress.co.jp/article/2003/11/19/xdoc2txt.html
+	(【窓の杜NEWS】)
+
+■ namazuのフィルタとしての利用について(Windows版)
+
+a.hanai様がxdoc2txtをnamazu(Windows版)のフィルタに使用する事例を紹介されています。
+namazuオリジナルのフィルタに比べて、メモリ占有率が下がるため、安定したインデックス
+作成が可能です。
+
+xdoc2txtを利用した文書フィルターのサンプル
+http://www.geocities.co.jp/SiliconValley-Oakland/8718/namazu/
+
+■ 商用製品の採用実績
+株式会社高速屋 様	「フルサーチナレッジウェア」
+			http://www.kousokuya.co.jp/solution/index.html
+株式会社ワイズ 様	「CALS Manager」
+			http://www.wise.co.jp
+
+他数社
+
+■ 履歴
+
+1.38	2010/12/21	・一部のPDF(PDF1.5で/XRefが使用されている場合の一部の条件)で異常終了する問題修正
+1.37	2010/05/16	・一部のPDF writer(Brava!Desktop)で出力したPDFが文字化けする問題に対処
+			・EXCELのテキストボックスでごみが入るケースを修正
+1.36	2010/01/09	・EUCエンコードのPDFが文字化けする問題を修正
+1.35	2009/08/24	・空のOffice2007文書
+1.34	2009/06/22	・パスワード付のOffice2007文書は"encrypted file."と表示するようにする。
+			・本バージョンからzlib.dll不要(静的リンクにした)
+1.33	2009/06/07	・破損したPDFで異常終了するケースを修正
+			・パスワード付のOpenOffice文書で文字化けする問題を修正("encrypted file."と表示する)
+			・シート数や行数が極端に多いExcel2007文書で異常終了するケースを修正。
+			・-x オプション追加。EXCEL2007で存在するセルのみ表示
+1.32	2008/12/01	・破損したPDFで無限ループになるケースがあるのを修正
+			・Acrobat7.0以降の、128bit AESで暗号化されたPDFの読み取り対応
+			 (cryptlib.dllの導入が必要)
+1.31	2008/11/05	・破損したOffice2007ファイルで文字化けする問題を修正。
+			・Excel2007でシート数が100付近を超えると異常終了する問題を修正
+	2008/08/18	・AtiveX版 xdoc2txt.ocx を公開。配布条件はexe版と同じ。
+1.30	2008/05/22	・-p オプション：Office文書のプロパティ表示に「会社名」「分類」「管理者名」を追加
+
+1.29	2008/05/18	・Acrobat以外のPDF作成ソフトで作成されたPDFファイルで異常終了する場合がある問題を修正
+			・サイズが0バイトのPDFで異常終了する問題を修正
+1.28	2008/03/17	・PDFMaker8.1で作成されたPDFに対応
+1.27	2008/01/20	・入力ファイルのパス名が256バイトを超えると "error in ファイル名"と表示されて処理できない問題を修正
+
+1.26a	2007/10/21	・改行が0x0D,0x0AでないHTMLでバッファオーバーランのケースがあるのを修正
+			・docxで中身がdocのファイルを正常に処理するようにする
+1.26	2007/05/11	・Microsoft Office Excel2007 で列の一部が表示されないbug修正
+			・PDFに関するbug修正2件(表示漏れ、異常終了対策)
+1.25	2007/02/28	・Microsoft Wordの差込フィールド名の表示に対応
+1.24	2007/02/18	・Microsoft Office Word2007/Excel2007/PowerPoint2007,
+			  OpenOffice.org Writer/Calc/Impress/Draw,
+			  Open Document Formatに対応
+			・EXCELで1E+275 のように大きな桁数の数字を使用すると異常終了するbug修正。
+1.23	2006/08/29	・AntenaHouse PDF Driver2.0 で作成されたPDFからテキスト抽出できない問題に対応
+			(PDF1.5以降のCross-Reference Streamsに対応)
+			・PDFによって、ファイルの最後までテキスト抽出できない場合があった問題を修正
+1.22	2006/05/28	・PDFのエンコードによって‘’“”が文字化けするbug修正
+-	2006/05/10	・商用利用の利用条件変更
+1.21	2006/05/08	・【重要】一太郎Ver6のパスワード付文書を検索するとメモリ不足になるbug修正
+1.20	2006/02/17	・PDFでUnicodeマッピングのリガチャ対応(ff,fi等)
+1.19	2006/02/08	・PDFでバッファオーバーランの予防的修正
+1.18	2006/02/04	・PowerPoint95対応
+	2006/01/26	・EXCELで行の内容がすべて表示されないことがあるbug修正
+1.17	2005/09/19	・PDFの字間調整パラメータ -g を追加
+1.16	2005/05/02	・PDFでサポートするCMAPの種類に /H /V を追加(JISエンコーディング)
+			・PDFで巨大な図形が/FlateDecodeで圧縮されている場合、メモリ確保に失敗するbugを修正
+			・PDFのオプション追加
+			　-o=0	PDFで -- ? -- の形式のページ番号を表示しない
+			　-o=1	PDFで改行を削除(縦書きで1字毎に改行される場合)
+			・HTMLのルビの出力オプション
+			  -r=0	なし
+			  -r=1	()
+			  -r=2	《》青空文庫形式
+			・HTMLのテキスト化でタグ直後の空白が消えるbugを修正
+1.15	2005/04/23	・Acrobat4で作成したPDFで一部テキスト化できないケースを修正
+			・Acrobatで一度でもスタンプを付けたPDFがテキスト化できないbugを修正
+1.14	2005/01/31	・Justsystem PDF Creator で作成したPDFで異常終了するbug修正
+			・画像のみでテキストのないPDFで異常終了するケースのあるbug修正
+1.13	2004/05/30	・PDFの字間の計算を調整
+			・WK4(123)で異常終了するケースがあるbug修正
+1.12	2004/05/05	・PDF文書のアクセス権限の設定を無視するオプション(-n)
+			・PDFで半角のCIDが表示されないbug修正
+			・標準出力に出力したとき、余分な改行が表示されるbug修正
+1.11	2004/04/04	・パスワード無しで暗号化されたPDF対応(128bit暗号まで)。
+			　ただし別途 cryptlib.dll をダウンロードする必要有り
+			・「easyPDF 3.1」「Jaws PDF Creator」で作成したPDFに対応
+			・一太郎V7以降でタブ文字が削除される問題に対処
+			・-p オプションを追加。Office文書のプロパティを表示
+1.10	2004/03/13	・「OpenOffice.org1.1」で作成したPDFに対応 
+1.09	2004/02/25	・「ActiveReports 2.0J 」で作成したPDFに対応
+			・特定のPDFで異常終了するbug修正
+1.08	2004/01/28	・EXCELの計算式の結果文字列に全角"±×÷"が現れた場合、
+			　半角カナに文字化けするbug修正
+			・余分な改行の除去
+1.07	2004/01/26	・Word、EXCEL、PowerPointで全角の"±×÷"が半角カナに
+			　文字化けする場合があるbug修正
+-	2004/01/18	・「著作権・利用条件について」を明文化する。
+1.06	2003/11/09	・ワードパッドで保存したRTFの１行目が表示されないbug修正
+			・拡張子が.docのOLE文書でWord文書が含まれない場合に
+			　異常終了するbug修正
+1.05	2003/07/15	・Acrobat6.0で作成したPDFの表示対応
+1.04	2003/03/26	・日本語PDFの字間の計算の改良
+1.03	2002/11/23	・UnicodeエンコーディングのPDF対応
+1.02	2002/10/18	・mht/html に対応
+1.01	2002/09/09	・-cオプション追加
+1.00	2002/07/08	・KWIC Finderからテキスト抽出部分を分離し、フィルタとして公開。
+
+Copyright (C) 2002-2007, hishida
+	http://www31.ocn.ne.jp/~h_ishida/ 
+	hishida@bg.mbn.or.jp
+

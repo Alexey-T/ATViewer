@@ -1,0 +1,647 @@
+Version=6.5.0
+Author=-= ZityiSoft™ =-
+Homepage=http://szoftverforditasok.hu
+Email=zityisoft at gmail.com
+
+[Messages]
+
+101="A(z) "%s" fájl nem található"
+102="A(z) "%s" fájl nem nyitható meg"
+104="A(z) "%s" fájl nem tölthetõ be"
+105="A(z) "%s" fájl nem olvasható"
+106="A(z) %s elõkészítése sikertelen"
+107="A(z) "%s" mappa nem található"
+
+108="Ismeretlen formátum\nKattintson ide a bináris dump megjelenítéséhez"
+109="Olvasási hiba a(z) %s eltolásnál"
+110="A(z) "%s" fájllista nem kezelhetõ"
+111="A fájl üres"
+113="A fájlformátum nem észlelhetõ\nBináris dump megjelenítése"
+114="Az MS Office modul nem támogatja ezt a fájltípust"
+115="Ismeretlen kép formátum"
+116="Ismeretlen multimédia formátum"
+120="A(z) "%s" karaktersor nem található"
+121="A szöveg nem másolható a vágólapra"
+122="A(z) "%s" hex karaktersor érvénytelen"
+123=""%s" keresés:"
+124="Keresési hiba történt"
+125="Nincs kiválasztva szöveg"
+126="Nincs EXIF információ ebben a fájlban"
+127="A vágólap nem tartalmaz grafikát vagy szöveg formátumot"
+129="Elõzõ/Következõ lap\nJelenlegi lap: %d - %d"
+130="Van elérhetõ szöveg konverter ehhez a fájltípushoz\nKattintson ide a szöveg megjelenítéséhez"
+
+151="Az eszköz nem futtatható:\n"%s""
+152="Az Intézõ integrálási opció nem alkalmazható a rendszerleíróban. Próbálja meg rendszergazdaként futtatni a programot."
+153="Fájl csatolva."
+154="Nem küldhetõ e-mail (MAPI hiba)"
+155="A dokumentum nem konvertálható szöveg alakba"
+156="Az ideiglenes fájl nem hozható létre"
+
+200="Kivétel történt a(z) "%s" beépülõ, "%s" funkciójában"
+201="Nem lehet leállítani a(z) "%s" beépülõt"
+202="Nem lehet betölteni a beépülõt, a forrás nincs megadva"
+
+203="Ez az archívum nem támogatott beépülõt tartalmaz (%s)"
+204="Ez az archívum beépülõt tartalmaz:\n"%s".\n\nSzeretné telepíteni azt az Universal Viewer programban?"
+
+209="A következõ beépülõk lettek hozzáadva:\n\n%s\nA következõ beépülõk lettek frissítve:\n\n%s"
+210="A következõ beépülõk lettek hozzáadva:\n\n%s\nA következõ beépülõk nem lettek hozzáadva, mivel már telepítve vannak:\n\n%s"
+211="(nincs)\n"
+212="A forrás fájl/mappa név nem érvényes"
+213="A kiválasztott Total Commander exe név, nem érvényes"
+214="(nem található)"
+215="A(z) "%s" archívum nem csomagolható ki a(z) "%s" beépülõ mappába"
+216="A beépülõ modul nem található az archívumban "%s""
+
+250="Ez az utolsó fájl a mappában. Az elsõ fájlhoz ugrik?"
+251="Ez az elsõ fájl a mappában. Az utolsó fájlhoz ugrik?"
+252="A jelenlegi "%s" fájlnév, nem található a mappában. Az elsõ fájlhoz ugrik?"
+253="A jelenlegi mappa üres. Nem lehet másik fájlhoz ugrani."
+254="Ez az egy fájl van a mappában. Nem lehet másik fájlhoz ugrani."
+255="Ez az utolsó fájl a listán. Az elsõ fájlhoz ugrik?"
+256="Ez az elsõ fájl a listán. Az utolsó fájlhoz ugrik?"
+257="Üres mappa: "%s""
+
+260="Fájl törlése"
+261="Áthelyezi a(z) "%s" fájlt a lomtárba?"
+262="Biztos, hogy törli a(z) "%s" fájlt?"
+263="Nem lehet törölni a következõt: "%s""
+264="Nem lehet másolni vagy áthelyezni "%s" ide: "%s""
+
+301="%d bájt"
+302="%d Kb"
+303="%d Mb"
+304="%d Gb"
+305="%d Tb"
+306="%d - %d mappában"
+307="%d - %d listában"
+
+310="Link létrehozása a mappában:"
+311="A link nem hozható létre:"
+312="Link létrehozva:"
+
+313="Fontos: a Másolás/Áthelyezés/Törlés/Email/Konverter mûveleteknek szüksége van a navigációs panel kiegészítõre."
+314="Nem lehet inicializálni az MS Office vezérlõt."
+315="Ez a fájl kiterjesztés (%s) szerepel a kihagyási listában.\nMindenképp megnyitja?"
+316="A(z) "%s" fájl hibás %s kiterjesztéssel rendelkezik.\nÁtnevezi?"
+317="Ez a kulcs már hozzá van rendelve ehhez: %s""
+
+320=Regisztrált alkalmazás
+321=A kulcs nem aktiválható. Ellenõrizze a szöveget és az internetkapcsolatot.
+322=regisztrált
+323=%d nap van hátra
+
+;Keys
+400="BkSp"
+401="Tab"
+402="Esc"
+403="Enter"
+404="Space"
+405="PgUp"
+406="PgDn"
+407="End"
+408="Home"
+409="Bal"
+410="Fel"
+411="Jobb"
+412="Le"
+413="Ins"
+414="Del"
+415="Shift+"
+416="Ctrl+"
+417="Alt+"
+
+[Captions]
+
+;FormViewUV
+100="&Fájl"
+101="&Megnyitás..."
+102="&Újra-betöltés"
+103="Menté&s másként..."
+104="Be&zárás"
+105="&Mappa megnyitása..."
+106="Legutóbbi megnyitása"
+107="Lista ürítése"
+108="&E-mail küldése..."
+109="&Fájlnév másolása"
+110="&Nyomtatás..."
+111="Nyomtatási ké&p..."
+112="O&ldalbeállítás..."
+115="&Elõzõ fájl"
+116="&Következõ fájl"
+117="Tö&rlés..."
+118="&Tulajdonságok..."
+119="&Kilépés"
+
+120="&Beillesztés új fájlba"
+121="S&zerkesztés"
+122="&Másolás"
+123="Min&det kijelöli"
+124="K&eresés..."
+125="T&ovábbkeresés"
+126="&Ugrás..."
+127="Másolás &hex-ként"
+128="&Sor kijelölése"
+129="Másolás &fájlba..."
+
+130="&Beállítások"
+131="&1  Szöveg"
+132="&2  Bináris (rögzített hossz)"
+133="&3  Hexadecimális"
+134="&4  Kép/Multimédia"
+135="&5  Internet"
+136="&6  Unicode"
+137="&7  Beépülõ modulok"
+138="&4  Kép"
+
+139="&Mód"
+140="Hivatkozás másolása"
+141="URL kiemelés"
+142="&Hosszú sorok tördelése"
+143="&A kép ablakhoz illesztése"
+144="&Kapcsolat nélküli böngészés"
+145="&Mindig látható"
+146="&Teljes képernyõ"
+
+147="&Beállítás..."
+148="Beépülõ modulok konfigurálása..."
+149="&Eszköztár testreszabása..."
+
+150="&Nézet"
+151="Kép"
+152="&Nagyítás"
+153="&Kicsinyítés"
+154="&Eredeti méret"
+
+155="&Súgó"
+156="&Névjegy..."
+
+157="90 fokos elforgatás"
+158="270 fokos elforgatás"
+159="Szürkeárnyalatos"
+160="Negatív"
+161="Csak a nagy képek illesztése"
+162="Információs címke megjelenítése"
+163="&Kép középre"
+164="&Nagyítás"
+165="Ablak igazítása a képhez"
+166="&Lejátszás/Szünet"
+
+167="&Elõzõ keresése"
+168="&Kódolás"
+169="Kódolási &menü..."
+170="&Elõzõ kódolás"
+171="&Következõ kódolás"
+172="&Nem-nyomtatható karakterek"
+173=
+174="Ablak igazítása a média mérethez"
+175="Idõ kijelzõ megjelenítése"
+
+176="&Ugrás vissza"
+177="&Elõre"
+178="&Szöveg"
+179="&Internet"
+
+180="Nincs betöltve fájl (Fájl > Megnyitás)"
+
+181="&Eszközök"
+182="Felhasználói eszközök konfigurálása..."
+183="S&peciális"
+184="A Konfigurációs fájl kézi szerkesztése"
+185="Az Elõzmények fájl kézi szerkesztése"
+186="Az ablak pozíció mentése"
+187="Hivatkozás létrehozása a fájlhoz..."
+188="Csak a kép szélességének igazítása"
+189="Csak a kép magasságának igazítása"
+
+219="Kép effekt"
+220=
+221=
+222=
+223=
+224="&Függõleges tükrözés"
+225="&Vízszintes tükrözés"
+226="&180 fokos elforgatás"
+227="&Szépia"
+
+228="Fórum - Angol"
+229="Fórum - Orosz"
+230="&Web hivatkozások"
+231="&Honlap..."
+232="&Visszajelzés..."
+233="&Beépülõ modulok letöltése..."
+234="&Tartalomjegyzék..."
+
+;img panel
+235=Kép panel
+236=Szerkesztés
+237=Konvertálás
+238=Elforgatás:
+239=Effektek:
+240=Konvertálás:
+241=Konvertálás...
+242=Kép &panel megjelenítése
+
+;FormViewOptions
+;(continues after 800)
+263="Javasolt a hibás kiterjesztésû képek átnevezése"
+264="Ablak felirat:"
+265="Teljes helynév megjelenítése"
+266="Csak a fájlnév megjelenítése"
+267="Megjelenítési mód indításkor:"
+268="Auto-észlelés"
+
+269="&Hasábköz és sorszámok..."
+270="Sorszámok megjelenítése a hasábközöknél"
+271="&Csak az elsõhöz:"
+272="Kb/fájl"
+273="Csak ehhez a fájl kiterjesztéshez:"
+
+274="&Bal oldali hasábköz"
+275="Nincs hibaüzenet, helyette hangjelzés legyen"
+276="A sorszámok maximális száma:"
+278="Lépés (1: megjelenítés mindre):"
+279="Nincs "Továbbkeresés" opció jóváhagyás"
+
+280="Egyéb"
+281="Az .lnk kiterjesztésû fájlok feloldása"
+282="Lejátszások száma"
+283="&Rejtett fájlok megjelenítése"
+284="Ablak pozíció mentése"
+285="Utolsó munkakönyvtár mentése"
+286="Elõzmények"
+287="Nyomtatás"
+288="&Interfész:"
+289="Keresési elõzmény mentése"
+290="&Lábjegyzet betû:"
+291="Törlés"
+292="Törlés"
+
+300="Universal Viewer beállítások"
+301="Fájl kiterjesztés"
+302="Szöveg"
+303="Multimédia"
+304="Felhasználói felület"
+305="Fájltípusok"
+306="Speciális"
+307="Gyorsbillentyûk"
+308="Betûk és színek"
+309="Auto-újratöltés"
+
+310="&Szöveg:"
+311="&Képek:"
+312="&Média:"
+313="I&nternet:"
+314="&RTF:"
+
+315="Hex szín"
+316="Hex háttér"
+
+317="Speciális &OEM betû használata"
+318="Ma&ximum sor hosszúság"
+319="&Tabulátor méret"
+320="&Betûtípus:"
+321="&Színek:"
+322="Bináris mód: szélesség igazítása"
+323="Bináris mód: rögzített szélesség"
+324="&Keresési eredmény: sorok felülrõl"
+325="Kiválasztási javaslat keresõszövegként"
+326="Auto-&újrabetöltés fájl módosításnál"
+327="A listavéghez ugrik az újrabetöltés után"
+328="&Hangjelzés betöltésnél"
+329="&Szöveg auto-másolása a vágólapra"
+
+330="Képfelirat szín"
+331="&Kép újra-mintavételezés átméretezésnél"
+332="Kép háttérszín"
+333="Átlátszó kép megjelenítés"
+334="&Lejátszás auto-indítása"
+
+335="&Nyelv:"
+336="Intézõ helyi menü elem megjelenítés"
+337="&Eszköztár"
+338="Keret a megjelenítési terület körül"
+339="Eszköztár engedélyezése teljes képernyõn"
+
+340="Parancs"
+341="Gyorsbillentyû"
+342="&Billentyûparancs:"
+
+343="Ikonok megjelenítése a menüben"
+344="Menü megjelenítése"
+345="Legutóbbi fájlok listájának megjelenítése"
+346="Csak egy példány engedélyezése"
+347="&Állapotsor megjelenítése"
+348="Na&vigációs panel megjelenítése"
+349="Felhasználói megerõsítés a nem felismerhetõ típusok megnyitása elött"
+
+;Buttons
+350="OK"
+351="Mégse"
+352="Keresés"
+353="Bezárás"
+354="Hozzárendelés"
+355="Súgó"
+356="Visszaállítás"
+
+;Options dialog
+360="Szöveg konvertáló:"
+361="Szöveg konverter üzenet megjelenítése felül"
+362="Az utoljára használt fájl ismételt megnyitása"
+363="RAW képek"
+
+364="&Audió illesztõprogram:"
+365="&Videó illesztõprogram:"
+366="Kép automatikus elforgatása EXIF szerint"
+
+;FormViewOptionsText
+380="Auto-&észlelés"
+381="&Szövegfájlok auto-észlelése"
+382="elsõként"
+383="Kb"
+384="&maximális méret:"
+385="Kb (0: nincs korlátozás)"
+386="&OEM kódolás auto-észlelése"
+387="&UTF-8 kódolás automatikus észlelése"
+
+;FormViewGoto
+400="Ugrás"
+401="Új pozíció"
+402="&Százalék (%)"
+403="&Hexadecimális távolság"
+404="&Decimális eltolás"
+405="&Kijelölés kezdete"
+406="&Kijelölés vége"
+407="&Sorszám"
+408="Adjon meg cella nevet, pl. A10:"
+409="Lapszám megadása:"
+
+;FormViewAbout
+410="Névjegy"
+411="Verzió"
+412="Komponens készítõk:"
+413="Regisztrált tulajdonos:"
+414="Próbaverzió (%d nap van hátra)"
+416="Licencszerzõdés"
+417="Az alkalmazás eltávolításához, nyissa meg a Start menü - Programok - Universal Viewer - és futtassa az "Eltávolítás" modult."
+
+;FormViewFindText
+420="Keresés"
+421="&Keresendõ szöveg:"
+422="&Csak egész szavak"
+423="&Kis-/nagybetû megkülönböztetés"
+424="Többsoros reguláris kifejezés"
+425="He&x karaktersor"
+426="&Reguláris kifejezés"
+427=" (az eljáráskönyvtár nem használt)"
+428="Beállítások"
+429="Irány"
+430="&Elõre"
+431="&Hátra"
+432="Kezdet"
+433="&Kurzortól"
+434="A jelenlegi laptól"
+435="&Teljes fájl"
+436="Az összes elõfordulás megjelölése"
+
+;FormPluginsOptions
+500="Beépülõ konfiguráció"
+501="Telepített beépülõk"
+502="&Hozzáadás..."
+503="Eltá&volítás"
+504="S&zerkesztés..."
+505="&Fel"
+506="&Le"
+507="&Beállítás..."
+510="Név"
+511="Karaktersor észlelés"
+512="Fájlnév"
+520="A beépülõ modulok magasabb prioritásúak a belsõ nézõkénél"
+521="Beépülõ nevek mentése %Commander_Path% környezeti változóval"
+524="Az 'Alt' &billentyû hozzáadása a gyorsbillentyû menühöz, így nem fognak konfliktusba keveredni a beépülõkkel"
+
+;FormPluginsAdd
+530="Beépülõk hozzáadása"
+531="Beépülõk hozzáadása a &Total Commander konfigurációs fájlból"
+532="Beépülõk hozzáadása a megadott mappából"
+533="Szimpla beépülõk hozzáadása"
+534="Beépülõ(k) telepítése archívum(ok)ból"
+537="Total Commander &exe fájl:"
+538="Total Commander konfigurációs fájl:"
+539="&Fájl:"
+540="&Mappa:"
+541="Alkalmazások (*.exe)|*.EXE"
+542="INI-fájlok (*.INI)|*.INI"
+543="Beépülõk (*.wlx)|*.WLX"
+544="Archívumok (*.zip,*.rar)|*.ZIP;*.RAR"
+
+;FormPluginsEdit
+550="Beépülõ konfigurálása"
+551="Fájlnév:"
+552="&Karaktersor észlelés:"
+553="Alapértelmezett"
+554="Konfigurációs fájl:"
+
+;FormViewToolbar
+560="Eszköztár testreszabása"
+561="&Választható gombok:"
+562="Kiválasztott gombok:"
+563="&Hozzáadás ->"
+564="<- &Eltávolítás"
+565="&Alaphelyzet"
+566="(Elválasztó)"
+
+;FormViewToolList
+600="Felhasználói eszközök lista"
+601="Felhasználói eszköz tulajdonságok"
+602="&Felirat:"
+603="&Alkalmazás:"
+604="&Paraméterek:"
+605="Makró paraméterek (dupla kattintás a makró hozzáadásához a paraméter listához):"
+606="Végrehajtási mûvelet:"
+607="Az alkalmazás végrehajtása elött:"
+608="Az alkalmazás végrehajtása után:"
+609="Javaslat: '?' hozzáadása elsõ karakterként a paraméter megerõsítéshez."
+
+;FormViewRename
+650="Fájl átnevezése"
+651="Átnevezés..."
+652="&Átnevezés erre:"
+653="Másolás mappába..."
+654="Áthelyezés mappába..."
+
+;FormReg
+700="Regisztrálás"
+701="&Regisztrálás..."
+702="Regisztrálási információ"
+703="&Név:"
+704="&Kulcs:"
+705="Beillesztés"
+706=Kérjük, adja meg az email-ben kapott licenckódot. A licenckód kis- és nagybetû függõ. Javasoljuk, hogy illessze be (Ctrl+V) a kulcsot az alábbi mezõbe. A kulcs megadása után kattintson az Aktiválás gombra.
+707=&Aktiválás
+708=Kulcs igénylés
+
+;FormPrintPreview
+710="Margók"
+711="&Bal:"
+712="&Jobb:"
+713="&Fent:"
+714="&Lent:"
+715="mm"
+716="cm"
+717="hüvelyk"
+718="Gamma"
+719="&Gamma érték:"
+
+720="Nyomtatási kép"
+721="Nyomtatás"
+722="Beállítások"
+723="Gyorsnézet"
+724="&Élõláb szövege"
+725="Az ideiglenes bitkép nem foglalható le."
+726="Pozíció"
+
+727="&Illesztési mód:"
+728="Normál"
+729="Legjobb kitöltés"
+730="Nyújtás"
+731="Egyedi méret"
+732="&Magasság:"
+733="&Szélesség:"
+734="&Arányos"
+735="&Betûtípus..."
+736="Nyomtató&beállítás..."
+
+;FormViewOptionsImages
+740="Eljáráskönyvtárak"
+741="&Az IrfanView/XnView használata a grafikák betöltéséhez"
+742="&Alkalmazás fájlnév:"
+743="&Fájl kiterjesztés:"
+744="Az IrfanView/XnView magasabb prioritású a belsõ eljáráskönyvtárnál"
+745="Az "ijl15.dll" használata a &JPEG grafikák betöltéséhez"
+746="&Fájl kiterjesztés:"
+
+;FormNavColumns
+780="További..."
+781="Oszlopbeállítások"
+782="Aktiválja az oszlopokat, amelyeket meg szeretne jeleníteni. Húzd és ejtsd mód az oszlopok újrarendezéséhez."
+783="A kijelölt oszlop "
+784="képpont széles"
+785="Frissítés"
+
+;FormViewOptions..
+800="&Ikonok:"
+801="(Alapértelmezett)"
+802="(Sablon mentése...)"
+803="&Ismétlõdõ lejátszás"
+
+805="Fájl rendezés:"
+806=" (leírás)"
+807="Fájlnév"
+808="Kiterjesztés"
+809="Létrehozva"
+810="Módosítva"
+811="Egyéni ablak magasságok használata"
+812="Kihagyási lista:"
+813="Keresési kiemelés"
+
+814="Modern médialejátszó használata"
+815="Ha le van tiltva, a régi stílusú lejátszó lesz használatban. A régi stílusú lejátszó is letiltható a "Média" kijelölésének megszüntetésével a "Fájltípusok" fülön."
+
+816=Elemek teljes képernyõs módban
+817=Menüsáv
+818=Eszköztár
+819=Multimédia - beállítósáv
+820=Multimédia - gombsáv
+821=Állapotsor
+822=Multimédia - kurzor
+
+830=Word/RTF opciók
+831=Alapértelmezett elrendezés:
+832=Alapértelmezett nagyítás
+833=Egyéni nagyítási érték %:
+834=Tervezet elrendezés
+835=Webes elrendezés
+836=Nyomtatási elrendezés
+
+;FormViewEXIF
+880="EXIF olvasó"
+881="EXIF megjelenítés..."
+883="Címke"
+884="Tulajdonság"
+885="Érték"
+890=" IFD 0 "
+891=" Al IFD "
+892=" IFD együttmûködési képesség "
+893=" Jegyzet készítõ "
+894=" IFD 1 "
+895=" Miniatûr "
+
+;Preview
+900=Elsõ oldal
+901=Elõzõ oldal
+902=Következõ oldal
+903=Utolsó oldal
+904=Aktuális oldal
+905=Nagyítási érték
+906=Teljes oldal
+907=Szélesség igazítása
+908=Egyéni...
+
+;Media
+910=Lejátszás/szünet
+911=Szünet
+912=Leállítás
+913=Elõre léptetés
+914=Eredeti
+915=Nyújtás
+916=Audio#%d
+917=Némítás
+918=Hangerõ
+919=Képarány
+920=Audió csatorna
+921=Kép megnyitása...
+922=10 mp visszaléptetés
+923=1 perc visszaléptetés
+924=5 perc visszaléptetés
+925=Elõre 10 mp
+926=Elõre 1 perc
+927=Elõre 5 perc
+928=Idõ (hh:mm:ss):
+929=Aktuális képkocka mentése...
+
+
+
+[Nav]
+
+200="Navigációs panel"
+201="Egy szinttel feljebb"
+202="&Nézet"
+203="&Súgó"
+204="&Regisztráció..."
+205="&Névjegy..."
+206="&Mappa:"
+207="&Meghajtók:"
+
+210="Üres mappa"
+211="&Ikonok"
+212="&Lista"
+213="&Részletek"
+214="&Miniatûrök"
+215="&Vízszintes elrendezés"
+216="&Rejtett fájlok megjelenítése"
+217="Csatolás a megjelenítõhöz"
+218="Elérési útvonal sáv megjelenítése"
+219="Meghajtó sáv megjelenítése"
+220="Speciális mappák megjelenítése"
+221="Állapotsor megjelenítése"
+222="Mappák megnyitása a megjelenítõben"
+
+
+
+
+
+
+
+

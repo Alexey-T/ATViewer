@@ -1,0 +1,74 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <title>Plugins usage</title>
+  <link href="Main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h3>
+  Plugins usage
+</h3>
+<hr>
+
+<!--------------------------------->
+<h4>Installation</h4>
+
+<p>
+To install a plugin from <i>.zip</i> / <i>.rar</i> archive, do the following:
+<ul>
+<li> In UV open "Options -- Configure plugins" dialog, press "Add...",
+     select "Add plugin(s) from archive(s)" and press "..." button.
+<li> In the Open dialog browse for the archive file (or several files).
+</ul>
+
+Or, if plugin archive contains <i>"pluginst.inf"</i> file:
+<ul>
+<li> Just open this archive in UV. Auto-install prompt will appear.
+</ul>
+
+Note: if you install newer plugin version, from the archive with different name,
+this may not overwrite the older plugin record. So, you will need to manually delete the older plugin record.
+
+<!--------------------------------->
+<h4>Configuring</h4>
+
+<p>
+You can tweak plugins a little, this is optional of course,
+but may be needed with some plugins which have poor default configuration.
+For example, <i>ICLView</i> plugin has the poor configuration, which doesn't contain
+<i>.DLL</i> extension.
+In "Configure plugins" dialog press "Configure...",
+there you can edit plugin <i>detect-string</i>.
+
+<p>
+The <i>"detect-string"</i> specifies which filetypes will be opened in plugin by default.
+The empty string means that plugin should detect filetypes by content
+(must be supported by plugin).
+String may contain the following:
+
+<ul>
+<li> List of file extensions in the form:<br>
+  <i>EXT="TXT" | EXT="DOC" | EXT="RTF"</i>
+<li> <i>"FORCE"</i> special word, which can be present with or without extensions:<br>
+  <i>EXT="TXT" | FORCE</i> <br>
+  This word tells that plugin should be opened also for unknown filetypes,
+  when you forcefully call Plugins view ("7" key).
+<li> List of file extensions in the form:<br>
+  <i>EXT:TXT,DOC,RTF</i> <br>
+  <i>EXT:TXT FORCE</i> <br>
+  The <i>"FORCE"</i> special word can be present, after space, at the end of line.
+</ul>
+
+<!--------------------------------->
+<h4>Usage</h4>
+
+<ul>
+<li> When Plugins view is active, you can press "7" key repeatedly
+to switch between plugins applicable to the current file.
+<li> You can see, which plugin is currently active, in the app window caption:
+plugin name is written there in brackets.
+</ul>
+
+
+</body></html>

@@ -1,0 +1,654 @@
+Version=6.5.3
+Author=Alexandru Bogdan Munteanu
+Homepage=http://muntealb.bravehost.com
+Email=muntealb(at)gmail.com
+
+[Messages]
+
+101="Filã negãsitã: "%s""
+102="Nu pot deschide fila: "%s""
+104="Nu pot redeschide fila: "%s""
+105="Nu pot citi fila: "%s""
+106="Nu pot iniþializa %s"
+107="Dosar negãsit: "%s""
+
+108="Format necunoscut\nClicheazã aici pentru a vedea deºertarea binarã [binary dump]\n(Acest mesaj poate fi fãcut sã nu mai aparã din Panoul Opþiunilor)"
+109="Eroare de citire la decalarea %s"
+110="Nu pot procesa lista de file: "%s""
+111="Fila este goalã"
+113="Formatul filei nu poate fi detectat\nEste arãtatã deºertarea binarã [binary dump]"
+114="Aceastã filã nu poate fi arãtatã folosind modulul MS Office"
+115="Format de imagine necunoscut"
+116="Format multimedia necunoscut"
+120="Nu am gãsit ºirul cãutat: "%s""
+121="Nu pot copia textul în cliplanºetã"
+122="ªir Hex nevalid: "%s""
+123="Caut "%s":"
+124="A apãrut o eroare de cãutare."
+125="Nu ai selectat nici un text."
+126="Nu existã informaþii EXIF în aceastã filã."
+127="Cliplanºeta nu conþine text sau imagini."
+129="Pagina Precedentã/Urmãtoare\nPagina Curentã: %d din %d"
+130="Convertorul de Text este disponibil pentru acest tip de filã\nClicheazã aici pentru a arãta textul"
+
+151="Nu pot rula unealta:\n"%s""
+152="Nu pot aplica în registru opþiunea de integrare cu Windows Explorer. Încearcã sã rulezi aplicaþia ca Administrator."
+153="Filã ataºatã."
+154="Nu pot trimite mesajul electronic (eroare MAPI)"
+155="Nu pot converti documentul în format text"
+156="Nu pot crea fila temporarã"
+
+200="Excepþie apãrutã în implantul [plugin] "%s" la funcþia "%s""
+201="Nu pot dezîncãrca implantul [plugin] "%s""
+202="Nu pot încãrca implanturile [plugins], formatul pãrinte nefiind specificat"
+
+203="Aceastã arhivã conþine un implant nesuportat (%s)"
+204="Aceastã arhivã conþine implantul:\n"%s".\n\nVrei sã-l instalezi în Universal Viewer?"
+
+209="Au fost adãugate urmãtoarele implanturi:\n\n%s\nAu fost actualizate urmãtoarele implanturi:\n\n%s"
+210="Implanturile urmãtoare au fost adãugate:\n\n%s\nImplanturile urmãtoare sînt deja instalate ºi nu au mai fost adãugate:\n\n%s"
+211="(nimic)\n"
+212="Numele filei/dosarului sursã nu este valid"
+213="Numele executabilului selectat ca fiind Total Commander nu este valid"
+214="(negãsit)"
+215="Nu pot decomprima arhiva "%s" în dosarul implanturilor "%s""
+216="Nu pot gãsi implantul în arhiva "%s""
+
+250="Aceasta este ultima filã din dosar. Sar la prima filã?"
+251="Aceasta este prima filã din dosar. Sar la ultima filã?"
+252="Numele de filã "%s" nu a fost gãsit în dosar. Sar la prima filã?"
+253="Dosarul curent este gol. Nu pot sãri la altã filã."
+254="Aceasta este singura filã din dosar. Nu pot sãri la altã filã."
+255="Aceasta este ultima filã din listã. Sar la prima filã?"
+256="Aceasta este prima filã din listã. Sar la ultima filã?"
+257="Dosarul este gol: "%s""
+
+260="ªterge Fila"
+261="Vrei sã muþi "%s" în Reciclator?"
+262="Vrei sã ºtergi "%s"?"
+263="Nu pot ºterge "%s""
+264="Nu pot copia sau muta "%s" în "%s""
+
+301="%d baiþi"
+302="%d KB"
+303="%d MB"
+304="%d GB"
+305="%d TB"
+306="%d din %d în dosar"
+307="%d din %d în listã"
+
+310="Creeazã legãturã în dosarul:"
+311="Nu pot crea legãtura:"
+312="Legãturã creatã:"
+
+313="Notã: Operaþiile de Copiere/Mutare/ªtergere/E-mail/Convertire necesitã Panoul de Navigare, care este un adoas al softului."
+314="Nu pot iniþializa controlul MS Office"
+315="Extensia (%s) acestei file este în lista de ignorare.\nO deschizi oricum?"
+316="Fila "%s" este de fapt de tipul %s, dar are extensia greºitã.\nO renumesc cu extensia corectã?"
+317="Aceastã tastã este deja alocatã pentru "%s""
+
+320=Aplicaþie înregistratã
+321=Nu pot activa cheia de licenþiere. Verificã textul ei ºi conexiunea la internet.
+322=înregistrat
+323=%d zile rãmase
+
+;Keys
+400="BkSp"
+401="Tab"
+402="Esc"
+403="Enter"
+404="Spaþiu"
+405="PgUp"
+406="PgDn"
+407="End"
+408="Home"
+409="Stînga"
+410="Sus"
+411="Dreapta"
+412="Jos"
+413="Ins"
+414="Del"
+415="Shift+"
+416="Ctrl+"
+417="Alt+"
+
+[Captions]
+
+;FormViewUV
+100="&Filã"
+101="&Deschide..."
+102="&Redeschide"
+103="Salveazã c&a..."
+104="Înc&hide"
+105="Deschide Do&sarul..."
+106="Deschide Fila Recentã"
+107="&Curãþã Lista"
+108="Trimite prin Poºta &Electronicã..."
+109="Cop&iazã Numele Filei"
+110="Ti&pãreºte..."
+111="Pre&vizioneazã Tipãritura..."
+112="Aran&jeazã Pagina..."
+115="Fila &Precedentã"
+116="Fila &Urmãtoare"
+117="ªter&ge..."
+118="Pr&oprietãþi..."
+119="&Ieºi"
+
+120="Li&peºte în Filã Nouã"
+121="&Editeazã"
+122="&Copiazã"
+123="Selecteazã &Tot"
+124="&Gãseºte..."
+125="Gãseºte &Urmãtoarea"
+126="&Du-te La..."
+127="Copiazã ca &Hex"
+128="Selecteazã &Rîndul"
+129="Copiazã într-o F&ilã..."
+
+130="&Opþiuni"
+131="&1  Text"
+132="&2  Binar (lungime fixã)"
+133="&3  Hex"
+134="&4  Imagini/Multimedia"
+135="&5  Internet"
+136="&6  Unicode"
+137="&7  Implant [Plugin]"
+138="&4  Imagine"
+
+139="&Mod"
+140="Copiazã &Legãtura"
+141="E&videnþiazã Adresele de Internet (URL)"
+142="Încadrea&zã Textul"
+143="A&justeazã Imaginea la Fereastrã"
+144="Exploreazã Conectat/&Neconectat"
+145="Mereu De&asupra"
+146="Ecran &Plin"
+
+147="&Configureazã Opþiunile..."
+148="Configureazã &Implanturile [Plugins]..."
+149="Personalizeazã Bara de Unel&te..."
+
+150="&Vezi"
+151="&Imagine"
+152="Zumeazã &Intern [Zoom in]"
+153="Zumeazã &Extern [Zoom out]"
+154="Afiºeazã la Mã&rimea Originalã"
+
+155="A&jutor"
+156="&Despre..."
+
+157="Roteºte &90 Grade"
+158="Roteºte &270 Grade"
+159="Nuanþe de &Gri"
+160="&Negativ"
+161="Ajusteazã Numai Imaginile &Mari"
+162="Aratã Eticheta cu &Informaþii"
+163="&Centreazã Imaginea"
+164="&Zumeazã"
+165="Ajusteazã &Fereastra la Imagine"
+166=
+
+167="Gãseºte &Precedenta"
+168="&Codeazã"
+169="&Meniul Codãrilor..."
+170="Codarea &Precedentã"
+171="Codarea &Urmãtoare"
+172="Afiºeazã Caracterele &Netipãribile"
+173=
+174="Ajusteazã Fereastra la Conþinutul Multimedia"
+175="Aratã Indicatorul de &Timp"
+
+176="Mergi Îna&poi"
+177="Mergi Î&nainte"
+178="&Text"
+179="&Internet"
+
+180="Nu este deschisã nici o filã (foloseºte meniul Filã > Deschide)"
+
+181="&Unelte"
+182="Configureazã Uneltele Utiliza&torului..."
+183="&Avansate"
+184="Editeazã Manual Fila de &Configurare"
+185="Editeazã Manual Fila &Istoriei"
+186="Salveazã Poziþia &Ferestrei"
+187="Creeazã &Scurtãturã cãtre Fila Selectatã..."
+188="Ajusteazã Imaginea Doar pe &Lãþime"
+189="Ajusteazã Imaginea Doar pe Î&nãlþime"
+
+219="&Efecte de Imagine"
+220=
+221=
+222=
+223=
+224="Rãstoarnã &Vertical"
+225="Rãstoarnã &Orizontal"
+226="Roteºte &180 Grade"
+227="&Sepia"
+
+228="Discuþie despre Soft în Englezã"
+229="Discuþie despre Soft în Rusã"
+230="&Internet"
+231="&Situl Softului"
+232="&Mesaj Electronic cãtre Autorul Softului"
+233="Im&planturi [Plugins] pentru Soft"
+234="&Cuprins"
+
+;img panel
+235=Panoul Imaginilor
+236=Editeazã
+237=Converteºte
+238=Roteºte:
+239=Efecte:
+240=Converteºte în:
+241=Converteºte...
+242=Aratã &Panoul Imaginilor
+
+;FormViewOptions
+;(continues after 800)
+263="Su&gereazã renumirea filelor imagine care au extensia greºitã"
+264="Afiºeazã în bara de &titlu:"
+265="Calea completã a filei"
+266="Doar numele filei"
+267="Afiºeazã la pornire în for&mat:"
+268="Autodetectat"
+
+269="&Jgheabul ºi Numerotarea Rîndurilor..."
+270="Aratã &numerotarea rîndurilor în jgheab [gutter]"
+271="D&oar pentru primii:"
+272="KB ai filei"
+273="Doar pentru aceste &extensii de file:"
+
+274="Aratã j&gheabul (margine gri) la stînga ferestrei"
+275="Nu afiºa mesajele de &eroare, doar bipeazã"
+276="Numãrul &maxim la numerotarea rîndurilor:"
+278="Pasul numerotãrii (1 = aratã pentru toate rîndurile):"
+279="Nu cere confirmare la 'Gãseºte Urmãtoarea'"
+
+280="Diverse"
+281="Rezolvã þin&ta filelor .lnk (deschide fila þintã a scurtãturii)"
+282="Numãrul de &Redãri Succesive"
+283="Aratã &filele ascunse"
+284="Salveazã po&ziþia ferestrei"
+285="Salveazã ultimul dosar fo&losit"
+286="Istorie"
+287="Tipãrire"
+288="&Interfaþã:"
+289="&Salveazã istoria cãutãrilor"
+290="Fontul Su&bsolului Paginii [Footer]:"
+291="C&urãþã Lista"
+292="Cu&rãþã Istoria"
+
+300="Setãri Universal Viewer"
+301="Extensii de File"
+302="Text"
+303="Multimedia"
+304="Interfaþã"
+305="Tipuri de File"
+306="Avansate"
+307="Scurtãturi"
+308="Fonturi ºi Culori"
+309="Redeschidere Automatã [Auto-Reload]"
+
+310="&Text:"
+311="&Imagine:"
+312="&Multimedia:"
+313="I&nternet:"
+314="&RTF:"
+
+315="Culoare Hex"
+316="Fundal Hex"
+
+317="Foloseºte un font &OEM special"
+318="Lungimea ma&ximã a rîndului"
+319="Mãrimea &tabului"
+320="&Font:"
+321="&Culori:"
+322="Mod binar: potriveºte cu &lãþimea ferestrei"
+323="Mod binar: lãþime &fixã"
+324="Rezultatele &cãutãrii: rînduri pornind de sus"
+325="Ada&ugã automat selecþia în panoul de cãutare"
+326="&Redeschide automat fila dupã modificarea ei"
+327="Urmeazã &Coada dupã Redeschidere"
+328="&Bipeazã (emite un bip) la redeschidere"
+329="&Autocopiazã textul în Cliplanºetã [clipboard]"
+
+330="Culoarea etichetei imaginii"
+331="&Reeºantioneazã Imaginea la Scalare"
+332="Culoarea de fundal a imaginii"
+333="Aratã &Transparenþa Imaginii"
+334="Porneºte &Automat Redarea"
+
+335="&Limbã:"
+336="Aratã softul UV în meniul contextual Windows &Explorer"
+337="Aratã Bara de &Unelte"
+338="Aratã un &chenar subþire în jurul zonei de afiºare"
+339="Aratã bara de &unelte ºi în modul ecran plin [full screen]"
+
+340="Comandã"
+341="Scurtãturã"
+342="&Scurtãturã:"
+
+343="Aratã I&coane în Meniuri"
+344="Aratã Bara de &Meniuri"
+345="Salveazã lista de file folosite &recent în program"
+346="&Permite o singurã instanþã a softului Universal Viewer"
+347="Aratã Bara de &Stare"
+348="Aratã Panoul de &Navigare"
+349="Solicitã confirmare înainte de deschiderea filelor cu format ne&cunoscut"
+
+;Buttons
+350="OK"
+351="Anuleazã"
+352="Gãseºte"
+353="Închide"
+354="Alocã"
+355="Ajutor"
+356="Reseteazã"
+
+;Options dialog
+360="&Convertor de Text:"
+361="Aratã în partea de sus informarea despre convertorul de te&xt"
+362="Redeschide la pornire &ultima filã folositã"
+363="Imagini RAW"
+
+364="Draiver &Audio:"
+365="Draiver &Video:"
+366="Autoroteºte imaginea conform cu informaþiile E&XIF"
+
+;FormViewOptionsText
+380="&Autodetectare"
+381="Detecteazã &automat filele text"
+382="dupã &primii"
+383="KB"
+384="Mãrime &maximã:"
+385="KB (0: nelimitatã)"
+386="Detecteazã automat codarea &OEM"
+387="Detecteazã automat codarea &UTF-8"
+
+;FormViewGoto
+400="Du-te la"
+401="Poziþia nouã"
+402="&Procent (%)"
+403="Decalare &Hex"
+404="Decalare &Zecimalã"
+405="Î&nceputul Selecþiei"
+406="S&fîrºitul Selecþiei"
+407="Numãrul &Rîndului"
+408="Introdu numele celulei, de ex. A10:"
+409="Introdu numãrul paginii:"
+
+;FormViewAbout
+410="Despre"
+411="Versiune"
+412="Credite pentru componentele utilizate:"
+413="Înregistrat de:"
+414="Versiune de evaluare (%d zile rãmase)"
+416="Acord de Licenþiere"
+417="Pentru a dezinstala softul, deschide Meniul de Pornire - Toate Programele - Universal Viewer - ºi clicheazã pe comanda "Uninstall"."
+
+;FormViewFindText
+420="Cãutare"
+421="&Textul cãutat:"
+422="Doar cuvinte între&gi"
+423="Þine cont de caseta literelor (MA&JUSCULE/minuscule)"
+424="Expresie Regulatã &Multilinie (pe mai multe rînduri)"
+425="ªir He&x"
+426="Expresie &Regulatã"
+427=" (bibliotecã neutilizatã)"
+428="Opþiuni"
+429="Sensul de Cãutare"
+430="Î&nainte"
+431="Îna&poi"
+432="Intervalul de Cãutare"
+433="Pornind de &la cursor"
+434="Doar &pagina curentã"
+435="Toatã fi&la"
+436="Marcheazã colorat to&ate apariþiile"
+
+;FormPluginsOptions
+500="Configurarea Implanturilor [Plugins]"
+501="Implanturi Instalate"
+502="&Adaugã..."
+503="În&lãturã"
+504="&Editeazã..."
+505="&Sus"
+506="&Jos"
+507="&Configureazã..."
+510="Numele Implantului"
+511="Detecteazã ªirul"
+512="Calea Filei"
+520="Implanturile au &prioritate mai înaltã decît vizoarele interne"
+521="Salveazã numele filelor implanturilor cu &variabila de mediu %Commander_Path%"
+524="Adaugã &tasta 'Alt' la scurtãturile din meniuri, pentru a evita conflictul cu implanturile"
+
+;FormPluginsAdd
+530="Instaleazã Implanturi [Plugins]"
+531="Importã setãrile din &Total Commander"
+532="Instaleazã toate implanturile din &dosar"
+533="Instaleazã un &singur implant"
+534="Instaleazã implanturi din &arhive"
+537="Filã &Executabilã TC:"
+538="&Filã de Configurare TC:"
+539="&Filã:"
+540="&Dosar:"
+541="Aplicaþii (*.exe)|*.EXE"
+542="File Ini (*.ini)|*.INI"
+543="Implanturi (*.wlx)|*.WLX"
+544="Arhive (*.zip,*.rar)|*.ZIP;*.RAR"
+
+;FormPluginsEdit
+550="Configureazã Implantul"
+551="Numele Filei:"
+552="&Detecteazã ªirul [Detect String]:"
+553="I&mplicit"
+554="Filã de Configurare:"
+
+;FormViewToolbar
+560="Personalizeazã Bara de Unelte"
+561="Butoane Dis&ponibile:"
+562="Butoane Afiºa&te:"
+563="&Adaugã ->"
+564="<- În&lãturã"
+565="Re&seteazã"
+566="(Separator)"
+
+;FormViewToolList
+600="Lista de Unelte ale Utilizatorului"
+601="Proprietãþile Uneltelor"
+602="&Etichetã:"
+603="Ap&licaþie:"
+604="Pa&rametri:"
+605="&Macrocomenzi pentru parametri (dublu-clicul adaugã macrocomanda la lista de parametri):"
+606="Acþiuni de efectuat:"
+607="Înaintea executãrii aplicaþiei:"
+608="Dupã executarea aplicaþiei:"
+609="Pont: Adaugã '?' ca prim caracter pentru a confirma parametrii."
+
+;FormViewRename
+650="Renumeºte Fila"
+651="Renumeºte..."
+652="&Renumeºte în:"
+653="Copiazã în Dosarul..."
+654="Mutã în Dosarul..."
+
+;FormReg
+700="Înregistrare"
+701="În&registreazã..."
+702
+703=
+704=
+705=
+706=Introdu cheia de licenþiere primitã prin poºta electronicã. Caracterele majuscule ºi minuscule trebuie introduse ca atare. Recomandãm copierea ºi apoi lipirea (Ctrl+V) cheii în cîmpul de mai jos. Dupã introducerea cheii clicheazã pe butonul Activeazã pentru a o activa.
+707=&Activeazã
+708=O&bþine cheia
+
+;FormPrintPreview
+710="Margini"
+711="Stîn&ga:"
+712="&Dreapta:"
+713="&Sus:"
+714="&Jos:"
+715="mm"
+716="cm"
+717="inci"
+718="Gama"
+719="Valoare &Gama:"
+
+720="Previzioneazã Tipãritura"
+721="Tipãreºte"
+722="Opþiuni"
+723="Previzioneazã"
+724="Textul Subs&olului"
+725="Nu pot aloca bitmapul temporar."
+726="Poziþie"
+
+727="Mod de &Potrivire:"
+728="Normalã"
+729="Optimã"
+730="Extinsã"
+731="Mãrime Personalizatã"
+732="Î&nãlþime:"
+733="&Lãþime:"
+734="&Proporþionalã"
+735="Fo&nt..."
+736="Configureazã &Tipãrirea..."
+
+;FormViewOptionsImages
+740="Biblioteci &Grafice"
+741="Foloseºte Irfan&View/XnView pentru a vedea imaginile"
+742="Fila executabilã a &aplicaþiei:"
+743="Extensii de &file asociate:"
+744="IrfanView/XnView are prioritate mai înaltã ca &biblioteca internã"
+745="Foloseºte biblioteca "IJL15.dll" pentru a vedea imaginile &JPEG"
+746="&Extensii de file asociate:"
+
+;FormNavColumns
+780="Mai multe..."
+781="Setãrile Coloanei"
+782="Bifeazã coloanele care sã fie vizibile în acest dosar. Trage-ºi-pune coloanele pentru a le rearanja."
+783="Coloana selectatã ar trebui sã aibã "
+784="pixeli lãþime"
+785="LiveUpdate"
+
+;FormViewOptions..
+800="&Icoane:"
+801="(Implicit)"
+802="(Salveazã ªablonul...)"
+803="Redã în &Buclã (Continuu)"
+
+805="&Sorteazã filele dupã:"
+806=" (descrescãtor)"
+807="Nume"
+808="Extensie"
+809="Creat"
+810="Modificat"
+811="Foloseºte o Înãlþime Personalizatã a Ferestrei pentru Modurile:"
+812="&Listã de Ignorare:"
+813="Evidenþiazã rezultatele cãutãrii"
+
+;814="Foloseºte redorul [player] media modern"
+;815="(dacã opþiunea e debifatã, atunci este folosit tipul vechi de redor, care poate fi dezactivat prin debifarea opþiunii "Multimedia" din tabul "Tipuri de File")"
+;Poþi dezactiva redorul vechi debifînd opþiunea "Multimedia" din tabul "Tipuri de Filã"."
+
+816=Itemuri Afiºate în Modul Ecran Plin [Full Screen]
+817=Bara de Meniuri
+818=Bara de Unelte
+819=Multimedia - bara de piese
+820=Multimedia - bara de butoane
+821=Bara de Stare
+822=Multimedia - cursor
+
+823="Foloseºte redorul [player] media modern"
+824="Foloseºte redorul media vechi"
+825="Multimedia (redor de tip vechi)"
+826="Multimedia (redor de tip modern)"
+827="Spaþiere între linii"
+
+830=Opþiuni Word/RTF
+831=Aranjament implicit:
+832=Zum [Zoom] Implicit: 
+833=Valoarea Zumului [Zoom] în Procente:
+834=Aranjament de ciornã
+835=Aranjament de paginã web
+836=Aranjament de tipãrire
+
+;FormViewEXIF
+880="Cititor EXIF"
+881="Aratã Informaþiile E&XIF..."
+883="Tag"
+884="Proprietate"
+885="Valoare"
+890=" IFD 0 "
+891=" Sub IFD "
+892=" Interop. IFD "
+893=" Maker Note "
+894=" IFD 1 "
+895=" Miniaturã "
+
+;Preview
+900=Prima Paginã
+901=Pagina Precedentã
+902=Pagina Urmãtoare
+903=Ultima Paginã
+904=Pagina Curentã
+905=Valoarea de Zumare [Zoom]
+906=Afiºeazã Pagina Încadratã Complet
+907=Afiºeazã Pagina Încadratã pe Lãþime
+908=Afiºeazã Personalizat...
+
+;Media
+910=Redã/Pauzeazã
+911=Pauzeazã
+912=Opreºte
+913=Deruleazã Înainte Cadru cu Cadru
+914=Original
+915=Extins
+916=Audio#%d
+917=Mut
+918=Volum
+919=Raportul Aspectului
+920=Canale Audio
+921=Deschid imaginea...
+922=Deruleazã Înapoi 10 s
+923=Deruleazã Înapoi 1 min
+924=Deruleazã Înapoi 5 min
+925=Deruleazã Înainte 10 s
+926=Deruleazã Înainte 1 min
+927=Deruleazã Înainte 5 min
+928=Timp (hh:mm:ss):
+929=Salveazã cadrul curent...
+
+
+
+[Nav]
+
+200="Panou de Navigare"
+201="Sus un Nivel"
+202="&Vezi"
+203="A&jutor"
+204="În&registreazã..."
+205="De&spre..."
+206="&Dosar:"
+207="Dispoziti&ve:"
+
+210="Dosarul este gol"
+211="&Icoane"
+212="&Listã"
+213="&Detalii"
+214="&Miniaturi"
+215="Dispune &Orizontal Lista de File/Dosare"
+216="Aratã &Filele Ascunse"
+217="Docheazã la &Vizor"
+218="Aratã &Bara Cãii"
+219="Aratã Ba&ra Dispozitivelor"
+220="Aratã Dosarele &Speciale"
+221="Aratã Bara de St&are"
+222="Deschide Dosar&ele în Vizor"
+
+
+
+
+
+
+
+

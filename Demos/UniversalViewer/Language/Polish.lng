@@ -1,0 +1,654 @@
+Version=6.5.3
+Author=Maciej Bojakowski
+Homepage=
+Email=
+
+[Messages]
+
+101="Nie mo¿na odnaleŸæ pliku: "%s""
+102="Nie mo¿na otworzyæ pliku: "%s""
+104="Nie mo¿na za³adowaæ pliku: "%s""
+105="Nie mo¿na odczytaæ pliku: "%s""
+106="Nie mo¿na zainicjowaæ %s"
+107="Nie mo¿na odnaleŸæ folderu: "%s""
+
+108="Nieznany format\nKliknij tutaj, aby wyœwietliæ zrzut binarny\n(Ten komunikat mo¿na wy³¹czyæ w oknie dialogowym Opcje)"
+109="B³¹d odczytu od offsetu %s"
+110="Nie mo¿na obs³u¿yæ listy plików: "%s""
+111="Plik jest pusty"
+113="Nie mo¿na wykryæ formatu pliku\nPrzedstawiono zrzut binarny"
+114="Modu³ MS Office nie obs³uguje tego typu pliku"
+115="Nieznany format obrazu"
+116="Nieznany format multimediów"
+120="Wyszukiwany ci¹g znaków nie zosta³ znaleziony: "%s""
+121="Nie mo¿na skopiowaæ tekstu do Schowka"
+122="Nieprawid³owy ci¹g szesnastkowy.: "%s""
+123="Wyszukiwanie "%s":"
+124="Wyst¹pi³ b³¹d wyszukiwania"
+125="Tekst nie zaznaczony"
+126="Brak informacji EXIF w tym pliku"
+127="Schowek nie zawiera danych tekstowych lub elementu graficznego"
+129="Poprzednia/Nastêpna strona\nBie¿¹ca strona: %d z %d"
+130="Konwerter tekstu jest dostêpny dla tego typu pliku\nKliknij tutaj, aby wyœwietliæ tekst"
+
+151="Nie mo¿na uruchomiæ narzêdzia:\n"%s""
+152="Nie mo¿na zastosowaæ opcji integracji programu Explorer w rejestrze. Spróbuj uruchomiæ aplikacjê jako Administrator."
+153="Plik do³¹czony."
+154="Nie mo¿na wys³aæ wiadomoœci e-mail (b³¹d MAPI)"
+155="Nie mo¿na przekonwertowaæ dokumentu do formularza tekstowego"
+156="Nie mo¿na utworzyæ pliku tymczasowego"
+
+200="Wyj¹tek we wtyczce "%s" w funkcji "%s""
+201="Nie mo¿na zwolniæ wtyczki "%s""
+202="Nie mo¿na za³adowaæ wtyczki, nie okreœlono nadrzêdnego formularza"
+
+203="To archiwum zawiera nieobs³ugiwan¹ wtyczkê (%s)"
+204="To archiwum zawiera wtyczkê:\n"%s".\n\nCzy chcesz zainstalowaæ j¹ w Universal Viewer?"
+
+209="Dodano nastêpuj¹ce wtyczki:\n\n%s\nNastêpuj¹ce wtyczki zosta³y zaktualizowane:\n\n%s"
+210="Dodano nastêpuj¹ce wtyczki:\n\n%s\nNastêpuj¹ce wtyczki s¹ ju¿ zainstalowane i nie zosta³y dodane:\n\n%s"
+211="(brak)\n"
+212="Nazwa pliku/folderu Ÿród³owego nie jest prawid³owa"
+213="Zaznaczona nazwa pliku wykonywalnego Total Commandera nie jest prawid³owa"
+214="(nie znaleziono)"
+215="Nie mo¿na rozpakowaæ archiwum "%s" do folderu wtyczki "%s""
+216="Nie mo¿na zdnaleŸæ wtyczki w archiwum "%s""
+
+250="Jest to ostatni plik w folderze. Przejœæ do pierwszego pliku?"
+251="Jest to pierwszy plik w folderze. Przejœæ do ostatniego pliku?"
+252="Bie¿¹ca nawa pliku "%s" nie znajduje siê w folderze. Przejœæ do pierwszego pliku?"
+253="Bie¿¹cy folder jest pusty. Nie mo¿na przejœæ do innego pliku."
+254="Jest to pojedynczy plik w folderze. Nie mo¿na przejœæ do innego pliku."
+255="Jest to ostatni plik na liœcie. Przejœæ do pierwszego pliku?"
+256="Jest to pierwszy plik na liœcie. Przejœæ do ostatniego pliku?"
+257="Folder jest pusty: "%s""
+
+260="Usuñ plik"
+261="Czy chcesz przenieœæ "%s" do Kosza?"
+262="Czy chcesz usun¹æ "%s"?"
+263="Nie mo¿na usun¹æ "%s""
+264="Nie mo¿na skopiowaæ lub przenieœæ "%s" do "%s""
+
+301="%d bajtów"
+302="%d KB"
+303="%d MB"
+304="%d GB"
+305="%d TB"
+306="%d z %d w folderze"
+307="%d z %d w liœcie"
+
+310="Utwórz ³¹cze w folderze:"
+311="Nie mo¿na utworzyæ ³¹cza:"
+312="£¹cze utworzone:"
+
+313="Uwaga: Kopiowanie/Przenoszenie/Usuwanie/Email/Konwersja/MS-Office-inicjowanie operacji wymaga rozszerzenia Panelu nawigacji w zarejestrowanej (lub próbnej) wersji. Patrz temat pomocy "NavPanel add-on"."
+314="Uwaga: Przegl¹danie plików biurowych wymaga rozszerzenia Panelu nawigacji w zarejestrowanej (lub próbnej) wersji. Patrz temat pomocy "NavPanel add-on"."
+315="Rozszerzenie tego pliku (%s) jest na liœcie ignorowanych.\nOtworzyæ mimo to?"
+316="Plik "%s" jest %s z nieprawid³owym rozszerzeniem.\nZmieniæ je?"
+317="Ten klucz jest ju¿ przypisany do "%s""
+
+320=Aplikacja zarejestrowana
+321=Nie mo¿na aktywowaæ klucza. SprawdŸ tekst i po³¹czenie z internetem.
+322=zarejestrowany
+323=pozosta³(o) %d dzieñ(dni)
+
+;Keys
+400="BkSp"
+401="Tab"
+402="Esc"
+403="Enter"
+404="Spacja"
+405="PgUp"
+406="PgDn"
+407="End"
+408="Home"
+409="W lewo"
+410="W górê"
+411="W prawo"
+412="W dó³"
+413="Ins"
+414="Del"
+415="Shift+"
+416="Ctrl+"
+417="Alt+"
+
+[Captions]
+
+;FormViewUV
+100="&Plik"
+101="&Otwórz..."
+102="&Za³aduj ponownie"
+103="Zapisz j&ako..."
+104="Zam&knij"
+105="Otwórz fo&lder..."
+106="Otwórz ostatnie"
+107="Wy&czyœæ listê"
+108="Wyœlij mail&em..."
+109="&Kopiuj nazwê pliku"
+110="&Drukuj..."
+111="Podgl¹d &wydruku..."
+112="Ustawienia &strony..."
+115="Pop&rzedni plik"
+116="&Nastêpny plik"
+117="&Usuñ..."
+118="W³aœciwoœc&i..."
+119="&Zakoñcz"
+
+120="Wklej do nowego &pliku"
+121="&Edycja"
+122="&Kopiuj"
+123="Z&aznacz wszystko"
+124="&ZnajdŸ..."
+125="ZnajdŸ &nastêpny"
+126="&IdŸ do..."
+127="Kopiuj jako hex"
+128="Zaznacz &liniê"
+129="Kopiuj do pl&iku..."
+
+130="&Opcje"
+131="&1  Tekst"
+132="&2  Binarne (sta³a d³ugoœæ)"
+133="&3  Hex"
+134="&4  Obraz/Multimedia"
+135="&5  Internet"
+136="&6  Unicode"
+137="&7  Wtyczki"
+138="&4  Obraz"
+
+139="&Tryb"
+140="Kopiuj ³¹cze"
+141="Podœwietlanie adresu URL "
+142="Zawijaj &wiersze"
+143="&Dopasuj obraz do okna"
+144="Przegl¹daj w trybie offline"
+145="Z&awsze na wierzchu"
+146="&Pe³ny ekran"
+
+147="&Konfiguracja..."
+148="Konfiguracja &wtyczek..."
+149="Dostosowywanie paska &narzêdzi..."
+
+150="&Widok"
+151="&Obraz"
+152="Pow&iêksz"
+153="P&omniejsz"
+154="Oryginalny ro&zmiar"
+
+155="P&omoc"
+156="O progr&amie..."
+
+157="Obrót &90"
+158="Obrót &270"
+159="&Skala odcieni szaroœci"
+160="&Negatyw"
+161="Dopasuj tylko du¿e obrazy"
+162="Poka¿ etykietê z informacjami"
+163="&Wyœrodkuj obraz"
+164="Powiêkszenie"
+165="Dopasuj okno do obrazu"
+166=
+
+167="ZnajdŸ &poprzedni"
+168="&Kodowanie"
+169="&Menu kodowania..."
+170="&Poprzednie kodowanie"
+171="&Nastêpne kodowanie"
+172="Znaki &niedrukowalne"
+173=
+174="Dopasuj okno do rozmiaru pliku"
+175="Poka¿ wskaŸnik czasu"
+
+176="PrzejdŸ wstecz"
+177="PrzejdŸ do przodu"
+178="&Tekst"
+179="&Internet"
+
+180="Plik nie za³adowany (Wybierz menu Plik > Otwórz)"
+
+181="&Narzêdzia"
+182="Konfigurowanie narzêdzi &u¿ytkownika..."
+183="Z&aawansowane"
+184="Rêcznie edytuj plik konfiguracyjny"
+185="Rêcznie edytuj plik &historii"
+186="Zapisz po³o¿enie okna"
+187="Utwórz ³¹cze do pliku..."
+188="Dopasuj tylko szerokoœæ obrazu"
+189="Dopasuj tylko wysokoœæ obrazu"
+
+219="Efekt obrazu"
+220=
+221=
+222=
+223=
+224="Przerzuæ w pionie "
+225="Przerzuæ w poziomie <->"
+226="Obrót &180"
+227="&Sepia"
+
+228="Forum - angielskie"
+229="Forum - rosyjskie"
+230="£¹cza sieci &Web"
+231="&Strona domowa"
+232="&E-mail"
+233="W&tyczki"
+234="&Zawartoœæ"
+
+;img panel
+235=Panel obrazu
+236=Edycja
+237=Konwertowanie
+238=Obrót:
+239=Efekty:
+240=Konwertuj na:
+241=Konwertowanie...
+242=Poka¿ &panel obrazu
+
+;FormViewOptions
+;(continues after 800)
+263="Sugeruj zmianê dla obrazów z niew³aœciwym rozszerzeniem"
+264="Tytu³ okna:"
+265="Wyœwietl pe³n¹ œcie¿kê"
+266="Wyœwietl tylko nazwê pliku"
+267="Tryb widoku przy starcie:"
+268="Automatyczne wykrywanie"
+
+269="&Grzbiet oprawy i liczba linii..."
+270="Poka¿ liczbê linni na grzbiecie oprawy"
+271="Tylk&o dla pierwszych:"
+272="KB pliku"
+273="Tylko dla tych rozszerzeñ plików:"
+
+274="&Grzbiet oprawy po lewej stronie"
+275="Nie wyœwietlaj komunikatu o b³êdzie, tylko sygna³ dŸwiêkowy"
+276="&Maksymalna iloœæ liczby linii:"
+278="Krok (1 = poka¿ dla wszystkich):"
+279="Nie potwierdzaj opcji "ZnajdŸ nastêpny" "
+
+280="Dodatkowe"
+281="Rozwiñ .lnk docelowych plików"
+282="&Liczba odtworzeñ"
+283="Poka¿ ukryte pliki"
+284="Zapisz po³o¿enie okna"
+285="Zapisz ostatni folder roboczy"
+286="Historia"
+287="Drukuj"
+288="&Interfejs:"
+289="Zapi&sz historiê wyszukiwania"
+290="Czcionka stopki:"
+291="Wyczyœæ"
+292="Wyczyœæ"
+
+300="Ustawienia Universal Viewer"
+301="Rozszerzenia plików"
+302="Tekst"
+303="Multimedia"
+304="Interfejs"
+305="Typy plików"
+306="Zaawansowane"
+307="Skróty"
+308="Czcionki i kolory"
+309="Automatyczne ponowne ³adowanie"
+
+310="&Tekst:"
+311="&Obrazy:"
+312="&Media:"
+313="I&nternet:"
+314="&RTF:"
+
+315="Kolor hex"
+316="Kolor t³a hex"
+
+317="U¿yj specjalnej czcionki OEM"
+318="Maksymalna d³ugoœæ linii"
+319="Ro&zmiar Tabulatora"
+320="&Czcionka:"
+321="&Kolory:"
+322="Tryb binarny: dopasuj do szerokoœc&i"
+323="Tryb binarny: sta³a szerokoœæ"
+324="Wynik wy&szukiwania: linie od góry"
+325="Zapropon&uj zaznaczenie jako tekst wyszukiwania"
+326="Wczytaj ponownie plik po zmianie"
+327="ŒledŸ koniec po ponownym wczytaniu"
+328="DŸwiêk przy ponownym wczytywaniu"
+329="&Automatycznie kopiuj tekst do Schowka"
+
+330="Kolor etykiety obrazu"
+331="P&rzepróbkuj obraz przy skalowaniu"
+332="Kolor t³a obrazu"
+333="Poka¿ przejrzystoœæ obrazu"
+334="&Automatycznie uruchom odtwarzanie"
+
+335="&Jêzyk:"
+336="Poka¿ pozycjê menu kontekstowego &Eksplorera"
+337="Poka¿ pasek narzêdzi"
+338="Poka¿ o&bramowanie wokó³ obszaru widoku"
+339="Zezwalaj na pasek narzêdzi w trybie pe³noekranowym"
+
+340="Polecenie"
+341="Skrót"
+342="&Skrót:"
+
+343="Poka¿ &ikony w menu"
+344="Poka¿ &menu"
+345="Zapisz listê ostatnich plików"
+346="Zezwalaj uruchomiæ tylko 1 kopiê progr&amu"
+347="Poka¿ pasek &stanu"
+348="Poka¿ panel &nawigacyjny"
+349="Poka¿ potwierdzenia przed otwarciem nierozpoznanych plików"
+
+;Buttons
+350="OK"
+351="Anuluj"
+352="ZnajdŸ"
+353="Zamknij"
+354="Przypisz"
+355="Pomoc"
+356="Resetuj"
+
+;Options dialog
+360="Konwerter tekstu:"
+361="Poka¿ monit konwertera tekstu na wierzchu"
+362="Ponownie otwórz ostatnio &u¿ywany plik"
+363="Obrazy RAW"
+
+364="Sterownik &audio:"
+365="Sterownik wideo:"
+366="Automatyczny obrót obrazu zgodnie z E&XIF"
+
+;FormViewOptionsText
+380="&Autowykrywanie"
+381="&Autowykrywanie plików tekstowych"
+382="przez pierwsze"
+383="KB"
+384="&maksymalny rozmiar:"
+385="KB (0: brak limitu)"
+386="Automatyczne wykrywanie kodowania &OEM"
+387="Automatyczne wykrywanie kodowania &UTF-8"
+
+;FormViewGoto
+400="PrzejdŸ do"
+401="Nowe po³o¿enie"
+402="&Procent (%)"
+403="Przesuniêcie szesnastkowo"
+404="Przesuniêcie dziesiêtne"
+405="Pocz¹tek zaznaczenia"
+406="Koniec zaznaczenia"
+407="&Numer wiersza"
+408="Wpisz nazwê komórki, n.p. A10:"
+409="WprowadŸ numer strony:"
+
+;FormViewAbout
+410="O programie"
+411="Wersja"
+412="Komponenty:"
+413="Zarejestrowany dla:"
+414="Wersja próbna (pozosta³o %d dni)"
+416="Umowa licencyjna"
+417="Aby odinstalowaæ aplikacjê, Otwórz menu Start - Programy - Universal Viewer - i uruchom pozycjê "Odinstaluj"."
+
+;FormViewFindText
+420="Wyszukiwanie"
+421="&Tekst do znalezienia:"
+422="Tylko ca³e &wyrazy"
+423="Wielkoœæ liter"
+424="Wielowierszowe wyra¿enia regularnego"
+425="Ci¹g He&x"
+426="Wyra¿enie &regularne"
+427=" (biblioteka nie jest u¿ywana)"
+428="Opcje"
+429="Kierunek"
+430="Do przodu"
+431="Do ty³u"
+432="Oryginalnie"
+433="&Od kursora"
+434="Od bie¿¹cej strony"
+435="&Ca³y plik"
+436="Ozn&acz wszystkie wyst¹pienia"
+
+;FormPluginsOptions
+500="Konfiguracja wtyczek"
+501="Zainstalowane wtyczki"
+502="Dod&aj..."
+503="&Usuñ"
+504="&Edycja..."
+505="W górê"
+506="W &dó³"
+507="&Konfiguruj..."
+510="Nazwa"
+511="Wykryj ci¹g"
+512="Nazwa pliku"
+520="Wtyczki maj¹ wy¿szy priorytet ni¿ wewnêtrzna przegl¹darka"
+521="Zapisz nazwy plików &wtyczek z zmienn¹ %Commander_Path% "
+524="Dodaj &klawisz 'Alt' do menu skrótów, aby unikn¹æ konfliktu z wtyczkami"
+
+;FormPluginsAdd
+530="Zainstaluj wtyczki"
+531="Importuj ustawienia z &Total Commandera"
+532="Zainstaluj wszystkie wtyczki z &folderu"
+533="Zainstaluj pojedyncz¹ wtyczkê"
+534="Zainstaluj wtyczkê(i) z &archiwum(ów)"
+537="Plik wykonywalny TC:"
+538="Plik konfiguracji TC:"
+539="&Plik:"
+540="&Folder:"
+541="Aplikacje (*.exe)|*.EXE"
+542="Pliki ini (*.ini)|*.INI"
+543="Wtyczki (*.wlx)|*.WLX"
+544="Archiwa (*.zip,*.rar)|*.ZIP;*.RAR"
+
+;FormPluginsEdit
+550="Konfiguruj wtyczkê"
+551="Nazwa pliku:"
+552="Wykrywanie-ci¹g:"
+553="Domyœlne"
+554="Plik konfiguracyjny:"
+
+;FormViewToolbar
+560="Dostosuj pasek narzêdzi"
+561="Dostêpne przyciski:"
+562="Wybrane przyciski:"
+563="Dod&aj ->"
+564="<- &Usuñ"
+565="Re&setuj"
+566="(Separator)"
+
+;FormViewToolList
+600="Lista narzêdzi u¿ytkownika"
+601="W³aœciwoœci narzêdzi u¿ytkownika"
+602="Nag³ówek:"
+603="Ap&likacja:"
+604="Pa&rametry:"
+605="Parametry &makr (kliknij dwukrotnie, aby dodaæ makro do listy parametrów):"
+606="Akcje do wykonania:"
+607="Przed uruchomieniem aplikacji:"
+608="Po uruchomieniu aplikacji:"
+609="Wskazówka: Dodaj '?' jako pierwszy znak do potwierdzenia parametrów."
+
+;FormViewRename
+650="Zmieñ nazwê pliku"
+651="Zmieñ nazwê..."
+652="&Zmieñ nazwê:"
+653="Skopiuj do folderu..."
+654="Przenieœ do folderu..."
+
+;FormReg
+700="Rejestruj"
+701="&Rejestruj..."
+702=
+703=
+704=
+705=
+706=Podaj klucz licencyjny, które otrzyma³eœ poczt¹. W kluczu licencji jest rozró¿niana wielkoœæ liter. Zaleca siê wklejenie (Ctrl+V) klucza do pola poni¿ej. Po wprowadzeniu klucza kliknij opcjê Aktywuj by go uaktywniæ.
+707=&Aktywuj
+708=&Pobierz klucz
+
+;FormPrintPreview
+710="Marginesy"
+711="&Lewy:"
+712="P&rawy:"
+713="&Górny:"
+714="&Dolny:"
+715="mm"
+716="cm"
+717="cale"
+718="Gamma"
+719="Wartoœæ &gamma:"
+
+720="Podgl¹d wydruku"
+721="Drukuj"
+722="Opcje"
+723="Podgl¹d"
+724="Tekst st&opki"
+725="Nie mo¿na przydzieliæ tymczasowej bitmapy."
+726="Po³o¿enie"
+
+727="&Dopasuj tryb:"
+728="Normalny"
+729="Dopasuj optymalnie"
+730="Rozci¹gnij"
+731="Rozmiar niestandardowy"
+732="&Wysokoœæ:"
+733="&Szerokoœæ:"
+734="&Proporcjonalnie"
+735="Czcionka..."
+736="U&stawienia wydruku..."
+
+;FormViewOptionsImages
+740="Biblioteki &graficzne"
+741="&U¿yjIrfanView/XnView do ³adowania grafiki"
+742="Nazwa pliku &aplikacji:"
+743="&Rozszerzenia plików:"
+744="IrfanView/XnView ma wy¿szy priorytet ni¿ wewnêtrzne biblioteki"
+745="U¿yj biblioteki "IJL15.dll" do ³adowania grafiki &JPEG"
+746="Rozsz&erzenia plików:"
+
+;FormNavColumns
+780="Wiêcej..."
+781="Ustawienia kolumn"
+782="Wybierz kolumny, któr¹ chcesz uczyniæ widocznymi w tym folderze. Przeci¹gnij i upuœæ, aby zmieniæ kolejnoœæ kolumn."
+783="Wybranej kolumny powinny mieæ "
+784="szerokoœæ pikseli"
+785="LiveUpdate"
+
+;FormViewOptions..
+800="&Ikony:"
+801="(Domyœlne)"
+802="(Zapisz szablon...)"
+803="Odtwarzanie w pêt&li"
+
+805="&Sortowanie plików:"
+806=" (malej¹co)"
+807="Nazwa pliku"
+808="Rozszerzenie"
+809="Utworzony"
+810="Zmodyfikowany"
+811="U¿yj niestandardowej wysokoœci okna dla trybów"
+812="&Lista ignorowanych:"
+813="Podœwietlanie wyszukiwania"
+
+;814="U¿yj nowoczesnego odtwarzacza multimedialnego"
+;815="Jeœli wy³¹czone, zostanie u¿yty odtwarzacz w starym stylu. Mo¿esz tak¿e wy³¹czyæ stary styl odtwarzacza przez odznaczenie "Media" na zak³adce "Typy plików"."
+;You may also disable the old-style player by unchecking "Media" on "File types" tab." 
+
+816=Elementy w trybie pe³noekranowym
+817=Pasek menu
+818=Pasek narzêdzi
+819=Multimedia - Pasek œcie¿ki
+820=Multimedia - Pasek przycisków
+821=Pasek stanu
+822=Multimedia - kursor
+
+823 = "U¿yj nowego odtwarzacza multimedialnego"
+824 = "U¿yj starego odtwarzacza multimedialnego"
+825 = "Multimedia (stary odtwarzacz)"
+826 = "Multimedia (nowy odtwarzacz)"
+827 = "Odstêpy miêdzy wierszami"
+
+830=Opcje programu Word/RTF
+831=Domyœlny uk³ad:
+832=Dmyœlne powiêkszenie
+833=Powiêkszenie niestandardowe %:
+834=Uk³ad projektu
+835=Uk³adu strony sieci Web
+836=Uk³ad wydruku
+
+;FormViewEXIF
+880="Czytnik EXIF"
+881="Poka¿ E&XIF..."
+883="Tag"
+884="W³aœciwoœæ"
+885="Wartoœæ"
+890=" IFD 0 "
+891=" Sub IFD "
+892=" Interop. IFD "
+893=" Uwaga producenta "
+894=" IFD 1 "
+895=" Miniatura "
+
+;Preview
+900=Pierwsza strona
+901=Poprzednia strona
+902=Nastêpna strona
+903=Ostatnia strona
+904=Bie¿¹ca strona
+905=Wartoœæ powiêkszenia
+906=Ca³a strona
+907=Dopasuj szerokoœæ
+908=Niestandardowe...
+
+;Media
+910=Odtwórz/Wstrzymaj
+911=Wstrzymaj
+912=Zatrzymaj
+913=Krok naprzód
+914=Oryginalny
+915=Rozci¹gnij
+916=Audio#%d
+917=Wyciszenie
+918=G³oœnoœæ
+919=Wspó³czynnik proporcji
+920=Kana³y audio
+921=Otwieranie obrazu...
+922=Do ty³u 10 s
+923=Do ty³u 1 min
+924=Do ty³u 5 min
+925=Do przodu 10 s
+926=Do przodu 1 min
+927=Do przodu 5 min
+928=Czas (hh:mm:ss):
+929=Zapisz bie¿¹c¹ ramkê...
+
+
+
+[Nav]
+
+200="Panel nawigacyjny"
+201="Jeden poziom w górê"
+202="&Widok"
+203="&Pomoc"
+204="&Rejestruj..."
+205="O progr&amie..."
+206="&Folder:"
+207="Napê&dy:"
+
+210="Folder jest pusty"
+211="&Ikony"
+212="&Lista"
+213="&Szczegó³y"
+214="&Miniatury"
+215="Uk³ad p&oziomy"
+216="Poka¿ ukryte pliki"
+217="Przypnij do przegl¹darki"
+218="Poka¿ &pasek œcie¿ki"
+219="Poka¿ pasek napêdu"
+220="Poka¿ foldery &specjalne"
+221="Poka¿ p&asek stanu"
+222="Otwórz foldery w przegl¹darce"
+
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+<html>
+<head>
+  <title>Localizing</title>
+  <link href="Main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Localizing</h1>
+
+To localize the preview form captions, use the following variables,
+declared in ATPrintPreview unit. They are self-descriptive:
+
+<pre>
+var
+  //Captions:
+  MsgPreviewDlgCaption: string = 'Print preview';
+  MsgPreviewDlgPrintSetup: string = '&Print setup...';
+  MsgPreviewDlgPrint: string = 'Print';
+  MsgPreviewDlgCancel: string = 'Cancel';
+  MsgPreviewDlgOptions: string = ' Options ';
+  MsgPreviewDlgPosition: string = ' Position ';
+  MsgPreviewDlgPreview: string = ' Preview ';
+  MsgPreviewDlgMargins: string = ' Margins ';
+  MsgPreviewDlgGamma: string = ' Gamma ';
+
+  MsgPreviewDlgMarginLeft: string = '&Left:';
+  MsgPreviewDlgMarginTop: string = '&Top:';
+  MsgPreviewDlgMarginRight: string = '&Right:';
+  MsgPreviewDlgMarginBottom: string = '&Bottom:';
+  MsgPreviewDlgOptFitMode: string = '&Fit mode:';
+  MsgPreviewDlgOptFitSizeX: string = '&Width:';
+  MsgPreviewDlgOptFitSizeY: string = '&Height:';
+  MsgPreviewDlgOptFitSizeProp: string = 'Proportio&nal';
+  MsgPreviewDlgOptFooter: string = 'F&ooter text';
+  MsgPreviewDlgOptFooterFont: string = 'Font...';
+  MsgPreviewDlgOptGamma: string = '&Gamma value:';
+
+  MsgPreviewDlgUnit: array[TATPrintUnit] of string =
+    ('mm', 'cm', 'inches');
+  MsgPreviewDlgFitModes: array[TATPrintFitMode] of string =
+    ('Normal', 'Best fit to page', 'Stretch to page', 'Custom size');
+  MsgPreviewDlgPos: array[TATPrintPosition] of string =
+    ('Top-Left', 'Top', 'Top-Right',
+     'Left', 'Center', 'Right',
+     'Bottom-Left', 'Bottom', 'Bottom-Right');
+
+  //Error messages:
+  MsgPreviewDlgCannotAllocateMemory: string = 'Cannot allocate temporary bitmap, not enougth memory.';
+
+  //Font:
+  MsgPreviewDlgFontName: string = 'Tahoma';
+  MsgPreviewDlgFontSize: Integer = 8;
+
+</pre>
+
+
+</body>
+</html>

@@ -1,0 +1,3 @@
+{$define TNT}
+{$define GIF}
+

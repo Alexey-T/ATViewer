@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Usage: Events, Media-related</title>
+  <link href="Main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h2>Events, Media-related</h2>
+<hr>
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="width: 40%;">
+        <font color="DarkBlue">OnMediaPlaybackEnd</font>
+      </td>
+      <td>Event fired after media playback has been finished (when IsMedia = True).
+      </td>
+    </tr>
+    
+    <tr>
+    	<td>
+        <font color="DarkBlue">OnImageLClick<br>OnImageRClick</font>
+        </td>
+    	<td>
+          Events fired after left/right mouse clicks happen, over the image (when IsImage = True).
+        </td>
+    </tr>
+    
+    <tr>
+    	<td>
+        <font color="DarkBlue">OnImageMouseDown <br>OnImageMouseUp <br />OnImageMouseMove</font>
+        </td>
+    	<td>
+          Events fired when mouse button pressed/released, or mouse moved, over the image (when IsImage = True).<br />
+		  Parameters:
+		  <ul>
+			<li>Btn gives mouse button number. 0: left, 1: right, 2: middle. (Not used for OnImageMouseMove.)
+			<li>Shift gives control keys state. 
+	            Bit 0: Shift pressed, bit 1: Alt pressed, bit 2: Ctrl pressed, 
+                bit 3: left mouse button pressed, bit 4: right mouse button pressed, bit 5: middle button pressed.
+			<li>X and Y give image clicked position. You may need to get ImageWidth/ImageHeight/ImageScale, 
+			    then you may calculate which image pixel is clicked.
+		  </ul>
+        </td>
+    </tr>
+
+  </tbody>
+</table>
+</body>
+</html>

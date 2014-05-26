@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Usage: Methods, Localization-related</title>
+  <link href="Main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h2>Methods, Localization-related</h2>
+<hr>
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+    	<td width="25%">
+          <font color="DarkBlue">SetTextPopupCaption</font>
+        </td>
+    	<td>
+          Sets caption text for one of context menu items.<br>
+          Parameters:
+          <ul>
+          <li> Id (Integer) -- one of values:<br>
+              <b>vpCmdCopy</b> -- "Copy" item;<br>
+              <b>vpCmdCopyHex</b> -- "Copy as hex" item;<br />
+              <b>vpCmdCopyLink</b> -- "Copy link" item;<br />
+              <b>vpCmdSelectLine</b> -- "Select line" item;<br />
+              <b>vpCmdSelectAll</b> -- "Select all" item;<br />
+              <b>vpCmdEncMenu</b> -- "Encodings menu" item.
+          <li> S (WideString) -- caption text.
+          </ul>
+        </td>
+    </tr>
+
+    <tr>
+    	<td>
+          <font color="DarkBlue">SetMessageText</font>
+        </td>
+    	<td>
+          Sets content for one of localizable strings.<br />
+          Parameters:<br />
+          <ul>
+          <li> Id (Integer) -- string id.
+          <li> S (WideString) -- string text.
+          </ul>
+          Possible values of Id and default strings values are shown in the list below:<br />
+          <ul>
+          <li> 0 -- MsgViewerCaption = 'Viewer'
+          <li> 1 -- MsgViewerShowCfm = 'Format unknown'#13'Click here to show binary dump'
+          <li> 2 -- MsgViewerShowEmpty = 'File is empty'
+          <li> 3 -- MsgViewerErrCannotFindFile = 'File not found: "%s"'
+          <li> 4 -- MsgViewerErrCannotFindFolder = 'Folder not found: "%s"'
+          <li> 5 -- MsgViewerErrCannotOpenFile = 'Cannot open file: "%s"'
+          <li> 6 -- MsgViewerErrCannotLoadFile = 'Cannot load file: "%s"'
+          <li> 7 -- MsgViewerErrCannotReadFile = 'Cannot read file: "%s"'
+          <li> 8 -- MsgViewerErrCannotReadStream = 'Cannot read stream'
+          <li> 9 --  MsgViewerErrCannotReadPos = 'Read error at offset %s'
+          <li> 10 --  MsgViewerErrDetect = 'Program could not detect file format'#13'Dump is shown'
+          <li> 11 --  MsgViewerErrImage = 'Unknown image format'
+          <li> 12 --  MsgViewerErrMedia = 'Unknown multimedia format'
+          <li> 13 --  MsgViewerErrOffice = 'MS Office module doesn''t support this file type'
+          <li> 14 --  MsgViewerErrInitControl = 'Cannot initialize %s'
+          <li> 15 --  MsgViewerErrInitOffice = 'Cannot initialize MS Office control'
+          <li> 16 --  MsgViewerErrCannotCopyData = 'Cannot copy data to Clipboard'
+          <li> 17 --  MsgViewerWlxException = 'Exception in plugin "%s" in function "%s"'
+          <li> 18 --  MsgViewerWlxParentNotSpecified = 'Cannot load plugins: parent form not specified'
+          <li> 19 --  MsgViewerAniTitle = 'Title: '
+          <li> 20 --  MsgViewerAniCreator = 'Creator: '
+          <li> 21 --  MsgViewerPageHint = 'Previous/Next page'#13'Current page: %d of %d'
+          </ul>
+          Notes:
+          <ul>
+          <li> Not all mentioned strings are really used in the ActiveX version.
+          <li> #13 means CR (carriage return) character.
+          </ul>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

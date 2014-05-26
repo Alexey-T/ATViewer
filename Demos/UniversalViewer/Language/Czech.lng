@@ -1,0 +1,628 @@
+Version=6.4.5
+Author=Martin Rùžièka
+Homepage=http://total-commander.eu/
+Email=martin.ruzicka.cz(at)gmail(dot)com
+
+[Messages]
+
+101="Nelze nalézt soubor: %s"
+102="Nelze otevøít soubor: %s"
+104="Nelze naèíst soubor: %s"
+105="Nelze èíst soubor: %s"
+106="Nelze inicializovat %s"
+107="Nelze nalézt složku: "%s""
+
+108="Neznámý formát\nKliknìte sem pro zobrazení binárního výpisu"
+109="Chyba ètení na pozici %s"
+110="Nelze zpracovat seznam souborù: %s"
+111="Soubor je prázdný"
+113="Nelze rozpoznat formát souboru\nZobrazí se binární výpis"
+114="Modul MS Office nepodporuje tento typ souboru"
+115="Neznámý formát obrázku"
+116="Neznámý multimediální formát"
+120="Hledaný øetìzec "%s" nebyl nalezen"
+121="Text nelze do schránky zkopírovat"
+122="Hex. øetìzec "%s" není platný"
+123="Hledání "%s":"
+124="Došlo k chybì v hledání"
+125="Není vybrán text"
+126="EXIF informace nejsou v souboru uvedeny"
+127="Schránka neobsahuje grafický nebo textový formát"
+129="Pøedchozí/Další stránka\nAktuální stránka: %d z %d"
+130="Pro tento typ souboru je k dispozici textový pøevadìè\nKliknìte sem pro zobrazení v prostém textu"
+
+151="Nelze spustit nástroj:\n%s"
+152="V registru nelze provést integraci do aplikace Prùzkumník. Pokuste se spustit aplikaci jako správce."
+153="Soubor pøiložen."
+154="E-mail nelze poslat (chyba MAPI)"
+155="Dokument nelze pøevést do textového formátu"
+156="Nelze vytvoøit doèasný soubor"
+
+200="Výjimka v doplòku %s ve funkci %s"
+201="Nelze uvolnit doplnìk %s"
+202="Nelze zavést doplòky, nadøazená tøída není specifikována"
+
+203="Archiv obsahuje nepodporovaný doplnìk typu (%s)"
+204="Archiv obsahuje doplnìk:\n"%s".\n\nOpravdu chcete tento doplnìk nainstalovat?"
+
+209="Byly pøidány tyto doplòky:\n\n%s\nByly aktualizovány tyto doplòky:\n\n%s"
+210="Byly pøidány tyto doplòky:\n\n%s\nDoplòky, které jsou již nainstalovány a nebyly pøidány:\n\n%s"
+211="(žádné)\n"
+212="Název zdrojového souboru/složky není platný"
+213="Vybraný název aplikace Total Commander není platný"
+214="(nenalezeno)"
+215="Nelze extrahovat archiv "%s" do složky doplòkù "%s""
+216="Nelze nalézt doplnìk v archivu "%s""
+
+250="Toto je poslední soubor ve složce. Pøejít na první soubor?"
+251="Toto je první soubor ve složce. Pøejít na poslední soubor?"
+252="Aktuální název souboru "%s" se ve složce nenachází. Pøejít na první soubor?"
+253="Aktuální složka je prázdná. Nelze pøejít na další soubor."
+254="V této složce je pouze jeden soubor. Nelze pøejít na další soubor."
+255="Toto je poslední soubor v seznamu. Pøejít na první soubor?"
+256="Toto je první soubor v seznamu. Pøejít na poslední soubor?"
+257="Složka je prázdná: "%s""
+
+260="Odstranit soubor"
+261="Chcete pøesunout soubor "%s" do koše?"
+262="Chcete odstranit "%s"?"
+263="Nelze odstranit "%s""
+264="Nelze kopírovat nebo pøesunout "%s" do "%s""
+
+301="%d bajtù"
+302="%d kB"
+303="%d MB"
+304="%d GB"
+305="%d TB"
+306="%d z %d ve složce"
+307="%d z %d v seznamu"
+
+310="Odkaz vytvoøit ve složce:"
+311="Nelze vytvoøit odkaz:"
+312="Vytvoøen odkaz:"
+
+313="Poznámka: Operace Kopírovat/Pøesunout/Odstranit/E-mail/Pøevadìè/MS Office inicializace vyžadují rozšíøení Navigaèní panel v registrované (nebo zkušební) verzi. Více v tématu nápovìdy "NavPanel add-on"."
+314="Nelze inicializovat ovládací prvek MS Office.\n\nPoznámka: Inicializace MS Office vyžaduje rozšíøení Navigaèní panel v registrované (nebo zkušební) verzi. Více v tématu nápovìdy "NavPanel add-on"."
+315="Pøípona souboru (%s) je uvedena na seznamu vynechávaných.\n\nOpravdu chcete soubor otevøít?"
+316="Soubor "%s" je %s s chybnou pøíponou.\nPøejmenovat?"
+317="Tato zkratka je již pøiøazena k "%s""
+
+320=Registrovaná aplikace
+321=Klíè nelze aktivovat. Zkontrolujte øetìzec a pøipojení k internetu.
+322=registrováno
+323=zbývá %d dní
+
+;Keys
+400="BkSp"     
+401="Tab"      
+402="Esc"      
+403="Enter"    
+404="Mezerník"    
+405="PgUp"     
+406="PgDn"     
+407="End"      
+408="Home"     
+409="Left"     
+410="Up"       
+411="Right"    
+412="Down"     
+413="Ins"      
+414="Del"      
+415="Shift+"   
+416="Ctrl+"    
+417="Alt+"     
+
+[Captions]
+
+;FormViewUV
+100="&Soubor"
+101="&Otevøít..."
+102="&Znovu naèíst"
+103="Uložit j&ako..."
+104="&Zavøít"
+105="Otevøít slož&ku..."
+106="Naposledy otevøené"
+107="&Vymazat seznam"
+108="Odeslat &e-mailem..."
+109="Kop&írovat název souboru"
+110="&Tisk..."
+111="Náh&led tisku..."
+112="Nastavení tisk&u..."
+115="P&øedchozí soubor"
+116="&Další soubor"
+117="O&dstranit..."
+118="Vlastnost&i..."
+119="&Konec"
+
+120="&Vložit"
+121="&Upravit"
+122="&Kopírovat"
+123="Vybrat &vše"
+124="&Najít..."
+125="Najít da&lší"
+126="Pøej&ít na..."
+127="Kopírovat jako &hex"
+128="Vyb&rat øádek"
+129="Kopírovat d&o souboru..."
+
+130="&Možnosti"
+131="&1  Text"
+132="&2  Binární (pevná délka øádku)"
+133="&3  Hexadecimální"
+134="&4  Obrázek/Multimédia"
+135="&5  Internet/Office"
+136="&6  Unicode"
+137="&7  Doplòky"
+138="&4  Obrázek"
+
+139="&Režim"
+140="&Kopírovat odkaz"
+141="Zvýraznit U&RL"
+142="&Zalomit text"
+143="&Pøizpùsobit obrázek oknu"
+144="&Offline prohlížení"
+145="&Vždy navrchu"
+146="&Celá obrazovka"
+
+147="Ko&nfigurace..."
+148="Konfigurace doplòk&ù..."
+149="&Pøizpùsobit panel nástrojù..."
+
+150="&Zobrazit"
+151="&Obrázek"
+152="&Pøiblížit"
+153="&Oddálit"
+154="Pùv&odní velikost"
+
+155="Ná&povìda"
+156="&O aplikaci..."
+
+157="Otoèit do&prava"
+158="Otoèit dolev&a"
+159="Odstíny š&edi"
+160="&Negativ"
+161="Pøi&zpùsobit pouze velké obrázky"
+162="&Zobrazit informaèní štítek"
+163="Vycen&trovat obrázek"
+164="&Lupa"
+165="Pøizpùsobit &okno obrázku"
+166="Pøe&hrát/Pozastavit"
+
+167="Najít &pøedchozí"
+168="&Kódování"
+169="Nabídka kódová&ní..."
+170="&Pøedchozí kódování"
+171="&Následující kódování"
+172="Netisknutelné &znaky"
+173="&Textový kurzor"
+174="Pøizpùsobit okno na &velikost média"
+175="Zobrazit indiká&tor èasu"
+
+176="&Zpìt"
+177="&Vpøed"
+178="Te&xt"
+179="&Internet"
+
+180="Žádný soubor není naèten"
+
+181="&Nástroje"
+182="Konfigurace &uživatelských nástrojù..."
+183="&Pokroèilé"
+184="Mìnit &konfiguraèní soubor pøímo"
+185="Mìnit soubor s &historií pøímo"
+186="Uložit pozici &okna"
+187="Vytvoøit od&kaz (zástupce)..."
+188="Pøizpùsobit pou&ze šíøku obrázku"
+189="Pøizpùsobit pouze &výšku obrázku"
+
+219="&Efekty"
+220="&Hlasitost"
+221="Pøi&dat"
+222="U&brat"
+223="&Ztlumit"
+224="Pøevrátit &vertikálnì"
+225="Pøevrátit &horiz."
+226="Otoèit o &180"
+227="&Sépie"
+
+230="&Webové stránky"
+231="&Domovská stránka..."
+232="&Zpìtná vazba..."
+233="Do&plòky..."
+234="&Obsah..."
+233="&Doplòky"
+234="&Obsah"
+
+;img panel
+235=Panel obrázek
+236=Upravit
+237=Pøevést
+238=Otoèení:
+239=Efekty:
+240=Pøevést na:
+241=Pøevést...
+242=Zobrazit &panel obrázek
+
+;FormViewOptions
+;(continues after 800)
+263="Navrhnout pøejmenování obrázkù s nesprávnou pøíponou"
+264="Zá&hlaví okna:"
+265="Zobrazit úplnou cestu"
+266="Zobrazit pouze název souboru"
+267="Zobrazení po s&puštìní:"
+268="Autodetekce"
+
+269="&Levý pruh a èísla øádkù..."
+270="&Zobrazovat èísla øádkù v levém pruhu"
+271="P&ouze pro prvních:"
+272="kB souboru"
+273="Pouz&e pro tyto pøípony souborù:"
+
+274="&Levý pruh v prohlížeèi"
+275="Bez chybové zprávy, pouz&e pípnutí"
+276="&Max. poèet èísel øádkù:"
+278="Krok (1: zobrazit všem):"
+279="Možnost "Najít další" bez potvrzení"
+
+280="Rùzné"
+281="Sled&ovat cíle LNK souborù (zástupcù)"
+282="&Poèet pøehrání"
+283="Zobrazovat &skryté soubory"
+284="Ukládat pozici o&kna"
+285="Ukládat poslední pracovní &složku"
+286="Historie"
+287="Tisk"
+288="&Rozhraní:"
+289="Ukládat hi&storii hledání"
+290="Písmo &zápatí:"
+291="Vy&mazat"
+292="V&ymazat"
+
+300="Universal Viewer - nastavení"
+301="Pøípony souborù"
+302="Text"
+303="Multimédia"
+304="Rozhraní"
+305="Typy souborù"
+306="Pokroèilé"
+307="Klávesové zkratky"
+308="Písmo a barvy"
+309="Automatické znovunaètení"
+
+310="&Text:"
+311="&Obrázky:"
+312="&Multimédia:"
+313="I&nternet:"
+314="&RTF:"
+
+315="Hex. barva"
+316="Hex. pozadí"
+
+317="Použít písmo OE&M"
+318="Max&imální délka øádku"
+319="Velikost ta&bulátoru"
+320="&Písmo:"
+321="&Barvy:"
+322="Binární režim: vho&dná šíøka"
+323="Binární režim: pev&ná šíøka"
+324="Poèet øádkù nad &výsledkem hledání"
+325="Nabízet výbìr jako hledaný te&xt"
+326="Po zmìnì souboru automaticky &znovu naèíst"
+327="Po znovunaètení následovat &konec"
+328="&Po znovunaètení pípnout"
+329="&Automaticky kopírovat text do schránky"
+
+330="Barva popisu obrázku"
+331="Pøi zmìnì mìøítka pøevzo&rkovat obrázek"
+332="Barva pozadí obrázku"
+333="Zobrazovat prùhlednos&t obrázku"
+334="&Automatické pøehrávání média"
+
+335="&Jazyk:"
+336="Integrovat do místní nabídky aplikace Prùz&kumník"
+337="Zobrazova&t panel nástrojù"
+338="Zobrazovat okraj okolo o&blasti prohlížení"
+339="Pov&olit panel nástrojù v režimu celé obrazovky"
+
+340="Pøíkaz"
+341="Klávesová zkratka"
+342="&Klávesová zkratka:"
+
+343="Zobrazovat &ikony v hl. nabídce"
+344="Zobrazovat hlavní &nabídku"
+345="Ukládat &seznam minulých souborù"
+346="Povolit pouze &jednu instanci"
+347="Zobrazovat &stavový øádek"
+348="Zobrazovat panel &navigace"
+349="Zobrazovat &potvrzení pøed otevøením souborù nerozpoznaných typù"
+
+;Buttons
+350="OK"
+351="Storno"
+352="Najít"
+353="Zavøít"
+354="Pøiøadit"
+355="Nápovìda"
+
+;Options dialog
+360="Pøevadìè te&xtu:"
+361="Zobrazovat výzvu pøevadìèe te&xtu v horní èásti"
+362="Znov&u otevøít poslední použitý soubor"
+363="RAW obrázky"
+
+364="Zvukový ovl&adaè:"
+365="&Video ovladaè:"
+366="Automaticky otoèit obrázek podle E&XIF"
+
+;FormViewOptionsText
+380="Auto&detekce"
+381="&Autodetekce textových souborù"
+382="Podle &prvních"
+383="kB"
+384="&Maximální velikost:"
+385="kB (0: bez limitu)"
+386="Autodetekce &OEM kódování"
+387="Autodetekce &UTF-8 kódování"
+
+;FormViewGoto
+400="Pøejít na"
+401="&Pøejít na pozici:"
+402="&Procent (%)"
+403="&Hexadecimální ofset"
+404="&Decimální ofset"
+405="Poèátek výb&ìru"
+406="&Konec výbìru"
+407="Èís&lo øádku"
+408="Zadejte název buòky, napø. A10:"
+409="Zadejte èíslo stránky:"
+
+;FormViewAbout
+410="O aplikaci"
+411="Verze"
+412="Podìkování:"
+413="Registrován:"
+414="Zkušební verze (zbývá %d dní)"
+416="Licenèní smlouva"
+417="Pro odebrání aplikace, otevøete nabídku Start - Všechny programy - Universal Viewer - a spuste položku Uninstall (odinstalovat)."
+
+;FormViewFindText
+420="Hledat"
+421="&Hledat:"
+422="Jen ce&lý výraz"
+423="&Rozlišovat velikost písmen"
+424="&Víceøádkový regulární výraz"
+425="He&xadecimální øetìzec"
+426="Regulární &výraz"
+427=" (knihovna není použita)"
+428="Možnosti"
+429="Smìr"
+430="&Dolù"
+431="Na&horu"
+432="Zaèátek"
+433="Od &kurzoru"
+434="Od aktuální &stránky"
+435="&Celý soubor"
+436="Oznaèit &všechny výskyty"
+
+;FormPluginsOptions
+500="Konfigurace doplòkù"
+501="Nainstalované doplòky"
+502="&Pøidat..."
+503="&Odebrat"
+504="&Upravit..."
+505="Na&horu"
+506="&Dolù"
+507="Konfi&gurovat..."
+510="Název"
+511="Rozpoznávací øetìzec"
+512="Název souboru"
+520="Doplòky mají &vyšší prioritu než vnitøní prohlížeèe"
+521="Uložit doplòky s promìnnou %&Commander_Path%"
+524="Pøidat &klávesu ALT do nabídky zkratek pro prevenci kolize s doplòky"
+
+;FormPluginsAdd
+530="Pøidat doplòky"
+531="Importovat nastavení z aplikace &Total Commander"
+532="Pøidat doplòky ze zadané sl&ožky"
+533="Pøidat &jeden doplnìk"
+534="Pøidat doplòky z &archivu"
+537="Spustit&elný soubor aplikace Total Commander:"
+538="&Konfiguraèní soubor aplikace Total Commander:"
+539="&Soubor:"
+540="S&ložka:"
+541="Aplikace (*.exe)|*.EXE"
+542="INI soubory (*.ini)|*.INI"
+543="Doplòky (*.wlx)|*.WLX"
+544="Archivy (*.zip,*.rar)|*.ZIP;*.RAR"
+
+;FormPluginsEdit
+550="Konfigurovat doplnìk"
+551="Název souboru:"
+552="&Rozpoznávací øetìzec:"
+553="&Výchozí"
+554="Konfiguraèní soubor:"
+
+;FormViewToolbar
+560="Upravit panel nástrojù"
+561="Tlaèítka k &dispozici:"
+562="Tlaèítka pane&lu nástrojù:"
+563="&Pøidat ->"
+564="<- &Odebrat"
+565="Pùvod&ní"
+566="(Oddìlovaè)"
+
+;FormViewToolList
+600="Seznam uživatelských nástrojù"
+601="Vlastnosti uživatelských nástrojù"
+602="&Hlavièka:"
+603="&Aplikace:"
+604="&Parametry:"
+605="&Makra pro parametry (dvojitým kliknutím pøidáte makro do pole parametrù):"
+606="&Akce k provedení:"
+607="Pøed spuštìním aplikace:"
+608="Po spuštìní aplikace:"
+609="Rada: pøidejte '?' jako první znak pro potvrzení parametrù."
+
+;FormViewRename
+650="Pøejmenovat soubor"
+651="Pøejmenovat..."
+652="&Pøejmenovat na:"
+653="Kopírovat do složky..."
+654="Pøesunout do složky..."
+
+;FormViewReg
+700="Registrovat aplikaci"
+701="&Registrovat..."
+702="Registraèní informace"
+703="J&méno:"
+704="&Klíè:"
+705="Vložit"
+706=Zadejte licenèní klíè, který jste obdrželi prostøednictvím e-mailu. Licenèní klíè rozlišuje malá a velká písmena. Doporuèujeme klíè vložit (po zkopírování) zkratkou Ctrl+V. Po zadání klíèe kliknìte na tlaèítko Aktivovat.
+707=&Aktivovat
+708=&Získat klíè
+
+;FormPrintPreview
+710="Okraje"
+711="&Levý:"
+712="P&ravý:"
+713="&Horní:"
+714="&Dolní:"
+715="mm"
+716="cm"
+717="palce"
+718="Gamma"
+719="&Gamma hodnota:"
+
+720="Náhled tisku"
+721="Tisk"
+722="Možnosti"
+723="Náhled"
+724="&Text zápatí"
+725="Nelze alokovat doèasnou bitmapu."
+726="Pozice"
+
+727="&Pøizpùsobit:"
+728="Normální"
+729="Best fit"
+730="Roztáhnout"
+731="Vlastní velikost"
+732="&Výška:"
+733="&Šíøka:"
+734="Zachovat &proporce"
+735="P&ísmo..."
+736="Na&stavení tisku..."
+
+;FormViewOptionsImages
+740="Grafické &knihovny"
+741="&Pro zavedení grafiky použít IrfanView/XnView"
+742="&Název (cesta) souboru aplikace:"
+743="P&øípony souborù:"
+744="IrfanView/XnVie&w má vyšší prioritu než vnitøní knihovna"
+745="Pro zavedení &JPEG obrázkù použít "ijl15.dll""
+746="Pøípony &souborù:"
+
+;FormNavColumns
+780="Další..."
+781="Zvolit podrobnosti"
+782="Vyberte údaje o souborech, které chcete v této složce zobrazit. Poøadí sloupcù zmìníte pøetažením."
+783="Šíøka vybraného sloupce "
+784="pixelù "
+785="Živá aktualizace"
+
+;FormViewOptions..
+800="I&kony:"
+801="(Výchozí)"
+802="(Uložit šablonu...)"
+803="&Opakované pøehrávání"
+
+805="Øazení &souborù:"
+806=" (sest.)"
+807="Název souboru"
+808="Pøípona"
+809="Vytvoøeno"
+810="Zmìnìno"
+811="Použít vlastní výšku okna pro režimy"
+812="&Vynechávat:"
+813="Zvýraznit hledání"
+
+814="Použít moderní multimediální pøehrávaè"
+815="Pokud je zakázáno, použije se starý styl pøehrávaèe. Starý styl pøehrávaèe mùžete rovnìž zakázat zrušením zaškrtnutí položky "Multimédia" na záložce "Typy souborù"."
+
+816=Položky v režimu celé obrazovky
+817=Hlavní nabídka
+818=Panel nástrojù
+819=Multimédia - Posuvník sledování
+820=Multimédia - Tlaèítková lišta
+821=Stavový øádek
+822=Multimédia - Kurzor
+
+;FormViewEXIF
+880="Èteèka EXIF"
+881="Zobrazit E&XIF..."
+883="Tag"
+884="Vlastnost"
+885="Hodnota"
+890=" IFD 0 "
+891=" Sub IFD "
+892=" Interop. IFD "
+893=" Poznámka tvùrce "
+894=" IFD 1 "
+895=" Miniatura "
+
+;Preview
+900=První stránka
+901=Pøedchozí stránka
+902=Další stránka
+903=Poslední stránka
+904=Aktuální stránka
+905=Hodnota pøiblížení
+906=Celá stránka
+907=Pøizpùsobit šíøku
+
+;Media
+910=Pøehrát nebo pozastavit
+911=Pozastavit
+912=Zastavit
+913=Krok vpøed
+914=Originál
+915=Roztáhnout
+916=Zvuk#%d
+917=Ztlumit
+918=Hlasitost
+919=Pomìr stran
+920=Zvukový kanál
+921=
+922=Pøevinout zpìt 10 s
+923=Pøevinout zpìt 1 min
+924=Pøevinout zpìt 5 min
+925=Vpøed 10 s
+926=Vpøed 1 min
+927=Vpøed 5 min
+928=Èas (hh:mm:ss):
+929=Uložit aktuální rámec...
+
+[Nav]
+
+200="Navigace"
+201="O úroveò výš"
+202="&Zobrazit"
+203="&Nápovìda"
+204="&Registrace..."
+205="O &aplikaci..."
+206="&Složka:"
+207="Je&dnotky:"
+
+210="Složka je prázdná"
+211="&Ikony"
+212="&Seznam"
+213="Po&drobnosti"
+214="Mi&niatury"
+215="&Panely pod sebou"
+216="Zobrazit &skryté soubory"
+217="Ukotvit k &prohlížeèi"
+218="Zobrazit panel s &cestou"
+219="Zob&razit panel s disky"
+220="Zobrazit &speciální složky"
+221="Zobrazit st&avový øádek"
+222="Ot&evøít složky v prohlížeèi"
+

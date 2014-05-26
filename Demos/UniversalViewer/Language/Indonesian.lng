@@ -1,0 +1,652 @@
+[About]
+
+Version=6.5.3
+Author=elda taluta
+Homepage=rahasia.com
+Email=RA-HA-SI-A@rahasia.com
+
+[Messages]
+
+101="Berkas tak ditemukan: "%s""
+102="Tak dapat membuka berkas: "%s""
+104="Tak dapat memuat berkas: "%s""
+105="Tak dapat membaca berkas: "%s""
+106="Tak dapat menginisialisasi %s"
+107="Pelipat tak ditemukan: "%s""
+
+108="Format tak dikenal\nKlik di sini untuk menampilkan pembuangan biner\n(Pesan ini dapat dilumpuhkan melalui dialog Opsi)"
+109="Galat baca pada offset %s"
+110="Tak dapat menangani senarai berkas: "%s""
+111="Berkas kosong"
+113="Tak dapat mendeteksi berkas format\nPembuangan biner ditampilkan"
+114="Modul MS Office tak mendukung tipe berkas ini"
+115="Format citra tak dikenal"
+116="Format multimedia tak dikenal"
+120="Untai penelusuran tak ditemukan: "%s""
+121="Tak dapat menyalin teks ke papan klip"
+122="Untai Heks tak sah: "%s""
+123="Menelusuri "%s":"
+124="Galat penelusuran terjadi"
+125="Teks tak dipilih"
+126="Tiada informasi EXIF dalam berkas ini"
+127="Papan klip tak berisi grafik atau data teks"
+129="Halaman Sebelumnya/Selanjutnya\nHalaman saat ini: %d dari %d"
+130="Pengkonversi teks tersedia untuk tipe berkas ini\nKlik di sini untuk menampilkan teks"
+
+151="Tak dapat menjalankan alat:\n"%s""
+152="Tak dapat menerapkan opsi integrasi Explorer di dalam Registri. Cobalah untuk menjalankan aplikasi selaku Administrator."
+153="Berkas terlampir."
+154="Tak dapat mengirim surel (galat MAPI)"
+155="Tak dapat mengubah dokumen menjadi bentuk teks"
+156="Tak dapat membuat berkas sementara"
+
+200="Eksepsi dalam plugin "%s" untuk fungsi "%s""
+201="Tak dapat membongkar plugin "%s""
+202="Tak dapat memuat plugin, bentuk induk tak ditetapkan"
+
+203="Arsip ini berisi plugin yang tak didukung (%s)"
+204="Arsip ini berisi plugin:\n"%s".\n\nApakah Anda ingin menginstalnya dalam Universal Viewer?"
+
+209="Plugin berikut ini ditambahkan:\n\n%s\nPlugin berikut ini dimutakhirkan:\n\n%s"
+210="Plugin berikut ini ditambahkan:\n\n%s\nPlugin berikut ini telah diinstal dan tak ditambahkan:\n\n%s"
+211="(kosong)\n"
+212="Nama berkas/pelipat sumber tak sah"
+213="Nama eksekusi Total Commander yang dipilih tak sah"
+214="(tak ditemukan)"
+215="Tak dapat membongkar arsip "%s" ke pelipat plugin "%s""
+216="Tak dapat menemukan plugin dalam arsip "%s""
+
+250="Ini adalah berkas terakhir dalam pelipat. Apakah Anda ingin meloncat ke berkas pertama?"
+251="Ini adalah berkas pertama dalam pelipat. Apakah Anda ingin meloncat ke berkas terakhir?"
+252="Nama berkas sekarang "%s" tak ditemukan dalam pelipat. Apakah Anda ingin meloncat ke berkas pertama?"
+253="Pelipat sekarang kosong. Tak dapat meloncat ke berkas lain."
+254="Ini adalah berkas tunggal dalam pelipat. Tak dapat meloncat ke berkas lain."
+255="Ini adalah berkas terakhir dalam senarai. Apakah Anda ingin meloncat ke berkas pertama?"
+256="Ini adalah berkas pertama dalam senarai. Apakah Anda ingin meloncat ke berkas terakhir?"
+257="Pelipat kosong: "%s""
+
+260="Hapus berkas"
+261="Apakah Anda ingin memindahkan "%s" ke Penampung Daur Ulang?"
+262="Apakah Anda ingin menghapus "%s"?"
+263="Tak dapat menghapus "%s""
+264="Tak dapat menyalin atau memindahkan "%s" ke "%s""
+
+301="%d bita"
+302="%d KB"
+303="%d MB"
+304="%d GB"
+305="%d TB"
+306="%d dari %d dalam pelipat"
+307="%d dari %d dalam senarai"
+
+310="Buat tautan di dalam pelipat:"
+311="Tak dapat membuat tautan:"
+312="Tautan dibuat:"
+
+313="Catatan: Operasi Salin/Pindahkan/Hapus/Surel/Pengkonversi membutuhkan tertambah Panel Navigasi."
+314="Tak dapat memulai kendali MS Office."
+315="Ekstensi berkas ini (%s) tercantum dalam senarai pengabaian.\nTetap buka?"
+316="Berkas "%s" ter%s dengan ekstensi yang keliru.\nGanti nama?"
+317="Kunci ini telah ditugaskan ke "%s""
+
+320=Aplikasi terdaftar
+321=Tak dapat mengaktifkan kunci. Periksa teks dan sambungan internet.
+322=terdaftar
+323=%d hari tersisa
+
+;Keys
+400="BkSp"
+401="Tab"
+402="Esc"
+403="Enter"
+404="Space"
+405="PgUp"
+406="PgDn"
+407="End"
+408="Home"
+409="Left"
+410="Up"
+411="Right"
+412="Down"
+413="Ins"
+414="Del"
+415="Shift+"
+416="Ctrl+"
+417="Alt+"
+
+[Captions]
+
+;FormViewUV
+100="&Berkas"
+101="B&uka..."
+102="&Muat ulang"
+103="&Simpan sebagai..."
+104="&Tutup"
+105="Buka &pelipat..."
+106="Buka terkini"
+107="B&ersihkan senarai"
+108="K&irim melalui surel..."
+109="Salin &nama berkas"
+110="&Cetak..."
+111="Pr&atilik cetak..."
+112="Tata halaman&..."
+115="Berkas sebe&lumnya"
+116="Berkas selanjutn&ya"
+117="&Hapus..."
+118="P&roperti..."
+119="&Keluar"
+
+120="&Pasta ke dalam berkas baru"
+121="&Edit"
+122="&Salin"
+123="&Pilih semua"
+124="&Cari..."
+125="Cari &selanjutnya"
+126="&Tuju..."
+127="Salin sebagai &heks"
+128="Pilih b&aris"
+129="Salin ke be&rkas..."
+
+130="&Opsi"
+131="&1  Teks"
+132="&2  Biner (panjang tetap)"
+133="&3  Heks"
+134="&4  Citra/Multimedia"
+135="&5  Internet"
+136="&6  Unicode"
+137="&7  Plugin"
+138="&4  Citra"
+
+139="&Moda"
+140="Salin &tautan"
+141="Sorotan &URL"
+142="&Bungkus kata"
+143="Muatkan &citra ke jendela"
+144="M&eramban terputus"
+145="&Selalu di atas"
+146="&Layar penuh"
+
+147="&Konfigurasi..."
+148="Konfigurasikan &plugin..."
+149="Sesuaikan &batang alat..."
+
+150="&Tilikan"
+151="&Citra"
+152="Zum &besar"
+153="Zum &kecil"
+154="Ukuran as&li"
+
+155="&Bantuan"
+156="&Tentang..."
+
+157="Putar &90"
+158="Putar &270"
+159="&Skala abu-abu"
+160="&Negatif"
+161="Muatkan &citra besar saja"
+162="Tampilkan &info label"
+163="&Pusatkan citra"
+164="&Zum"
+165="Muatkan &jendela ke citra"
+166=
+
+167="Cari &sebelumnya"
+168="&Pengkodean"
+169="&Menu pengkodean..."
+170="Pengkodean se&belumnya"
+171="Pengkodean se&lanjutnya"
+172="&Karakter tak dapat dicetak"
+173=
+174="Muatkan jendela menjadi ukuran me&dia"
+175="Tampilkan &indikator waktu"
+
+176="&Belakang"
+177="&Depan"
+178="&Teks"
+179="&Internet"
+
+180="Berkas tak dimuat (pilih menu Berkas > Buka)"
+
+181="&Alat"
+182="Konfigurasikan alat pen&gguna..."
+183="&Lanjutan"
+184="Edit berkas &konfigurasi secara manual"
+185="Edit berkas &sejarah secara manual"
+186="Simpan posisi &jendela"
+187="Buat &tautan menuju berkas..."
+188="Muatkan &panjang citra saja"
+189="Muatkan le&bar citra saja"
+
+219="&Efek citra"
+220=
+221=
+222=
+223=
+224="Balik &vert."
+225="Balik &horiz."
+226="Putar &180"
+227="&Sepia"
+
+228="Forum - Inggris"
+229="Forum - Rusia"
+230="&Tautan web"
+231="&Halaman pangkal"
+232="&Surat elektronik"
+233="&Plugin"
+234="&Isi"
+
+;img panel
+235=Panel citra
+236=Edit
+237=Ubah
+238=Rotasi:
+239=Efek:
+240=Ubah menjadi:
+241=Ubah...
+242=Tampilkan panel &citra
+
+;FormViewOptions
+;(continues after 800)
+263="Sa&rankan penamaan ulang citra berekstensi keliru"
+264="&Judul jendela:"
+265="Tayangkan nama jalur lengkap"
+266="Tayangkan nama berkas saja"
+267="Penghidupan &moda tilik:"
+268="Deteksi otomatis"
+
+269="&Gutter dan nomor baris..."
+270="Tampilkan nomor &baris pada gutter"
+271="&Hanya untuk yang pertama:"
+272="KB berkas"
+273="Hanya untuk ekstensi &berkas ini:"
+
+274="&Gutter di sebelah kiri"
+275="Jangan tampilkan &pesan galat, cukup bunyi"
+276="&Jumlah maks. nomor baris:"
+278="Langkah (1: tampilkan untuk semua):"
+279="Jangan tegaskan opsi "Cari selanjutnya""
+
+280="Rupa-Rupa"
+281="Urai &target berkas .lnk"
+282="&Cacah gelaran"
+283="Tampilkan &berkas tersembunyi"
+284="Simpan &posisi jendela"
+285="Simpan pelipat &kerja terakhir"
+286="Sejarah"
+287="Cetak"
+288="&Antarmuka:"
+289="Simpan &sejarah penelusuran"
+290="&Huruf kaki halaman:"
+291="Ber&sihkan"
+292="Bers&ihkan"
+
+300="Penataan Universal Viewer"
+301="Ekstensi Berkas"
+302="Teks"
+303="Multimedia"
+304="Antarmuka"
+305="Tipe berkas"
+306="Lanjutan"
+307="Pintasan"
+308="Huruf dan warna"
+309="Muat ulang otomatis"
+
+310="&Teks:"
+311="&Citra:"
+312="&Media:"
+313="I&nternet:"
+314="&RTF:"
+
+315="Warna heks"
+316="Latar belakang heks"
+
+317="Gunakan huruf &OEM spesial"
+318="Panjang baris ma&ksimal"
+319="Ukuran ta&b"
+320="&Huruf:"
+321="&Warna:"
+322="Moda biner: lebar p&as"
+323="Moda biner: lebar te&tap"
+324="&Hasil penelusuran: baris dari atas"
+325="Anj&urkan pilihan sebagai teks penelusuran"
+326="Muat ulang &otomatis berkas pada pergantian"
+327="Turuti &ekor setelah muat ulang"
+328="&Berbunyi saat muat ulang"
+329="&Salin otomatis teks ke Papan Klip"
+
+330="Warna label citra"
+331="&Sampel ulang citra saat penskalaan"
+332="Warna latar belakang citra"
+333="Tampilkan &transparansi citra"
+334="&Mulai otomatis gelar balik"
+
+335="&Bahasa:"
+336="Tampilkan butir konteks menu &Penjelajah"
+337="Tampilkan batang &alat"
+338="Tampilkan batas di sekitar &wilayah tilik"
+339="Iz&inkan batang alat dalam layar penuh"
+
+340="Perintah"
+341="Pintasan"
+342="&Pintasan:"
+
+343="Tampilkan i&kon dalam menu"
+344="Tampilkan &menu"
+345="Simpan &senarai berkas terbaru"
+346="&Izinkan satu contoh saja"
+347="Tampilkan &batang status"
+348="Tampilkan &panel navigasi"
+349="Tampilkan penegasan sebelum membuka berkas-berkas tak ter&deteksi"
+
+;Buttons
+350="Oke"
+351="Batal"
+352="Cari"
+353="Tutup"
+354="Terapkan"
+355="Bantuan"
+356="Tata Ulang"
+
+;Options dialog
+360="Pengkonversi &teks:"
+361="Tampilkan sia&p ketik pengkonversi teks di puncak"
+362="Buka ulang &berkas yang dipakai terakhir"
+363="Citra RAW"
+
+364="Pengandar &audio:"
+365="Pengandar &video:"
+366="Otoputar citra menurut E&XIF"
+;FormViewOptionsText
+380="&Deteksi otomatis"
+381="&Deteksi otomatis berkas teks"
+382="berdasarkan &pertama"
+383="KB"
+384="ukuran &maksimal:"
+385="KB (0: tak terbatas)"
+386="Otomatis deteksi pengkodean &OEM"
+387="Otomatis deteksi pengkodean &UTF-8"
+
+;FormViewGoto
+400="Tuju"
+401="Posisi baru"
+402="&Persentase (%)"
+403="Offset &heks"
+404="Offset &desimal"
+405="A&wal pilihan"
+406="A&khir pilihan"
+407="&Nomor baris"
+408="Masukkan nama sel, mis. A10:"
+409="Masukkan nomor halaman:"
+
+;FormViewAbout
+410="Tentang"
+411="Versi"
+412="Kredit komponen:"
+413="Terdaftar kepada:"
+414="Versi uji coba (%d hari tersisa)"
+416="Kesepakatan lisensi"
+417="Untuk menghapus instalasi, buka menu Mulai - Programs - Universal Viewer - dan jalankan butir "Hapus Instalasi"."
+
+;FormViewFindText
+420="Penelusuran"
+421="&Teks yang dicari:"
+422="&Kata utuh saja"
+423="&Peka huruf"
+424="Ekspresi reguler &multibaris"
+425="Untai &heks"
+426="&Ekspresi reguler"
+427=" (pustaka tak digunakan)"
+428="Opsi"
+429="Arah"
+430="&Depan"
+431="&Belakang"
+432="Asal"
+433="Da&ri kursor"
+434="&Dari halaman sekarang"
+435="&Seluruh berkas"
+436="Tandai semua peristi&wa"
+
+;FormPluginsOptions
+500="Konfigurasi plugin"
+501="Plugin terinstal"
+502="&Tambah..."
+503="&Hapus"
+504="&Edit..."
+505="&Ungguh"
+506="&Anjlok"
+507="&Susunan..."
+510="Nama"
+511="Deteksi untaian"
+512="Nama berkas"
+520="Plugin mempunyai &prioritas yang lebih tinggi daripada penilik internal"
+521="Simpan nama berkas plugin &dengan variabel lingkungan %Commander_Path%"
+524="Tambahkan kunci &'Alt' ke pintasan menu demi mencegah konflik dengan plugin"
+
+;FormPluginsAdd
+530="Instal plugin"
+531="Impor penataan dari &Total Commander"
+532="Instal seluruh plugin &dari pelipat"
+533="Instal plu&gin &tunggal"
+534="Instal plugin dari &arsip"
+537="Berkas &eksekusi TC:"
+538="Berkas &susunan TC:"
+539="&Berkas:"
+540="&Pelipat:"
+541="Aplikasi (*.exe)|*.EXE"
+542="Berkas ini (*.ini)|*.INI"
+543="Plugin (*.wlx)|*.WLX"
+544="Arsip (*.zip,*.rar)|*.ZIP;*.RAR"
+
+;FormPluginsEdit
+550="Konfigurasikan plugin"
+551="Nama berkas:"
+552="&Untai deteksi:"
+553="Sta&ndar"
+554="Berkas susunan:"
+
+;FormViewToolbar
+560="Sesuaikan batang alat"
+561="Tombol &tersedia:"
+562="Tombol ter&pilih:"
+563="&Tambah ->"
+564="<- &Hapus"
+565="Tata &ulang"
+566="(Pemisah)"
+
+;FormViewToolList
+600="Senarai alat pengguna"
+601="Properti alat pengguna"
+602="Ta&karir:"
+603="Ap&likasi:"
+604="Pa&rameter:"
+605="Makro &parameter (klik-ganda untuk menambahkan makro ke senarai parameter):"
+606="Aksi yang akan dilakukan:"
+607="Sebelum menjalankan aplikasi:"
+608="Setelah menjalankan aplikasi:"
+609="Petunjuk: Tambahkan '?' sebagai karakter pertama untuk menegaskan parameter."
+
+;FormViewRename
+650="Ganti nama berkas"
+651="Ganti nama ulang..."
+652="&Ganti nama menjadi:"
+653="Salin ke pelipat..."
+654="Pindahkan ke pelipat..."
+
+;FormReg
+700="Daftar"
+701="&Daftar..."
+702=
+703=
+704=
+705=
+706=Silakan masukkan kunci lisensi yang Anda terima via surel. Kunci lisensi bersifat peka huruf. Kami sarankan agar Anda merekatkan (Ctrl+V) kunci ke dalam ruas di bawah ini. Setelah Anda memasukkan kunci klik Aktifkan guna mengaktifkannya.
+707=&Aktifkan
+708=&Dapatkan kunci
+
+;FormPrintPreview
+710="Ruang"
+711="&Kiri:"
+712="K&anan:"
+713="&Puncak:"
+714="&Dasar:"
+715="mm"
+716="cm"
+717="inci"
+718="Gamma"
+719="&Nilai gamma:"
+
+720="Pratilik cetak"
+721="Cetak"
+722="Opsi"
+723="Pratilik"
+724="T&eks kaki halaman"
+725="Tak dapat mengalokasikan bitmap sementara."
+726="Posisi"
+
+727="&Moda muat:"
+728="Normal"
+729="Muat terbaik"
+730="Regang"
+731="Ukuran suai"
+732="&Lebar:"
+733="&Panjang:"
+734="&Berimbang"
+735="Hur&uf..."
+736="Tata &cetak..."
+
+;FormViewOptionsImages
+740="&Pustaka grafik"
+741="&Gunakan IrfanView/XnView untuk memuat grafik"
+742="&Nama berkas aplikasi:"
+743="&Ekstensi berkas:"
+744="IrfanView/XnView mempunyai &prioritas yang lebih tinggi daripada pustaka internal"
+745="Gunakan pustaka "IJL15.dll" untuk memuat grafik &JPEG"
+746="Ekstensi &berkas:"
+
+;FormNavColumns
+780="Tambah..."
+781="Penataan kolom"
+782="Centang kolom yang ingin Anda buat terlihat dalam pelipat ini. Seret dan jatuhkan guna menyusun ulang kolom."
+783="Kolom terpilih haruslah selebar"
+784=" piksel"
+785="LiveUpdate"
+
+;FormViewOptions..
+800="&Ikon:"
+801="(Standar)"
+802="(Simpan templat...)"
+803="&Loop gelar balik"
+
+805="Pemilahan &berkas:"
+806=" (desk.)"
+807="Nama berkas"
+808="Ekstensi"
+809="Dibuat"
+810="Dimodifikasi"
+811="Gunakan tinggi jendela suai untuk moda"
+812="Abaikan &senarai:"
+813="Sorotan penelusuran"
+;814="Pakai penggelar media modern"
+;815="Jika lumpuh, maka penggelar bergaya klasik akan dipakai. 
+;Anda juga dapat melumpuhkan penggelar bergaya klasik dengan jalan tak mencentang "Media" di tab "Tipe berkas"."
+
+816=Butir dalam moda layar penuh
+817=Batang menu
+818=Batang alat
+819=Multimedia - batang lintas
+820=Multimedia - batang tombol
+821=Batang status
+822=Multimedia - kursor
+
+823="Pakai penggelar media modern"
+824="Pakai penggelar media klasik"
+825="Multimedia (penggelar klasik)"
+826="Multimedia (penggelar modern)"
+827="Spasi antarbaris"
+830=Opsi Word/RTF
+831=Atak standar:
+832=Zum standar
+833=Nilai zum suai di %:
+834=Atak rancangan
+835=Atak web
+836=Atak cetak
+;FormViewEXIF
+880="Pembaca EXIF"
+881="Tampilkan E&XIF..."
+883="Tag"
+884="Properti"
+885="Nilai"
+890=" IFD 0 "
+891=" Sub IFD "
+892=" Interop. IFD "
+893=" Catatan Pembuat  "
+894=" IFD 1 "
+895=" Gambar mini "
+
+;Preview
+900=Halaman pertama
+901=Halaman sebelumnya
+902=Halaman selanjutnya
+
+903=Halaman terakhir
+904=Halaman sekarang
+905=Nilai zum
+906=Halaman utuh
+907=Lebar pas
+908=Suai...
+
+;Media
+910=Gelar/jeda
+911=Jeda
+912=Stop
+913=Maju
+914=Asli
+915=Regangkan
+916=Audio#%d
+917=Bisu
+918=Volume
+919=Rasio aspek 
+920=Kanal audio
+921=Membuka citra...
+922=Mundur 10 det
+923=Mundur 1 men
+924=Mundur 5 men
+925=Maju 10 det
+926=Maju 1 men
+927=Maju 5 men
+928=Waktu (hh:mm:ss):
+929=Simpan bingkai sekarang...
+
+
+[Nav]
+
+200="Panel Navigasi"
+201="Naik satu aras"
+202="&Tilik"
+203="&Bantuan"
+204="&Daftar..."
+205="T&entang..."
+206="&Pelipat:"
+207="Pe&nggerak:"
+
+210="Pelipat kosong"
+211="&Ikon"
+212="&Senarai"
+213="&Rincian"
+214="&Gambar mini"
+215="Atak &horizontal"
+216="Tampilkan &berkas tersembunyi"
+217="Rapatkan ke &penilik"
+218="Tampilkan batang &jalur"
+219="Tampilkan bat&ang penggerak"
+220="Tampilkan pelipat &spesial"
+221="Tampilkan batang stat&us"
+222="&Buka pelipat dalam penilik"
+
+
+
+
+
+
+
+

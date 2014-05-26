@@ -1,0 +1,640 @@
+[About]
+Version=6.5.3
+Author=Jan Verheijen
+Homepage=
+Email=
+
+[Messages]
+
+101="Bestand niet gevonden %s"
+102="Kan bestand: %s niet openen"
+104="Kan bestand: %s niet laden"
+105="Kan bestand: %s niet lezen"
+106="Kan bestand %s niet initialiseren"
+107="Map: %s niet gevonden"
+
+108="Onbekend formaat\nKlik hier om de binaire dump weer te geven\n(Deze melding kan in het Opties-dialoogvenster uitgeschakeld worden)"
+109="Leesfout bij offset %s"
+110="Kan bestandenlijst : %s niet verwerken"
+111="Bestand is leeg"
+113="Kan het bestandsformaat niet detecteren\nDe binaire dump wordt weergegeven"
+114="De MS Office-module ondersteunt dit bestandstype niet"
+115="Onbekend afbeeldingsformaat"
+116="Onbekend multimediaformaat"
+120="Zoektekst niet gevonden: "%s""
+121="Kan de tekst niet naar het klembord kopiëren"
+122="Hex-tekst is ongeldig: "%s""
+123="Zoeken naar "%s":"
+124="Zoekfout opgetreden"
+125="Tekst is niet geselecteerd"
+126="Geen EXIF-informatie in dit bestand"
+127="Het klembord bevat geen grafische of tekstgegevens"
+129="Vorige/Volgende pagina\nHuiddige pagina: %d van %d"
+130="Een tekstconvertor is beschikbaar voor dit bestandstype\nKlik hier om de tekst weer te geven"
+
+151="Kan de tool niet uitvoeren:\n"%s""
+152="Kan de Verkenner-integratie-optie niet in het register zetten. Probeer de toepassing als Administrator uit te voeren."
+153="Bestand bijgevoegd."
+154="Kan geen mail versturen (MAPI-fout)"
+155="Kan het document niet converteren naar een tekstformulier"
+156="Kan geen tijdelijk bestand creëren"
+
+200="Uitzondering in plugin %s in functie %s"
+201="Kan plugin %s niet uitschakelen"
+202="Kan plugins niet laden: geen ouder-formulier gespecificeerd"
+
+203="Dit archief bevat een niet ondersteunde plugin (%s)"
+204="Dit archief bevat de plugin:\n"%s".\n\nWilt u deze in Universal Viewer installeren?"
+
+209="De volgende plugins zijn toegevoegd:\n\n%s\nDe volgende plugins zijn geupdated:\n\n%s"
+210="De volgende plugins zijn toegevoegd:\n\n%s\nDe volgende plugins zijn al geïnstalleerd en zijn niet toegevoegd:\n\n%s"
+211="(geen)\n"
+212="Bronbestands-/mapnaam is niet geldig"
+213="De gekozen "Total Commander"-executable-naam is niet geldig"
+214="(niet gevonden)"
+215="Kan archief "%s" niet uitpakken in plugins-map "%s""
+216="Kan plugin niet vinden in archief "%s""
+
+250="Dit is het laatste bestand in de map. Naar het eerste bestand springen?"
+251="Dit is het eerste bestand in de map. Naar het laatste bestand springen?"
+252="Huidige bestandsnaam "%s" is niet in de map gevonden. Naar het eerste bestand springen?"
+253="Huidige map is leeg. Kan niet naar een ander bestand springen."
+254="Dit is het enige bestand in de map. Kan niet naar een ander bestand springen."
+255="Dit is het laatste bestand in de lijst. Naar het eerste bestand springen?"
+256="Dit is het eerste bestand in de lijst. Naar het laatste bestand springen?"
+257="Map is leeg: "%s""
+
+260="Bestand verwijderen"
+261="Wilt u "%s" verplaatsen naar de prullenbak?"
+262="Wilt u "%s" verwijderen?"
+263="Kan "%s" niet verwijderen"
+264="Kan "%s" niet verplaatsen of kopiëren naar "%s""
+
+301="%d bytes"
+302="%d kB"
+303="%d MB"
+304="%d GB"
+305="%d TB"
+306="%d van %d in de map"
+307="%d of %d in de lijst"
+
+310="Link maken in map:"
+311="Kan link niet maken:"
+312="Link gemaakt:"
+
+313="Opmerking: voor de bewerkingen Kopiëren/Verplaatsen/Verwijderen/E-mailen/Converteren is de Navigatie-paneel-invoegtoepassing nodig."
+314="Opmerking: het MS Office-beheer kan niet geïnitialiseerd worden."
+315="De bestandsextensie (%s) van dit bestand staat in de negerenlijst.\n Toch openen?"
+316="Bestand "%s" heeft een onjuiste extensie %s.\nHernoemen?"
+317="Deze sleutel is al toegekend aan "%s""
+
+320=De applicatie is geregistreerd
+321=De sleutel kan niet geactiveerd worden. Controleer de tekst en de internet-verbinding.
+322=geregistreerd
+323=%d dag(en) over
+
+;Keys
+400="BkSp"
+401="Tab"
+402="Esc"
+403="Enter"
+404="Space"
+405="PgUp"
+406="PgDn"
+407="End"
+408="Home"
+409="Left"
+410="Up"
+411="Right"
+412="Down"
+413="Ins"
+414="Del"
+415="Shift+"
+416="Ctrl+"
+417="Alt+"
+
+[Captions]
+
+;FormView
+100="&Bestand"
+101="&Openen..."
+102="Op&nieuw laden"
+103="Opslaan als&..."
+104="&Sluiten"
+105="&Map openen..."
+106="&Recent gebruikt bestand openen"
+107="&Lijst wissen"
+108="Per E-mail versturen..."
+109="&Bestandsnaam kopiëren"
+110="Af&drukken..."
+111="Afdruk&voorbeeld..."
+112="Pagina-&instelling..."
+115="Vori&ge bestand"
+116="Volgende bes&tand"
+117="Ver&wijderen..."
+118="&Eigenschappen..."
+119="&Afsluiten"
+
+120="&Plakken naar een nieuw bestand"
+121="Be&werken"
+122="&Kopiëren"
+123="&Alles selecteren"
+124="&Zoeken..."
+125="Volgende z&oeken"
+126="&Ga naar..."
+127="Kopiëren als &Hex"
+128="&Regel selecteren"
+129="&Naar bestand kopiëren..."
+
+130="&Opties"
+131="&1  Tekst"
+132="&2  Binair (vaste regellengte)"
+133="&3  Hex"
+134="&4  Afbeelding/Multimedia"
+135="&5  Internet"
+136="&6  Unicode"
+137="&7  Plugins"
+138="&4  Afbeelding"
+
+139="&Modus"
+140="&Link kopiëren"
+141="URL &accentueren"
+142="&Regelterugloop"
+143="Afbeelding aanpassen aan venster"
+144="&Offline bladeren"
+145="Al&tijd op de voorgrond"
+146="Volledig &scherm"
+
+147="&Configureren..."
+148="&Plugins configureren..."
+149="&Werkbalk aanpassen..."
+
+150="Bee&ld"
+151="Afbeelding"
+152="&Inzoomen"
+153="&Uitzoomen"
+154="&Originele grootte"
+
+155="&Help"
+156="&Over..."
+
+157="Draaien &90"
+158="Draaien &270"
+159="&Grijstinten"
+160="&Negatief"
+161="Alleen grote afbeeldingen passend maken"
+162="Info-label weergeven"
+163="Afbeelding &centreren"
+164="&Zoomen"
+165="Venster aanpassen aan afbeelding"
+166=
+
+167="&Vorige zoeken"
+168="&Codering"
+169="Code-&menu..."
+170="&Vorige codering"
+171="&Volgende codering"
+172="&Niet-afdrukbare tekens"
+173=
+174="Venster aanpassen aan media-grootte"
+175="Tijdindicator weergeven"
+
+176="&Terug"
+177="&Vooruit"
+178="&Tekst"
+179="&Internet"
+
+180="Bestand niet geladen (kies menu Bestand > Openen)"
+
+181="&Hulpmiddelen"
+182="&Gebruikershulpmiddelen configureren..."
+183="&Geavanceerd"
+184="&Configuratiebestand bewerken"
+185="&Geschiedenisbestand bewerken"
+186="&Vensterpositie opslaan"
+187="&Link maken naar bestand..."
+188="Afbeelding alleen in de breedte passend maken"
+189="Afbeelding alleen in de hoogte passend maken"
+
+219="Image-&effect"
+220=
+221=
+222=
+223=
+224="&Vert. omklappen"
+225="&Horiz. omklappen"
+226="Draaien &180"
+227="&Sepia"
+228="Forum - Engels"
+229="Forum - Russisch"
+230="&Web-links"
+231="&Website Universal Viewer"
+232="E-mail"
+233="Plugins"
+234="&Inhoud"
+
+;img panel
+235=Afbeeldingpaneel
+236=Bewerken
+237=Converteren
+238=Draaiing:
+239=Effecten:
+240=Converteren naar:
+241=Converteren...
+242=Afbeeldingpaneel weergeven
+
+;FormViewOptions
+;(vervolg na 800)
+263="Stel voor om afbeeldingen met verkeerde extensie te hernoemen"
+264="Venstertitel:"
+265="Volledige padnaam"
+266="Alleen bestandsnaam"
+267="&Weergave-modus starten:"
+268="Auto-detect"
+
+269="&Marge- en regelnummers..."
+270="Regel&nummers bij marge weergeven"
+271="&Alleen voor de eerste:"
+272="kB van bestand"
+273="Alleen voor deze bestands&extensies:"
+
+274="&Marge links"
+275="Geen &foutmelding weergeven, alleen een piep"
+276="&Max. aantal regelnummers:"
+278="Stap (1: toon voor alles):"
+279=""Volgende zoeken"-opties niet bevestigen"
+
+280="Diversen"
+281=".lnk-bestandsdoelen zoeken"
+282="Afspeeltel&ler"
+283="&Verborgen bestanden weergeven"
+284="Vensterpositie op&slaan"
+285="Laatste &werkmap opslaan"
+286="Geschiedenis"
+287="Afdrukken"
+288="&Interface:"
+289="&Zoek-geschiedenis opslaan"
+290="Lettertype-voetregel"
+291="&Wissen"
+292="Wissen"
+
+300="Universal Viewer-instellingen"
+301="Bestandextensies"
+302="Tekst"
+303="Multimedia"
+304="Interface"
+305="Bestandstypen"
+306="Geavanceerd"
+307="Snelkoppelingen"
+308="Lettertype en kleuren"
+309="Automatisch herladen"
+
+310="&Tekst:"
+311="&Afbeeldingen:"
+312="&Media:"
+313="I&nternet:"
+314="&RTF:"
+
+315="Hex-kleur"
+316="Hex-achtergrond"
+
+317="Speciaal OE&M-lettertype gebruiken"
+318="Max&imale regellengte"
+319="Tab-gr&ootte"
+320="&Lettertype:"
+321="&Kleuren:"
+322="Binaire modus: breedte passend maken"
+323="Binaire modus: vaste breedte"
+324="&Zoekresultaat: regels vanaf bovenkant"
+325="Selectie aanbieden als zoektekst"
+326="&Bestand bij wijziging automatisch herladen"
+327="Na herladen achter &staart verder gaan"
+328="&Piep bij herladen"
+329="&Automatisch tekst naar klembord kopiëren"
+
+330="Kleur van afbeeldingslabel"
+331="Afbeelding na herschalen opnieuw weergeven"
+332="Kleur van afbeeldingsach&tergrond:"
+333="Transparantie van de afbeelding weergeven"
+334="Auto-start van afspelen"
+
+335="&Taal:"
+336="&Verkenner-context-menu-item weergeven"
+337="&Werkbalk weergeven"
+338="&Rand om beeldgebied weergeven"
+339="Werkbalk in volledig scherm weergeven"
+
+340="Opdracht"
+341="Snelkoppeling"
+342="&Snelkoppeling:"
+
+343="Symbolen in menu weergeven"
+344="&Menu weergeven"
+345="Recente &bestandenlijst weergeven"
+346="Slechts één instantie toestaan"
+347="&Statusbalk weergeven"
+348="&Navigatie-paneel weergeven"
+349="Een bevestiging weergeven voor het openen van niet-gedetecteerde bestanden"
+
+;Buttons
+350="OK"
+351="Annuleren"
+352="Zoeken"
+353="Sluiten"
+354="Toekennen"
+355="Help"
+356="Resetten"
+
+;Options dialog
+360="Tekst-convertor:"
+361="Tekst-convertor-prompt weergeven aan de bovenkant"
+362="Laatst gebruikte bestand heropenen"
+363="RAW-afbeeldingen"
+
+364="Audio-stuurprogramma:"
+365="Video-stuurprogramma:"
+366="Afbeelding auto-roteren volgens EXIF"
+
+;FormViewOptionsText
+380="Auto-&detectie"
+381="Tekstbestanden &automatisch detecteren"
+382="door &eerst"
+383="kB"
+384="&maximale grootte:"
+385="kB (0: geen begrenzing)"
+386="&OEM-codering automatisch detecteren"
+387="&UTF-8-codering automatisch detecteren"
+
+;FormViewGoto
+400="Ga naar"
+401="Nieuwe positie:"
+402="&Procent (%)"
+403="&Hex-offset"
+404="&Decimale offset"
+405="Selectie-&begin"
+406="Selectie-&einde"
+407="Regelnummer"
+408="Voer de celnaam in, bijv. A10:"
+409="Voer paginanummer in:"
+
+;FormViewAbout
+410="Over"
+411="Versie"
+412="Onderdelenlijst:"
+413="Geregistreerd door:"
+414="Probeerversie (nog %d dagen over)"
+416="Licentie-overeenkomst"
+417="Om de applicatie te de-installeren:  Startmenu - Programma's - Universal Viewer - Uninstall"
+
+;FormFindText
+420="Zoeken"
+421="&Zoektekst:"
+422="Alleen hele &woorden"
+423="&Hoofdlettergevoelig"
+424="Meerregelige normale uitdrukking"
+425="He&x-tekst"
+426="&Normale uitdrukking"
+427=" (bibliotheek wordt niet gebruikt)"
+428="Opties"
+429="Richting"
+430="&Vooruit"
+431="&Terug"
+432="Origineel"
+433="Va&naf cursor"
+434="Vanaf huidige &pagina"
+435="&Gehele bestand"
+436="Alle overeenkomsten markeren"
+
+;FormPluginsOptions
+500="Plugins-instellingen"
+501="Geïnstalleerde plugins"
+502="&Toevoegen..."
+503="&Verwijderen"
+504="&Bewerken..."
+505="Om&hoog"
+506="Om&laag"
+507="&Configureren"
+510="Naam"
+511="Detecteer tekst"
+512="Bestandsnaam"
+520="Plugins hebben &hogere prioriteit dan interne viewers"
+521="Plugin-bestandsnamen opslaan met  %&Commander_Path%-omgevingsvariabele"
+524="De 'Alt'-&toets toevoegen aan menu-snelkoppelingen, zodat deze niet conflicteren met de plugins"
+
+;FormPluginsAdd
+530="Plugins installeren"
+531="Instellingen importeren uit &Total Commander"
+532="Alle plugins uit m&ap installeren"
+533="Een enkel &plugin installeren"
+534="Plugin(s) installeren uit &archief(ven)
+537="TC-&uitvoerbaar bestand:"
+538="TC-instellingen-&bestand:"
+539="&Bestand:"
+540="&Map:"
+541="Toepassingen (*.exe)|*.EXE"
+542="Ini-bestanden (*.ini)|*.INI"
+543="Plugins (*.wlx)|*.WLX"
+544="Archieven (*.zip,*.rar)|*.ZIP;*.RAR"
+
+;FormPluginsEdit
+550="Plugin configureren"
+551="Bestandsnaam:"
+552="&Detecteer-tekst:"
+553="&Standaard"
+554="Instellingenbestand"
+
+;FormCustomizeToolbar
+560="Werkbalk aanpassen"
+561="&Beschikbare knoppen:"
+562="Gese&lecteerde knoppen:"
+563="&Toevoegen ->"
+564="<- &Verwijderen"
+565="Terug&zetten"
+566="(Scheidingsteken)"
+
+;FormToolList
+600="Gebruikershulpmiddelen-lijst"
+601="Gebruikershulpmiddelen-eigenschappen"
+602="&Titel:"
+603="App&licatie:"
+604="Pa&rameters:"
+605="Parameters-&macros (dubbelklik om macro toe te voegen aan de parameterlijst):"
+606="Acties om uit te voeren:"
+607="Alvorens de applicatie uit te voeren:"
+608="Na uitvoering vd applicatie:"
+609="Hint: voeg '?' toe als eerste teken om parameters te bevestigen."
+
+;FormRename
+650="Bestand hernoemen"
+651="Hernoemen..."
+652="&Hernoemen naar:"
+653="Kopiëren naar map..."
+654="Verplaatsen naar map..."
+
+;FormReg
+700="Registreren"
+701="&Registreren..."
+702=
+703=
+704=
+705=
+706=Voer a.u.b. de licentiesleutel in, die u per E-mail heeft ontvangen. De licentiesleutel is hoofdlettergevoelig. We bevelen aan de sleutel naar het veld onder te plakken (Ctrl+V). Nadat u de sleutel hebt ingevoerd klikt u op 'Activeren'.
+707=&Activeren
+708=Sleutel ophalen
+
+;FormPrintPreview
+710="Marges"
+711="&Links:"
+712="&Rechts:"
+713="&Boven:"
+714="&Onder:"
+715="mm"
+716="cm"
+717="inches"
+718="Gamma"
+719="&Gamma-waarde:"
+
+720="Afdrukvoorbeeld"
+721="Afdrukken"
+722="Opties"
+723="Voorbeeld"
+724="V&oettekst"
+725="Kan geen tijdelijke bitmap toewijzen."
+726="Positie"
+
+727="&Passend maken-modus:"
+728="Normaal"
+729="Best passend"
+730="Uitrekken"
+731="Aangepaste grootte"
+732="&Hoogte:"
+733="&Breedte:"
+734="&Proportioneel"
+735="Let&tertype..."
+736="Afdruk&instellingen..."
+
+;FormViewOptionsImages
+740="Grafische bibliotheken"
+741="&Gebruik IrfanView/XnView om afbeeldingen te laden"
+742="&Applicatie-bestandsnaam:"
+743="&Bestandsextensies:"
+744="IrfanView/XnView heeft een &hogere prioriteit dan de interne bibliotheek"
+745="Gebruik de "ijl15.dll"-bibliotheek om &JPEG-afbeeldingen te laden"
+746="Bestands&extensies"
+
+;FormNavColumns
+780="Meer..."
+781="Kolominstellingen"
+782="Selecteer de kolommen die u in deze map wilt zien. Sleep en plak om de kolommen te herschikken."
+783="De geselecteerde kolom moet zijn "
+784="pixels breed"
+785="LiveUpdate"
+
+;FormViewOptions..
+800="Pictogrammen:"
+801="(Standaard)"
+802="(Sjabloon opslaan...)"
+803="&Herhaald afspelen"
+
+805="Bestands&sortering:"
+806=" (aflopend)
+807="Bestandsnaam"
+808="Extensie"
+809="Gemaakt op"
+810="Gewijzigd op"
+811="Aangepaste vensterhoogte gebruiken voor de modus"
+812="Negeren&lijst:"
+813="Markering zoeken"
+
+816=Items in modus volledig scherm
+817=Menubalk
+818=Werkbalk
+819=Multimedia - trackbalk
+820=Multimedia - knoppenbalk
+821=Statusbalk
+822=Multimedia - cursor
+
+823="Moderne mediaplayer gebruiken"
+824="Oude-stijl mediaplayer gebruiken"
+825="Multimedia (oude stijl player)"
+826="Multimedia (moderne player)"
+827="Regelafstand"
+
+830=Word/RTF-opties
+831=Standaard opmaak:
+832=Standaard zoom
+833=Aangepaste zoomwaarde in %:
+834=Concept-opmaak
+835=Web-opmaak
+836=Afdrukopmaak
+
+;FormViewEXIF
+880="EXIF-lezer"
+881="E&XIF weergeven..."
+883="Tag"
+884="Eigenschap"
+885="Waarde"
+890=" IFD 0 "
+891=" Sub IFD"
+892=" Interop. IFD "
+893=" Maker-opmerling "
+894=" IFD 1"
+895=" Miniatuur "
+
+;Preview
+900=Eerste pagina
+901=Vorige pagina
+902=Volgende pagina
+903=Laatste pagina
+904=Huidige pagina
+905=Zoom-waarde
+906=Hele pagina
+907=In de breedte passen
+908=Aangepast...
+
+;Media
+910=Afspelen/pauze
+911=Pauze
+912=Stoppen
+913=Stap vooruit
+914=Origineel
+915=Uitrekken
+916=Audio#%d
+917=Mute
+918=Volume
+919=Verhouding
+920=Audio-kanaal
+921=Afbeelding openen...
+922=Terugspoelen 10 s
+923=Terugspoelen 1 min
+924=Terugspoelen 5 min
+925=Vooruit 10 s
+926=Vooruit 1 min
+927=Vooruit 5 min
+928=Tijd (uu:mm:ss):
+929=Huidige frame opslaan...
+
+[Nav]
+
+200="Navigatie-paneel"
+201="Eén niveau hoger"
+202="&Beeld"
+203="&Help"
+204="&Registreren..."
+205="&Over..."
+206="&Map:"
+207="&Schijven:"
+
+210="Map is leeg"
+211="&Pictogrammen"
+212="&Lijst"
+213="&Details"
+214="&Miniaturen"
+215="&Horizontale layout"
+216="&Verborgen bestanden weergeven"
+217="Dock in &viewer"
+218="&Padbalk weergeven"
+219="S&chijvenbalk weergeven"
+220="&Speciale mappen weergeven"
+221="St&atusbalk weergeven"
+222="Mappen openen in viewer"

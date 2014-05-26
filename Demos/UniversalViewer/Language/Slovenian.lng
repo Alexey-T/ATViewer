@@ -1,0 +1,650 @@
+[About]
+
+Version=6.5.6.1
+Author=Jadran Rudec
+Homepage=http://www.uvviewsoft.com
+Email=jrudec(at)gmail.com 
+
+[Messages]
+
+101="Datoteka ni bila najdena: "%s""
+102="Ni možno odpreti datoteko: "%s""
+104="Ni možno naložiti datoteko: "%s""
+105="Ni možno brati datoteko: "%s""
+106="Ni možno inicializirati %s"
+107="Ni možno najti mapo: "%s""
+
+108="Neznan format\nKliknite tukaj za prikaz v binarni obliki\n(To sporoèilo je mogoèe izklopiti v pogovornem oknu Možnosti)"
+109="Napaka branja pri odmiku %s"
+110="Ni možno upravljati s seznamom datotek: "%s""
+111="Datoteka je prazna"
+113="Ni možno zaznati format datoteke\nPrikazana je v binarni obliki"
+114="Modul MS Office ne podpira to vrsto datoteke"
+115="Neznan format slike"
+116="Neznan multimedijski format"
+120="Iskan niz ni bilo mogoèe najti: "%s""
+121="Ni mogoèe kopirati besedilo v odložišèe"
+122="Neveljaven Hex niz: "%s""
+123="Iskanje "%s":"
+124="Pri iskanju je prišlo do napake"
+125="Besedilo ni izbrano"
+126="V tej datoteki ni EXIF informacij"
+127="Odložišèe ne vsebuje grafiko ali besedila"
+129="Predhodna/Naslednja stran\nTrenutna stran: %d of %d"
+130="Za to vrsto datoteke je na voljo pretvornik\nKliknite tukaj za prikaz besedila"
+
+151="Ni možno zagnati orodje:\n"%s""
+152="Ni možno uporabiti možnosti povezovanja Explorerja v registru. Poskusite zagon aplikacije kot skrbnik."
+153="Datoteka je pripeta."
+154="Ni možno poslati e-pošto (Napaka MAPI)"
+155="Ni možno pretvoriti dokument v besedilo"
+156="Ni možno ustvariti zaèasno datoteko"
+
+200="Izjema v vtièniku "%s" v funkciji "%s""
+201="Ni možno naložiti vtiènik "%s""
+202="Ni možno naložiti vtiènik. Ni doloèen nadrejen obrazec!"
+
+203="Ta arhiv vsebuje nepodprt vtiènik (%s)"
+204="Ta arhiv vsebuje vtiènik:\n"%s".\n\nAli ga želite namestiti v UV?"
+
+209="Dodani so bili naslednji vtièniki:\n\n%s\naslednji vtièniki so bili posodobljeni:\n\n%s"
+210="Dodani so bili naslednji vtièniki:\n\n%s\nnaslednji vtièniki so že namešèeni in niso bili dodani:\n\n%s"
+211="(niè)\n"
+212="Izvorno ime datoteke/mape ni veljavno"
+213="Izbrano izršljivo ime Total Commanderja ni veljavno"
+214="(ni najden)"
+215="Ni bilo mogoèe razpakirati arhiva "%s" v mapo z vtièniki "%s""
+216="Ne najdem vtiènika v arhivu "%s""
+
+250="To je zadnja datoteka v mapi. Naj skoèim na prvo datoteko?"
+251="To je prva datoteka v mapi. Naj skoèim na zadnjo datoteko?"
+252="Ime trenutne datoteke "%s " ni najdeno v mapi. Naj skoèim na prvo datoteko?"
+253="Trenutna mapa je prazna. Ni možno skoèiti na drugo datoteko."
+254="V mapi je samo ena datoteka. Ni možno skoèiti na drugo datoteko."
+255="To je zadnja datoteka na seznamu. Naj skoèim na prvo datoteko?"
+256="To je prva datoteka na seznamu. Naj skoèim na zadnjo datoteko?"
+257="Mapa je prazna: "%s""
+
+260="Izbriši datoteko"
+261="Ali želite premakniti "%s" v koš?"
+262="Ali želite izbrisati "%s"?"
+263="Ni možno izbrisati "%s""
+264="Ni možno kopirati ali premakniti "%s" v "%s""
+
+301="%d bajtov"
+302="%d Kb"
+303="%d Mb"
+304="%d Gb"
+305="%d Tb"
+306="%d od %d v mapi"
+307="%d od %d na seznamu"
+
+310="Ustvari povezavo v mapi:"
+311="Ni možno ustvariti povezavo:"
+312="Povezava je ustvarjena:"
+
+313="Opomba: Kopiraj/Premakni/Izbriši/E-pošta/Pretvornik/MS-Office-zagon operacij zahteva dodatek 'Navigacijska plošèa' v registrirani (ali poskusni) obliki. Glejte "NavPanel add-on" teme pomoèi."
+314="Ni možno inicializirati nadzor MS Office.\n\nOpozorilo: Nadzor MS Office zahteva registriran ali èasovno omejen dodatak. Pogledajte poglavlje pomoæi "Navigator - dodatak"!"
+315="Konènica datoteke (%s) je na seznamu prezrtih.\nNaj jo kljub temu odprem?"
+316="Datoteka "%s" z %s je z napaèno konènico.\nNaj jo preimenujem?"
+317="Ta tipka je že dodeljena "%s""
+
+320=Aplikacija je registrirana
+321=Ni možno aktivirati kljuè. Preverite besedilo in povezavo z internetom.
+322=registriran
+323=%d do poteka
+
+;Keys
+400="BkSp" 
+401="Tab" 
+402="Esc"
+403="Enter"
+404="Space" 
+405="PgUp"
+406="PgDn"
+407="End"
+408="Home" 
+409="Left" 
+410="Up" 
+411="Right"
+412="Down" 
+413="Ins"
+414="Del"
+415="Shift+" 
+416="Ctrl+"
+417="Alt+" 
+
+[Captions]
+
+;FormViewUV
+100="&Datoteka"
+101="Ponovno nal&oži..."
+102="O&sveži"
+103="Shrani &kot..."
+104="&Zapri"
+105="Odpri &mapo..."
+106="Odpri nedavne"
+107="&Poèisti seznam"
+108="Pošlji po &e-pošti..."
+109="&Kopiraj ime datoteke"
+110="&Natisni..."
+111="&Predogled &tiskanja..."
+112="Nastavitev s&trani ..."
+115="Pre&jšnja datoteka"
+116="Nas&lednja datoteka"
+117="&Briši..."
+118="L&astnosti..."
+119="I&zhod"
+
+120="&Prilepi v novo datoteko"
+121="&Uredi"
+122="&Kopiraj"
+123="Izberi v&se"
+124="&Najdi..."
+125="Najdi nas&lednjo"
+126="P&ojdi na..."
+127="Kopiraj kot &hex"
+128="Izberi v&rstico"
+129="Kopiraj v &datoteko..."
+
+130="&Možnosti"
+131="&1 Besedilo"
+132="&2 Binarno (fiksna dolžina)"
+133="&3 Hex"
+134="&4 Slika/Multimedija"
+135="&5 Internet/Office"
+136="&6 Unicode"
+137="&7 Vtièniki"
+138="&4 Slika"
+
+139="&Naèin"
+140="Kopiraj po&vezavo"
+141="URL &poudarjanje"
+142="&Razdeli besedilo v dve vrstici"
+143="&Sliko prilagodi oknu"
+144="Brskanje brez p&ovezave"
+145="&Vedno na vrhu"
+146="&Cel zaslon"
+
+147="&Konfiguriraj..."
+148="Konfiguriraj &vtiènike..."
+149="P&rilagodi orodno vrstico..."
+
+150="&Pogled"
+151="&Multimedija"
+152="&Poveèaj"
+153="Po&manjšaj"
+154="&Originalna velikost"
+
+155="&Pomoè"
+156="&Vizitka..."
+
+157="Obraèaj v &desno"
+158="Obraèaj v &levo"
+159="Pretvori v &sivine"
+160="Pretvori v &negativ"
+161="Raztegni samo &velike slike"
+162="Prikaži &info oznako"
+163="&Sredina slike"
+164="&Poveèaj"
+165="Raztegni &okno na sliko"
+166="&Predvajaj/Pavza"
+
+167="N&ajdi prejšnjo"
+168="&Kodiranje"
+169="&Meni kodiranja..."
+170="&Prejšnje kodiranje"
+171="&Naslednje kodiranje"
+172="&Nenatisljivi znaki"
+173="&Besedilo kazalca"
+174="Raztegni okno na velikost &medija"
+175="Prikaži me&rilnik èasa"
+
+176="Pojdi na&zaj"
+177="Pojdi na&prej"
+178="&Besedilo"
+179="&Internet"
+
+180="Datoteka ni naložena (izberite meni 'Datoteka' > Odpri)"
+
+181="&Orodja"
+182="Konfiguriraj &uporabnikova orodja..."
+183="&Napredno"
+184="Roèno uredi &konfiguracijsko datoteko"
+185="Roèno uredi datoteko &zgodovine"
+186="Shrani položaj &okna"
+187="Ustvari po&vezavo do datoteke..."
+188="Raztegni samo š&irino slike"
+189="Raztegni samo &višino slike"
+
+218="Naloži z osnovnim pregledovalnikom"
+219="&Uèinek slike"
+220="&Ponovi"
+221="&Glasneje"
+222="&Utišaj"
+223="&Tiho"
+224="Zrcali po&konèno"
+225="Zrcali po&loženo"
+226="Obraèaj za &180"
+227="&Sepia"
+
+228="Forum - anglešèina"
+229="Forum - rušèina"
+230="&Spletne povezave"
+231="&Domaèa stran"
+232="&Povratna informacija"
+233="&Vtièniki"
+234="&Vsebina"
+
+;img panel
+235=Plošèa slike
+236=Uredi
+237=Pretvori
+238=Obraèaj:
+239=Uèinki:
+240=Pretvori v:
+241=Pretvori...
+242=Prikaži p&lošèo slike
+
+;FormViewOptions
+;(continues after 800)
+263="Predla&gaj preimenovanje slik z napaèno konènico"
+264="&Naslov okna:"
+265="Prikaži celotno pot"
+266="Prikaži samo ime datoteke"
+267="Zagonski naèin &pregleda:"
+268="Samodejno zaznaj"
+
+269="&Robni stolpec in številke vrstic..."
+270="Prikaži &številke vrstic v robnem stolpcu"
+271="&Samo za prvo:"
+272="KB datoteke"
+273="Samo za te &konènice datotek:"
+
+274="&Robni stolpec na levi"
+275="Ne prikaži sporoèila o &napaki, le zvoèni signal"
+276="&Najveèje število številk vrstic:"
+278="Korak (1: prikaži za vse):"
+279="Ne potrjuj možnosti "Išèi naprej""
+
+280="Razno"
+281="Razèleni .lnk datoteke ciljev"
+282="&Število predvajanj"
+283="Prikaži &skrite datoteke"
+284="Shrani položaj &okna"
+285="Shrani &zadnjo delovno mapo"
+286="Zgodovina"
+287="Natisni"
+288="&Vmesnik:"
+289="Shrani &zgodovino iskanja"
+290="&Pisava noge:"
+291="&Poèisti"
+292="P&oèisti"
+
+300="Nastavitve programa"
+301="Konènice datotek"
+302="Besedilo"
+303="Multimedija"
+304="Vmesnik"
+305="Vrste datotek"
+306="Napredno"
+307="Bližnjice"
+308="Pisave in barve"
+309="Samodejno ponovno nalaganje"
+
+310="&Besedilo:"
+311="&Slike:"
+312="&Multimedija:"
+313="I&nternet:"
+314="&RTF:"
+
+315="Hex barve"
+316="Hex ozadje"
+
+317="Uporabi posebne &OEM pisave"
+318="&Najveèja dolžina vrstice"
+319="Veliko&st zavihka"
+320="&Pisava:"
+321="&Barva:"
+322="Binarni naèin: prilagojena &širina"
+323="Binarni naèin: &fiksna širina"
+324="&Rezultat iskanja: vrstic od vrha"
+325="P&redlagaj izbor, kot je iskano besedilo"
+326="Samodejno &znova naloži datoteke po spremembi"
+327="&Sledi &koncu po ponovnem nalaganju"
+328="&Pisk po ponovnem nalaganju"
+329="&Samodejno kopiraj besedilo v odložišèe"
+
+330="Barva oznake slike"
+331="&Ponovno vzorèi sliko ob skaliranju"
+332="Barva ozadja slike"
+333="Prikaži pr&ozornost slike"
+334="&Samodejni zaèetek ponovnega predvajanja"
+
+335="&Jezik:"
+336="Prikaži m&enujski vnos priroènega menija Raziskovalca"
+337="Prikaži &orodno vrstico"
+338="Prikaži ro&b okoli obmoèja za pregled"
+339="&Dovoli orodno vrstico v celozaslonskem naèinu"
+
+340="Ukaz"
+341="Bližnjica"
+342="&Bližnjica:"
+
+343="Prikaži i&kone v meniju"
+344="Prikaži &meni"
+345="Shrani seznam &nedavnih datotek"
+346="&Dovoli samo en primerek"
+347="Prikaži &statusno vrstico"
+348="Prikaži &navigacijsko plošèo"
+349="Prikaži potrditev pred odpiranjem n&eodkritih datotek"
+
+;Buttons
+350="Vredu"
+351="Preklièi"
+352="Najdi"
+353="Zapri"
+354="Pripiši"
+355="Pomoè"
+356="Ponastavi"
+
+
+;Options dialog
+360="&Pretvornik besedila :"
+361="Prikaži &opomnik pretvornika besedila na vrhu"
+362="Ponovno odpri zadnjo &uporabljeno datoteko"
+363="RAW slike"
+
+364="Zv&oèni gonilnik:"
+365="&Video gonilnik:"
+366="Samodejno obrni sliko v E&XIF"
+
+;FormViewOptionsText
+380="&Samodejno zaznavanje"
+381="&Samodejno zaznavanje besedilnih datotek"
+382="po &prvi"
+383="Kb"
+384="&najveèja velikost:"
+385="Kb (0: brez omejitve)"
+386="Samodejno zaznavanje &OEM kodiranja"
+387="Samodejno zaznavanje &UTF-8 kodiranja"
+
+;FormViewGoto
+400="Pojdi na"
+401="Nov položaj"
+402="&Odstotek (%)"
+403="&Hex odmik"
+404="&Decimalni odmik"
+405=Izberi &zaèetek"
+406="=Izberi &konec"
+407="&Številka vrstice"
+408="Vnesite ime celic, na primer A10:"
+409="Vnesite številko strani:"
+
+;FormViewAbout
+410="Vizitka"
+411="Razlièica"
+412="Komponente dobropisa:"
+413="Registriral:"
+414="Preizkusna razlièica (%d dni do poteka)"
+416="Licenèna pogodba"
+417="Èe želite odstraniti aplikacijo, odprite meni Start - Programi - Universal Viewer - in zaženite element "Odstrani""
+
+;FormViewFindText
+420="Poišèi"
+421="&Poišèi besedilo:"
+422="Samo cele besede"
+423="&Velike ali male èrke"
+424="&Veèvrstièni regularni izraz"
+425="He&x niz"
+426="&Regularni izraz"
+427=" (knjižnica ni uporabljena)"
+428="Možnosti"
+429="Smer"
+430="&Naprej"
+431="Na&zaj"
+432="Originalno"
+433="Od &kazalca"
+434="Od trenutne &strani"
+435="&Celotna datoteka"
+436="Oznaèi &vse ponovitve"
+
+;FormPluginsOptions
+500="Konfiguracija vtiènikov"
+501="Namešèeni vtièniki"
+502="&Dodaj..."
+503="&Odstrani"
+504="&Uredi..."
+505="&Gor"
+506="&Dol"
+507="&Konfiguriraj..."
+510="Ime"
+511="Zaznaj niz"
+512="Ime datoteke"
+520="Vtièniki imajo &prednost pred notranjim pregledovanjem"
+521="Shrani imena datotek vtiènikov s spremenljivko okolja %Commander_Path% "
+524="Dodaj &tipko 'Alt' v meni bližnjic v izogib konfliktom z vtiènikom"
+
+;FormPluginsAdd
+530="Namesti vtiènike"
+531="Uvozi nastavitve iz &Total Commanderja"
+532="Namesti vse vtiènike &iz mape"
+533="Namesti posamezen &vtiènik"
+534="Namesti vtiènike iz &arhivov"
+537="&Izvršljiva datoteka TC:"
+538="Konfiguracijska &datoteka TC:"
+539="&Datoteka:"
+540="&Mapa:"
+541="Aplikacije (*.exe)|*.EXE"
+542="Ini datoteke (*.ini)|*.INI"
+543="Vtièniki (*.wlx)|*.WLX"
+544="Arhivi (*.zip,*.rar)|*.ZIP;*.RAR"
+
+;FormPluginsEdit
+550="Konfiguriraj vtiènik"
+551="Ime datoteke:"
+552="&Zaznaj niz:"
+553="&Privzeto"
+554="Konfiguracijska datoteka:"
+
+;FormViewToolbar
+560="Prilagodi orodno vrstico"
+561="&Gumbi na voljo:"
+562="&Izbrani gumbi:"
+563="&Dodaj ->"
+564="<- &Odstrani"
+565="&Ponastavi"
+566="(- loèilo -)"
+
+;FormViewToolList
+600="Uporabnikov seznam orodij"
+601="Lastnosti uporabnikovega orodja "
+602="&Napis:"
+603="&Aplikacija:"
+604="Pa&rametri:"
+605="Parametri &makrojev (dvokliknite za dodajanje makroja na seznam parametrov):"
+606="Dejanja za izvedbo:"
+607="Pred izvršitvijo aplikacije:"
+608="Po izvršitvi aplikacije:"
+609="Namig: Dodajte '?' kot prvi znak za potrditev parametrov."
+
+;FormViewRename
+650="Preimenuj datoteko"
+651="Preimenuj..."
+652="&Preimenuj v:"
+653="Kopiraj v mapo..."
+654="Premakni v mapo..."
+
+;FormReg
+700="Registriraj"
+701="&Registriraj..."
+702="Registracijski podatki"
+703="&Ime:"
+704="&Kljuè:"
+705="Prilepi"
+706="Vnesite licenèni kljuè, ki ste ga prejeli po e-pošti. Licenèni kljuè je obèutljiv na male/velike èrke. Priporoèamo, da prilepite kljuè (Ctrl+V) v spodnje polje. Po vnosu kljuèa kliknite na gumb 'Aktiviraj' za njegovo aktiviranje!.
+707=&Aktiviraj
+708=Pridobi&te kljuè
+
+;FormPrintPreview
+710="Robovi"
+711="&Levi:"
+712="&Desni:"
+713="&Zgoraj:"
+714="&Spodaj:"
+715="mm"
+716="cm"
+717="palcev"
+718="Gamma"
+719="Vrednost &Gamma:"
+
+720="Predogled tiskanja"
+721="Natisni"
+722="Možnosti"
+723="Predogled"
+724="Besedilo noge"
+725="Ni mogoèe dodeliti zaèasno bitno sliko."
+726="Položaj"
+
+727="&Naèin raztegovanja:"
+728="Obièajno"
+729="Najboljše prileganje"
+730="Raztegni"
+731="Velikost po meri"
+732="&Višina:"
+733="&Širina:"
+734="So&razmerno"
+735="Pi&sava..."
+736="&Nastavitev tiskanja..."
+
+;FormViewOptionsImages
+740="&Grafiène knjižnice"
+741="&Uporabi IrfanView/XnView za nalaganje grafike"
+742="&Ime datoteke aplikacije:"
+743="&Konènice datotek:"
+744="IrfanView/XnView ima višjo prioriteto kot notranja knjižnica"
+745="Uporabi "IJL15.dll" knjižnico za nalaganje &JPEG grafike"
+746="Konènice &datotek:"
+
+;FormNavColumns
+780="Veè..."
+781="Nastavitve stolpca"
+782="Oznaèite stolpce, ki jih želite narediti vidne v tej mapi. Povleci in spusti za prerazporeditev stolpcev."
+783="Izbran stolpec bo "
+784="slikovnih pik širok"
+785="Posodobitev v živo"
+
+;FormViewOptions..
+800="I&kone:"
+801="(Privzeto)"
+802="(Shrani predlogo...)"
+803="&Predvajaj v zanki"
+
+805="Raz&vršèanje datotek:"
+806=" (padajoèe)"
+807="Ime datoteke"
+808="Konènica"
+809="Ustvarjeno"
+810="Spremenjeno"
+811="Uporabi višino okna po meri za naèine"
+812="&Seznam prezrtih:"
+813="Poišèi poudarjene"
+
+814="Uporabi sodoben medijski predvajalnik"
+815="Èe je onemogoèen bo uporabljen stari slog medijskega predvajalnika." 
+;You may also disable the old-style player by unchecking "Media" on "File types" tab."
+
+816=Vnosi v celozaslonskem naèinu
+817=Menijska vrstica
+818=Orodna vrstica
+819=Multimedia - vrstica posnetkov
+820=Multimedia - vrstica gumbov
+821=Statusna vrstica
+822=Multimedia - kazalec
+
+823="Uporabi sodoben predvajalnik medijev"
+824="Uporabi star slog predvajalnika medijev"
+825="Multimedia (star slog predvajalnika)"
+826="Multimedia (sodoben predvajalnik)"
+827="Medvrstièen razmik"
+
+830=Možnosti Word/RTF
+831=Privzeta postavitev:
+832=Privzeta poveèava
+833=Vrednost poveèave po meri v %:
+834=Postavitev osnutka
+835=Spletna postavitev
+836=Postavitev tiskanja
+
+;FormViewEXIF
+880="EXIF bralec"
+881="Prikaži E&XIF..."
+883="Oznaka"
+884="Lastnosti"
+885="Vrednost"
+890=" IFD 0 "
+891=" Sub IFD "
+892=" Interop. IFD "
+893=" Opomba ustvarjalca "
+894=" IFD 1 "
+895=" Slièica "
+
+
+;Preview
+900=Prva stran
+901=Prejšnja stran
+902=Naslednja stran
+903=Zadnja stran
+904=Tekoèa stran
+905=Vrednost poveèave
+906=Celotna stran
+907=Raztegni z
+908=Po meri...
+
+;Media
+910=Predvajaj/Pavza
+911=Pavza
+912=Ustavi
+913=Korak naprej
+914=Original
+915=Raztegni
+916=Audio#%d
+917=Nemo
+918=Jakost
+919=Razmerje
+920=Zvoèni kanal
+921=Odpiram sliko...
+922=Nazaj 10 s
+923=Nazaj 1 min
+924=Nazaj 5 min
+925=Naprej 10 s
+926=Naprej 1 min
+927=Naprej 5 min
+928=Èas (hh:mm:ss):
+929=Shrani tekoèi okvir...
+
+[Nav]
+
+200="Navigacijska plošèa"
+201="1 raven gor"
+202="Pre&gled"
+203="Po&moè"
+204="&Registriraj..."
+205="&Vizitka..."
+206="&Mapa:"
+207="Po&goni:"
+
+210="Mapa je prazna"
+211="&Ikone"
+212="&Seznam"
+213="Po&drobnosti"
+214="S&lièice"
+215="P&oložena postavitev"
+216=Prikaži s&krite datoteke"
+217="Dokaj v pre&gledovalnik"
+218=Prikaži &vrstico s potjo"
+219=Prikaži Vrst &ico pogonov"
+220=Prikaži &posebne mape"
+221=Prikaži st&atusno vrstico"
+222="Odpri map&e v pregledovalniku"
+

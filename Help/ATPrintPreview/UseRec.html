@@ -1,0 +1,94 @@
+<html>
+<head>
+  <title>Structs</title>
+  <link href="Main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<!----------------------------------------------->
+<a name="Structs"></a>
+<h1>Structs</h1>
+
+Helper records:
+<pre>
+  TFloatRect = record
+    Left, Top, Right, Bottom: Extended;
+  end;
+
+  TFloatSize = record
+    X, Y: Extended;
+  end;
+
+  TATPrintFooter = record
+    Enabled: Boolean;
+    EnableLine: Boolean;
+    Caption: WideString;
+    FontName: TFontName;
+    FontSize: Integer;
+    FontStyle: TFontStyles;
+    FontColor: TColor;
+    FontCharset: TFontCharset;
+  end;
+</pre>
+
+Printing options are specified in a record:
+<pre>
+  TATPrintOptions = record
+    Copies: Integer;
+    OptFit: TATPrintFitMode;
+    OptFitSize: TFloatSize;
+    OptPosition: TATPrintPosition;
+    OptMargins: TFloatRect;
+    OptUnit: TATPrintUnit;
+    OptGamma: Extended;
+    OptFooter: TATPrintFooter;
+    PixelsPerInch: Integer;
+    JobCaption: string;
+    FailOnErrors: Boolean;
+  end;
+</pre>
+
+Fields are:
+<ul>
+<li> <b>Copies</b>: Number of print copies.
+<li> <b>OptFit</b>: State of the option "Fit mode". Possible values:<br>
+  <ul>
+  <li> <b>pFitNormal</b>: fit to page only large images
+  <li> <b>pFitBest</b>: fit also small images
+  <li> <b>pFitStretch</b>: stretch image to page
+  <li> <b>pFitSize</b>: set custom image size
+  </ul>
+<li> <b>OptFitSize</b>: Custom size for pFitSize fit mode.
+
+<li> <b>OptPosition</b>: State of the option "Position". Possible values:
+  <ul>
+  <li> <b>pPosTopLeft</b>
+  <li> <b>pPosTop</b>
+  <li> <b>pPosTopRight</b>
+  <li> <b>pPosLeft</b>
+  <li> <b>pPosCenter</b>
+  <li> <b>pPosRight</b>
+  <li> <b>pPosBottomLeft</b>
+  <li> <b>pPosBottom</b>
+  <li> <b>pPosBottomRight</b>
+  </ul>
+
+<li> <b>OptMargins</b>: State of the "Margins" option (Left, top, right, bottom).
+<li> <b>OptUnit</b>: Units for margins and custom size:
+  <ul>
+  <li> <b>pUnitMm</b>: millimeters
+  <li> <b>pUnitCm</b>: centimetres
+  <li> <b>pUnitIn</b>: inches
+  </ul>
+<li> <b>OptGamma</b>: Gamma correction value. Should be in 0.1...7.0, 1.0 means no gamma correction.
+<li> <b>OptFooter</b>: Footer to print below image.
+
+<li> <b>PixelsPerInch</b>: "Pixels per inch" value for the screen. Pass here the Screen.PixelsPerInch value.
+<li> <b>JobCaption</b>: Caption of the job in the Print Manager.
+<li> <b>FailOnErrors</b>: If set to True, then on preview errors the function will fail.
+       If set to False, then on preview errors the form will not be shown but the printing will start without questions.
+</ul>
+
+
+</body>
+</html>

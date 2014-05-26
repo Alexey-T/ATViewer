@@ -1,0 +1,167 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <title>Command line parameters</title>
+  <link href="Main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h3>
+  Command line parameters
+</h3>
+<hr>
+
+<p>
+Program supports the following command line notations:
+<b>
+<ul>
+<li> Viewer.exe          <font color="gray">[Optional parameters]</font>
+<li> Viewer.exe FileName <font color="gray">[Optional parameters]</font>
+<li> Viewer.exe FolderName <font color="gray">[Optional parameters]</font>
+<li> Viewer.exe @FileList <font color="gray">[Optional parameters]</font>
+<li> Viewer.exe @@FolderName <font color="gray">[Optional parameters]</font>
+</ul>
+</b>
+
+<p>
+The meaning of parameters:
+<p>
+<table border="1" align="center">
+<tr>
+  <td width="150">
+    <b>FileName</b>
+  </td>
+  <td>
+    File name to open at startup.<br>
+    Note: Name containing spaces should be double-quoted.
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <b>FolderName</b>
+  </td>
+  <td>
+    Folder name to open at startup in a folder plugin (such as <a href="http://totalcmd.net/plugring/visdirsize.html" target=_blank>VisualDirSize</a>).<br>
+    This folder is opened in navigation panel too.<br>
+    Note: Name containing spaces should be double-quoted.
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <b>@@FolderName</b>
+  </td>
+  <td>
+    Specifies the folder which will be read at startup
+    so that you can browse all files in it using "File -- Next file/ Previous file" commands.
+    Total files number will be shown in window caption in square brackets.
+    If several media clips are opened in this way, they will be played one after another (playlist mode).
+    <br>
+    Note: Name containing spaces should be double-quoted.
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <b>@FileList</b>
+  </td>
+  <td>
+    Name of the temporary text file (in ANSI or UTF-8 with BOM encoding)
+    containing list of several filenames to open.<br>
+    After successful reading, this filelist will be deleted.<br>
+    You can jump between listed files using "File -- Next file/ Previous file" menu commands.
+    Total files number will be shown in window caption in square brackets.
+  </td>
+</tr>
+
+<tr>
+  <td colspan="2" align="center">
+    Optional parameters
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <b>/Pos=Value</b>
+  </td>
+  <td>
+    Specifies initial file position.<br>
+    <b>Value</b> can be:
+     <ul>
+     <li> number: absolute offset. Valid in text, Internet modes.
+     <li> number with 'p' char: relative position in percents.
+       Valid in text, Internet, Plugins modes.
+     <li> number with 'n' char: line number.
+       Valid in text modes only.
+     </ul>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <b>/P=Left,Top,Width,Height</b>
+  </td>
+  <td>
+    Specifies the initial window position and size.<br>
+    <b>Left, Top, Width, Height</b> should be valid numbers.<br>
+    Values at the end of list can be skipped, e.g.
+    <b>/P=Left,Top</b> specifies only window position.
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <b>/Print</b>
+  </td>
+  <td>
+    Prints opened document and exits.<br>
+    &nbsp;<br>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <b>/Opt</b>
+  </td>
+  <td>
+    Opens configuration dialog and exits.<br>
+    Note: <b>FileName</b> param should not be specified.
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <b>/Ini=Value</b>
+  </td>
+  <td>
+    Specifies folder for program configuration files.<br>
+    Note: <b>Value</b> containing spaces should be double-quoted.
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <b>/FText=String</b> <br>
+    <b>/FCase=N</b> <br>
+    <b>/FWords=N</b> <br>
+    <b>/FHex=N</b>
+  </td>
+  <td>
+    Specify search string and search options "Case sensitive"/ "Whole words"/ "Hex string".<br>
+    <b>N</b> is a boolean value (0/1).
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <b>/Mode=N</b>
+  </td>
+  <td>
+    Specifies initial view mode (disables mode auto-detection).<br>
+    <b>N</b> is the mode number (1..8).
+  </td>
+</tr>
+</table>
+</body>
+</html>

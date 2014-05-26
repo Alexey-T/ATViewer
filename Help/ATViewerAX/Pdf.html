@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>PDF support</title>
+  <link href="Main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h2>PDF support</h2>
+<hr>
+<p>
+To support PDF files loading, you must use plugin sLister.dll:
+file is included in PdfDll folder.
+This plugin uses "Sumatra PDF" program to show PDF ("Sumatra PDF" program is also included in PdfDll).
+
+<p>
+These are steps to support PDF:
+
+<ul>
+<li> Create the app without plugins usage
+<li> Correctly set ParentWnd property
+<li> Copy PdfDll folder to app folder
+<li> In app initialization add code like this (sample Delphi code):
+<p>
+<pre>
+  S:= ExtractFileDir(Application.ExeName) + '\PdfDll\slister.dll';
+  if not FileExists(S) then
+    begin ShowMessage('Not found PDF dll:'#13+ S); Exit end;
+  ATViewer1.AddPlugin(S, 'ext:pdf');
+</pre>
+<li> If you rename PdfDll folder to a different name,
+you should adjust path to this folder in code too.
+</ul>
+
+<p>
+<hr>
+<p>
+If you want you may not use sLister plugin, but then Acrobat/Foxit Reader
+will be needed on end user's system.<br>
+W/o plugin pdf is loaded in "Web" mode (ATViewer1.Mode = vmodeWeb).
+With plugin pdf is loaded in "Plugins" mode (ATViewer1.Mode = vmodeWLX).
+
+</body>
+</html>

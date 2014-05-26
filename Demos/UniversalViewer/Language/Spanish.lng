@@ -1,0 +1,647 @@
+Version=6.5.3
+Author=Victor Emmanuel
+Homepage=
+Email=vicokoby at gmail.com
+
+[Messages]
+
+101="Archivo no encontrado: %s"
+102="No se puede abrir el archivo: %s"
+104="No se puede cargar el archivo: %s"
+105="No se puede leer el archivo: %s"
+106="No se puede inicializar %s"
+107="Carpeta no encontrada: "%s""
+
+108="Formato desconocido\nHaga clic aquí para ver un volcado binario\n(Este mensaje puede ser deshabilitado en el diálogo Opciones)"
+109="Error de lectura en offset %s"
+110="No se puede manejar la lista de archivos: %s"
+111="El archivo está vacío"
+113="No se puede detectar el formato del archivo\nSe muestra el volcado binario"
+114="El módulo de MS Office no soporta este tipo de archivo"
+115="Formato de imagen desconocido"
+116="Formato multimedia desconocido"
+120="Cadena buscada no encontrada: "%s""
+121="No se puede copiar el texto al portapapeles"
+122="La cadena hexadecimal es inválida: "%s""
+123="Buscando: "%s"."
+124="Ocurrió un error de búsqueda"
+125="El texto no está seleccionado"
+126="Este archivo no contiene información EXIF"
+127="El portapapeles no contiene un gráfico o un formato de texto"
+129="Página anterior/siguiente\nPágina actual: %d de %d"
+130="Está disponible el conversor de texto para este tipo de archivo\nHaga clic aquí para mostrar el texto"
+
+151="No se puede ejecutar la herramienta:\n%s"
+152="No se puede aplicar la opción de integración con el Explorador en el Registro. Intente ejecutar la aplicación como Administrador."
+153="Archivo incluido."
+154="No se puede enviar el correo (error de MAPI)"
+155="No se puede convertir el documento a forma texto"
+156="No se puede crear el archivo temporal"
+
+200="Excepción en el complemento %s en la función %s"
+201="No se puede descargar el complemento %s"
+202="No se puede cargar los complementos: formulario padre no especificado"
+
+203="Este archivo contiene un complemento no soportado (%s)"
+204="Este archivo contiene el complemento:\n"%s".\n\n¿Quiere instalarlo en Universal Viewer?"
+
+209="Los siguientes complementos fueron añadidos:\n\n%s\nLos siguientes fueron actualizados:\n\n%s"
+210="Los siguientes complementos fueron añadidos:\n\n%s\nLos siguientes complementos ya estaban instalados y no fueron añadidos:\n\n%s"
+211="(ninguno)\n"
+212="Nombre de archivo/carpeta origen no válido"
+213="Nombre del ejecutable de Total Commander no válido"
+214="(no encontrado)"
+215="No se puede descomprimir el archivo "%s" en la carpeta de complementos "%s""
+216="No se puede encontrar el complemento en el archivo "%s""
+
+250="Este es el último archivo en la carpeta. ¿Saltar al primer archivo?"
+251="Este es el primer archivo en la carpeta. ¿Saltar al último archivo?"
+252="Nombre de archivo actual "%s" no encontrado en la carpeta. ¿Saltar al primer archivo?"
+253="Carpeta actual vacía. No se puede saltar a otro archivo."
+254="Este es el único archivo en la carpeta. No se puede saltar a otro archivo."
+255="Este es el último archivo en la lista. ¿Saltar al primer archivo?"
+256="Este es el primer archivo en la lista. ¿Saltar al último archivo?"
+257="La carpeta está vacía: "%s""
+
+260="Eliminar archivo"
+261="¿Quiere mover "%s" a la Papelera de reciclaje?"
+262="¿Quiere eliminar "%s"?"
+263="No se puede eliminar "%s""
+264="No se puede copiar o mover "%s" a "%s""
+
+301="%d bytes"
+302="%d Kb"
+303="%d Mb"
+304="%d Gb"
+305="%d Tb"
+306="%d de %d en carpeta"
+307="%d de %d en lista"
+
+310="Crear enlace en la carpeta:"
+311="No se puede crear el enlace:"
+312="Enlace creado:"
+
+313="Nota: las opciones Copiar/Mover/Eliminar/Email/Convertir requieren el complemento del panel de navegación."
+314="No se puede inicializar el control de MS Office"
+315="Esta extensión de archivo (%s) está en la lista de ignorados. ¿Abrirlo de todas maneras?"
+316="El archivo "%s" tiene la extensión incorrecta %s.\n¿Renombrarlo?"
+317="Estas teclas ya están asignadas a "%s""
+
+320=Aplicación registrada
+321=No se puede activar la clave. Compruebe el texto y la conexión de internet.
+322=registrado
+323=%d días restantes
+
+;Keys
+400="BkSp"
+401="Tab"
+402="Esc"
+403="Intro"
+404="Espacio"
+405="RePág"
+406="AvPág"
+407="Fin"
+408="Inicio"
+409="Izquierda"
+410="Arriba"
+411="Derecha"
+412="Abajo"
+413="Ins"
+414="Supr"
+415="Shift+"
+416="Ctrl+"
+417="Alt+"
+
+[Captions]
+
+;FormViewUV
+100="&Archivo"
+101="&Abrir..."
+102="&Recargar"
+103="&Guardar como..."
+104="&Cerrar"
+105="Abrir ca&rpeta..."
+106="Abrir recientes"
+107="&Limpiar lista"
+108="Enviar por correo &electrónico..."
+109="Copiar &nombre del archivo"
+110="Im&primir..."
+111="&Vista preliminar"
+112="C&onfigurar página..."
+115="Archivo a&nterior"
+116="Sig&uiente archivo"
+117="&Eliminar"
+118="Propi&edades..."
+119="&Salir"
+
+120="&Pegar en nuevo archivo"
+121="&Editar"
+122="&Copiar"
+123="Seleccionar &todo"
+124="&Buscar..."
+125="Buscar &siguiente"
+126="&Ir a..."
+127="Copiar como &hexadecimal"
+128="Seleccionar &línea"
+129="Copiar a un arch&ivo..."
+
+130="&Opciones"
+131="&1  Texto"
+132="&2  Binario (longitud fija)"
+133="&3  Hexadecimal"
+134="&4  Imagen/Multimedia"
+135="&5  Internet"
+136="&6  Unicode"
+137="&7  Complementos"
+138="&4  Imagen"
+
+139="&Modo"
+140="Copiar en&lace"
+141="&Resaltar URL's"
+142="Ajuste de &línea"
+143="Aj&ustar imagen a ventana"
+144="Navegador &desconectado"
+145="Siempre &visible"
+146="&Pantalla completa"
+
+147="&Configurar..."
+148="Configurar &complementos..."
+149="Personalizar &barra de herramientas..."
+
+150="&Ver"
+151="&Multimedia"
+152="&Acercar"
+153="A&lejar"
+154="Tamaño &original"
+
+155="Ay&uda"
+156="&Acerca de..."
+
+157="Rotar &90º"
+158="Rotar &270º"
+159="Escala de &grises"
+160="&Negativo"
+161="Sólo ajustar imágenes &grandes"
+162="Mostrar información de &etiqueta"
+163="&Centrar imagen"
+164=&Zoom
+165="Ajustar &ventana a imagen"
+166=
+
+167="Buscar a&nterior"
+168="&Codificación"
+169="&Menú de codificaciones..."
+170="Codificación &anterior"
+171="&Siguiente codificación"
+172="Caracteres &no imprimibles"
+173=
+174=Ajustar ventana al tamaño del medio
+175="Mostrar indicador de &tiempo"
+
+176="Re&gresar"
+177="A&vanzar"
+178="Te&xto"
+179="&Internet"
+
+180="Archivo no cargado (escoja el menú Archivo > Abrir)"
+
+181="&Herramientas"
+182="Configurar herramientas del &usuario..."
+183="&Avanzado"
+184="Editar el archivo de configuración &manualmente"
+185="Editar el archivo del historial &manualmente"
+186="G&uardar posición de ventana"
+187="Crear en&lace al archivo..."
+188="Sólo ajustar la a&nchura de imagen"
+189="Sólo ajustar la a&ltura de imagen"
+
+219="&Efectos de imagen"
+220=
+221=
+222=
+223=
+224="Voltear &vert."
+225="Voltear &horiz."
+226="Rotar &180º"
+227="&Sepia"
+
+228="Foro - Inglés"
+229="Foro - Ruso"
+230="Enlaces &Web"
+231="&Página Web..."
+232="&Retroalimentación..."
+233="&Complementos..."
+234="&Contenido..."
+
+;img panel
+235=Panel de imagen
+236=Editar
+237=Convertir
+238=Rotación:
+239=Efectos:
+240=Convertir a:
+241=Convertir...
+242=Mostrar &panel de imagen
+
+;FormViewOptions
+;(continues after 800)
+263="Su&gerir renombrado de imágenes con extensiones incorrectas"
+264="Tít&ulo de la ventana:"
+265="Mostrar ruta completa"
+266="Sólo mostrar el nombre"
+267="Modo de &vista inicial:"
+268="Autodetectar"
+
+269="&Canal y números de línea..."
+270="Mostrar números de línea en el canal"
+271="&Sólo para los primeros:"
+272="Kb del archivo"
+273="Sólo para estas &extensiones de archivos:"
+
+274="&Canal a la izquierda"
+275="Sin mensajes de &error, sólo escuchar pitido"
+276="Cantidad &máxima de números de línea:"
+278="Paso (1: mostrar para todos):"
+279="No confirmar opciones de "Buscar siguiente""
+
+280="Varios"
+281="&Resolver destinos de archivos .LNK"
+282="Cantidad de reprod&ucciones"
+283="Mostrar archivos &ocultos"
+284="G&uardar posición de ventana"
+285="Guardar la última carpeta de &trabajo"
+286="Historial"
+287="Imprimir"
+288="&Interfaz:"
+289="Guardar historial de &búsqueda"
+290="Fuente del pie de &página:"
+291="&Limpiar"
+292="L&impiar"
+
+300="Configuración de Universal Viewer"
+301="Extensiones de archivos"
+302="Texto"
+303="Multimedia"
+304="Interfaz"
+305="Tipos de archivos"
+306="Avanzado"
+307="Atajos"
+308="Fuente y colores"
+309="Auto recargar"
+
+310="&Texto:"
+311="&Imágenes:"
+312="&Multimedia:"
+313="I&nternet:"
+314="&RTF:"
+
+315="Color para hexadecimal"
+316="Fondo para hexadecimal"
+
+317="Usar fuente OE&M especial"
+318="Longitud &máxima de línea"
+319="Tamaño ta&bulación"
+320="&Fuente:"
+321="&Colores:"
+322="Modo binario: ajustar &ancho"
+323="Modo binario: a&ncho fijo"
+324="Buscar &resultados: líneas arriba"
+325="S&ugerir texto seleccionado para búsqueda"
+326=A&uto &recargar archivo en cambios
+327="Co&ntinuar en la cola tras recargar"
+328="Escuchar &pitido al recargar"
+329="&Auto copiar texto al portapapeles"
+
+330="Color de etiqueta de imagen"
+331="Re mostrar imagen al &escalar"
+332="Color de f&ondo de imagen:"
+333="Mostrar &transparencia de imagen"
+334="&Auto iniciar reproducción"
+
+335="&Idioma:"
+336="Mostrar ítem en el menú contextual del &Explorador"
+337="Mostrar &barra de herramientas"
+338="Mostrar borde al rededor del área de la vista"
+339="&Permitir barra de herramientas en pantalla completa"
+
+340="Comando"
+341="Atajo"
+342="&Atajo:"
+
+343="&Mostrar íconos en el menú"
+344="M&ostrar menú"
+345="Mostrar lista de archivos &recientes"
+346="Permitir &sólo una instancia"
+347="Mostrar barra de e&stado"
+348="Mostrar panel de n&avegación"
+349="Mostrar confirmación antes de abrir archivos de tipos &indetectables"
+
+;Buttons
+350="Aceptar"
+351="Cancelar"
+352="Buscar"
+353="Cerrar"
+354="Asignar"
+355="Ayuda"
+356="Restablecer"
+
+;Options dialog
+360="&Conversor de texto:"
+361="Mostrar sugerencia de conversor de te&xto en la parte superior"
+362="Reabrir último archivo &usado"
+363="Imágenes RAW"
+
+364="Controlador de &audio:"
+365="Controlador de &video:"
+366="Auto rotar imagen de acuerdo al E&XIF"
+
+;FormViewOptions2
+380="Auto &detección"
+381=&Auto detectar archivos de texto
+382="por &primeros"
+383="Kb"
+384="tamaño &máximo:"
+385="Kb (0: sin límite)"
+386="Auto detectar codificación &OEM"
+387="Auto detectar codificación &UTF-8"
+
+;FormViewGoto
+400="Ir a"
+401="&Nueva posición:"
+402="&Porcentaje (%)"
+403="Offset &hexadecimal"
+404="Offset &decimal"
+405="Inicio de &selección"
+406="&Fin de selección"
+407="Número de &línea"
+408="Introduzca un nombre de celda, ej. A10:"
+409="Introduzca un número de página:"
+
+;FormViewAbout
+410="Acerca de"
+411="Versión"
+412="Créditos de los componentes:"
+413="Registrado para:"
+414="Versión de evaluación (%d días restantes)"
+416="Acuerdo de licencia"
+417="Para desinstalar la aplicación, abra el menú Inicio - Programas - Universal Viewer - y ejecute el ítem "Uninstall"."
+
+;FormFindText
+420="Buscar"
+421="Buscar &texto:"
+422="Sólo palabras enteras"
+423="Sensible a &MAY/min"
+424="Expresión regular &multilínea"
+425="Cadena &hexadecimal"
+426="Expresión &regular"
+427=" (biblioteca no usada)"
+428="Opciones"
+429="Dirección"
+430="&Adelante"
+431="A&trás"
+432="Origen"
+433="&Desde el cursor"
+434="Desde la &página actual"
+435="&Todo el archivo"
+436="Marcar &todas las ocurrencias"
+
+;FormPluginsOptions
+500="Configuración de complementos"
+501="Complementos instalados"
+502="&Añadir..."
+503="&Remover"
+504="&Editar..."
+505="S&ubir"
+506="&Bajar"
+507="&Configurar..."
+510="Nombre"
+511="Detectar cadena"
+512="Nombre del archivo"
+520="Los complementos tienen mayor &prioridad que los visores internos"
+521="Guardar los nombres de archivos con la variable de entorno %&Commander_Path%"
+524="Añadir la &tecla 'Alt' al menú de atajos, para evitar conflictos con los complementos"
+
+;FormPluginsAdd
+530="Instalar complementos"
+531="Importar configuración de &Total Commander"
+532="Instalar todos los complementos de la &carpeta"
+533="Instalar sólo un &complemento"
+534="Instalar complementos desde &archivos"
+537="Archivo ejecutable de TC:"
+538="Archivo de configuración de TC:"
+539="&Archivo"
+540="&Carpeta:"
+541="Aplicaciones (*.exe)|*.EXE"
+542="Archivos Ini (*.ini)|*.INI"
+543="Complementos (*.wlx)|*.WLX"
+544="Archivos (*.zip,*.rar)|*.ZIP;*.RAR"
+
+;FormPluginsEdit
+550="Configurar complemento"
+551="Nombre del archivo:"
+552="Cadena &detectada:"
+553="&Predeterminada"
+554="Archivo de configuración:"
+
+;FormCustomizeToolbar
+560="Personalizar barra de herramientas"
+561="Botones &disponibles:"
+562="Botones se&leccionados:"
+563="&Añadir ->"
+564="<- &Remover"
+565="Re&stablecer"
+566="(Separador)"
+
+;FormToolList
+600="Lista de herramientas del usuario"
+601="Propiedades de la herramienta de usuario"
+602="&Título:"
+603="Ap&licación:"
+604="Pa&rámetros:"
+605="Parámetros de &macros (doble clic para añadir un macro a la lista de parámetros):"
+606="Acciones a realizar:"
+607="Antes de ejecutar la aplicación:"
+608="Después de ejecutar la aplicación:"
+609="Consejo: añada '?' como primer carácter para confirmar parámetros."
+
+;FormRename
+650="Renombrar archivo"
+651="Renombrar..."
+652="&Renombrar a:"
+653="Copiar a la carpeta..."
+654="Mover a la carpeta..."
+
+;FormReg
+700="Registrar"
+701="&Registrar..."
+702=
+703=
+704=
+705=
+706=Por favor introduzca la clave de licencia que recibió por correo electrónico. La clave es sensible a MAY/min. Le recomendamos que pegue (Ctrl+V) la clave en el campo debajo. Después de introducir la clave haga clic en Activar para activarla.
+707=&Activar
+708=&Obtener clave
+
+;FormPrintPreview
+710="Márgenes"
+711="&Izquierdo:"
+712="&Derecho:"
+713="&Superior:"
+714="&Inferior:"
+715="mm"
+716="cm"
+717="pulgadas"
+718="Gamma"
+719="Valor &gamma:"
+
+720="Vista preliminar"
+721="Imprimir"
+722="Opciones"
+723="Vista previa"
+724=Texto al &pie de página
+725="No se puede localizar el mapa de bits temporal."
+726="Posición"
+
+727="Modo a&justado:"
+728="Normal"
+729="Mejor ajuste"
+730="Estirar"
+731="Tamaño personalizado"
+732="&Alto:"
+733="A&ncho:"
+734="&Proporcional"
+735="F&uente..."
+736="Configurar im&presión..."
+
+;FormViewOptionsImages
+740="&Bibliotecas gráficas"
+741="&Usar IrfanView/XnView para cargar gráficos"
+742="Nombre de archivo de la &aplicación:"
+743="Extensiones de &imágenes:"
+744="IrfanView/XnView tienen &mayor prioridad que la biblioteca interna"
+745="Usar la biblioteca "ijl15.dll" para cargar gráficos &JPEG"
+746="&Extensiones de archivos:"
+
+;FormColumns
+780="Más..."
+781="Configurar columnas"
+782="Marque las columnas que quiera hacer visibles en esta carpeta. Arrastre y suelte las columnas para reordenarlas."
+783=La columna seleccionada debería ser
+784="píxeles de ancho"
+785="LiveUpdate"
+
+;FormViewOptions..
+800="I&conos:"
+801="(Predeterminado)"
+802="(Guardar plantilla...)"
+803="Reproducción &continua"
+
+805="&Orden de archivos:"
+806=" (desc.)"
+807="Nombre del archivo"
+808="Extensión"
+809="Creado"
+810="Modificado"
+811="Usar altura de ventana personalizada en los modos"
+812="&Lista de ignorados:"
+813="Búsqueda resaltada"
+
+814="Usar reproductor multimedia moderno"
+815="Si está deshabilitado, se usará el estilo antiguo. También puede deshabilitar el estilo antiguo del reproductor desmarcando "Multimedia" en la pestaña "Tipos de archivos"."
+;You may also disable the old-style player by unchecking "Media" on "File types" tab."
+
+816=Ítems en modo de pantalla completa
+817=Barra del menú
+818=Barra de herramientas
+819=Multimedia - Barra de seguimiento
+820=Multimedia - Barra de botones
+821=Barra de estado
+822=Multimedia - cursor
+
+823="Usar reproductor multimedia moderno"
+824="Usar reproductor multimedia de estilo antiguo"
+825="Multimedia (reprod. estilo antiguo)"
+826="Multimedia (reproductor moderno)"
+827="Espaciado interlineado"
+
+830=Opciones de Word/RTF
+831=Diseño por defecto:
+832=Zoom por defecto
+833=Valor de zoom personalizado en %:
+834=Diseño preliminar
+835=Diseño Web
+836=Diseño de impresión
+
+;FormViewEXIF
+880="Lector EXIF"
+881="Mostrar E&XIF..."
+883="Etiqueta"
+884="Propiedades"
+885="Valor"
+890=" IFD 0 "
+891=" Sub IFD"
+892=" Interop. IFD "
+893=" Creador de notas"
+894=" IFD 1"
+895=" Miniatura "
+
+;Preview
+900=Primera página
+901=Página anterior
+902=Siguiente página
+903=Última página
+904=Página actual
+905=Valor del zoom
+906=Toda la página
+907=Ajustar al ancho
+908=Personalizar...
+
+;Media
+910=Reproducir/pausar
+911=Pausar
+912=Detener
+913=Avanzar un paso
+914=Original
+915=Estirado
+916=Audio#%d
+917=Silencio
+918=Volumen
+919=Relación de aspecto
+920=Canal de audio
+921=Abriendo imagen...
+922=Rebobinar 10 s
+923=Rebobinar 1 min
+924=Rebobinar 5 min
+925=Avanzar 10 s
+926=Avanzar 1 min
+927=Avanzar 5 min
+928=Tiempo (hh:mm:ss):
+929=Guardar marco actual...
+
+
+
+[Nav]
+
+200="Panel de navegación"
+201="S&ubir un nivel"
+202="&Ver"
+203="Ay&uda"
+204="&Registrar..."
+205="&Acerca de..."
+206="&Carpeta:"
+207="&Unidades:"
+
+210="La carpeta está vacía"
+211="&Iconos"
+212="&Lista"
+213="&Detalles"
+214="&Miniaturas"
+215="Diseño &horizontal"
+216="&Mostrar ocultos"
+217="Atracar al &visor"
+218="Mostrar barra de &ruta
+219="Mostrar barra de &unidades
+220="Mostrar carpetas &especiales"
+221="Mostrar barra de &estado"
+222="Abrir ca&rpetas en el visor"
+
