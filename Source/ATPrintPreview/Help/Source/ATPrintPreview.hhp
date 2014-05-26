@@ -1,0 +1,21 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=ATPrintPreview.chm
+Contents file=Table of Contents.hhc
+Default topic=Index.html
+Display compile progress=No
+Language=0x409 Английский (США)
+Title=ATPrintPreview Component
+
+
+[FILES]
+Contacts.html
+History.html
+Index.html
+Loc.html
+UseRec.html
+UseFunc.html
+License.html
+
+[INFOTYPES]
+

@@ -1,0 +1,75 @@
+<html>
+<head>
+  <title>Functions</title>
+  <link href="Main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<ul>
+<li> <a href="#Use">Units</a>
+<li> <a href="#Bitmap">Printing a bitmap</a>
+<li> <a href="#Image">Printing an image</a>
+</ul>
+
+<!----------------------------------------------->
+<a name="Use"></a>
+<h1>Units</h1>
+
+<p>
+First, use the following two units in your application
+(note that both units must be used):
+
+<ul>
+<li> ATPrintPreview
+<li> ATxPrintProc
+</ul>
+
+
+<!----------------------------------------------->
+<a name="Bitmap"></a>
+<h1>Printing a bitmap</h1>
+
+<p>
+To call the preview form for a bitmap, use the BitmapPrint function:
+
+<pre>
+function BitmapPrint(
+  ABitmap: TBitmap;
+  var AOptions: TATPrintOptions): Boolean;
+</pre>
+
+<p>
+Parameters:<br>
+ABitmap: Bitmap to print.<br>
+AOptions: Printing options.
+
+<p>
+Result:<br>
+True if printing was completed, False if printing was cancelled or some errors occured.
+
+
+<!----------------------------------------------->
+<a name="Image"></a>
+<h1>Printing an image</h1>
+
+To call the preview form for an image (TImage), use the ImagePrint function:
+
+<pre>
+function ImagePrint(
+  AImage: TImage;
+  var AOptions: TATPrintOptions): Boolean;
+</pre>
+
+<p>
+Parameters:<br>
+AImage: Image object to print.
+All image types can be printed: bitmaps, metafiles, icons etc.<br>
+AOptions: Printing options.
+
+<p>
+Result:<br>
+The same as for the BitmapPrint function.
+
+
+</body>
+</html>
