@@ -26,15 +26,11 @@ var
   MsgViewerErrCannotReadPos: Widestring = 'Read error at offset %s';
   MsgViewerErrDetect: Widestring = 'Program could not detect file format'#13'Dump is shown';
   MsgViewerErrImage: Widestring = 'Unknown image format';
-  MsgViewerErrMedia: Widestring = 'Unknown multimedia format';
-  MsgViewerErrOffice: Widestring = 'MS Office module doesn''t support this file type';
   MsgViewerErrInitControl: Widestring = 'Cannot initialize %s';
   MsgViewerErrInitOffice: Widestring = 'Cannot initialize MS Office control';
   MsgViewerErrCannotCopyData: Widestring = 'Cannot copy data to Clipboard';
   MsgViewerWlxException: Widestring = 'Exception in plugin "%s" in function "%s"';
   MsgViewerWlxParentNotSpecified: Widestring = 'Cannot load plugins: parent form not specified';
-  MsgViewerAniTitle: Widestring = 'Title: ';
-  MsgViewerAniCreator: Widestring = 'Creator: ';
   MsgViewerPageHint: Widestring = 'Previous/Next page'#13'Current page: %d of %d';
 
 implementation

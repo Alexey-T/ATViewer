@@ -5,7 +5,6 @@
 {$define IJL}
 {$define JP2}
 //{$define PREVIEW}
-//{$define IVIEW}
 {$define TIFF}
 
 {$define WLX}

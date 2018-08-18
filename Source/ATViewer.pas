@@ -1699,77 +1699,6 @@ procedure TATViewer.LoadImage(APicture: TPicture = nil; ANewImage: Boolean = Tru
   {$endif}
 
   //
-  {$ifdef ANI}
-  function LoadAni: Boolean;
-  var
-    GetFrames: function(FileName: PChar): THandle; stdcall;
-    GetCursorCreator: function(Handle: THandle; FileName: PChar): ShortString; stdcall;
-    GetCursorTitle: function(Handle: THandle; FileName: PChar): ShortString; stdcall;
-  var
-    b: TBitmap;
-    IL: TImageList;
-    hLib, hIL: THandle;
-    fn, s1, s2: AnsiString;
-    i: Integer;
-  const
-    CH = 16; //row height
-    CF = 9; //font size
-    C2 = 2; //border 2px
-  begin
-    Result := False;
-    hLib := LoadLibrary('amnani.dll');
-    if hLib = 0 then
-      raise EInvalidGraphic.Create(Format(MsgViewerErrCannotLoadFile, ['amnani.dll']));
-
-    try
-      GetFrames := GetProcAddress(hLib, 'GetFrames');
-      if @GetFrames = nil then Exit;
-      GetCursorCreator := GetProcAddress(hLib, 'GetCursorCreator');
-      if @GetCursorCreator = nil then Exit;
-      GetCursorTitle := GetProcAddress(hLib, 'GetCursorTitle');
-      if @GetCursorTitle = nil then Exit;
-
-      fn := FFileNameWideToAnsi(FFileName);
-      hIL := GetFrames(PAnsiChar(fn));
-      if hIL = 0 then Exit;
-      s1 := MsgViewerAniTitle + GetCursorTitle(Handle, PAnsiChar(fn));
-      s2 := MsgViewerAniCreator + GetCursorCreator(Handle, PAnsiChar(fn));
-
-      IL := TImageList.Create(Self);
-      b := TBitmap.Create;
-      try
-        IL.Handle := hIL;
-
-        b.PixelFormat := pf16bit;
-        b.Canvas.Font.Name := Font.Name;
-        b.Canvas.Font.Size := CF;
-        b.Canvas.Font.Color := clBtnText;
-        b.Width := IMax(IMax(
-          IL.Width * IL.Count,
-          b.Canvas.TextWidth(s1)),
-          b.Canvas.TextWidth(s2)) + C2 * 2;
-        b.Height := IL.Height + CH * 2 + C2 * 3;
-
-        b.Canvas.Brush.Color := clBtnface;
-        b.Canvas.FillRect(Rect(0, 0, b.Width, b.Height));
-        b.Canvas.TextOut(C2, C2, s1);
-        b.Canvas.TextOut(C2, C2 + CH, s2);
-        for i := 0 to IL.Count - 1 do
-          IL.Draw(b.Canvas, C2 + i * IL.Width, CH * 2 + C2 * 2, i);
-
-        FImageBox.LoadBitmap(b, False);
-        Result := True;
-      finally
-        b.Free;
-        IL.Free;
-      end;
-    finally
-      FreeLibrary(hLib);
-    end;
-  end;
-  {$endif}
-
-  //
   function LoadCur: Boolean;
   const
     cSize = 32; //max cursor size
@@ -1940,16 +1869,6 @@ begin
           end;
         {$endif}
 
-        {$ifdef ANI}
-        //2a) Load ANI
-        if SFileExtensionMatch(FFileName, 'ani') then
-        begin
-          if not LoadAni then
-            raise Exception.Create('');
-          Exit;
-        end;
-        {$endif}
-
         {$ifdef TIFF}
         //2b) Load TIFF
         if SFileExtensionMatch(FFileName, 'tif,tiff') then
@@ -2028,10 +1947,6 @@ end;
 
 procedure TATViewer.ShowError(S: AnsiString);
 begin
-  if S = '' then
-    S := MsgViewerErrMedia;
-  if S = 'The associated COM server does not support ActiveX Document embedding' then
-    S := MsgViewerErrOffice;
   FTextPanelErr.Visible := True;
   FTextPanelErr.LabCaption :=
     WrapText(' '#13 + S + #13' ', ClientWidth div Canvas.TextWidth('0'));
@@ -4772,15 +4687,11 @@ begin
     9:  MsgViewerErrCannotReadPos:= S;
     10:  MsgViewerErrDetect:= S;
     11:  MsgViewerErrImage:= S;
-    12:  MsgViewerErrMedia:= S;
-    13:  MsgViewerErrOffice:= S;
     14:  MsgViewerErrInitControl:= S;
     15:  MsgViewerErrInitOffice:= S;
     16:  MsgViewerErrCannotCopyData:= S;
     17:  MsgViewerWlxException:= S;
     18:  MsgViewerWlxParentNotSpecified:= S;
-    19:  MsgViewerAniTitle:= S;
-    20:  MsgViewerAniCreator:= S;
     21:  MsgViewerPageHint:= S;
   end;
 end;
