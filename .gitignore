@@ -3,3 +3,5 @@
 *.exe
 *.cfg
 *.dof
+*.ddp
+*.ini

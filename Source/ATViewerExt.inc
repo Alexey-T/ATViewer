@@ -12,22 +12,12 @@ begin
       + ',jp2,jpc,pnm,ras,mis' //Jasper
       + ',ani,cur';
 
-    ExtMedia :=
-      'avi,mpg,mpeg,mpe,mpv,mp3,mp2,mp1,m1v,m2v,mpv2,mp2v,mpa,m1a,m2a,asf,lsf,lsx,ivf'
-      + ',wav,mid,midi,rmi,kar,aif,aifc,aiff,au,snd'
-      + ',mov,qt,3gp,3gp2,3g2,3gpp'
-      + ',ra,rm,ram,rmvb,rpm,rt,rp,smi,smil,roq'
-      + ',asx,m3u,pls,wvx,wax,wmx'
-      + ',wmv,wma,wmp,wm,cda,ac3,dts,vob,ifo,d2v,fli,flc,flic,mka,mkv,ts,tp,tpr,pva,aac,mp4'
-      + ',ogm,ogg,divx,vp6,m4a,m4b,vqf,ape,mpc,flac,flv,dvr-ms,wtv';
-
     ExtInet :=
       'htm,html,xml,xsl,mht' //MSIE
       + ',pdf,swf,xps' //Acrobat, Flash, MS XPS
       + ',shtml,xhtml,shtm,stm,php,php2,php3,asp,pl,vrml,plg,htt,htx'; //MSIE
 
     ExtImagesUse := True;
-    ExtMediaUse := True;
     ExtInetUse := True;
   end;
 end;

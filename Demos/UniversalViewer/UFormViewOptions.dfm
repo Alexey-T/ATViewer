@@ -219,12 +219,12 @@ object FormViewOptions: TFormViewOptions
         Left = 8
         Top = 4
         Width = 369
-        Height = 237
+        Height = 149
         Caption = 'File extensions'
         TabOrder = 0
         object labConv: TLabel
           Left = 8
-          Top = 186
+          Top = 90
           Width = 39
           Height = 13
           Caption = 'labConv'
@@ -252,26 +252,19 @@ object FormViewOptions: TFormViewOptions
           Height = 21
           TabOrder = 2
         end
-        object edMedia: TEdit
+        object edInet: TEdit
           Left = 120
           Top = 64
           Width = 233
           Height = 21
           TabOrder = 4
         end
-        object edInet: TEdit
+        object edConv: TEdit
           Left = 120
           Top = 88
           Width = 233
           Height = 21
-          TabOrder = 6
-        end
-        object edConv: TEdit
-          Left = 120
-          Top = 184
-          Width = 233
-          Height = 21
-          TabOrder = 7
+          TabOrder = 5
         end
         object chkImages: TCheckBox
           Left = 8
@@ -281,36 +274,28 @@ object FormViewOptions: TFormViewOptions
           Caption = 'chkImages'
           TabOrder = 1
         end
-        object chkMedia: TCheckBox
+        object chkInet: TCheckBox
           Left = 8
           Top = 66
           Width = 112
           Height = 17
-          Caption = 'chkMedia'
-          TabOrder = 3
-        end
-        object chkInet: TCheckBox
-          Left = 8
-          Top = 90
-          Width = 112
-          Height = 17
           Caption = 'chkInet'
-          TabOrder = 5
+          TabOrder = 3
         end
         object edIgnore: TEdit
           Left = 120
-          Top = 208
+          Top = 112
           Width = 233
           Height = 21
-          TabOrder = 9
+          TabOrder = 7
         end
         object chkIgnore: TCheckBox
           Left = 8
-          Top = 210
+          Top = 114
           Width = 112
           Height = 17
           Caption = 'Ignore:'
-          TabOrder = 8
+          TabOrder = 6
         end
       end
       object btnTextOptions: TButton
@@ -1091,7 +1076,7 @@ object FormViewOptions: TFormViewOptions
         Left = 8
         Top = 140
         Width = 305
-        Height = 165
+        Height = 141
         Caption = 'Use custom height'
         TabOrder = 1
         object chkHText: TCheckBox
@@ -1136,16 +1121,16 @@ object FormViewOptions: TFormViewOptions
           Value = 40
           OnKeyDown = edHTextKeyDown
         end
-        object chkHMedia: TCheckBox
+        object chkHWeb: TCheckBox
           Left = 8
           Top = 64
           Width = 130
           Height = 17
-          Caption = 'Multimedia'
+          Caption = 'Web'
           TabOrder = 4
           OnClick = chkHTextClick
         end
-        object edHMedia: TSpinEdit
+        object edHWeb: TSpinEdit
           Left = 144
           Top = 60
           Width = 50
@@ -1157,58 +1142,16 @@ object FormViewOptions: TFormViewOptions
           Value = 40
           OnKeyDown = edHTextKeyDown
         end
-        object chkHWeb: TCheckBox
-          Left = 8
-          Top = 88
-          Width = 130
-          Height = 17
-          Caption = 'Web'
-          TabOrder = 6
-          OnClick = chkHTextClick
-        end
-        object edHWeb: TSpinEdit
-          Left = 144
-          Top = 84
-          Width = 50
-          Height = 22
-          Increment = 20
-          MaxValue = 2000
-          MinValue = 40
-          TabOrder = 7
-          Value = 40
-          OnKeyDown = edHTextKeyDown
-        end
         object chkHRtf: TCheckBox
-          Left = 8
-          Top = 136
-          Width = 130
-          Height = 17
-          Caption = '&RTF/UTF-8:'
-          TabOrder = 10
-          OnClick = chkHTextClick
-        end
-        object edHRtf: TSpinEdit
-          Left = 144
-          Top = 132
-          Width = 50
-          Height = 22
-          Increment = 20
-          MaxValue = 2000
-          MinValue = 40
-          TabOrder = 11
-          Value = 40
-          OnKeyDown = edHTextKeyDown
-        end
-        object chkHPlug: TCheckBox
           Left = 8
           Top = 112
           Width = 130
           Height = 17
-          Caption = 'Plugins:'
+          Caption = '&RTF/UTF-8:'
           TabOrder = 8
           OnClick = chkHTextClick
         end
-        object edHPlug: TSpinEdit
+        object edHRtf: TSpinEdit
           Left = 144
           Top = 108
           Width = 50
@@ -1217,6 +1160,27 @@ object FormViewOptions: TFormViewOptions
           MaxValue = 2000
           MinValue = 40
           TabOrder = 9
+          Value = 40
+          OnKeyDown = edHTextKeyDown
+        end
+        object chkHPlug: TCheckBox
+          Left = 8
+          Top = 88
+          Width = 130
+          Height = 17
+          Caption = 'Plugins:'
+          TabOrder = 6
+          OnClick = chkHTextClick
+        end
+        object edHPlug: TSpinEdit
+          Left = 144
+          Top = 84
+          Width = 50
+          Height = 22
+          Increment = 20
+          MaxValue = 2000
+          MinValue = 40
+          TabOrder = 7
           Value = 40
           OnKeyDown = edHTextKeyDown
         end

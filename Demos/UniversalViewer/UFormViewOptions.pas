@@ -99,7 +99,6 @@ type
     boxExt: TGroupBox;
     edText: TEdit;
     edImages: TEdit;
-    edMedia: TEdit;
     edInet: TEdit;
     btnTextOptions: TButton;
     btnImageOptions: TButton;
@@ -130,7 +129,6 @@ type
     chkShowConv: TCheckBox;
     edConv: TEdit;
     chkImages: TCheckBox;
-    chkMedia: TCheckBox;
     chkInet: TCheckBox;
     labConv: TLabel;
     labText: TLabel;
@@ -141,8 +139,6 @@ type
     edHText: TSpinEdit;
     chkHImage: TCheckBox;
     edHImage: TSpinEdit;
-    chkHMedia: TCheckBox;
-    edHMedia: TSpinEdit;
     chkHWeb: TCheckBox;
     edHWeb: TSpinEdit;
     chkHRtf: TCheckBox;
@@ -394,7 +390,6 @@ begin
 
   chkHText.Caption:= labText.Caption;
   chkHImage.Caption:= chkImages.Caption;
-  chkHMedia.Caption:= chkMedia.Caption;
   chkHWeb.Caption:= chkInet.Caption;
   chkHPlug.Caption:= MsgStrip(MsgCaption(137))+':';
   boxHMisc.Caption:= ' '+MsgCaption(811)+' ';
@@ -838,7 +833,6 @@ procedure TFormViewOptions.chkHTextClick(Sender: TObject);
 begin
   edHText.Enabled:= chkHText.Checked;
   edHImage.Enabled:= chkHImage.Checked;
-  edHMedia.Enabled:= chkHMedia.Checked;
   edHWeb.Enabled:= chkHWeb.Checked;
   edHRtf.Enabled:= chkHRtf.Checked;
   edHPlug.Enabled:= chkHPlug.Checked;

@@ -1294,7 +1294,6 @@ begin
       ExtImages:= FIni.ReadString(csExt, ccOExtImages, ExtImages);
       //if Pos('jp2', ExtImages) = 0 then
       //  ExtImages:= ExtImages + ',jp2,jpc,pnm,ras,mis';
-      ExtMedia:= FIni.ReadString(csExt, ccOExtMedia, ExtMedia);
       ExtInet:= FIni.ReadString(csExt, ccOExtInet, ExtInet);
       ExtRTF:= FIni.ReadString(csExt, ccOExtRTF, ExtRTF);
       FExtConv:= FIni.ReadString(csExt, ccOExtConv, FExtConv);
@@ -1303,7 +1302,6 @@ begin
       ShowHidden:= ShowHidden; //upd FFileList.ExtIgnore
 
       ExtImagesUse:= FIni.ReadBool(csExt, ccOExtImagesUse, ExtImagesUse);
-      ExtMediaUse:= FIni.ReadBool(csExt, ccOExtMediaUse, ExtMediaUse);
       ExtInetUse:= FIni.ReadBool(csExt, ccOExtInetUse, ExtInetUse);
       end;
 
@@ -1735,7 +1733,6 @@ begin
 
     FIniSave.WriteString(csExt, ccOExtText, ATViewerOptions.ExtText);
     FIniSave.WriteString(csExt, ccOExtImages, ATViewerOptions.ExtImages);
-    FIniSave.WriteString(csExt, ccOExtMedia, ATViewerOptions.ExtMedia);
     FIniSave.WriteString(csExt, ccOExtInet, ATViewerOptions.ExtInet);
     FIniSave.WriteString(csExt, ccOExtRTF, ATViewerOptions.ExtRTF);
     FIniSave.WriteString(csExt, ccOExtConv, FExtConv);
@@ -1743,7 +1740,6 @@ begin
     FIniSave.WriteBool(csExt, ccOExtIgnoreUse, FExtIgnoreUse);
 
     FIniSave.WriteBool(csExt, ccOExtImagesUse, ATViewerOptions.ExtImagesUse);
-    FIniSave.WriteBool(csExt, ccOExtMediaUse, ATViewerOptions.ExtMediaUse);
     FIniSave.WriteBool(csExt, ccOExtInetUse, ATViewerOptions.ExtInetUse);
 
     {$ifdef IVIEW}
@@ -2913,13 +2909,11 @@ begin
         begin
         edText.Text:= ExtText;
         edImages.Text:= ExtImages;
-        edMedia.Text:= ExtMedia;
         edInet.Text:= ExtInet;
         edConv.Text:= FExtConv;
         edIgnore.Text:= FExtIgnore;
         chkIgnore.Checked:= FExtIgnoreUse;
         chkImages.Checked:= ExtImagesUse;
-        chkMedia.Checked:= ExtMediaUse;
         chkInet.Checked:= ExtInetUse;
         end;
 
@@ -3004,14 +2998,12 @@ begin
 
       chkHText.Checked:= FUText;
       chkHImage.Checked:= FUImage;
-      chkHMedia.Checked:= FUMedia;
       chkHWeb.Checked:= FUWeb;
       chkHRtf.Checked:= FURtf;
       chkHPlug.Checked:= FUPlug;
 
       edHText.Value:= FHText;
       edHImage.Value:= FHImage;
-      edHMedia.Value:= FHMedia;
       edHWeb.Value:= FHWeb;
       edHRtf.Value:= FHRtf;
       edHPlug.Value:= FHPlug;
@@ -3094,14 +3086,12 @@ begin
           begin
           ExtText:= edText.Text;
           ExtImages:= edImages.Text;
-          ExtMedia:= edMedia.Text;
           ExtInet:= edInet.Text;
           FExtConv:= edConv.Text;
           FExtIgnore:= edIgnore.Text;
           FExtIgnoreUse:= chkIgnore.Checked;
           ShowHidden:= ShowHidden; //FFileList.ExtIgnore
           ExtImagesUse:= chkImages.Checked;
-          ExtMediaUse:= chkMedia.Checked;
           ExtInetUse:= chkInet.Checked;
           end;
 
@@ -3227,14 +3217,12 @@ begin
 
         FUText:= chkHText.Checked;
         FUImage:= chkHImage.Checked;
-        FUMedia:= chkHMedia.Checked;
         FUWeb:= chkHWeb.Checked;
         FURtf:= chkHRtf.Checked;
         FUPlug:= chkHPlug.Checked;
 
         FHText:= edHText.Value;
         FHImage:= edHImage.Value;
-        FHMedia:= edHMedia.Value;
         FHWeb:= edHWeb.Value;
         FHRtf:= edHRtf.Value;
         FHPlug:= edHPlug.Value;

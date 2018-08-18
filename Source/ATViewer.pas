@@ -293,8 +293,6 @@ type
     procedure SetMessagesEnabled(V: boolean);
     function GetExtImages: Widestring;
     procedure SetExtImages(const S: Widestring);
-    function GetExtMedia: Widestring;
-    procedure SetExtMedia(const S: Widestring);
     function GetExtInet: Widestring;
     procedure SetExtInet(const S: Widestring);
 
@@ -445,7 +443,6 @@ type
 
     function ActualExtText: AnsiString;
     function ActualExtImages: AnsiString;
-    function ActualExtMedia: AnsiString;
     function ActualExtRTF: AnsiString;
     function ActualExtInet: AnsiString;
 
@@ -598,7 +595,6 @@ type
     //for ActiveX:
     property MessagesEnabled: boolean read GetMessagesEnabled write SetMessagesEnabled;
     property ExtImages: Widestring read GetExtImages write SetExtImages;
-    property ExtMedia: Widestring read GetExtMedia write SetExtMedia;
     property ExtInet: Widestring read GetExtInet write SetExtInet;
 
     property TextDetect: Boolean read FTextDetect write FTextDetect default True;
@@ -717,10 +713,8 @@ type
     ExtText,
     ExtRTF,
     ExtImages,
-    ExtMedia,
     ExtInet: AnsiString;
     ExtImagesUse,
-    ExtMediaUse,
     ExtInetUse: Boolean;
   end;
 
@@ -1477,7 +1471,7 @@ begin
     SFileExtensionMatch(FFileName, ActualExtText) then FMode := vmodeText else
 
   if (not (vmodeMedia in FModesDisabledForDetect)) and
-    SFileExtensionMatch(FFileName, ActualExtImages + ',' + ActualExtMedia)
+    SFileExtensionMatch(FFileName, ActualExtImages)
                                                  then FMode := vmodeMedia else
 
   if (not (vmodeWeb in FModesDisabledForDetect)) and
@@ -1538,17 +1532,6 @@ begin
   with ATViewerOptions do
   begin
     Result := ExtRTF;
-  end;
-end;
-
-function TATViewer.ActualExtMedia: AnsiString;
-begin
-  with ATViewerOptions do
-  begin
-    if ExtMediaUse then
-      Result := ExtMedia
-    else
-      Result := '';
   end;
 end;
 
@@ -4506,16 +4489,6 @@ end;
 procedure TATViewer.SetExtImages(const S: Widestring);
 begin
   ATViewerOptions.ExtImages := S;
-end;
-
-function TATViewer.GetExtMedia: Widestring;
-begin
-  Result := ATViewerOptions.ExtMedia;
-end;
-
-procedure TATViewer.SetExtMedia(const S: Widestring);
-begin
-  ATViewerOptions.ExtMedia := S;
 end;
 
 function TATViewer.GetExtInet: Widestring;
