@@ -5,7 +5,7 @@
 {$define IJL}
 {$define JP2}
 //{$define PREVIEW}
-{$define IVIEW}
+//{$define IVIEW}
 {$define TIFF}
 
 {$define WLX}
@@ -14,6 +14,6 @@
 
 {$define IE4X}
 {$define NOTIF}
-{$define PRINT}
+//{$define PRINT}
 {$define SEARCH}
 {$define OFFLINE}

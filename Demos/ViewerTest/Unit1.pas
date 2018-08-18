@@ -55,16 +55,9 @@ var fn: Widestring;
 begin
   ATViewerOptions.ExtInet:= 'htm,html,mht,xml';
 
-  //fn:= GetModuleName(HInstance);
-  //fn:= SExtractFileDir(fn) + '\PdfDll\slister.dll';
-  fn:= 'c:\ProgView\Demos\OcxTest\PdfDll\slister.dll';
-  if not FileExists(fn) then
-    begin ShowMessage('Not found: '+ fn); Exit end;
-    
-  V.InitPluginsParams(Self, SExpandVars('%AppData%\lsplugin.ini'));
-  V.AddPlugin(fn, 'ext:pdf');
-
-  V.Open('D:\Office\Acrobat _.pdf');
+  fn:= ChangeFileExt(Application.ExeName, '.dpr');
+  if FileExists(fn) then
+    V.Open(fn);
 end;
 
 procedure TForm1.FormResize(Sender: TObject);

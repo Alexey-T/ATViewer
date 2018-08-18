@@ -13,9 +13,6 @@
 {$I Compilers.inc}      //Compilers defines
 {$I ATViewerOptions.inc} //ATViewer options
 
-{$ifdef M6} {$define MW} {$endif}
-{$ifdef M9} {$define MW} {$endif}
-
 unit ATViewer;
 
 interface
@@ -26,9 +23,6 @@ uses
   ATViewerMCI, ATxPanel,
   {$ifdef TNT} TntExtCtrls, {$endif}
   {$ifdef WLX} WLXProc, {$endif}
-  {$ifdef M6} MediaPlayer_TLB, {$endif}
-  {$ifdef M9} MediaPlayer9_TLB, {$endif}
-  {$ifdef MW} ActiveX, {$endif}
   {$ifdef IE4X} WebBrowser4_TLB, {$else} SHDocVw, {$endif}
   {$ifdef PRINT} Dialogs, {$endif}
   {$ifdef SEARCH} ATStreamSearch, {$endif}
@@ -57,37 +51,6 @@ type
 
   TATViewerOfficeEvent = procedure(Sender: TObject; var ADo: boolean) of object;
   TATViewerImageMouseEvent = procedure(Sender: TObject; Btn, Shift, X, Y: Integer) of object;
-
-  TATViewerMediaMode = (
-    vmmodeNone,
-    vmmodeMCI
-    {$ifdef M6} ,vmmodeWMP64 {$endif}
-    {$ifdef M9} ,vmmodeWMP9 {$endif}
-    );
-
-const
-  cATViewerMediaModeNames: array[TATViewerMediaMode] of AnsiString = (
-    '', 'MCI'
-    {$ifdef M6} ,'Windows Media Player 6.4' {$endif}
-    {$ifdef M9} ,'Windows Media Player 9.0' {$endif}
-    );
-
-const
-  vmmodeDefault =
-    {$ifdef M6}
-    vmmodeWMP64
-    {$else}
-      {$ifdef MEDIA_PLAYER}
-      vmmodeMCI
-      {$else}
-        {$ifdef M9}
-        vmmodeWMP9
-        {$else}
-        vmmodeNone
-        {$endif}
-      {$endif}
-    {$endif}
-    ;
 
 const
   vfo_Words = 1;
@@ -157,17 +120,6 @@ type
     FEditMenuItemSelectAll: TMenuItem;
     FEditMenuItemSep: TMenuItem;
     FErrTimer: TTimer;
-    FMedia: TMediaFrame;
-
-    {$ifdef M6}
-    FWMP6: TWMP;
-    FWMP6Controls: Boolean;
-    FWMP6Tracker: Boolean;
-    {$endif}
-
-    {$ifdef M9}
-    FWMP9: TWMP9;
-    {$endif}
 
     FBrowser: TWebBrowser;
     {$ifdef MSO}
@@ -178,8 +130,6 @@ type
     FPlugins: TWlxPlugins;
     FPluginsHighPriority: Boolean;
     {$endif}
-
-    FMediaEndTimer: TTimer;
 
     {$ifdef PRINT}
     FPrintDialog: TPrintDialog;
@@ -200,7 +150,6 @@ type
     FModeUndetected: TATViewerMode;
     FModeUndetectedCfm: Boolean;
     FModesDisabledForDetect: TATViewerModes;
-    FMediaMode: TATViewerMediaMode;
     FSourceType: TATFileSource;
     FTextEncoding: TATEncoding;
     FTextWrap: Boolean;
@@ -209,17 +158,11 @@ type
     FTextDetectLimit: DWORD;
     FTextDetectOEM: Boolean;
     FTextDetectUTF8: Boolean;
-    FMediaAutoPlay: Boolean;
-    FMediaLoop: Boolean;
-    FMediaPlayCount: Integer;
-    FMediaPlaylistPause: Integer;
     FMediaFit,
     FMediaFitOnlyBig,
     FMediaFitWidth,
     FMediaFitHeight,
     FMediaCenter: Boolean;
-    FMediaVolume: Integer;
-    FMediaMute: Boolean;
     {$ifdef OFFLINE}
     FWebOffline: Boolean;
     {$endif}
@@ -289,19 +232,15 @@ type
     {$endif}
     procedure InitEdit;
     procedure InitImage;
-    procedure InitMediaEndTimer;
-    procedure InitMedia;
     procedure InitWeb;
     {$ifdef MSO}
     procedure InitOffice;
     procedure LoadOffice;
     procedure HideOffice;
     {$endif}
-    procedure FreeMedia;
     function CanSetFocus: Boolean;
     procedure SetBorderStyleInner(AValue: TBorderStyle);
     procedure SetMode(AValue: TATViewerMode);
-    procedure SetMediaMode(AValue: TATViewerMediaMode);
     function GetTextEncoding: TATEncoding;
     procedure SetTextEncoding(AValue: TATEncoding);
     procedure SetTextWrap(AValue: Boolean);
@@ -341,8 +280,6 @@ type
 
     procedure SetSearchIndentVert(AValue: Integer);
     procedure SetSearchIndentHorz(AValue: Integer);
-    procedure SetMediaPosition;
-    procedure SetMediaLoop(AValue: Boolean);
     procedure SetMediaFit(AValue: Boolean);
     procedure SetMediaFitOnlyBig(AValue: Boolean);
     procedure SetMediaFitWidth(AValue: Boolean);
@@ -402,7 +339,6 @@ type
     procedure LoadImageStream;
     procedure LoadWeb;
     procedure LoadWebStream;
-    procedure LoadMediaStream;
 
     {$ifdef WLX}
     function LoadWLX: Boolean;
@@ -427,7 +363,6 @@ type
     procedure HideAll;
     procedure HideEdit;
     procedure HideImage;
-    procedure HideMedia;
     procedure HideWeb;
     procedure Enter(Sender: TObject);
     procedure ImageUpDownClick(Sender: TObject; Button: TUDBtnType);
@@ -473,19 +408,6 @@ type
     procedure TextPanelClick(Sender: TObject);
     function DetectTextAndUnicode: Boolean;
 
-    {$ifdef M6}
-    procedure SetMediaFit_WMP6(WMP: TWMP);
-    procedure PlayStateChange_WMP6(Sender: TObject; OldState: Integer; NewState: Integer);
-    {$endif}
-
-    {$ifdef M9}
-    procedure SetMediaFit_WMP9(WMP: TWMP9);
-    procedure PlayStateChange_WMP9(Sender: TObject; NewState: Integer);
-    {$endif}
-
-    procedure MediaEndTimerTimer(Sender: TObject);
-    procedure PreparePlaybackEnd;
-    procedure DoPlaybackEnd;
     procedure DoWebDocumentComplete;
     procedure DoWebNavigateComplete;
     procedure DoWebStatusTextChange(const Text: WideString);
@@ -496,7 +418,6 @@ type
     procedure DoOptionsChange;
     procedure DoLoadImageStream;
     procedure DoLoadWebStream;
-    procedure DoLoadMediaStream;
 
     {$ifdef NOTIF}
     function GetTextAutoReload: Boolean;
@@ -545,18 +466,9 @@ type
     function GetMediaFitWidth: Boolean;
     function GetMediaFitHeight: Boolean;
     function GetMediaCenter: Boolean;
-    function GetMediaShowControls: Boolean;
-    procedure SetMediaShowControls(AValue: Boolean);
-    function GetMediaShowTracker: Boolean;
-    procedure SetMediaShowTracker(AValue: Boolean);
     function GetTextMaxClipboardDataSizeMb: Integer;
     procedure SetTextMaxClipboardDataSizeMb(AValue: Integer);
-    function GetMediaVolume: Integer;
-    procedure SetMediaVolume(AValue: Integer);
-    function GetMediaMute: Boolean;
-    procedure SetMediaMute(AValue: Boolean);
     procedure SetOnOptionsChange(AEvent: TNotifyEvent);
-    procedure MediaSyncVolume;
 
     function ActualExtText: AnsiString;
     function ActualExtImages: AnsiString;
@@ -582,7 +494,6 @@ type
     function MarginsRectPx: TRect;
     {$endif}
 
-    function IsAX: boolean;
     procedure SetParentWnd(H: integer);
 
   {$ifdef AX}
@@ -593,7 +504,7 @@ type
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
     function Open(const AFileName: WideString {$ifdef OPP}; APicture: TPicture = nil {$endif}): Boolean;
-    function OpenStream(AStream: TStream; AMode: TATViewerMode; AMediaMode: TATViewerMediaMode = vmmodeNone): Boolean;
+    function OpenStream(AStream: TStream; AMode: TATViewerMode): Boolean;
     procedure Reload;
     procedure CopyToClipboard(AsHex: Boolean = False);
     procedure SelectAll;
@@ -668,9 +579,6 @@ type
 
     procedure ImageScaleInc;
     procedure ImageScaleDec;
-    procedure MediaPause;
-    property MediaVolume: Integer read GetMediaVolume write SetMediaVolume;
-    property MediaMute: Boolean read GetMediaMute write SetMediaMute;
     property WebBusy: Boolean read GetWebBusy;
 
     property PosPercent: Integer read GetPosPercent write SetPosPercent;
@@ -701,7 +609,6 @@ type
 
   protected
     procedure Click; override;
-    procedure Resize; override;
 
   public
     //these array props moved here, in separate "public" section, so
@@ -768,13 +675,6 @@ type
     property TextPopupCommands: TATPopupCommands read GetTextPopupCommands write SetTextPopupCommands default cATBinHexCommandSet;
     property TextEnableSel: Boolean read GetTextEnableSel write SetTextEnableSel default True;
 
-    property MediaMode: TATViewerMediaMode read FMediaMode write SetMediaMode default vmmodeDefault;
-    property MediaAutoPlay: Boolean read FMediaAutoPlay write FMediaAutoPlay default True;
-    property MediaLoop: Boolean read FMediaLoop write SetMediaLoop;
-    property MediaPlayCount: Integer read FMediaPlayCount write FMediaPlayCount default 1;
-    property MediaPlaylistPause: Integer read FMediaPlaylistPause write FMediaPlaylistPause default 500;
-    property MediaShowControls: Boolean read GetMediaShowControls write SetMediaShowControls;
-    property MediaShowTracker: Boolean read GetMediaShowTracker write SetMediaShowTracker;
     property MediaFit: Boolean read GetMediaFit write SetMediaFit default True;
     property MediaFitOnlyBig: Boolean read GetMediaFitOnlyBig write SetMediaFitOnlyBig default True;
     property MediaFitWidth: Boolean read GetMediaFitWidth write SetMediaFitWidth default False;
@@ -1027,7 +927,6 @@ begin
   FModeUndetected := vmodeBinary;
   FModeUndetectedCfm := True;
   FModesDisabledForDetect := [];
-  FMediaMode := vmmodeDefault;
   FTextColor := clWindow;
   FTextEncoding := vencANSI;
   FTextWrap := False;
@@ -1037,17 +936,11 @@ begin
   FTextDetectSize := 4;
   FTextDetectLimit := 0;
 
-  FMediaAutoPlay := True;
-  FMediaLoop := False;
-  FMediaPlayCount := 1;
-  FMediaPlaylistPause := 500;
   FMediaFit := True;
   FMediaFitOnlyBig := True;
   FMediaFitWidth := False;
   FMediaFitHeight := False;
   FMediaCenter := True;
-  FMediaVolume := Pred(Pred(cVolMax));
-  FMediaMute := False;
 
   {$ifdef OFFLINE}
   FWebOffline := False;
@@ -1146,19 +1039,6 @@ begin
   FEditMenuItemSelectAll := nil;
   FEditMenuItemSep := nil;
   FEditMenu := nil;
-  FMedia := nil;
-
-  {$ifdef M6}
-  FWMP6 := nil;
-  FWMP6Controls := True;
-  FWMP6Tracker := True;
-  {$endif}
-
-  {$ifdef M9}
-  FWMP9 := nil;
-  {$endif}
-
-  FMediaEndTimer := nil;
 
   FBrowser := nil;
 
@@ -1222,8 +1102,6 @@ begin
   FPlugins.Free;
   {$endif}
 
-  FreeMedia;
-
   inherited Destroy;
 end;
 
@@ -1254,12 +1132,6 @@ begin
     begin
       Name := 'VRichEdit';
       Parent := Self;
-      if IsAX then
-      begin
-        Parent := nil;
-        ParentWindow := Self.Handle;
-      end;
-
       Align := alClient;
       ReadOnly := True;
       ScrollBars := ssBoth;
@@ -1310,12 +1182,6 @@ begin
     begin
       Name := 'VImageBox';
       Parent := Self;
-      if IsAX then
-      begin
-        Parent := nil;
-        ParentWindow := Self.Handle;
-        Image.IncrementalDisplay := False; //TODO
-      end;
 
       Width := 1; //To "hide" control initially
       Height := 1;
@@ -1346,74 +1212,6 @@ begin
       OnClick := ImageUpDownClick;
     end;
   end;
-end;
-
-procedure TATViewer.InitMediaEndTimer;
-begin
-  if not Assigned(FMediaEndTimer) then
-  begin
-    FMediaEndTimer := TTimer.Create(Self);
-    with FMediaEndTimer do
-    begin
-      Enabled := False;
-      Interval := 500;
-      OnTimer := MediaEndTimerTimer;
-    end;
-  end;
-end;
-
-procedure TATViewer.InitMedia;
-begin
-  InitMediaEndTimer;
-
-  {$ifdef M6}
-  if (FMediaMode = vmmodeWMP64) and not Assigned(FWMP6) then
-    try
-      FWMP6 := TWMP.Create(Self);
-      with FWMP6 do
-      begin
-        Align := alClient;
-        Parent := Self;
-        //Parent assignment must be after Align assignment!
-        AutoStart := False;
-        AutoRewind := True;
-        OnPlayStateChange := PlayStateChange_WMP6;
-      end;
-    except
-      ShowError(Format(MsgViewerErrInitControl, ['Windows Media Player 6.4 ActiveX']));
-      FMediaMode := vmmodeWMP9;
-    end;
-  {$endif}
-
-  {$ifdef M9}
-  if (FMediaMode = vmmodeWMP9) and not Assigned(FWMP9) then
-    try
-      FWMP9 := TWMP9.Create(Self);
-      with FWMP9 do
-      begin
-        Align := alClient;
-        Parent := Self;
-        //Parent assignment must be after Align assignment!
-        Settings.AutoStart := False;
-        OnPlayStateChange := PlayStateChange_WMP9;
-      end;
-    except
-      ShowError(Format(MsgViewerErrInitControl, ['Windows Media Player 9 ActiveX']));
-      FMediaMode := vmmodeMCI;
-    end;
-  {$endif}
-
-  if (FMediaMode = vmmodeMCI) and not Assigned(FMedia) then
-  begin
-    FMedia := TMediaFrame.Create(Self);
-    with FMedia do
-    begin
-      Parent := Self;
-      Align := alClient;
-    end;
-  end;
-
-  HideMedia;
 end;
 
 procedure TATViewer.InitWeb;
@@ -1469,27 +1267,6 @@ begin
 end;
 {$endif}
 
-procedure TATViewer.FreeMedia;
-begin
-  if Assigned(FMedia) then
-    FreeAndNil(FMedia);
-
-  {$ifdef M6}
-  if Assigned(FWMP6) then
-  begin
-    FWMP6.Parent := nil;
-    FreeAndNil(FWMP6);
-  end;
-  {$endif}
-
-  {$ifdef M9}
-  if Assigned(FWMP9) then
-  begin
-    FWMP9.Parent := nil;
-    FreeAndNil(FWMP9);
-  end;
-  {$endif}
-end;
 
 procedure TATViewer.HideAll;
 var
@@ -1517,10 +1294,6 @@ begin
   if IsEmpty or (FMode <> vmodeMedia) or (not IsImage) then
     HideImage;
 
-  //Hide media control when non-media is to be loaded
-  if IsEmpty or (FMode <> vmodeMedia) or IsImage then
-    HideMedia;
-
   //Hide plugins when different mode is set
   {$ifdef WLX}
   if IsEmpty or (FMode <> vmodeWLX) then
@@ -1529,22 +1302,6 @@ begin
 
   FTextPanel.Hide;
   FTextPanel0.Hide;
-end;
-
-procedure TATViewer.HideMedia;
-begin
-  if Assigned(FMedia) then
-    FMedia.Hide;
-
-  {$ifdef M6}
-  if Assigned(FWMP6) then
-    FWMP6.Hide;
-  {$endif}
-
-  {$ifdef M9}
-  if Assigned(FWMP9) then
-    FWMP9.Hide;
-  {$endif}
 end;
 
 procedure TATViewer.HideEdit;
@@ -1573,14 +1330,13 @@ begin
 end;
 {$endif}
 
-function TATViewer.OpenStream(AStream: TStream; AMode: TATViewerMode; AMediaMode: TATViewerMediaMode): Boolean;
+function TATViewer.OpenStream(AStream: TStream; AMode: TATViewerMode): Boolean;
 begin
   Result := True;
   FSourceType := vfSrcNone;
 
   FStream := AStream;
   FMode := AMode;
-  FMediaMode := AMediaMode;
 
   FreeData;
   HideAll;
@@ -1600,10 +1356,7 @@ begin
     vmodeRTF:
       LoadRTFStream;
     vmodeMedia:
-      case AMediaMode of
-      vmmodeNone:
-        LoadImageStream;
-      end;
+      LoadImageStream;
     vmodeWeb:
       LoadWebStream;
   end;
@@ -1791,22 +1544,6 @@ begin
     if Assigned(FEdit) and (FEdit.Lines.Count > 0) then
       FEdit.Lines.Clear;
 
-    if Assigned(FMedia) and (FMedia.P.FileName <> '') then
-    begin
-      FMedia.P.Close;
-      FMedia.P.FileName := '';
-    end;
-
-    {$ifdef M6}
-    if Assigned(FWMP6) and (FWMP6.FileName <> '') then
-      FWMP6.FileName := '';
-    {$endif}
-
-    {$ifdef M9}
-    if Assigned(FWMP9) and (FWMP9.URL <> '') then
-      FWMP9.URL := '';
-    {$endif}
-
     if Assigned(FBrowser) then
       FreeAndNil(FBrowser);
 
@@ -1876,50 +1613,6 @@ begin
     ShowError(MsgViewerErrDetect);
   end;
 end;
-
-
-{$ifdef M6}
-procedure TATViewer.SetMediaFit_WMP6(WMP: TWMP);
-const
-  cWMPDisplaySize: array[Boolean] of MPDisplaySizeConstants =
-    (mpDefaultSize, mpFitToSize);
-begin
-  if Assigned(WMP) then
-    WMP.DisplaySize := cWMPDisplaySize[FMediaFit];
-end;
-
-procedure TATViewer.PlayStateChange_WMP6(Sender: TObject; OldState: Integer; NewState: Integer);
-begin
-  case NewState of
-    MediaPlayer_TLB.mpPlaying:
-      SetMediaPosition; //Needed for Vista
-    MediaPlayer_TLB.mpStopped:
-      PreparePlaybackEnd;
-  end;
-end;
-{$endif}
-
-{$ifdef M9}
-procedure TATViewer.SetMediaFit_WMP9(WMP: TWMP9);
-begin
-  if Assigned(WMP) then
-  try
-    with WMP do
-      (IDispatch(OleObject) as IWMPPlayer4).StretchToFit := FMediaFit;
-  except
-  end;
-end;
-
-procedure TATViewer.PlayStateChange_WMP9(Sender: TObject; NewState: Integer);
-begin
-  case NewState of
-    MediaPlayer9_TLB.wmppsPlaying:
-      SetMediaPosition;
-    MediaPlayer9_TLB.wmppsMediaEnded:
-      PreparePlaybackEnd;
-  end;
-end;
-{$endif}
 
 
 function TATViewer.ActualExtImages: AnsiString;
@@ -2489,96 +2182,6 @@ begin
       end;
     except
     end
-
-  else
-  //Load media clip
-  begin
-    FreeData;
-    FIsMedia := True;
-    MediaSyncVolume;
-    InitMedia;
-
-    if (FMediaMode = vmmodeMCI) and Assigned(FMedia) then
-     with FMedia do
-      try
-        try
-          DoCursorHours;
-          Show;
-          P.FileName := FFileNameWideToAnsi(FFileName);
-          P.Notify := True;
-          P.Open;
-          TrackBar1.Max := P.Length;
-          if CanSetFocus then
-            P.SetFocus;
-          if FMediaAutoPlay then
-            PlayPause;
-        finally
-          DoCursorDefault;
-        end;
-      except
-        on E: Exception do
-        begin
-          P.FileName := '';
-          ShowError(E.Message);
-        end;
-      end;
-
-    {$ifdef M6}
-    if (FMediaMode = vmmodeWMP64) and Assigned(FWMP6) then
-      try
-        with FWMP6 do
-        begin
-          VideoBorder3D := FBorderStyleInner <> bsNone;
-          ShowStatusBar := True;
-          ShowControls := FWMP6Controls;
-          ShowTracker := FWMP6Tracker;
-          Show;
-          if CanSetFocus then
-            SetFocus;
-
-          MediaVolume := FMediaVolume;
-          MediaMute := FMediaMute;
-          if FMediaLoop then
-            PlayCount := MaxInt
-          else
-            PlayCount := FMediaPlayCount;
-          AutoStart := FMediaAutoPlay;
-          SetMediaFit_WMP6(FWMP6);
-          SetMediaPosition;
-          FileName := FFileName;
-        end;
-      except
-        on E: Exception do
-          ShowError(E.Message);
-      end;
-    {$endif}
-
-    {$ifdef M9}
-    if (FMediaMode = vmmodeWMP9) and Assigned(FWMP9) then
-      try
-        with FWMP9 do
-        begin
-          Show;
-          if CanSetFocus then
-            SetFocus;
-
-          MediaVolume := FMediaVolume;
-          MediaMute := FMediaMute;
-          if FMediaLoop then
-            Settings.PlayCount := MaxInt
-          else
-            Settings.PlayCount := FMediaPlayCount;
-          Settings.AutoStart := FMediaAutoPlay;
-          SetMediaFit_WMP9(FWMP9);
-          SetMediaPosition;
-          URL := FFileName;
-        end;
-      except
-        on E: Exception do
-          ShowError(E.Message);
-      end;
-    {$endif}
-  end;
 end;
 
 
@@ -2847,16 +2450,6 @@ begin
   end;
 end;
 
-procedure TATViewer.SetMediaMode(AValue: TATViewerMediaMode);
-begin
-  if FMediaMode <> AValue then
-  begin
-    FreeData;
-    //FreeMedia; //FreeMedia commented: causes strange AV
-    FMediaMode := AValue;
-  end;
-end;
-
 function TATViewer.GetTextEncoding: TATEncoding;
 begin
   case FMode of
@@ -3084,27 +2677,6 @@ begin
   end;
 end;
 
-procedure TATViewer.SetMediaPosition;
-begin
-  {$ifdef M6}
-  if (FMediaMode = vmmodeWMP64) and Assigned(FWMP6) then
-    try
-      with FWMP6 do
-        (IDispatch(OleObject) as IOleInPlaceObject).SetObjectRects(BoundsRect, Rect(0, 0, 32767, 32767));
-    except
-    end;
-  {$endif}
-
-  {$ifdef M9}
-  if (FMediaMode = vmmodeWMP9) and Assigned(FWMP9) then
-    try
-      with FWMP9 do
-        (IDispatch(OleObject) as IOleInPlaceObject).SetObjectRects(BoundsRect, Rect(0, 0, 32767, 32767));
-    except
-    end;
-  {$endif}
-end;
-
 procedure TATViewer.SetMediaFit(AValue: Boolean);
 begin
   if GetMediaFit <> AValue then
@@ -3115,16 +2687,6 @@ begin
         begin
           if Assigned(FImageBox) then
             FImageBox.ImageFitToWindow := FMediaFit;
-
-          {$ifdef M6}
-          if (FMediaMode = vmmodeWMP64) and Assigned(FWMP6) then
-            SetMediaFit_WMP6(FWMP6);
-          {$endif}
-
-          {$ifdef M9}
-          if (FMediaMode = vmmodeWMP9) and Assigned(FWMP9) then
-            SetMediaFit_WMP9(FWMP9);
-          {$endif}
         end;
 
       {$ifdef WLX}
@@ -3402,21 +2964,6 @@ begin
           if Assigned(FImageBox) and FImageBox.Visible and FImageBox.Enabled then
             FImageBox.SetFocus;
         end
-        else
-        begin
-          if (FMediaMode = vmmodeMCI) and Assigned(FMedia) and FMedia.Visible then
-            FMedia.P.SetFocus;
-
-          {$ifdef M6}
-          if (FMediaMode = vmmodeWMP64) and Assigned(FWMP6) and FWMP6.Visible then
-            FWMP6.SetFocus;
-          {$endif}
-
-          {$ifdef M9}
-          if (FMediaMode = vmmodeWMP9) and Assigned(FWMP9) and FWMP9.Visible then
-            FWMP9.SetFocus;
-          {$endif}
-        end;
       end;
 
     vmodeWeb:
@@ -3438,7 +2985,6 @@ procedure TATViewer.ErrTimerTimer(Sender: TObject);
 begin
   FErrTimer.Enabled := False;
   FTextPanelErr.Visible := False;
-  SetMediaPosition;
 end;
 
 {$ifdef SEARCH}
@@ -3702,29 +3248,6 @@ begin
   end;
 end;
 
-procedure TATViewer.PreparePlaybackEnd;
-begin
-  if Assigned(FMediaEndTimer) then
-  begin
-    FMediaEndTimer.Interval := FMediaPlaylistPause;
-    FMediaEndTimer.Enabled := True;
-  end;
-end;
-
-procedure TATViewer.MediaEndTimerTimer;
-begin
-  if Assigned(FMediaEndTimer) then
-  begin
-    FMediaEndTimer.Enabled := False;
-    DoPlaybackEnd;
-  end;
-end;
-
-procedure TATViewer.DoPlaybackEnd;
-begin
-  if Assigned(FOnMediaPlaybackEnd) then
-    FOnMediaPlaybackEnd(Self);
-end;
 
 procedure TATViewer.DoWebDocumentComplete;
 begin
@@ -3798,34 +3321,6 @@ procedure TATViewer.DoLoadWebStream;
 begin
   if Assigned(FOnLoadWebStream) then
     FOnLoadWebStream(Self, FBrowser, FStream);
-end;
-
-procedure TATViewer.DoLoadMediaStream;
-begin
-end;
-
-procedure TATViewer.Resize;
-var R: TRect;
-begin
-  inherited;
-  SetMediaPosition;
-
-  if IsAX then
-  begin
-    if Assigned(FBinHex) then FBinHex.BoundsRect := ClientRect;
-    if Assigned(FImageBox) then FImageBox.BoundsRect := ClientRect;
-    if Assigned(FEdit) then FEdit.BoundsRect := ClientRect;
-    {$ifdef WLX}
-    if FMode = vmodeWLX then
-    begin
-      R := ClientRect;
-      with FPanelDemo do
-       if Visible then
-        if Align = alTop then Inc(R.Top, Height) else Dec(R.Bottom, Height);
-      FPlugins.ResizeActive(R);
-    end;
-    {$endif}
-  end;
 end;
 
 {$ifdef PRINT}
@@ -5099,136 +4594,6 @@ begin
   FBinHex.MaxClipboardDataSizeMb := AValue;
 end;
 
-procedure TATViewer.MediaPause;
-begin
-  if (FMediaMode = vmmodeMCI) and Assigned(FMedia) then
-    FMedia.PlayPause;
-
-  {$ifdef M6}
-  if (FMediaMode = vmmodeWMP64) and Assigned(FWMP6) then
-    try
-      with FWMP6 do
-        if PlayState = MediaPlayer_TLB.mpPlaying then
-          Pause
-        else
-          Play;
-    except
-    end;
-  {$endif}
-
-  {$ifdef M9}
-  if (FMediaMode = vmmodeWMP9) and Assigned(FWMP9) then
-    try
-      with FWMP9 do
-        if PlayState = MediaPlayer9_TLB.wmppsPlaying then
-          Controls.Pause
-        else
-          Controls.Play;
-    except
-    end;
-  {$endif}
-end;
-
-
-function TATViewer.GetMediaVolume: Integer;
-begin
-  Result:= FMediaVolume;
-
-  {$ifdef M6}
-  if (FMediaMode = vmmodeWMP64) and Assigned(FWMP6) then
-    try
-      with FWMP6 do
-        Result:= Vol_W6toA(Volume);
-    except
-    end;
-  {$endif}
-
-  {$ifdef M9}
-  if (FMediaMode = vmmodeWMP9) and Assigned(FWMP9) then
-    try
-      with FWMP9 do
-        Result:= Vol_W9toA(Settings.Volume);
-    except
-    end;
-  {$endif}
-end;
-
-procedure TATViewer.SetMediaVolume(AValue: Integer);
-begin
-  FMediaVolume:= AValue;
-
-  {$ifdef M6}
-  if (FMediaMode = vmmodeWMP64) and Assigned(FWMP6) then
-    try
-      with FWMP6 do
-        Volume:= Vol_AtoW6(FMediaVolume);
-    except
-    end;
-  {$endif}
-
-  {$ifdef M9}
-  if (FMediaMode = vmmodeWMP9) and Assigned(FWMP9) then
-    try
-      with FWMP9 do
-        Settings.Volume:= Vol_AtoW9(FMediaVolume);
-    except
-    end;
-  {$endif}
-end;
-
-function TATViewer.GetMediaMute: Boolean;
-begin
-  Result:= FMediaMute;
-
-  {$ifdef M6}
-  if (FMediaMode = vmmodeWMP64) and Assigned(FWMP6) then
-    try
-      with FWMP6 do
-        Result:= Mute;
-    except
-    end;
-  {$endif}
-
-  {$ifdef M9}
-  if (FMediaMode = vmmodeWMP9) and Assigned(FWMP9) then
-    try
-      with FWMP9 do
-        Result:= Settings.Mute;
-    except
-    end;
-  {$endif}
-end;
-
-procedure TATViewer.SetMediaMute(AValue: Boolean);
-begin
-  FMediaMute:= AValue;
-
-  {$ifdef M6}
-  if (FMediaMode = vmmodeWMP64) and Assigned(FWMP6) then
-    try
-      with FWMP6 do
-        Mute:= FMediaMute;
-    except
-    end;
-  {$endif}
-
-  {$ifdef M9}
-  if (FMediaMode = vmmodeWMP9) and Assigned(FWMP9) then
-    try
-      with FWMP9 do
-        Settings.Mute:= FMediaMute;
-    except
-    end;
-  {$endif}
-end;
-
-procedure TATViewer.MediaSyncVolume;
-begin
-  //Refresh the values of FMediaVolume/FMediaMute fields from the actual
-  //WMP's properties values (if WMP object initialized)
-  FMediaVolume := GetMediaVolume;
-  FMediaMute := GetMediaMute;
-end;
 
 procedure TATViewer.SetOnOptionsChange(AEvent: TNotifyEvent);
 begin
@@ -5334,30 +4699,6 @@ begin
 end;
 {$endif}
 
-procedure TATViewer.SetMediaLoop(AValue: Boolean);
-begin
-  FMediaLoop := AValue;
-
-  {$ifdef M6}
-  if (FMediaMode = vmmodeWMP64) and Assigned(FWMP6) then
-    with FWMP6 do
-      if FMediaLoop then
-        PlayCount := MaxInt
-      else
-        PlayCount := FMediaPlayCount;
-  {$endif}
-
-  {$ifdef M9}
-  if (FMediaMode = vmmodeWMP9) and Assigned(FWMP9) then
-    with FWMP9 do
-      if FMediaLoop then
-        Settings.PlayCount := MaxInt
-      else
-        Settings.PlayCount := FMediaPlayCount;
-  {$endif}
-end;
-
-
 procedure TATViewer.SetPosLine(ALine: Integer);
 begin
   case FMode of
@@ -5387,42 +4728,6 @@ begin
   end;
 end;
 
-
-function TATViewer.GetMediaShowControls: Boolean;
-begin
-  {$ifdef M6}
-  Result := FWMP6Controls;
-  {$else}
-  Result := True;
-  {$endif}
-end;
-
-procedure TATViewer.SetMediaShowControls(AValue: Boolean);
-begin
-  {$ifdef M6}
-  FWMP6Controls := AValue;
-  if Assigned(FWMP6) then
-    FWMP6.ShowControls := AValue;
-  {$endif}
-end;
-
-function TATViewer.GetMediaShowTracker: Boolean;
-begin
-  {$ifdef M6}
-  Result := FWMP6Tracker;
-  {$else}
-  Result := True;
-  {$endif}
-end;
-
-procedure TATViewer.SetMediaShowTracker(AValue: Boolean);
-begin
-  {$ifdef M6}
-  FWMP6Tracker := AValue;
-  if Assigned(FWMP6) then
-    FWMP6.ShowTracker := AValue;
-  {$endif}
-end;
 
 procedure TATViewer.TextURLClick(Sender: TObject; const S: AnsiString);
 begin
@@ -5500,33 +4805,6 @@ begin
   FBinHex.TextEnableSel := AValue;
 end;
 
-procedure TATViewer.LoadMediaStream;
-begin
-  Assert(FStream <> nil, 'Stream not assigned');
-  FreeData;
-
-  InitMedia;
-
-  {
-  if Assigned(FWMP6) then
-  begin
-    DoLoadMediaStream;
-    SetMediaFit_WMP6(FWMP6);
-    SetMediaPosition;
-    FWMP6.Show;
-  end;
-
-  if Assigned(FWMP9) then
-  begin
-    DoLoadMediaStream;
-    FWMP9.Settings.AutoStart := FMediaAutoPlay;
-    SetMediaFit_WMP9(FWMP9);
-    SetMediaPosition;
-    FWMP9.Show;
-  end;
-  }
-end;
-
 procedure TATViewer.SetTextColorBin(A: TColor);
 begin
   FTextPanel.Color := A;
@@ -5541,11 +4819,6 @@ begin
   {$ifdef WLX}
   FPlugins.InitParams2(Self.Handle, SExpandVars('%temp%\lsplugin.ini'));
   {$endif}
-end;
-
-function TATViewer.IsAX: boolean;
-begin
-  Result := ParentWindow <> 0;
 end;
 
 procedure TATViewer.SetBorderStyleInner(AValue: TBorderStyle);
