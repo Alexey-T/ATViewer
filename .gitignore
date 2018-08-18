@@ -1,0 +1,5 @@
+*.dcu
+*.dll
+*.exe
+*.cfg
+*.dof
