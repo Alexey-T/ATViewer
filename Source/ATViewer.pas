@@ -13,7 +13,6 @@
 {$I Compilers.inc}      //Compilers defines
 {$I ATViewerOptions.inc} //ATViewer options
 
-{$ifdef CE} {$R CE_VideoPlayerUI.res} {$endif}
 {$ifdef M6} {$define MW} {$endif}
 {$ifdef M9} {$define MW} {$endif}
 
@@ -25,7 +24,6 @@ uses
   Windows, Messages, SysUtils, Classes, Controls, Graphics,
   StdCtrls, ExtCtrls, ComCtrls, Forms, Menus, Jpeg,
   ATViewerMCI, ATxPanel,
-  {$ifdef CE} CE_VideoPlayer, {$endif}
   {$ifdef TNT} TntExtCtrls, {$endif}
   {$ifdef WLX} WLXProc, {$endif}
   {$ifdef M6} MediaPlayer_TLB, {$endif}
@@ -65,7 +63,6 @@ type
     vmmodeMCI
     {$ifdef M6} ,vmmodeWMP64 {$endif}
     {$ifdef M9} ,vmmodeWMP9 {$endif}
-    {$ifdef CE} ,vmmodeCE {$endif}
     );
 
 const
@@ -73,7 +70,6 @@ const
     '', 'MCI'
     {$ifdef M6} ,'Windows Media Player 6.4' {$endif}
     {$ifdef M9} ,'Windows Media Player 9.0' {$endif}
-    {$ifdef CE} ,'DirectX (Cubic Explorer)' {$endif}
     );
 
 const
@@ -162,9 +158,6 @@ type
     FEditMenuItemSep: TMenuItem;
     FErrTimer: TTimer;
     FMedia: TMediaFrame;
-    {$ifdef CE}
-    FMediaCE: TCEVideoPlayer;
-    {$endif}
 
     {$ifdef M6}
     FWMP6: TWMP;
@@ -1154,9 +1147,6 @@ begin
   FEditMenuItemSep := nil;
   FEditMenu := nil;
   FMedia := nil;
-  {$ifdef CE}
-  FMediaCE := nil;
-  {$endif}
 
   {$ifdef M6}
   FWMP6 := nil;
@@ -1409,29 +1399,8 @@ begin
       end;
     except
       ShowError(Format(MsgViewerErrInitControl, ['Windows Media Player 9 ActiveX']));
-      {$ifdef CE}
-      FMediaMode := vmmodeCE;
-      {$else}
       FMediaMode := vmmodeMCI;
-      {$endif}
     end;
-  {$endif}
-
-  {$ifdef CE}
-  if (FMediaMode = vmmodeCE) and not Assigned(FMediaCE) then
-  try
-    if Win32Platform <> VER_PLATFORM_WIN32_NT then
-      raise Exception.Create(''); //Win9x may hang
-    FMediaCE := TCEVideoPlayer.Create(Self);
-    with FMediaCE do
-    begin
-      Parent := Self;
-      Align := alClient;
-    end;
-  except
-    ShowError(Format(MsgViewerErrInitControl, ['DirectX player']));
-    FMediaMode := vmmodeMCI;
-  end;
   {$endif}
 
   if (FMediaMode = vmmodeMCI) and not Assigned(FMedia) then
@@ -1566,11 +1535,6 @@ procedure TATViewer.HideMedia;
 begin
   if Assigned(FMedia) then
     FMedia.Hide;
-
-  {$ifdef CE}
-  if Assigned(FMediaCE) then
-    FMediaCE.Hide;
-  {$endif}
 
   {$ifdef M6}
   if Assigned(FWMP6) then
@@ -1832,14 +1796,6 @@ begin
       FMedia.P.Close;
       FMedia.P.FileName := '';
     end;
-
-    {$ifdef CE}
-    if Assigned(FMediaCE) then
-    begin
-      FMediaCE.Controller.OnStopClick(nil);
-      FMediaCE.CloseFile;
-    end;
-    {$endif}
 
     {$ifdef M6}
     if Assigned(FWMP6) and (FWMP6.FileName <> '') then
@@ -2566,29 +2522,6 @@ begin
           ShowError(E.Message);
         end;
       end;
-
-    {$ifdef CE}
-    if (FMediaMode = vmmodeCE) and Assigned(FMediaCE) then
-      try
-        with FMediaCE do
-        begin
-          Show;
-          OpenFile(FFileName);
-          MediaVolume := FMediaVolume;
-          MediaMute := FMediaMute;
-          DSEngine.Loop := FMediaLoop;
-          if FMediaAutoPlay then
-          begin
-            Controller.OnPlayClick(nil);
-            if not OpenRes then
-              ShowError(MsgViewerErrMedia);
-          end;
-        end;
-      except
-        on E: Exception do
-          ShowError(E.Message);
-      end;
-    {$endif}
 
     {$ifdef M6}
     if (FMediaMode = vmmodeWMP64) and Assigned(FWMP6) then
@@ -5171,17 +5104,6 @@ begin
   if (FMediaMode = vmmodeMCI) and Assigned(FMedia) then
     FMedia.PlayPause;
 
-  {$ifdef CE}
-  if (FMediaMode = vmmodeCE) and Assigned(FMediaCE) then
-    with FMediaCE do
-    begin
-      if Paused then
-        Controller.OnPlayClick(nil)
-      else
-        Controller.OnPauseClick(nil);
-    end;
-  {$endif}
-
   {$ifdef M6}
   if (FMediaMode = vmmodeWMP64) and Assigned(FWMP6) then
     try
@@ -5212,11 +5134,6 @@ function TATViewer.GetMediaVolume: Integer;
 begin
   Result:= FMediaVolume;
 
-  {$ifdef CE}
-  if (FMediaMode = vmmodeCE) and Assigned(FMediaCE) then
-    Result := FMediaCE.Controller.Volume * 10 div 255;
-  {$endif}
-
   {$ifdef M6}
   if (FMediaMode = vmmodeWMP64) and Assigned(FWMP6) then
     try
@@ -5239,16 +5156,6 @@ end;
 procedure TATViewer.SetMediaVolume(AValue: Integer);
 begin
   FMediaVolume:= AValue;
-
-  {$ifdef CE}
-  if (FMediaMode = vmmodeCE) and Assigned(FMediaCE) then
-  begin
-    if AValue < 0 then AValue := 0;
-    if AValue > 10 then AValue := 10;
-    FMediaCE.Controller.Volume := AValue * 255 div 10;
-    FMediaCE.Controller.OnVolumeChanged(nil);
-  end;
-  {$endif}
 
   {$ifdef M6}
   if (FMediaMode = vmmodeWMP64) and Assigned(FWMP6) then
@@ -5273,11 +5180,6 @@ function TATViewer.GetMediaMute: Boolean;
 begin
   Result:= FMediaMute;
 
-  {$ifdef CE}
-  if (FMediaMode = vmmodeCE) and Assigned(FMediaCE) then
-    Result := FMediaCE.Controller.Muted;
-  {$endif}
-
   {$ifdef M6}
   if (FMediaMode = vmmodeWMP64) and Assigned(FWMP6) then
     try
@@ -5300,14 +5202,6 @@ end;
 procedure TATViewer.SetMediaMute(AValue: Boolean);
 begin
   FMediaMute:= AValue;
-
-  {$ifdef CE}
-  if (FMediaMode = vmmodeCE) and Assigned(FMediaCE) then
-  begin
-    FMediaCE.Controller.Muted := AValue;
-    FMediaCE.Controller.OnMutedChanged(nil);
-  end;
-  {$endif}
 
   {$ifdef M6}
   if (FMediaMode = vmmodeWMP64) and Assigned(FWMP6) then

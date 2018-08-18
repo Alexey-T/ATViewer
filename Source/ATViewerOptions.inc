@@ -1,21 +1,12 @@
-{$define AX}
-{$define AX_SW}
-
-//{$define MSO}
 {$define TNT}
 {$define GEX}
 {$define GIF}
 {$define PNG}
 {$define IJL}
 {$define JP2}
-{$define PREVIEW}
+//{$define PREVIEW}
 {$define IVIEW}
-{$define ANI}
 {$define TIFF}
-
-{$define CE}
-{$define M6}
-{$define M9}
 
 {$define WLX}
 {$define WLX_FORM}
