@@ -27,7 +27,6 @@ uses
   {$ifdef PRINT} Dialogs, {$endif}
   {$ifdef SEARCH} ATStreamSearch, {$endif}
   {$ifdef PREVIEW} ATPrintPreview, ATxPrintProc, {$endif}
-  {$ifdef MSO} DSOFramer_TLB, {$endif}
   ATBinHex,
   ATImageBox,
   ATxCodepages,
@@ -43,7 +42,6 @@ type
     vmodeRTF,
     vmodeMedia,
     vmodeWeb
-    {$ifdef MSO}, vmodeOffice {$endif}
     {$ifdef WLX}, vmodeWLX {$endif}
     );
 
@@ -122,9 +120,6 @@ type
     FErrTimer: TTimer;
 
     FBrowser: TWebBrowser;
-    {$ifdef MSO}
-    FOffice: TDsoFramerControl;
-    {$endif}
 
     {$ifdef WLX}
     FPlugins: TWlxPlugins;
@@ -233,11 +228,6 @@ type
     procedure InitEdit;
     procedure InitImage;
     procedure InitWeb;
-    {$ifdef MSO}
-    procedure InitOffice;
-    procedure LoadOffice;
-    procedure HideOffice;
-    {$endif}
     function CanSetFocus: Boolean;
     procedure SetBorderStyleInner(AValue: TBorderStyle);
     procedure SetMode(AValue: TATViewerMode);
@@ -475,7 +465,6 @@ type
     function ActualExtMedia: AnsiString;
     function ActualExtRTF: AnsiString;
     function ActualExtInet: AnsiString;
-    function ActualExtMso: AnsiString;
 
     procedure SetPosLine(ALine: Integer);
     function GetPosLine: Integer;
@@ -751,14 +740,10 @@ type
     ExtRTF,
     ExtImages,
     ExtMedia,
-    ExtInet,
-    ExtOoo,
-    ExtMso: AnsiString;
+    ExtInet: AnsiString;
     ExtImagesUse,
     ExtMediaUse,
-    ExtInetUse,
-    ExtOooUse,
-    ExtMsoUse: Boolean;
+    ExtInetUse: Boolean;
   end;
 
 var
@@ -1239,34 +1224,6 @@ begin
   end;
 end;
 
-{$ifdef MSO}
-procedure TATViewer.InitOffice;
-begin
-  if not Assigned(FOffice) then
-  try
-    FOffice := TDsoFramerControl.Create(Self);
-  except
-    {MsgError}ShowError(MsgViewerErrInitOffice);
-  end;
-  if Assigned(FOffice) then
-    with FOffice do
-    try
-      Parent := Self;
-      Align := alClient;
-      if FBorderStyleInner = bsNone then
-        BorderStyle := dsoBorderNone
-      else
-        BorderStyle := dsoBorder3D;
-      Menubar := False;
-      Titlebar := False;
-      Toolbars := False;
-      ActivationPolicy := 1; //Needed to draw correctly
-    except
-      {MsgError}ShowError(MsgViewerErrInitOffice);
-    end;
-end;
-{$endif}
-
 
 procedure TATViewer.HideAll;
 var
@@ -1284,11 +1241,6 @@ begin
 
   if IsEmpty or (FMode <> vmodeWeb) then
     HideWeb;
-
-  {$ifdef MSO}
-  if IsEmpty or (FMode <> vmodeOffice) then
-    HideOffice;
-  {$endif}
 
   //Hide image control when non-image is to be loaded
   if IsEmpty or (FMode <> vmodeMedia) or (not IsImage) then
@@ -1322,13 +1274,6 @@ begin
     FBrowser.Hide;
 end;
 
-{$ifdef MSO}
-procedure TATViewer.HideOffice;
-begin
-  if Assigned(FOffice) then
-    FOffice.Hide;
-end;
-{$endif}
 
 function TATViewer.OpenStream(AStream: TStream; AMode: TATViewerMode): Boolean;
 begin
@@ -1438,10 +1383,6 @@ begin
         LoadMedia({$ifdef OPP}APicture{$else}nil{$endif});
       vmodeWeb:
         LoadWeb;
-      {$ifdef MSO}
-      vmodeOffice:
-        LoadOffice;
-      {$endif}
       {$ifdef WLX}
       vmodeWLX:
         begin
@@ -1546,15 +1487,6 @@ begin
 
     if Assigned(FBrowser) then
       FreeAndNil(FBrowser);
-
-    {$ifdef MSO}
-    if Assigned(FOffice) and AFreeOffice then
-    begin
-      FOffice.Close;
-      FreeAndNil(FOffice);
-      //DoOfficeUnload;
-    end;
-    {$endif}
   end;
 
   FIsImage := False;
@@ -1589,11 +1521,6 @@ begin
 
   if (not (vmodeWeb in FModesDisabledForDetect)) and
     SFileExtensionMatch(FFileName, ActualExtInet) then FMode := vmodeWeb else
-
-  {$ifdef MSO}
-  if (not (vmodeOffice in FModesDisabledForDetect)) and
-    SFileExtensionMatch(FFileName, ActualExtMso) then FMode := vmodeOffice else
-  {$endif}
 
   //Test for FModesDisabledForDetect is in DetectTextAndUnicode
   if FTextDetect and DetectTextAndUnicode then begin end else
@@ -1638,8 +1565,6 @@ begin
       Result := ExtInet
     else
       Result := '';
-    if ExtOooUse then
-      Result := Result + ',' + ExtOoo;
   end;
 end;
 
@@ -1665,17 +1590,6 @@ begin
   begin
     if ExtMediaUse then
       Result := ExtMedia
-    else
-      Result := '';
-  end;
-end;
-
-function TATViewer.ActualExtMso: AnsiString;
-begin
-  with ATViewerOptions do
-  begin
-    if ExtMsoUse then
-      Result := ExtMso
     else
       Result := '';
   end;
@@ -2382,23 +2296,6 @@ begin
     end;
 end;
 
-{$ifdef MSO}
-procedure TATViewer.LoadOffice;
-begin
-  Assert(FFileName <> '', 'FileName not assigned');
-  FreeData(True{AFreeImage}, False{AFreeOffice});
-
-  InitOffice;
-  if Assigned(FOffice) then
-  try
-    FOffice.Open(FFileName, True{RO});
-    FOffice.Show;
-  except
-    on E: Exception do
-      ShowError(E.Message);
-  end;
-end;
-{$endif}
 
 procedure TATViewer.SetMode(AValue: TATViewerMode);
 begin
@@ -2436,10 +2333,6 @@ begin
         LoadMedia;
       vmodeWeb:
         LoadWeb;
-      {$ifdef MSO}
-      vmodeOffice:
-        LoadOffice;
-      {$endif}
       {$ifdef WLX}
       vmodeWLX:
         LoadWLX;
@@ -3376,7 +3269,7 @@ begin
   if Assigned(FBrowser) then
     if FBrowser.Visible and (FMode = vmodeWeb) then begin
       if (not TextEnableSel) and
-        (not SFileExtensionMatch(FFileName, ATViewerOptions.ExtMso + ',' + ATViewerOptions.ExtOoo + ',pdf')) then
+        (not SFileExtensionMatch(FFileName, 'pdf')) then
       begin
         FBrowser.OleObject.document.parentWindow.execScript(
           'document.oncontextmenu='+
@@ -3550,12 +3443,6 @@ begin
       if Assigned(FBrowser) then
         WB_ShowPrintDialog(FBrowser);
 
-    {$ifdef MSO}
-    vmodeOffice:
-      if Assigned(FOffice) then
-        FOffice.ShowDialog(dsoDialogPrint);
-    {$endif}
-
     {$ifdef WLX}
     vmodeWLX:
       FPlugins.PrintActive(Rect(
@@ -3649,14 +3536,6 @@ begin
         if Assigned(FBrowser) then
           WB_ShowPrintPreview(FBrowser);
       end;
-
-    {$ifdef MSO}
-    vmodeOffice:
-      begin
-        if Assigned(FOffice) then
-          FOffice.PrintPreview;
-      end;
-    {$endif}
   end;
 end;
 {$endif}
@@ -3672,13 +3551,6 @@ begin
       if Assigned(FBrowser) then
         WB_ShowPageSetup(FBrowser);
     end;
-    {$ifdef MSO}
-    vmodeOffice:
-    begin
-      if Assigned(FOffice) then
-        FOffice.ShowDialog(dsoDialogPageSetup);
-    end;
-    {$endif}
     else
     begin
       InitDialogs;
@@ -4833,14 +4705,6 @@ begin
   if Assigned(FBrowser) then
     if WebBrowserSafe then
       WB_Set3DBorderStyle(FBrowser, FBorderStyleInner <> bsNone);
-
-  {$ifdef MSO}
-  if Assigned(FOffice) then
-    if FBorderStyleInner = bsNone then
-      FOffice.BorderStyle := dsoBorderNone
-    else
-      FOffice.BorderStyle := dsoBorder3D;
-  {$endif}
 end;
 
 function TATViewer.GetTextLineSpacing: Integer;

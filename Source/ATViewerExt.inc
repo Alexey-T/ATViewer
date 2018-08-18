@@ -26,18 +26,9 @@ begin
       + ',pdf,swf,xps' //Acrobat, Flash, MS XPS
       + ',shtml,xhtml,shtm,stm,php,php2,php3,asp,pl,vrml,plg,htt,htx'; //MSIE
 
-    ExtMso :=
-      'doc,dot,docx,docm,xls,xlt,xlsx,xlsm,xlsb,ppt,pptx,pptm,pps,ppz,pot,wbk,wps';
-
-    ExtOoo :=
-      'odt,ods,odp,odg,odf,odb,odm,ott,oth,ots,otg,otp' //OOo 2.x
-      + ',sxw,sxc,sxg,sxi,sxd,sxm,stw,stc,std,sti'; //OOo 1.x
-
     ExtImagesUse := True;
     ExtMediaUse := True;
     ExtInetUse := True;
-    ExtOooUse := True;
-    ExtMsoUse := True;
   end;
 end;
 
