@@ -62,7 +62,6 @@ contains
   ATxSHex in '..\Source\ATxSHex.pas',
   ATxSProc in '..\Source\ATxSProc.pas',
   ATxWBProc in '..\Source\ATxWBProc.pas',
-  nmzIrfanXnView in '..\Source\nmzIrfanXnView.pas',
   WebBrowser4_TLB in '..\Source\WebBrowser4_TLB.pas',
   WLXPlugin in '..\Source\WLXPlugin.pas';
 
