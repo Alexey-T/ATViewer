@@ -11,7 +11,7 @@
 {$define WLX_FORM}
 //{$define WLX_UNLOAD}
 
-{$define IE4X}
+//{$define IE4X}
 {$define NOTIF}
 //{$define PRINT}
 {$define SEARCH}

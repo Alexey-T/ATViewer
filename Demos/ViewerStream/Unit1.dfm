@@ -69,9 +69,6 @@ object Form1: TForm1
       TextFontGutter.Height = -12
       TextFontGutter.Name = 'Courier New'
       TextFontGutter.Style = []
-      MediaLoop = False
-      MediaShowControls = True
-      MediaShowTracker = True
     end
   end
   object GroupBox2: TGroupBox

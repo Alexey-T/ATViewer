@@ -211,7 +211,7 @@ end;
 
 procedure TForm1.bMediaClick(Sender: TObject);
 begin
-  ATViewer1.OpenStream(MS, vmodeMedia, vmmodeWMP64);
+  ATViewer1.OpenStream(MS, vmodeMedia);
 end;
 
 end.
