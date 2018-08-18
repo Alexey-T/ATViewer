@@ -52,12 +52,6 @@ type
     chkTextAutoCopy: TCheckBox;
     edTextTabSize: TSpinEdit;
     edTextLength: TSpinEdit;
-    boxMedia: TGroupBox;
-    labMediaPlayCount: TLabel;
-    labMediaMode: TLabel;
-    chkMediaStart: TCheckBox;
-    edMediaCnt: TSpinEdit;
-    edMediaMode: TComboBox;
     boxTextFont: TGroupBox;
     labTextFont1: TLabel;
     btnTextFont: TButton;
@@ -96,7 +90,6 @@ type
     labIcon: TLabel;
     Panel1: TPanel;
     Image1: TImage;
-    chkMediaLoop: TCheckBox;
     chkTextWrap: TCheckBox;
     chkTextNonPrint: TCheckBox;
     chkImageFit: TCheckBox;
@@ -108,7 +101,6 @@ type
     edImages: TEdit;
     edMedia: TEdit;
     edInet: TEdit;
-    edRTF: TEdit;
     btnTextOptions: TButton;
     btnImageOptions: TButton;
     btnGutterOptions: TButton;
@@ -134,19 +126,14 @@ type
     btnClearRecent: TButton;
     btnClearSearch: TButton;
     chkShowCfm: TCheckBox;
-    edMSO: TEdit;
     Label2: TLabel;
-    edOOo: TEdit;
-    chkOOo: TCheckBox;
     chkShowConv: TCheckBox;
     edConv: TEdit;
-    chkMso: TCheckBox;
     chkImages: TCheckBox;
     chkMedia: TCheckBox;
     chkInet: TCheckBox;
     labConv: TLabel;
     labText: TLabel;
-    labRTF: TLabel;
     chkSaveFile: TCheckBox;
     chkSearchNoCfm: TCheckBox;
     boxHMisc: TGroupBox;
@@ -158,8 +145,6 @@ type
     edHMedia: TSpinEdit;
     chkHWeb: TCheckBox;
     edHWeb: TSpinEdit;
-    chkHOffice: TCheckBox;
-    edHOffice: TSpinEdit;
     chkHRtf: TCheckBox;
     edHRtf: TSpinEdit;
     chkHPlug: TCheckBox;
@@ -190,7 +175,6 @@ type
     procedure chkTextReloadClick(Sender: TObject);
     procedure btnTextColorHexBackClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure edMediaModeChange(Sender: TObject);
     procedure btnImageOptionsClick(Sender: TObject);
     procedure chkTextOemSpecialClick(Sender: TObject);
     procedure btnTextColorGutterClick(Sender: TObject);
@@ -412,7 +396,6 @@ begin
   chkHImage.Caption:= chkImages.Caption;
   chkHMedia.Caption:= chkMedia.Caption;
   chkHWeb.Caption:= chkInet.Caption;
-  chkHOffice.Caption:= chkMso.Caption;
   chkHPlug.Caption:= MsgStrip(MsgCaption(137))+':';
   boxHMisc.Caption:= ' '+MsgCaption(811)+' ';
   chkIgnore.Caption:= MsgCaption(812);
@@ -425,7 +408,6 @@ begin
   chkTextWidthFitClick(Self);
   chkTextOemSpecialClick(Self);
   chkTextReloadClick(Self);
-  edMediaModeChange(Self);
   chkHTextClick(Self);
 
   //List languages
@@ -636,28 +618,9 @@ end;
 
 
 procedure TFormViewOptions.FormCreate(Sender: TObject);
-var
-  M: TATViewerMediaMode;
 begin
   ffImgList:= nil;
   ffToolbar:= nil;
-
-  with edMediaMode do
-    begin
-    Items.Clear;
-    for M:= Low(TATViewerMediaMode) to High(TATViewerMediaMode) do
-      if M <> Low(TATViewerMediaMode) then
-        Items.Add(cATViewerMediaModeNames[M]);
-    Enabled:= Items.Count > 0;
-    end;
-end;
-
-procedure TFormViewOptions.edMediaModeChange(Sender: TObject);
-begin
-  {$ifdef MEDIA_PLAYER}
-  edMediaCnt.Enabled:= edMediaMode.ItemIndex > 0;
-  labMediaPlayCount.Enabled:= edMediaCnt.Enabled;
-  {$endif}
 end;
 
 procedure TFormViewOptions.btnImageOptionsClick(Sender: TObject);
@@ -877,7 +840,6 @@ begin
   edHImage.Enabled:= chkHImage.Checked;
   edHMedia.Enabled:= chkHMedia.Checked;
   edHWeb.Enabled:= chkHWeb.Checked;
-  edHOffice.Enabled:= chkHOffice.Checked;
   edHRtf.Enabled:= chkHRtf.Checked;
   edHPlug.Enabled:= chkHPlug.Checked;
 end;

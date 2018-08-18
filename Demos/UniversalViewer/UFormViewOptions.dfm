@@ -50,7 +50,7 @@ object FormViewOptions: TFormViewOptions
     Top = 8
     Width = 553
     Height = 349
-    ActivePage = tabShortcuts
+    ActivePage = tabIntf
     TabOrder = 0
     object tabIntf: TTabSheet
       Caption = 'Interface'
@@ -238,14 +238,6 @@ object FormViewOptions: TFormViewOptions
           Caption = 'labText'
           FocusControl = edText
         end
-        object labRTF: TLabel
-          Left = 8
-          Top = 162
-          Width = 33
-          Height = 13
-          Caption = 'labRTF'
-          FocusControl = edRTF
-        end
         object edText: TEdit
           Left = 120
           Top = 16
@@ -274,49 +266,12 @@ object FormViewOptions: TFormViewOptions
           Height = 21
           TabOrder = 6
         end
-        object edRTF: TEdit
-          Left = 120
-          Top = 160
-          Width = 233
-          Height = 21
-          TabOrder = 11
-        end
-        object edMSO: TEdit
-          Left = 120
-          Top = 136
-          Width = 233
-          Height = 21
-          TabOrder = 10
-        end
-        object edOOo: TEdit
-          Left = 120
-          Top = 112
-          Width = 233
-          Height = 21
-          TabOrder = 8
-        end
-        object chkOOo: TCheckBox
-          Left = 16
-          Top = 114
-          Width = 97
-          Height = 17
-          Caption = '&OpenOffice:'
-          TabOrder = 7
-        end
         object edConv: TEdit
           Left = 120
           Top = 184
           Width = 233
           Height = 21
-          TabOrder = 12
-        end
-        object chkMso: TCheckBox
-          Left = 8
-          Top = 138
-          Width = 112
-          Height = 17
-          Caption = 'M&S Office:'
-          TabOrder = 9
+          TabOrder = 7
         end
         object chkImages: TCheckBox
           Left = 8
@@ -347,7 +302,7 @@ object FormViewOptions: TFormViewOptions
           Top = 208
           Width = 233
           Height = 21
-          TabOrder = 14
+          TabOrder = 9
         end
         object chkIgnore: TCheckBox
           Left = 8
@@ -355,7 +310,7 @@ object FormViewOptions: TFormViewOptions
           Width = 112
           Height = 17
           Caption = 'Ignore:'
-          TabOrder = 13
+          TabOrder = 8
         end
       end
       object btnTextOptions: TButton
@@ -720,67 +675,6 @@ object FormViewOptions: TFormViewOptions
     object tabMedia: TTabSheet
       Caption = 'Multimedia'
       ImageIndex = 4
-      object boxMedia: TGroupBox
-        Left = 280
-        Top = 4
-        Width = 257
-        Height = 113
-        Caption = 'Media'
-        TabOrder = 1
-        object labMediaPlayCount: TLabel
-          Left = 56
-          Top = 84
-          Width = 50
-          Height = 13
-          Caption = 'Play count'
-          FocusControl = edMediaCnt
-        end
-        object labMediaMode: TLabel
-          Left = 8
-          Top = 20
-          Width = 49
-          Height = 13
-          Caption = 'Interface:'
-          FocusControl = edMediaMode
-        end
-        object chkMediaStart: TCheckBox
-          Left = 8
-          Top = 44
-          Width = 246
-          Height = 17
-          Caption = 'Auto-start playback'
-          TabOrder = 1
-        end
-        object edMediaCnt: TSpinEdit
-          Left = 8
-          Top = 82
-          Width = 41
-          Height = 22
-          AutoSize = False
-          MaxValue = 10000
-          MinValue = 1
-          TabOrder = 3
-          Value = 1
-        end
-        object edMediaMode: TComboBox
-          Left = 88
-          Top = 16
-          Width = 161
-          Height = 21
-          Style = csDropDownList
-          ItemHeight = 13
-          TabOrder = 0
-          OnChange = edMediaModeChange
-        end
-        object chkMediaLoop: TCheckBox
-          Left = 8
-          Top = 60
-          Width = 246
-          Height = 17
-          Caption = 'Loop playback'
-          TabOrder = 2
-        end
-      end
       object boxImage: TGroupBox
         Left = 8
         Top = 4
@@ -898,11 +792,11 @@ object FormViewOptions: TFormViewOptions
       end
       object boxInternet: TGroupBox
         Left = 280
-        Top = 120
+        Top = 8
         Width = 257
         Height = 53
         Caption = 'Internet'
-        TabOrder = 2
+        TabOrder = 1
         object chkWebOffline: TCheckBox
           Left = 8
           Top = 20
@@ -1065,7 +959,7 @@ object FormViewOptions: TFormViewOptions
         Left = 8
         Top = 4
         Width = 305
-        Height = 125
+        Height = 133
         Caption = 'Misc'
         TabOrder = 0
         object labViewerTitle: TLabel
@@ -1195,9 +1089,9 @@ object FormViewOptions: TFormViewOptions
       end
       object boxHMisc: TGroupBox
         Left = 8
-        Top = 132
+        Top = 140
         Width = 305
-        Height = 185
+        Height = 165
         Caption = 'Use custom height'
         TabOrder = 1
         object chkHText: TCheckBox
@@ -1281,27 +1175,6 @@ object FormViewOptions: TFormViewOptions
           MaxValue = 2000
           MinValue = 40
           TabOrder = 7
-          Value = 40
-          OnKeyDown = edHTextKeyDown
-        end
-        object chkHOffice: TCheckBox
-          Left = 8
-          Top = 160
-          Width = 130
-          Height = 17
-          Caption = 'Office'
-          TabOrder = 12
-          OnClick = chkHTextClick
-        end
-        object edHOffice: TSpinEdit
-          Left = 144
-          Top = 156
-          Width = 50
-          Height = 22
-          Increment = 20
-          MaxValue = 2000
-          MinValue = 40
-          TabOrder = 13
           Value = 40
           OnKeyDown = edHTextKeyDown
         end

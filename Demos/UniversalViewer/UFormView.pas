@@ -3,7 +3,6 @@
 {$I ATStreamSearchOptions.inc}
 {$I Compilers.inc}
 {$I ViewerOptions.inc}
-{$ifndef NAV} {$undef MSO} {$endif}
 
 unit UFormView;
 
@@ -21,8 +20,8 @@ uses
   XPMan, TntExtCtrls;
 
 const
-  cViewerVersion = '5.7.3.0';
-  cViewerDate = 'nov 2012';
+  cViewerVersion = '5.8.0';
+  cViewerDate = 'aug 2018';
 
 const
   cToolbarListDefault =
@@ -233,8 +232,6 @@ type
     mnuBarRecentClear: TMenuItem;
     XPManifest1: TXPManifest;
     TimerWM: TTimer;
-    mnuViewMode9: TMenuItem;
-    mnuModes9: TMenuItem;
     mnuFileLink: TMenuItem;
     N1: TMenuItem;
     mnuMode: TMenuItem;
@@ -316,9 +313,6 @@ type
     procedure mnuViewImageFitWindowClick(Sender: TObject);
     procedure mnuViewShowNavClick(Sender: TObject);
     procedure mnuHelpWebPluginsClick(Sender: TObject);
-    procedure mnuViewMediaVolumeUpClick(Sender: TObject);
-    procedure mnuViewMediaVolumeDownClick(Sender: TObject);
-    procedure mnuViewMediaVolumeMuteClick(Sender: TObject);
     procedure mnuOptionsEditIniHistoryClick(Sender: TObject);
     procedure mnuFileRenameClick(Sender: TObject);
     procedure mnuHelpContentsClick(Sender: TObject);
@@ -352,12 +346,10 @@ type
     procedure mnuUserTool7Click(Sender: TObject);
     procedure mnuUserTool8Click(Sender: TObject);
     procedure mnuViewImageShowEXIFClick(Sender: TObject);
-    procedure mnuViewMediaLoopClick(Sender: TObject);
     procedure mnuEditPasteClick(Sender: TObject);
     procedure mnuFileEmailClick(Sender: TObject);
     procedure mnuFileCopyFNClick(Sender: TObject);
     procedure TimerWMTimer(Sender: TObject);
-    procedure mnuViewMode9Click(Sender: TObject);
     procedure mnuFileLinkClick(Sender: TObject);
     procedure TntFormKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
@@ -631,7 +623,7 @@ type
     procedure WMCommand(var Message: TMessage); message WM_COMMAND; //To process WM_COMMAND sent by plugins
     procedure WMActivate(var Msg: TWMActivate); message WM_ACTIVATE; //To focus active embedded control
     {$ifdef NAV}
-    procedure WMCopyData(var Msg: TWMCopyData); message WM_COPYDATA;
+    //procedure WMCopyData(var Msg: TWMCopyData); message WM_COPYDATA;
     procedure WMDisp(var Msg: TMessage); message EM_DISPLAYBAND;
     procedure WMMove(var Msg: TMessage); message WM_MOVE;
     {$endif}
@@ -665,9 +657,6 @@ uses
   {$endif}
   {$ifdef EXIF}
   UFormViewEXIF,
-  {$endif}
-  {$ifdef MSO}
-  UFormView_Reg,
   {$endif}
   {$ifdef NAV}
   UFormView_Op,
@@ -755,14 +744,6 @@ begin
     Result:= cModesNumbered[N]
   else
     Result:= Default;
-end;
-
-function IntegerToMediaMode(N: integer): TATViewerMediaMode;
-begin
-  if (N >= 1 {Skip vmmodeNone}) and (N <= Ord(High(TATViewerMediaMode))) then
-    Result:= TATViewerMediaMode(N)
-  else
-    Result:= High(TATViewerMediaMode);
 end;
 
 //----------------------------------------------
@@ -1190,7 +1171,6 @@ begin
   FUMedia:= FIni.ReadBool(csOpt, ccUMedia, false);
   FUWeb:= FIni.ReadBool(csOpt, ccUWeb, false);
   FUOffice:= FIni.ReadBool(csOpt, ccUOffice, false);
-  FURtf:= FIni.ReadBool(csOpt, ccURtf, false);
   FUPlug:= FIni.ReadBool(csOpt, ccUPlug, false);
 
   FHText:= FIni.ReadInteger(csOpt, ccHText, 300);
@@ -1198,7 +1178,6 @@ begin
   FHMedia:= FIni.ReadInteger(csOpt, ccHMedia, 300);
   FHWeb:= FIni.ReadInteger(csOpt, ccHWeb, 300);
   FHOffice:= FIni.ReadInteger(csOpt, ccHOffice, 300);
-  FHRtf:= FIni.ReadInteger(csOpt, ccHRtf, 300);
   FHPlug:= FIni.ReadInteger(csOpt, ccHPlug, 300);
 
   FSaveRecents:= FIni.ReadBool(csOpt, ccOSaveRecents, FSaveRecents);
@@ -1295,9 +1274,6 @@ begin
     TextAutoReloadFollowTail:= FIni.ReadBool(csText, ccOTextAutoReloadTail, TextAutoReloadFollowTail);
     TextAutoCopy:= FIni.ReadBool(csText, ccOTextAutoCopy, TextAutoCopy);
 
-    MediaMode:= IntegerToMediaMode(FIni.ReadInteger(csMedia, ccOMediaMode, integer(High(TATViewerMediaMode))));
-    MediaAutoPlay:= FIni.ReadBool(csMedia, ccOMediaAutoPlay, MediaAutoPlay);
-    MediaPlayCount:= FIni.ReadInteger(csMedia, ccOMediaPlayCount, MediaPlayCount);
     ImageColor:= FIni.ReadInteger(csMedia, ccOImageColor, ImageColor);
     ImageResample:= FIni.ReadBool(csMedia, ccOImageResample, true);
     ImageTransparent:= FIni.ReadBool(csMedia, ccOImageTransparent, false);
@@ -1320,8 +1296,6 @@ begin
       //  ExtImages:= ExtImages + ',jp2,jpc,pnm,ras,mis';
       ExtMedia:= FIni.ReadString(csExt, ccOExtMedia, ExtMedia);
       ExtInet:= FIni.ReadString(csExt, ccOExtInet, ExtInet);
-      ExtMso:= FIni.ReadString(csExt, ccOExtMso, ExtMso);
-      ExtOoo:= FIni.ReadString(csExt, ccOExtOoo, ExtOoo);
       ExtRTF:= FIni.ReadString(csExt, ccOExtRTF, ExtRTF);
       FExtConv:= FIni.ReadString(csExt, ccOExtConv, FExtConv);
       FExtIgnore:= FIni.ReadString(csExt, ccOExtIgnore, FExtIgnore);
@@ -1331,8 +1305,6 @@ begin
       ExtImagesUse:= FIni.ReadBool(csExt, ccOExtImagesUse, ExtImagesUse);
       ExtMediaUse:= FIni.ReadBool(csExt, ccOExtMediaUse, ExtMediaUse);
       ExtInetUse:= FIni.ReadBool(csExt, ccOExtInetUse, ExtInetUse);
-      ExtOooUse:= FIni.ReadBool(csExt, ccOExtOooUse, ExtOooUse);
-      ExtMsoUse:= {$ifdef MSO} FIni.ReadBool(csExt, ccOExtMsoUse, ExtMsoUse) {$else} false {$endif};
       end;
 
     PluginsHighPriority:= FIni.ReadBool(csOpt, ccPPrior, PluginsHighPriority);
@@ -1357,12 +1329,6 @@ begin
     end;
 
   //ViewerHistory.ini
-  with Viewer do
-    begin
-    MediaLoop:= FIniHist.ReadBool(csOpt, ccOMediaLoop, MediaLoop);
-    MediaMute:= FIniHist.ReadBool(csOpt, ccOMediaMute, MediaMute);
-    MediaVolume:= FIniHist.ReadInteger(csOpt, ccOMediaVolume, MediaVolume);
-    end;
   FGotoMode:= TViewerGotoMode(FIniHist.ReadInteger(csOpt, ccOGotoMode, integer(FGotoMode)));
   OpenDialog1.InitialDir:= UTF8Decode(FIniHist.ReadString(csWindow, ccOLastFolder, ''));
   SaveDialog1.InitialDir:= UTF8Decode(FIniHist.ReadString(csWindow, ccOLastFolderSave, ''));
@@ -1632,9 +1598,6 @@ begin
     FIniSave.WriteBool(csOpt, ccOWebAcceptAll, WebAcceptAllFiles);
 
     //ViewerHistory
-    FIniHistSave.WriteBool(csOpt, ccOMediaLoop, MediaLoop);
-    FIniHistSave.WriteBool(csOpt, ccOMediaMute, MediaMute);
-    FIniHistSave.WriteInteger(csOpt, ccOMediaVolume, MediaVolume);
     FIniHistSave.WriteInteger(csOpt, ccOGotoMode, integer(FGotoMode));
     end;
 
@@ -1691,7 +1654,6 @@ begin
   FIniSave.WriteBool(csOpt, ccUMedia, FUMedia);
   FIniSave.WriteBool(csOpt, ccUWeb, FUWeb);
   FIniSave.WriteBool(csOpt, ccUOffice, FUOffice);
-  FIniSave.WriteBool(csOpt, ccURtf, FURtf);
   FIniSave.WriteBool(csOpt, ccUPlug, FUPlug);
 
   FIniSave.WriteInteger(csOpt, ccHText, FHText);
@@ -1699,7 +1661,6 @@ begin
   FIniSave.WriteInteger(csOpt, ccHMedia, FHMedia);
   FIniSave.WriteInteger(csOpt, ccHWeb, FHWeb);
   FIniSave.WriteInteger(csOpt, ccHOffice, FHOffice);
-  FIniSave.WriteInteger(csOpt, ccHRtf, FHRtf);
   FIniSave.WriteInteger(csOpt, ccHPlug, FHPlug);
 
   FIniSave.WriteBool(csOpt, ccOSaveRecents, FSaveRecents);
@@ -1760,9 +1721,6 @@ begin
     FIniSave.WriteBool(csText, ccOTextAutoReloadTail, TextAutoReloadFollowTail);
     FIniSave.WriteBool(csText, ccOTextAutoCopy, TextAutoCopy);
 
-    FIniSave.WriteInteger(csMedia, ccOMediaMode, integer(MediaMode));
-    FIniSave.WriteBool(csMedia, ccOMediaAutoPlay, MediaAutoPlay);
-    FIniSave.WriteInteger(csMedia, ccOMediaPlayCount, MediaPlayCount);
     FIniSave.WriteInteger(csMedia, ccOImageColor, ImageColor);
 
     FIniSave.WriteBool(csMedia, ccOMediaFit, MediaFit);
@@ -1779,8 +1737,6 @@ begin
     FIniSave.WriteString(csExt, ccOExtImages, ATViewerOptions.ExtImages);
     FIniSave.WriteString(csExt, ccOExtMedia, ATViewerOptions.ExtMedia);
     FIniSave.WriteString(csExt, ccOExtInet, ATViewerOptions.ExtInet);
-    FIniSave.WriteString(csExt, ccOExtMso, ATViewerOptions.ExtMso);
-    FIniSave.WriteString(csExt, ccOExtOoo, ATViewerOptions.ExtOoo);
     FIniSave.WriteString(csExt, ccOExtRTF, ATViewerOptions.ExtRTF);
     FIniSave.WriteString(csExt, ccOExtConv, FExtConv);
     FIniSave.WriteString(csExt, ccOExtIgnore, FExtIgnore);
@@ -1789,8 +1745,6 @@ begin
     FIniSave.WriteBool(csExt, ccOExtImagesUse, ATViewerOptions.ExtImagesUse);
     FIniSave.WriteBool(csExt, ccOExtMediaUse, ATViewerOptions.ExtMediaUse);
     FIniSave.WriteBool(csExt, ccOExtInetUse, ATViewerOptions.ExtInetUse);
-    FIniSave.WriteBool(csExt, ccOExtOooUse, ATViewerOptions.ExtOooUse);
-    FIniSave.WriteBool(csExt, ccOExtMsoUse, ATViewerOptions.ExtMsoUse);
 
     {$ifdef IVIEW}
     with IViewIntegration do
@@ -1820,6 +1774,7 @@ end;
 
 procedure TFormViewUV.LoadMargins;
 begin
+  {
   with Viewer do
     begin
     MarginLeft:=   FIni.ReadFloat(csPrintOpt, ccPMarginL, MarginLeft);
@@ -1828,10 +1783,12 @@ begin
     MarginBottom:= FIni.ReadFloat(csPrintOpt, ccPMarginB, MarginBottom);
     PrintFooter:= FIni.ReadBool(csPrintOpt, ccPFooter, PrintFooter);
     end;
+    }
 end;
 
 procedure TFormViewUV.SaveMargins;
 begin
+  {
   with Viewer do
     begin
     FIniSave.WriteFloat(csPrintOpt, ccPMarginL, MarginLeft);
@@ -1840,6 +1797,7 @@ begin
     FIniSave.WriteFloat(csPrintOpt, ccPMarginB, MarginBottom);
     FIniSave.WriteBool(csPrintOpt, ccPFooter, PrintFooter);
     end;
+    }
   FIniSave.UpdateFile;
 end;
 
@@ -2415,7 +2373,7 @@ begin
   IsSearch:= (AMode in [vmodeText, vmodeBinary, vmodeHex, vmodeUnicode, vmodeRTF, vmodeWeb]);
   IsSearchNext:= (AMode in [vmodeText, vmodeBinary, vmodeHex, vmodeUnicode, vmodeRTF]);
   IsSearchPrev:= (AMode in [vmodeText, vmodeBinary, vmodeHex, vmodeUnicode]) and Viewer.SearchStarted and (not FFindRegex);
-  IsPrint:= (AMode in [vmodeText, vmodeBinary, vmodeHex, vmodeUnicode, vmodeRTF, vmodeWeb {$ifdef MSO}, vmodeOffice {$endif}]) or IsImage;
+  IsPrint:= (AMode in [vmodeText, vmodeBinary, vmodeHex, vmodeUnicode, vmodeRTF, vmodeWeb]) or IsImage;
   IsPrintPreview:= (AMode in [vmodeText, vmodeBinary, vmodeHex, vmodeUnicode, vmodeWeb]) or IsImage;
 
   with FToolbarList do
@@ -2457,7 +2415,6 @@ begin
     Update(mnuViewMode6, En, integer(AMode = vmodeUnicode));
     Update(mnuViewMode7, En2, integer(AMode = vmodeWLX));
     Update(mnuViewMode8, En, integer(AMode = vmodeRTF));
-    Update(mnuViewMode9, {$ifdef MSO} En, integer(AMode = vmodeOffice) {$else} false {$endif});
 
     mnuModes1.Checked:= mnuViewMode1.Checked;
     mnuModes2.Checked:= mnuViewMode2.Checked;
@@ -2467,7 +2424,6 @@ begin
     mnuModes6.Checked:= mnuViewMode6.Checked;
     mnuModes7.Checked:= mnuViewMode7.Checked;
     mnuModes8.Checked:= mnuViewMode8.Checked;
-    mnuModes9.Checked:= mnuViewMode9.Checked;
 
     Update(mnuViewTextEncSubmenu, En2 and (IsTextAnsi or (IsWLX and IsWLXCmd)));
     Update(mnuViewTextANSI, En2 and (IsTextAnsi or (IsWLX and IsWLXCmd)), integer(AEnc = vencANSI));
@@ -2600,14 +2556,6 @@ end;
 procedure TFormViewUV.mnuViewMode8Click(Sender: TObject);
 begin
   Viewer.Mode:= vmodeRTF;
-  UpdateOptions;
-end;
-
-procedure TFormViewUV.mnuViewMode9Click(Sender: TObject);
-begin
-  {$ifdef MSO}
-  Viewer.Mode:= vmodeOffice;
-  {$endif}
   UpdateOptions;
 end;
 
@@ -2921,20 +2869,20 @@ end;
 procedure TFormViewUV.mnuFilePrintClick(Sender: TObject);
 begin
   InitPreview;
-  Viewer.PrintDialog;
+  //Viewer.PrintDialog;
   SaveMargins;
 end;
 
 procedure TFormViewUV.mnuFilePrintPreviewClick(Sender: TObject);
 begin
   InitPreview;
-  Viewer.PrintPreview;
+  //Viewer.PrintPreview;
   SaveMargins;
 end;
 
 procedure TFormViewUV.mnuFilePrintSetupClick(Sender: TObject);
 begin
-  Viewer.PrintSetup;
+  //Viewer.PrintSetup;
   SaveMargins;
 end;
 
@@ -2967,23 +2915,12 @@ begin
         edImages.Text:= ExtImages;
         edMedia.Text:= ExtMedia;
         edInet.Text:= ExtInet;
-        edOOo.Text:= ExtOOo;
-        edMSO.Text:= ExtMso;
-        edRTF.Text:= ExtRTF;
         edConv.Text:= FExtConv;
         edIgnore.Text:= FExtIgnore;
         chkIgnore.Checked:= FExtIgnoreUse;
         chkImages.Checked:= ExtImagesUse;
         chkMedia.Checked:= ExtMediaUse;
         chkInet.Checked:= ExtInetUse;
-        chkOoo.Checked:= ExtOooUse;
-        chkMso.Checked:= ExtMsoUse;
-
-        {$ifndef MSO}
-        edMso.Enabled:= false;
-        chkMso.Enabled:= false;
-        chkMso.Checked:= false;
-        {$endif}
         end;
 
       ffTextDetect:= Viewer.TextDetect;
@@ -3046,11 +2983,6 @@ begin
       chkSearchNoMsg.Checked:= FShowNoFindError;
       chkSearchNoCfm.Checked:= FShowNoFindReset;
 
-      edMediaMode.ItemIndex:= Pred(Ord(Viewer.MediaMode));
-      chkMediaStart.Checked:= Viewer.MediaAutoPlay;
-      chkMediaLoop.Checked:= Viewer.MediaLoop;
-      edMediaCnt.Value:= Viewer.MediaPlayCount;
-
       chkImageFit.Checked:= Viewer.MediaFit;
       chkImageFitBig.Checked:= Viewer.MediaFitOnlyBig;
       chkImageFitWidth.Checked:= Viewer.MediaFitWidth;
@@ -3074,7 +3006,6 @@ begin
       chkHImage.Checked:= FUImage;
       chkHMedia.Checked:= FUMedia;
       chkHWeb.Checked:= FUWeb;
-      chkHOffice.Checked:= FUOffice;
       chkHRtf.Checked:= FURtf;
       chkHPlug.Checked:= FUPlug;
 
@@ -3082,7 +3013,6 @@ begin
       edHImage.Value:= FHImage;
       edHMedia.Value:= FHMedia;
       edHWeb.Value:= FHWeb;
-      edHOffice.Value:= FHOffice;
       edHRtf.Value:= FHRtf;
       edHPlug.Value:= FHPlug;
 
@@ -3166,9 +3096,6 @@ begin
           ExtImages:= edImages.Text;
           ExtMedia:= edMedia.Text;
           ExtInet:= edInet.Text;
-          ExtOoo:= edOoo.Text;
-          ExtMso:= edMso.Text;
-          ExtRTF:= edRTF.Text;
           FExtConv:= edConv.Text;
           FExtIgnore:= edIgnore.Text;
           FExtIgnoreUse:= chkIgnore.Checked;
@@ -3176,8 +3103,6 @@ begin
           ExtImagesUse:= chkImages.Checked;
           ExtMediaUse:= chkMedia.Checked;
           ExtInetUse:= chkInet.Checked;
-          ExtOooUse:= chkOoo.Checked;
-          ExtMsoUse:= chkMso.Checked;
           end;
 
         Viewer.TextDetect:= ffTextDetect;
@@ -3249,11 +3174,6 @@ begin
         Viewer.ImageResample:= chkImageResample.Checked;
         Viewer.ImageTransparent:= chkImageTransp.Checked;
 
-        Viewer.MediaMode:= Succ(TATViewerMediaMode(edMediaMode.ItemIndex));
-        Viewer.MediaAutoPlay:= chkMediaStart.Checked;
-        Viewer.MediaLoop:= chkMediaLoop.Checked;
-        Viewer.MediaPlayCount:= edMediaCnt.Value;
-
         {$ifdef IVIEW}
         with Viewer.IViewIntegration do
           begin
@@ -3309,7 +3229,6 @@ begin
         FUImage:= chkHImage.Checked;
         FUMedia:= chkHMedia.Checked;
         FUWeb:= chkHWeb.Checked;
-        FUOffice:= chkHOffice.Checked;
         FURtf:= chkHRtf.Checked;
         FUPlug:= chkHPlug.Checked;
 
@@ -3317,7 +3236,6 @@ begin
         FHImage:= edHImage.Value;
         FHMedia:= edHMedia.Value;
         FHWeb:= edHWeb.Value;
-        FHOffice:= edHOffice.Value;
         FHRtf:= edHRtf.Value;
         FHPlug:= edHPlug.Value;
 
@@ -4048,7 +3966,6 @@ begin
   FToolbarList.AddAvail(mnuViewMode6);
   FToolbarList.AddAvail(mnuViewMode7);
   FToolbarList.AddAvail(mnuViewMode8);
-  FToolbarList.AddAvail(mnuViewMode9);
   FToolbarList.AddAvail(mnuViewTextWrap);
   FToolbarList.AddAvail(mnuViewTextNonPrint);
   FToolbarList.AddAvail(mnuViewTextTail);
@@ -4257,7 +4174,7 @@ begin
 
   if FStartupPrint then
     begin
-    Viewer.PrintDialog;
+    //Viewer.PrintDialog;
     Close;
     end;
   {$endif}
@@ -4443,38 +4360,6 @@ begin
   UpdateOptions(true);
 end;
 
-(*
-procedure TFormViewUV.ViewerOfficeLoad(Sender: TObject; var ADo: boolean);
-begin
-  {$ifdef MSO}
-  ADo:= TestTemp(FTempPath + 'UV.tmp');
-  if not ADo then
-    MsgError(MsgString(0314));
-  {$endif}
-end;
-*)
-
-procedure TFormViewUV.mnuViewMediaVolumeUpClick(Sender: TObject);
-begin
-  with Viewer do
-    MediaVolume:= MediaVolume + 1;
-  UpdateOptions;
-end;
-
-procedure TFormViewUV.mnuViewMediaVolumeDownClick(Sender: TObject);
-begin
-  with Viewer do
-    MediaVolume:= MediaVolume - 1;
-  UpdateOptions;
-end;
-
-procedure TFormViewUV.mnuViewMediaVolumeMuteClick(Sender: TObject);
-begin
-  with Viewer do
-    MediaMute:= not MediaMute;
-  UpdateOptions;
-end;
-
 procedure TFormViewUV.ViewerOptionsChange(ASender: TObject);
 begin
   UpdateOptions;
@@ -4494,10 +4379,6 @@ begin
       if FUMedia and Viewer.IsMedia then Height:= FHMedia;
    vmodeWeb:
      if FUWeb then Height:= FHWeb;
-   {$ifdef MSO}
-   vmodeOffice:
-     if FUOffice then Height:= FHOffice;
-   {$endif}
    vmodeWLX:
      begin
      if FUPlug then Height:= FHPlug;
@@ -4736,12 +4617,6 @@ begin
   {$ifdef EXIF}
   ShowEXIF(FFileNameWideToAnsi(FFileName));
   {$endif}
-end;
-
-procedure TFormViewUV.mnuViewMediaLoopClick(Sender: TObject);
-begin
-  Viewer.MediaLoop:= not Viewer.MediaLoop;
-  UpdateOptions;
 end;
 
 
@@ -4990,43 +4865,6 @@ end;
 procedure TFormViewUV.TntFormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
-  if (Key = vk_space) and (Shift = []) then
-    if (Viewer.Mode = vmodeMedia) and Viewer.IsMedia
-      {$ifdef M6} and (Viewer.MediaMode <> vmmodeWMP64) {$endif} then //WMP64: Play method doesn't work
-    begin
-      Viewer.MediaPause;
-      Key:= 0;
-      Exit
-    end;
-
-  //keys for Cubic Explorer mode
-  if (Viewer.Mode = vmodeMedia) and Viewer.IsMedia
-    {$ifdef CE} and (Viewer.MediaMode = vmmodeCE) {$endif} then
-  begin
-    if (Key = vk_up) and (Shift = []) then
-    begin
-      if Viewer.MediaVolume<10 then
-        Viewer.MediaVolume:= Viewer.MediaVolume + 2;
-      Key:= 0;
-      Exit
-    end;
-
-    if (Key = vk_down) and (Shift = []) then
-    begin
-      if Viewer.MediaVolume>0 then
-        Viewer.MediaVolume:= Viewer.MediaVolume - 1;
-      Key:= 0;
-      Exit
-    end;
-
-    if (Key = Ord('M')) and (Shift = [ssCtrl]) then
-    begin
-      Viewer.MediaMute:= not Viewer.MediaMute;
-      Key:= 0;
-      Exit
-    end;
-  end;
-
   if (Viewer.Mode = vmodeMedia) and Viewer.IsImage then
   begin
     if (Key = vk_space) and (Shift = []) then

@@ -12,11 +12,6 @@
 program Viewer;
 
 uses
-  madExcept,
-  madLinkDisAsm,
-  madListHardware,
-  madListProcesses,
-  madListModules,
   Windows,
   Forms,
   UFormView in 'UFormView.pas' {FormViewUV},

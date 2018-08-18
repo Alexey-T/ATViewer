@@ -93,12 +93,8 @@ object FormViewUV: TFormViewUV
       TextFontGutter.Height = -12
       TextFontGutter.Name = 'Courier New'
       TextFontGutter.Style = []
-      MediaLoop = False
-      MediaShowControls = True
-      MediaShowTracker = True
       OnTextFileReload = ViewerTextFileReload
       IsFocused = True
-      OnMediaPlaybackEnd = ViewerMediaPlaybackEnd
     end
     object StatusBar1: TStatusBar
       Left = 0
@@ -757,14 +753,6 @@ object FormViewUV: TFormViewUV
         RadioItem = True
         ShortCut = 56
         OnClick = mnuViewMode8Click
-      end
-      object mnuViewMode9: TMenuItem
-        Caption = '&9  MS Office'
-        GroupIndex = 1
-        ImageIndex = 27
-        RadioItem = True
-        ShortCut = 57
-        OnClick = mnuViewMode9Click
       end
     end
     object mnuOptions: TMenuItem
