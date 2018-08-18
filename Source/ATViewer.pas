@@ -71,16 +71,6 @@ type
     vieFlipHorizontal
     );
 
-{$ifdef IVIEW}
-type
-  TATIViewIntegration = record
-    Enabled: Boolean;
-    ExeName: AnsiString; //WideString currently not supported
-    ExtList: AnsiString;
-    HighPriority: Boolean;
-  end;
-{$endif}
-
 {$ifdef IJL}
 type
   TATIJLIntegration = record
@@ -129,11 +119,6 @@ type
     {$ifdef PRINT}
     FPrintDialog: TPrintDialog;
     FPageSetupDialog: {$ifdef COMPILER_7_UP} TPageSetupDialog {$else} TPrintDialog {$endif};
-    {$endif}
-
-    {$ifdef IVIEW}
-    FIViewIntegration: TATIViewIntegration;
-    FIViewObject: TObject;
     {$endif}
 
     {$ifdef IJL}
@@ -215,8 +200,6 @@ type
     FOnModeDetected: TNotifyEvent;
     FOnFileLoad: TNotifyEvent;
     FOnFileUnload: TNotifyEvent;
-    FOnOfficeLoad: TATViewerOfficeEvent;
-    FOnOfficeUnload: TNotifyEvent;
     FOnOptionsChange: TNotifyEvent;
     FOnLoadImageStream: TATViewerLoadImageStream;
     FOnLoadWebStream: TATViewerLoadWebStream;
@@ -687,10 +670,6 @@ type
     property OnTextFileReload: TNotifyEvent read GetOnTextFileReload write SetOnTextFileReload;
     {$endif}
 
-    {$ifdef IVIEW}
-    property IViewIntegration: TATIViewIntegration read FIViewIntegration write FIViewIntegration;
-    {$endif}
-
     {$ifdef IJL}
     property IJLIntegration: TATIJLIntegration read FIJLIntegration write FIJLIntegration;
     {$endif}
@@ -718,7 +697,6 @@ type
     property OnModeDetected: TNotifyEvent read FOnModeDetected write FOnModeDetected;
     property OnFileLoad: TNotifyEvent read FOnFileLoad write FOnFileLoad;
     property OnFileUnload: TNotifyEvent read FOnFileUnload write FOnFileUnload;
-    property OnOfficeUnload: TNotifyEvent read FOnOfficeUnload write FOnOfficeUnload;
     property OnOptionsChange: TNotifyEvent read FOnOptionsChange write SetOnOptionsChange;
     property OnLoadImageStream: TATViewerLoadImageStream read FOnLoadImageStream write FOnLoadImageStream;
     property OnLoadWebStream: TATViewerLoadWebStream read FOnLoadWebStream write FOnLoadWebStream;
@@ -758,7 +736,6 @@ uses
   Clipbrd,
   {$ifdef TNT} TntClasses, {$endif}
   {$ifdef WLX} WLXPlugin, {$endif}
-  {$ifdef IVIEW} nmzIrfanXnView, {$endif}
   {$ifdef GEX} GraphicEx, {$endif}
   {$ifdef GIF} GIFImage, {$endif}
   {$ifdef PNG} PNGImage, {$endif}
@@ -1037,17 +1014,6 @@ begin
   FPageSetupDialog := nil;
   {$endif}
 
-  {$ifdef IVIEW}
-  with FIViewIntegration do
-  begin
-    Enabled := False;
-    ExeName := '';
-    ExtList := cIViewDefaultExtensions;
-    HighPriority := False;
-  end;
-  FIViewObject := nil;
-  {$endif}
-
   {$ifdef IJL}
   with FIJLIntegration do
   begin
@@ -1077,11 +1043,6 @@ end;
 destructor TATViewer.Destroy;
 begin
   FreeData;
-
-  {$ifdef IVIEW}
-  if Assigned(FIViewObject) then
-    FIViewObject.Free;
-  {$endif}
 
   {$ifdef WLX}
   FPlugins.Free;
@@ -1551,10 +1512,6 @@ begin
     else
       Result := '';
   end;
-  {$ifdef IVIEW}
-  if IViewIntegration.Enabled then
-    Result := Result + ',' + IViewIntegration.ExtList;
-  {$endif}
 end;
 
 function TATViewer.ActualExtInet: AnsiString;
@@ -1732,52 +1689,6 @@ procedure TATViewer.LoadImage(APicture: TPicture = nil; ANewImage: Boolean = Tru
   end;
 
   //
-  {$ifdef IVIEW}
-  function LoadImageWithIView: Boolean;
-  var
-    Bmp: TBitmap;
-  begin
-    FIsImageIView := True;
-
-    //if IView exe does not exist, raise special exception:
-    if not IsFileExist(IViewIntegration.ExeName) then
-    begin
-      raise EInvalidGraphic.Create(
-        SFormatW(MsgViewerErrCannotFindFile, [IViewIntegration.ExeName]) );
-    end;
-
-    Bmp := TBitmap.Create;
-    try
-      if not Assigned(FIViewObject) then
-        FIViewObject := TIrfanXnView.Create('');
-      with TIrfanXnView(FIViewObject) do
-      begin
-        Host := IViewIntegration.ExeName;
-        Bmp.PixelFormat := pf24bit;
-        Bmp.Handle := GetBitmap(FFileNameWideToAnsi(FFileName));
-        Host := '';
-      end;
-      Result := Bmp.Handle <> 0;
-      if Result then
-      begin
-        //If IView could load file, put it into Image object:
-        FImageBox.LoadBitmap(Bmp,
-          FImageTransparent and SFileExtensionMatch(FFileName, 'bmp'));
-      end
-      else
-      begin
-        //If IView could not load file, raise an exception that
-        //will be immediately handled and "Unsupported image format"
-        //message will be shown:
-        raise Exception.Create('');
-      end;
-    finally
-      Bmp.Free;
-    end;
-  end;
-  {$endif}
-
-  //
   procedure LoadImageWithDelphi;
   begin
     FImageBox.LoadFromFile(FFileName);
@@ -1816,10 +1727,6 @@ procedure TATViewer.LoadImage(APicture: TPicture = nil; ANewImage: Boolean = Tru
     FImageBox.LoadPicture(APicture);
   end;
 
-{$ifdef IVIEW}
-var
-  IViewHighPriority: Boolean;
-{$endif}
 var
   OldImageScale: Integer;
 begin
@@ -1840,13 +1747,6 @@ begin
   //IViewHighPriority local variable to False/True, otherwise it's set
   //according to IViewIntegration.HighPriority property.
 
-  {$ifdef IVIEW}
-  if FIsImageBefore then
-    IViewHighPriority := not FIsImageIView
-  else
-    IViewHighPriority := FIViewIntegration.HighPriority;
-  {$endif}
-
   if Assigned(FImageBox) then
     try
       try
@@ -1858,16 +1758,6 @@ begin
           LoadImageFromPicture(APicture);
           Exit;
         end;
-
-        {$ifdef IVIEW}
-        //1) Load with IView with high priority
-        if IViewIntegration.Enabled and IViewHighPriority then
-          if SFileExtensionMatch(FFileName, IViewIntegration.ExtList) then
-          begin
-            LoadImageWithIView;
-            Exit;
-          end;
-        {$endif}
 
         {$ifdef TIFF}
         //2b) Load TIFF
@@ -1899,34 +1789,9 @@ begin
         //4) Load with Delphi
         if SFileExtensionMatch(FFileName, ATViewerOptions.ExtImages) then
         begin
-          try
-            LoadImageWithDelphi;
-          except
-            {$ifdef IVIEW}
-            //If library couldn't load an image, switch to IView implicitly
-            //(so useless error messagebox won't appear)
-            if IViewIntegration.Enabled then
-              if SFileExtensionMatch(FFileName, IViewIntegration.ExtList) then
-              begin
-                LoadImageWithIView;
-                Exit;
-              end;
-            {$endif}
-            //If IView couldn't help here, show error messagebox finally
-            raise;
-          end;
+          LoadImageWithDelphi;
           Exit;
         end;
-
-        {$ifdef IVIEW}
-        //5) Load with IView with low priority
-        if IViewIntegration.Enabled and (not IViewHighPriority) then
-          if SFileExtensionMatch(FFileName, IViewIntegration.ExtList) then
-          begin
-            LoadImageWithIView;
-            Exit;
-          end;
-        {$endif}
 
         UnloadImage;
 
@@ -3752,15 +3617,6 @@ begin
     //Stub to compile when defines are commented
     vmodeText:
       Result := '';
-
-    {$ifdef IVIEW}
-    vmodeMedia:
-      if FIsImage then
-      begin
-        if FIsImageIView then Result := ChangeFileExt(ExtractFileName(IViewIntegration.ExeName), '') else
-         if FIsImageIJL then Result := 'IJLib';
-      end;
-    {$endif}
 
     {$ifdef WLX}
     vmodeWLX:
