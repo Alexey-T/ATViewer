@@ -7,8 +7,6 @@ package ATViewerD7;
 {$R '..\Source\ATStreamSearch.dcr'}
 {$R '..\Source\ATViewer.dcr'}
 {$R '..\Source\ATFileNotificationSimple.dcr'}
-{$R '..\Source\MediaPlayer_TLB.dcr'}
-{$R '..\Source\MediaPlayer9_TLB.dcr'}
 {$ALIGN 8}
 {$ASSERTIONS ON}
 {$BOOLEVAL OFF}
@@ -45,8 +43,6 @@ requires
   vcldb;
 
 contains
-  MediaPlayer_TLB in '..\Source\MediaPlayer_TLB.pas',
-  MediaPlayer9_TLB in '..\Source\MediaPlayer9_TLB.pas',
   ATBinHex in '..\Source\ATBinHex.pas',
   ATFileNotification in '..\Source\ATFileNotification.pas',
   ATImageBox in '..\Source\ATImageBox.pas',

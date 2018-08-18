@@ -20,7 +20,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Controls, Graphics,
   StdCtrls, ExtCtrls, ComCtrls, Forms, Menus, Jpeg,
-  ATViewerMCI, ATxPanel,
+  ATxPanel,
   {$ifdef TNT} TntExtCtrls, {$endif}
   {$ifdef WLX} WLXProc, {$endif}
   {$ifdef IE4X} WebBrowser4_TLB, {$else} SHDocVw, {$endif}
