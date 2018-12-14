@@ -12,82 +12,6 @@
 
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
   <tbody>
-    <tr>
-      <td style="width: 40%;"><font color="DarkBlue">MediaMode</font></td>
-      <td>Player mode (used when Mode = vmodeMedia).<br>
-      Possible values:<br>
-      <ul>
-      <li><b>vmmodeNone</b>: "Uninitialized" value that is set when no other modes are available - see Notes.</li>
-      <li><b>vmmodeMCI</b>: Usage of TMediaPlayer component (Windows MCI interface).</li>
-      <li><b>vmmodeWMP64</b>: Usage of Windows Media Player 6.4 ActiveX.</li>
-      <li><b>vmmodeWMP9</b>: Usage of Windows Media Player 9.0 ActiveX.</li>
-      <li><b>wmmodeCE</b>: Usage of DirectX (Cubic Explorer version).
-      </ul>
-      Notes:<br>
-      <ul>
-      <li>MCI and WMP modes are available only when corresponding defines are uncommented
-        in ATViewerOptions.inc.</li>
-      <li>WMP 9.0 mode will not work on end user's machine if no Windows Media Player 9+ is installed,
-        while WMP 6.4 mode should work on all machines since Windows Media Player 6.4 is preinstalled
-        even on Windows 95. Use ATxWMP unit from Universal Viewer demo to check
-        availability of different WMP versions.</li>
-      </ul>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <font color="DarkBlue">
-          MediaAutoPlay <br>
-          MediaPlayCount <br>
-          MediaLoop <br>
-          MediaPlaylistPause <br>
-          MediaShowControls <br>
-          MediaShowTracker
-        </font>
-      </td>
-      <td>
-        Media properties (when IsMedia = True).
-      <ul>
-      <li> Enables auto-start of media playback.
-      <li> Number of times (default is 1) media will be played.
-      <li> Loops media playback. When it is set, MediaPlayCount is ignored.
-      <li> Pause (in msec, default is 500 msec) between media playback end
-           and firing the OnMediaPlaybackEnd event.
-      <li> WMP 6.4 only: Show play controls on WMP control.
-      <li> WMP 6.4 only: Show play tracker on WMP control.
-      </ul>
-      </td>
-    </tr>
-
-    <tr>
-      <td><font color="DarkBlue">MediaVolume</font> (public)</td>
-      <td>Volume of media player (when IsMedia = True).<br>
-      It is in the range from 0 to 10.<br>
-      Notes:<br>
-      <ul>
-      <li>Currently not supported with MediaMode = vmmodeMCI.</li>
-      <li>WMP ActiveX controls use different volume ranges in 6.4 and 9+ versions.
-        This property correctly handles both cases.</li>
-      <li>WMP 6.4 ActiveX has an issue: it doesn't always update its Volume
-        property when state is changed using visual controls (when volume
-        slider is dragged by mouse).</li>
-      </ul>
-      </td>
-    </tr>
-
-    <tr>
-      <td><font color="DarkBlue">MediaMute</font> (public)</td>
-      <td>Mute state of media player (when IsMedia = True).<br>
-      Note:<br>
-      <ul>
-      <li>Currently not supported with MediaMode = vmmodeMCI.</li>
-      <li>WMP 6.4 ActiveX has an issue: it doesn't always update its Mute property
-        when state is changed using visual control (when Mute button is
-        pressed by mouse).</li>
-      </ul>
-      </td>
-    </tr>
 
     <tr>
       <td>
@@ -115,7 +39,6 @@
           IsImage <br>
           IsIcon <br>
           IsMetafile <br>
-          IsMedia
         </font> (public, read-only)
       </td>
       <td>Flags which show what media type is loaded in Multimedia mode:
@@ -123,7 +46,6 @@
         <li> <b>IsImage</b>: Image (any format).
         <li> <b>IsIcon</b>: Image which is an icon (ICO).
         <li> <b>IsMetafile</b>: Image which is a metafile (WMF, EMF).
-        <li> <b>IsMedia</b>: Video or audio clip.
         </ul>
         Note:<br>
         <ul>
