@@ -162,7 +162,6 @@ type
 
     FIsImage: Boolean;       //Image is currently loaded
     FIsImageBefore: Boolean; //Image was loaded before the last FreeData call
-    FIsImageIView: Boolean;  //Image was loaded using IrfanView/XnView
     FIsImageIJL: Boolean;    //Image was loaded using IJL
     FIsIcon: Boolean;        //Icon is currently loaded
     FIsMetafile: Boolean;    //Metafile is currently loaded
@@ -841,7 +840,6 @@ begin
 
   FIsImage := False;
   FIsImageBefore := False;
-  FIsImageIView := False;
   FIsImageIJL := False;
   FIsIcon := False;
   FIsMetafile := False;
@@ -1489,7 +1487,6 @@ begin
   FImageError := False;
   FImageErrorMessage := '';
   FImageBPP := 0;
-  FIsImageIView := False;
   FIsImageIJL := False;
 
   InitImage;
@@ -1642,7 +1639,6 @@ begin
   FImageError := False;
   FImageErrorMessage := '';
   FImageBPP := 0;
-  FIsImageIView := False;
   FIsImageIJL := False;
   if ANewImage then
   begin
@@ -1650,11 +1646,6 @@ begin
     FImagePagesCount := 1;
   end;
   OldImageScale := GetImageScale;
-
-  //If an image was loaded before, then we need to switch between
-  //"internal library" and "IrfanView" modes. We do this by setting the
-  //IViewHighPriority local variable to False/True, otherwise it's set
-  //according to IViewIntegration.HighPriority property.
 
   if Assigned(FImageBox) then
     try
