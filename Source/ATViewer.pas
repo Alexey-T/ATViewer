@@ -167,7 +167,6 @@ type
     FIsIcon: Boolean;        //Icon is currently loaded
     FIsMetafile: Boolean;    //Metafile is currently loaded
     FIsGif: Boolean;
-    FIsMedia: Boolean;       //Media clip is currently loaded
 
     FImageBPP: Integer;
     FImageColor: TColor;
@@ -534,7 +533,6 @@ type
     property IsIcon: Boolean read FIsIcon;
     property IsMetafile: Boolean read FIsMetafile;
     property IsGif: Boolean read FIsGif;
-    property IsMedia: Boolean read FIsMedia;
     property BinHex: TATBinHex read FBinHex;
     property ImageBox: TATImageBox read FImageBox;
     property ImageWidth: Integer read GetImageWidth;
@@ -848,7 +846,6 @@ begin
   FIsIcon := False;
   FIsMetafile := False;
   FIsGif := False;
-  FIsMedia := False;
 
   FImageBPP := 0;
   FImageColor := clDkGray;
@@ -1378,7 +1375,6 @@ begin
   FIsIcon := False;
   FIsMetafile := False;
   FIsGif := False;
-  FIsMedia := False;
 
   FreeSearch;
 end;
