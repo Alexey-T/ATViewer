@@ -192,7 +192,6 @@ type
     FOnImageMouseMove: TATViewerImageMouseEvent;
     FOnImageLClick: TNotifyEvent;
     FOnImageRClick: TNotifyEvent;
-    FOnMediaPlaybackEnd: TNotifyEvent;
     FOnWebDocumentComplete: TNotifyEvent;
     FOnWebNavigateComplete: TNotifyEvent;
     FOnWebStatusTextChange: TWebBrowserStatusTextChange;
@@ -684,7 +683,6 @@ type
     property OnImageMouseMove: TATViewerImageMouseEvent read FOnImageMouseMove write FOnImageMouseMove;
     property OnImageLClick: TNotifyEvent read FOnImageLClick write FOnImageLClick;
     property OnImageRClick: TNotifyEvent read FOnImageRClick write FOnImageRClick;
-    property OnMediaPlaybackEnd: TNotifyEvent read FOnMediaPlaybackEnd write FOnMediaPlaybackEnd;
     property OnWebDocumentComplete: TNotifyEvent read FOnWebDocumentComplete write FOnWebDocumentComplete;
     property OnWebNavigateComplete: TNotifyEvent read FOnWebNavigateComplete write FOnWebNavigateComplete;
     property OnWebStatusTextChange: TWebBrowserStatusTextChange read FOnWebStatusTextChange write FOnWebStatusTextChange;
@@ -950,7 +948,6 @@ begin
   {$endif}
 
   //Init events
-  FOnMediaPlaybackEnd := nil;
   FOnWebDocumentComplete := nil;
   FOnWebNavigateComplete := nil;
   FOnWebStatusTextChange := nil;
