@@ -380,14 +380,12 @@ type
 
     FUText,
     FUImage,
-    FUMedia,
     FUOffice,
     FUWeb,
     FURtf,
     FUPlug: boolean;
     FHText,
     FHImage,
-    FHMedia,
     FHWeb,
     FHOffice,
     FHRtf,
@@ -1168,14 +1166,12 @@ begin
 
   FUText:= FIni.ReadBool(csOpt, ccUText, false);
   FUImage:= FIni.ReadBool(csOpt, ccUImage, false);
-  FUMedia:= FIni.ReadBool(csOpt, ccUMedia, false);
   FUWeb:= FIni.ReadBool(csOpt, ccUWeb, false);
   FUOffice:= FIni.ReadBool(csOpt, ccUOffice, false);
   FUPlug:= FIni.ReadBool(csOpt, ccUPlug, false);
 
   FHText:= FIni.ReadInteger(csOpt, ccHText, 300);
   FHImage:= FIni.ReadInteger(csOpt, ccHImage, 300);
-  FHMedia:= FIni.ReadInteger(csOpt, ccHMedia, 300);
   FHWeb:= FIni.ReadInteger(csOpt, ccHWeb, 300);
   FHOffice:= FIni.ReadInteger(csOpt, ccHOffice, 300);
   FHPlug:= FIni.ReadInteger(csOpt, ccHPlug, 300);
@@ -1649,14 +1645,12 @@ begin
 
   FIniSave.WriteBool(csOpt, ccUText, FUText);
   FIniSave.WriteBool(csOpt, ccUImage, FUImage);
-  FIniSave.WriteBool(csOpt, ccUMedia, FUMedia);
   FIniSave.WriteBool(csOpt, ccUWeb, FUWeb);
   FIniSave.WriteBool(csOpt, ccUOffice, FUOffice);
   FIniSave.WriteBool(csOpt, ccUPlug, FUPlug);
 
   FIniSave.WriteInteger(csOpt, ccHText, FHText);
   FIniSave.WriteInteger(csOpt, ccHImage, FHImage);
-  FIniSave.WriteInteger(csOpt, ccHMedia, FHMedia);
   FIniSave.WriteInteger(csOpt, ccHWeb, FHWeb);
   FIniSave.WriteInteger(csOpt, ccHOffice, FHOffice);
   FIniSave.WriteInteger(csOpt, ccHPlug, FHPlug);
@@ -4363,8 +4357,7 @@ begin
    vmodeUnicode:
      if FUText then Height:= FHText;
    vmodeMedia:
-     if FUImage and Viewer.IsImage then Height:= FHImage else
-      if FUMedia and Viewer.IsMedia then Height:= FHMedia;
+     if FUImage and Viewer.IsImage then Height:= FHImage;
    vmodeWeb:
      if FUWeb then Height:= FHWeb;
    vmodeWLX:

@@ -622,18 +622,10 @@ procedure TFormViewOptions.btnImageOptionsClick(Sender: TObject);
 begin
   with TFormViewOptionsImages.Create(Self) do
     try
-      chkUseIView.Checked:= ffIViewEnabled;
-      edExeIView.Text:= ffIViewExeName;
-      edExtIView.Text:= ffIViewExtList;
-      chkPriority.Checked:= ffIViewHighPriority;
       chkUseIJL.Checked:= ffIJLEnabled;
       edExtIJL.Text:= ffIJLExtList;
       if ShowModal=mrOk then
         begin
-        ffIViewEnabled:= chkUseIView.Checked;
-        ffIViewExeName:= edExeIView.Text;
-        ffIViewExtList:= edExtIView.Text;
-        ffIViewHighPriority:= chkPriority.Checked;
         ffIJLEnabled:= chkUseIJL.Checked;
         ffIJLExtList:= edExtIJL.Text;
         end;

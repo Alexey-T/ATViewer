@@ -40,7 +40,9 @@ requires
   vclactnband,
   dsnap,
   dbrtl,
-  vcldb;
+  vcldb,
+  TntUnicodeVcl_R70,
+  PNG_D7;
 
 contains
   ATBinHex in '..\Source\ATBinHex.pas',

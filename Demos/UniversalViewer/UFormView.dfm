@@ -25,7 +25,7 @@ object FormViewUV: TFormViewUV
   object Toolbar: TToolBar
     Left = 0
     Top = 0
-    Width = 660
+    Width = 652
     Height = 26
     AutoSize = True
     Caption = 'Toolbar'
@@ -44,16 +44,16 @@ object FormViewUV: TFormViewUV
   object ViewerPanel: TPanel
     Left = 0
     Top = 26
-    Width = 660
-    Height = 333
+    Width = 652
+    Height = 328
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
     object Viewer: TATViewer
       Left = 0
       Top = 0
-      Width = 660
-      Height = 314
+      Width = 652
+      Height = 309
       Align = alClient
       BevelOuter = bvNone
       Caption = 'File not loaded'
@@ -91,8 +91,8 @@ object FormViewUV: TFormViewUV
     end
     object StatusBar1: TStatusBar
       Left = 0
-      Top = 314
-      Width = 660
+      Top = 309
+      Width = 652
       Height = 19
       Panels = <
         item
