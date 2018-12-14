@@ -1,6 +1,6 @@
 {$define CMD}
-{$define NAV}
+//{$define NAV}
 {$define MEMINI}
 {$define HELP}
-{$define MENX}
+//{$define MENX}
 {$define EXIF}

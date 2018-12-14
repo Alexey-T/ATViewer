@@ -13,7 +13,6 @@
   boxTextReload.Caption:= MsgCaption(309);
   boxTextSearch.Caption:= MsgCaption(420);
   boxImage.Caption:= MsgStrip(MsgCaption(311));
-  boxMedia.Caption:= MsgStrip(MsgCaption(312));
   boxInternet.Caption:= MsgStrip(MsgCaption(179));
   boxIntf.Caption:= MsgCaption(304);
   boxMisc.Caption:= MsgCaption(280);
@@ -26,9 +25,7 @@
 
   labText.Caption:= MsgCaption(310);
   chkImages.Caption:= MsgCaption(311);
-  chkMedia.Caption:= MsgCaption(312);
   chkInet.Caption:= MsgCaption(313);
-  labRTF.Caption:= MsgCaption(314);
   labConv.Caption:= MsgCaption(360);
 
   labTextFont1.Caption:= MsgCaption(320);
@@ -55,11 +52,7 @@
   btnTextColorGutter.Hint:= MsgStrip(MsgCaption(274));
   btnTextColorHi.Hint:= MsgCaption(813);
 
-  labMediaMode.Caption:= MsgCaption(288);
-  labMediaPlayCount.Caption:= MsgCaption(282);
   labColorImage.Caption:= labTextColors.Caption;
-  chkMediaStart.Caption:= MsgCaption(334);
-  chkMediaLoop.Caption:= MsgCaption(803);
 
   chkImageFit.Caption:= MsgCaption(143);
   chkImageFitBig.Caption:= MsgCaption(161);

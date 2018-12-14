@@ -7,9 +7,7 @@
   MsgViewerErrCannotReadFile:= MsgString(105);
   MsgViewerErrCannotReadPos:= MsgString(109);
   MsgViewerErrDetect:= MsgString(113);
-  MsgViewerErrOffice:= MsgString(114);
   MsgViewerErrImage:= MsgString(115);
-  MsgViewerErrMedia:= MsgString(116);
   MsgViewerErrInitControl:= MsgString(106);
   MsgViewerErrInitOffice:= MsgString(314);
   MsgViewerErrCannotFindText:= MsgString(120);
@@ -110,7 +108,6 @@
   mnuModes6.Caption:= mnuViewMode6.Caption;
   mnuModes7.Caption:= mnuViewMode7.Caption;
   mnuModes8.Caption:= mnuViewMode8.Caption;
-  mnuModes9.Caption:= mnuViewMode9.Caption;
 
   mnuViewTextEncSubmenu.Caption:= MsgCaption(168);
   mnuViewTextEncPrev.Caption:= MsgCaption(170);

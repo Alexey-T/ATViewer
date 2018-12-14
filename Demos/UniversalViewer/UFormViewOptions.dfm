@@ -50,7 +50,7 @@ object FormViewOptions: TFormViewOptions
     Top = 8
     Width = 553
     Height = 349
-    ActivePage = tabIntf
+    ActivePage = tabFile
     TabOrder = 0
     object tabIntf: TTabSheet
       Caption = 'Interface'
